@@ -6,9 +6,9 @@ const dataProvider = localStorageDataProvider({
             { id: 0, title: 'Hello, world!' },
             { id: 1, title: 'FooBar' },
         ],
-        comments: [
-            { id: 0, post_id: 0, author: 'John Doe', body: 'Sensational!' },
-            { id: 1, post_id: 0, author: 'Jane Doe', body: 'I agree' },
+        users: [
+            { id: 0, post_id: 0, name: 'John Doe', email: 'a@a.com!',phone:"123",website:"www.lol.com",company:{name:"aaaa"} },
+            { id: 1, post_id: 1, name: 'Jane Doe', email: 'b@b.com',phone:"123",website:"www.lol.com",company:{name:"gh"}  },
         ],
     }
 });
