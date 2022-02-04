@@ -8,10 +8,7 @@ import UserIcon from "@material-ui/icons/Group";
 
 import Dashboard from "./Dashboard";
 import authProvider from "./authProvider";
-
-import jsonServerProvider from "ra-data-json-server";
-
-const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
+import dataProvider from "./dataProvider";
 
 const App = () => (
   <Admin
