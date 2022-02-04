@@ -152,14 +152,6 @@ const dataProvider = localStorageDataProvider({
                 OmissioneDescrizioneOrdiniServizio: false
             }
         ],
-        fasce:[
-            {id:1, nome: 'Fasce della giornata'},
-            {id:2, nome: 'Fasce del monte ore'},
-            {id:3, nome: 'Timbrature Tipo'},
-            {id:4, nome: 'Arrotondamento Timbrature'},
-            {id:5, nome: 'Arrotondamento Straordinario'},
-            {id:6, nome: 'Pause'}		
-        ],
         fasceDellaGiornata: [
             { id : 1, fasciaId:1, orarioId: 1, causale: 'Notturno 2', dalle: '00:00', alle :'04:59', priorita: 0 },
             { id : 2, fasciaId:1, orarioId: 1, causale: 'Notturno 2', dalle: '20:00', alle :'23:59', priorita: 0 },
