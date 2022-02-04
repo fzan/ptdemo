@@ -1,6 +1,7 @@
 import localStorageDataProvider from 'ra-data-local-storage';
 
 const dataProvider = localStorageDataProvider({
+    loggingEnabled: true,
     defaultData: {
         posts: [
             { id: 0, userId: 0, title: 'Hello, world!' },
