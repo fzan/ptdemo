@@ -8,7 +8,7 @@ import UserIcon from "@material-ui/icons/Group";
 
 import Dashboard from "./Dashboard";
 import authProvider from "./authProvider";
-import dataProvider from "./dataProvider";
+import dataProvider from "./data";
 
 const App = () => (
   <Admin
