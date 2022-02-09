@@ -1,0 +1,52 @@
+import * as React from 'react'
+import TextField from '@material-ui/core/TextField'
+import TableBody from '@material-ui/core/TableBody'
+import TableRow from '@material-ui/core/TableRow'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import CheckBox from '@material-ui/core/Checkbox'
+
+function CardOrarioSpeciali(record) {
+    return (
+        <TableBody>
+            <TableRow width=''>
+                <FormControlLabel control={
+                    <CheckBox id="postElaborazioniCompensazioneAutomatica" checked={record.postElaborazioniCompensazioneAutomatica} InputProps={{ readOnly: true }} />
+                } label="Applicare Compensazione Automatica" />
+                <FormControlLabel control={
+                    <CheckBox id="postElaborazioniVociAutomatiche" checked={record.postElaborazioniVociAutomatiche} InputProps={{ readOnly: true }} />
+                } label="Generare Voci Automatiche" />
+                <FormControlLabel control={
+                    <CheckBox id="postElaborazioniUsaTipoReali" checked={record.postElaborazioniUsaTipoReali} InputProps={{ readOnly: true }} />
+                } label="Usare Tipo reali e/o virtuali anche senza timbrature" />
+            </TableRow>
+            <TableRow width=''>
+                <TextField id="oreTeoricheHHTeoriche" label="HH teoriche" defaultValue={record.oreTeoricheHHTeoriche} InputProps={{ readOnly: true }} />
+                <TextField id="oreTeoricheTipoGG" label="Tipo GG" defaultValue={record.oreTeoricheTipoGG} InputProps={{ readOnly: true }} />
+            </TableRow>
+            <TableRow width=''>
+                <FormControlLabel control={
+                    <CheckBox id="strategieIgnorareTimbratureOrfane" checked={record.strategieIgnorareTimbratureOrfane} InputProps={{ readOnly: true }} />
+                } label="Ignorare timbrature orfane" />
+                <FormControlLabel control={
+                    <CheckBox id="strategieTimbratureDiscriminazioneAutomatica" checked={record.strategieTimbratureDiscriminazioneAutomatica} InputProps={{ readOnly: true }} />
+                } label="Includere le timbrature nella fase di discriminazione automatica" />
+                <FormControlLabel control={
+                    <CheckBox id="strategieGiustificativiRigidi" checked={record.strategieGiustificativiRigidi} InputProps={{ readOnly: true }} />
+                } label="Convertire giustificativi parziali (rigidi)" />
+            </TableRow>
+            <TableRow width=''>
+                <FormControlLabel control={
+                    <CheckBox id="strategieGiustificativiFlex" checked={record.strategieGiustificativiFlex} InputProps={{ readOnly: true }} />
+                } label="Convertire giustificativi parziali (flex)" />
+                <FormControlLabel control={
+                    <CheckBox id="strategieGiustificativiAssenzaTimbrature" checked={record.strategieGiustificativiAssenzaTimbrature} InputProps={{ readOnly: true }} />
+                } label="Giustificativi assegnati anche senza timbratura" />
+                <FormControlLabel control={
+                    <CheckBox id="OmissioneDescrizioneOrdiniServizio" checked={record.OmissioneDescrizioneOrdiniServizio} InputProps={{ readOnly: true }} />
+                } label="Omettere la descrizione neglio ordini di servizio" />
+            </TableRow>
+        </TableBody>
+    );
+}
+
+export default CardOrarioSpeciali;
