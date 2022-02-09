@@ -89,6 +89,5 @@ export default function OrariDetails({ record }) {
                 </div>
             </TabPanel>
         </Paper>
-
     );
 }

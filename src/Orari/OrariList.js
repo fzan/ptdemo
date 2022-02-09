@@ -32,13 +32,6 @@ const OrariSostitutivi = (props) => {
         </div>
     )
 }
-const Rielaborazioni = (props) => {
-    return (
-        <div>
-
-        </div>
-    )
-}
 
 export const OrariList = props => (
     <List {...props} >

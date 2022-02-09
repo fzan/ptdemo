@@ -19,7 +19,7 @@ function CardGenerale(record) {
 
             <List
                 sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-                subheader={<ListSubheader>Tipologia, ore previste e competenza dei risultati</ListSubheader>}
+                subheader={<ListSubheader color="primary">Tipologia, ore previste e competenza dei risultati</ListSubheader>}
             >
                 <TableRow>
                     <TextField id="tipologiaTipo" label="Tipo" defaultValue={record.tipologiaTipo} InputProps={{ readOnly: true }} />
@@ -30,7 +30,7 @@ function CardGenerale(record) {
             </List>
             <List
                 sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-                subheader={<ListSubheader>Intervallo Timbrature</ListSubheader>}
+                subheader={<ListSubheader color="primary">Intervallo Timbrature</ListSubheader>}
             >
                 <TableRow>
                     <TextField id="timbratureDalle" label="Dalle" defaultValue={record.timbratureDalle} InputProps={{ readOnly: true }} />
