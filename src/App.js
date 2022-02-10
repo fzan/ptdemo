@@ -1,5 +1,10 @@
 import React from "react";
 import { Admin, Resource } from "react-admin";
+import merge from 'deepmerge'
+import italianCustom from './Translations/italianCustom'
+import englishCustom from "./Translations/englishCustom"
+import englishMessages from 'ra-language-english'
+import polyglotI18nProvider from 'ra-i18n-polyglot'
 
 import { FasceList } from "./Fasce/FasceList";
 import { FasceEdit } from "./Fasce/FasceEdit";
@@ -37,8 +42,18 @@ import Dashboard from "./Dashboard";
 import authProvider from "./authProvider";
 import dataProvider from "./data";
 
+const raLanguageItalian = require('ra-language-italian');
+
+const messages = {
+  'en': merge(englishMessages, englishCustom),
+  'it': merge(raLanguageItalian, italianCustom)
+};
+
+const i18nProvider = polyglotI18nProvider(locale => messages['it']); //locale
+
+
 const App = () => (
-  <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider} >
+  <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider} i18nProvider={i18nProvider} >
     <Resource name="orarios" list={OrariList} edit={OrariEdit} create={OrariCreate} icon={PostIcon} />
     <Resource name="profilos" />
     <Resource name="vocis" />
