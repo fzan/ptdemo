@@ -10,6 +10,7 @@ import CardOrarioSpeciali from '../Cards/CardOrarioSpeciali'
 import CardEsperto from '../Cards/CardEsperto'
 import CardAvanzato from '../Cards/CardAvanzato'
 import Table from '@material-ui/core/Table'
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles({
     root: {
@@ -47,47 +48,35 @@ export default function OrariDetails({ record }) {
     };
 
     return (
-        <Paper className={classes.root}>
-            <Tabs
-                value={value}
-                onChange={handleChange}
-                indicatorColor="primary"
-                textColor="primary"
-                centered
-            >
-                <Tab label="Generale" />
-                <Tab label="Avanzato" />
-                <Tab label="Esperto" />
-                <Tab label="Orario Speciali" />
-            </Tabs>
-            <TabPanel value={value} index={0}>
-                <div style={{ width: '100%' }}>
-                    <Table style={{ width: 600, margin: 'auto' }} aria-label="simple table" >
-                        <CardGenerale {...record} />
-                    </Table>
-                </div>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-                <div style={{ width: '100%' }}>
-                    <Table style={{ width: 600, margin: 'auto' }} aria-label="simple table" >
-                        <CardAvanzato {...record} />
-                    </Table>
-                </div>
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-                <div style={{ width: '100%' }}>
-                    <Table style={{ width: 600, margin: 'auto' }} aria-label="simple table" >
-                        <CardEsperto {...record} />
-                    </Table>
-                </div>
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-                <div style={{ width: '100%' }}>
-                    <Table style={{ width: 600, margin: 'auto' }} aria-label="simple table" >
-                        <CardOrarioSpeciali {...record} />
-                    </Table>
-                </div>
-            </TabPanel>
-        </Paper>
+        <Grid container spacing={1} style={{ width: "100%" }}>
+            <Grid item xs={2} />
+            <Grid item xs={8}>
+                <Tabs
+                    value={value}
+                    onChange={handleChange}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    centered
+                >
+                    <Tab label="Generale" />
+                    <Tab label="Avanzato" />
+                    <Tab label="Esperto" />
+                    <Tab label="Orario Speciali" />
+                </Tabs>
+                <TabPanel value={value} index={0}>
+                    <CardGenerale {...record} />
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                    <CardAvanzato {...record} />
+                </TabPanel>
+                <TabPanel value={value} index={2}>
+                    <CardEsperto {...record} />
+                </TabPanel>
+                <TabPanel value={value} index={3}>
+                    <CardOrarioSpeciali {...record} />
+                </TabPanel>
+            </Grid>
+            <Grid item xs={2} />
+        </Grid>
     );
 }
