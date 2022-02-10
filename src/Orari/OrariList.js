@@ -1,6 +1,8 @@
 import * as React from "react";
 import { ReferenceField, List, Datagrid, DateField, TextField, BooleanField, NumberField } from "react-admin";
 import OrariDetails from "./OrariDetails";
+import CheckBoxTwoToneIcon from '@material-ui/icons/CheckBoxTwoTone';
+import CheckBoxOutlineBlankTwoToneIcon from '@material-ui/icons/CheckBoxOutlineBlankTwoTone';
 
 const OrePreviste = (props) => {
     return (
@@ -11,7 +13,7 @@ const VisualizzazioneBool = (props) => {
     debugger
     return (
         <div>
-            {props.record[props.source] ? 'SI' : 'NO'}
+            {props.record[props.source] ? <CheckBoxTwoToneIcon /> : <CheckBoxOutlineBlankTwoToneIcon />}
         </div>
     )
 }
@@ -28,7 +30,7 @@ const FasciaTimbrature = (props) => {
 const OrariSostitutivi = (props) => {
     return (
         <div>
-            {(props.record.orariSostitutiviSabato === '' && props.record.orariSostitutiviDomenicaEFestivo === '' && props.record.orariSostitutiviPreFestivo === '') ? 'NO' : 'SI'}
+            {(props.record.orariSostitutiviSabato === '' && props.record.orariSostitutiviDomenicaEFestivo === '' && props.record.orariSostitutiviPreFestivo === '') ?  <CheckBoxOutlineBlankTwoToneIcon /> : <CheckBoxTwoToneIcon />}
         </div>
     )
 }

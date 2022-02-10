@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
+import Select from '@material-ui/core/Select'
+import MenuItem from '@material-ui/core/MenuItem'
 
 export const OrariEdit = props => (
     <Edit {...props}>
@@ -11,8 +13,7 @@ export const OrariEdit = props => (
             <Grid container spacing={1} style={{ width: "100%" }}>
                 <Grid item xs={2} />
                 <Grid item xs={8}>
-                    <Card style={{ padding: '5px', marginBottom: '5px', margin: '5px' }}>
-                        <CardContent style={{ padding: '5px', marginBottom: '5px', margin: '5px' }}>
+
                             <Typography gutterBottom variant="h5" component="div">
                                 Azienda info B
                             </Typography>
@@ -20,10 +21,14 @@ export const OrariEdit = props => (
                                 <SelectInput optionText="descrizione" />
                             </ReferenceInput>
                             <TextInput source="codice" />
-                            <DateInput source="breve" />
+                            <TextInput source="breve" />
                             <TextInput source="descrizione" />
                             <DateInput source="colore" />
-                            <TextInput source="tipologiaTipo" />
+                            <SelectInput source="tipologiaTipo" choices={[
+                                { id: 'Rigido', name: 'Rigido' },
+                                { id: 'Elastico', name: 'Elastico' },
+                                { id: 'Flessibile', name: 'Flessibile' },
+                            ]} />
                             <TextInput source="tipologiaOreBase" />
                             <TextInput source="tipologiaOreMinime" />
                             <TextInput source="tipologiaGiornoDiSalvataggio" />
@@ -40,7 +45,7 @@ export const OrariEdit = props => (
                             <TextInput source="lavoroStraordinarioArrotondamento" />
                             <BooleanInput source="lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare" />
                             <ReferenceInput source="profilosId" reference="profilos">
-                                <SelectInput optionText="id" />
+                                <SelectInput optionText="nome" />
                             </ReferenceInput>
                             <BooleanInput source="compensazioneCompensazioneSelettiva" />
                             <DateInput source="compensazioneCumuloAssenze" />
@@ -66,8 +71,7 @@ export const OrariEdit = props => (
                             <BooleanInput source="strategieGiustificativiFlex" />
                             <BooleanInput source="strategieGiustificativiAssenzaTimbrature" />
                             <BooleanInput source="OmissioneDescrizioneOrdiniServizio" />
-                        </CardContent>
-                    </Card>
+
                 </Grid>
                 <Grid item xs={2} />
             </Grid>
