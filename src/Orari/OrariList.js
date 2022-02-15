@@ -10,7 +10,6 @@ const OrePreviste = (props) => {
     )
 }
 const VisualizzazioneBool = (props) => {
-    debugger
     return (
         <div>
             {props.record[props.source] ? <CheckBoxTwoToneIcon /> : <CheckBoxOutlineBlankTwoToneIcon />}
@@ -30,13 +29,13 @@ const FasciaTimbrature = (props) => {
 const OrariSostitutivi = (props) => {
     return (
         <div>
-            {(props.record.orariSostitutiviSabato === '' && props.record.orariSostitutiviDomenicaEFestivo === '' && props.record.orariSostitutiviPreFestivo === '') ?  <CheckBoxOutlineBlankTwoToneIcon /> : <CheckBoxTwoToneIcon />}
+            {(props.record.orariSostitutiviSabato === '' && props.record.orariSostitutiviDomenicaEFestivo === '' && props.record.orariSostitutiviPreFestivo === '') ? <CheckBoxOutlineBlankTwoToneIcon /> : <CheckBoxTwoToneIcon />}
         </div>
     )
 }
 
 export const OrariList = props => (
-    <List {...props} >
+    <List {...props} bulkActionButtons={false} >
         <Datagrid rowClick="edit" expand={<OrariDetails />}>
             {/* <TextField source="id" /> */}
             {/* <ReferenceField source="orarioId" reference="orarios">

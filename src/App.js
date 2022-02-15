@@ -1,5 +1,5 @@
 import React from "react";
-import { Admin, Resource } from "react-admin";
+import { Admin, ListGuesser, Resource } from "react-admin";
 import merge from 'deepmerge'
 import italianCustom from './Translations/italianCustom'
 import englishCustom from "./Translations/englishCustom"
@@ -34,6 +34,8 @@ import { PauseList } from "./Pause/PauseList";
 import { PauseEdit } from "./Pause/PauseEdit";
 import { PauseCreate } from "./Pause/PauseCreate";
 
+import { VociList } from "./Voci/VociList";
+
 import PostIcon from "@material-ui/icons/Book";
 import UserIcon from "@material-ui/icons/Group";
 import AdbIcon from '@material-ui/icons/Adb';
@@ -56,14 +58,13 @@ const App = () => (
   <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider} i18nProvider={i18nProvider} >
     <Resource name="orarios" list={OrariList} edit={OrariEdit} create={OrariCreate} icon={PostIcon} />
     <Resource name="profilos" />
-    <Resource name="vocis" />
+    <Resource name="vocis" list={VociList} />
     <Resource name="fasceDellaGiornatas" list={FasceList} edit={FasceEdit} create={FasceCreate} icon={UserIcon} />
     <Resource name="fasceDelMonteOres" list={FascedelmonteoreList} edit={FascedelmonteoreEdit} create={FascedelmonteoreCreate} icon={AdbIcon} />
     <Resource name="timbratureTipos" list={TimbraturetipoList} edit={TimbraturetipoEdit} create={TimbraturetipoCreate} icon={UserIcon} />
     <Resource name="arrotondamentoTimbratures" list={ArrotondamentotimbratureList} edit={ArrotondamentotimbratureEdit} create={ArrotondamentotimbratureCreate} icon={UserIcon} />
     <Resource name="arrotondamentoStraordinarios" list={ArrotondamentostraordinarioList} edit={ArrotondamentostraordinarioEdit} create={ArrotondamentostraordinarioCreate} icon={UserIcon} />
     <Resource name="pauses" list={PauseList} edit={PauseEdit} create={PauseCreate} icon={UserIcon} />
-
   </Admin>
 );
 
