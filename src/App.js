@@ -35,6 +35,7 @@ import { PauseEdit } from "./Pause/PauseEdit";
 import { PauseCreate } from "./Pause/PauseCreate";
 
 import { VociList } from "./Voci/VociList";
+import { ProfiliList } from "./Profili/ProfiliList"
 
 import PostIcon from "@material-ui/icons/Book";
 import UserIcon from "@material-ui/icons/Group";
@@ -57,7 +58,7 @@ const i18nProvider = polyglotI18nProvider(locale => messages['it']); //locale
 const App = () => (
   <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider} i18nProvider={i18nProvider} >
     <Resource name="orarios" list={OrariList} edit={OrariEdit} create={OrariCreate} icon={PostIcon} />
-    <Resource name="profilos" />
+    <Resource name="profilos" list={ProfiliList} />
     <Resource name="vocis" list={VociList} />
     <Resource name="fasceDellaGiornatas" list={FasceList} edit={FasceEdit} create={FasceCreate} icon={UserIcon} />
     <Resource name="fasceDelMonteOres" list={FascedelmonteoreList} edit={FascedelmonteoreEdit} create={FascedelmonteoreCreate} icon={AdbIcon} />

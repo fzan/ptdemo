@@ -4,22 +4,32 @@ import TableBody from '@material-ui/core/TableBody'
 import TableRow from '@material-ui/core/TableRow'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import CheckBox from '@material-ui/core/Checkbox'
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles({
+    textInput: {
+        margin: 4
+    }
+});
 
 function CardEsperto(record) {
+    const classes = useStyles();
     return (
         <TableBody>
-            <TableRow width=''>
+            <TableRow>
                 <FormControlLabel control={
                     <CheckBox id="compensazioneCompensazioneSelettiva" checked={record.compensazioneCompensazioneSelettiva} InputProps={{ readOnly: true }} />
                 } label="Compensazione Selettiva" />
-                <TextField id="compensazioneCumuloAssenze" label="Cumulo Assenze" defaultValue={record.compensazioneCumuloAssenze} InputProps={{ readOnly: true }} />
-                <TextField id="compensazioneCumuloStraordinario" label="Cumulo Straordinario" defaultValue={record.compensazioneCumuloStraordinario} InputProps={{ readOnly: true }} />
-                <TextField id="compensazioneMassimale" label="Massimale" defaultValue={record.compensazioneMassimale} InputProps={{ readOnly: true }} />
+            </TableRow>
+            <TableRow >
+                <TextField id="compensazioneCumuloAssenze" label="Cumulo Assenze" defaultValue={record.compensazioneCumuloAssenze} InputProps={{ readOnly: true }} className={classes.textInput} />
+                <TextField id="compensazioneCumuloStraordinario" label="Cumulo Straordinario" defaultValue={record.compensazioneCumuloStraordinario} InputProps={{ readOnly: true }} className={classes.textInput} />
+                <TextField id="compensazioneMassimale" label="Massimale" defaultValue={record.compensazioneMassimale} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <FormControlLabel control={
                     <CheckBox id="compensazioneSaldoPositivo" checked={record.compensazioneSaldoPositivo} InputProps={{ readOnly: true }} />
                 } label="Saldo Positivo" />
             </TableRow>
-            <TableRow width=''>
+            <TableRow >
                 <FormControlLabel control={
                     <CheckBox id="compensazioneFasceSeAssenza" checked={record.compensazioneFasceSeAssenza} InputProps={{ readOnly: true }} />
                 } label="Fasce se Assenza" />
@@ -29,11 +39,13 @@ function CardEsperto(record) {
                 <FormControlLabel control={
                     <CheckBox id="compensazioneDeduzioneAdattivaTimbratureTipo" checked={record.compensazioneDeduzioneAdattivaTimbratureTipo} InputProps={{ readOnly: true }} />
                 } label="Deduzione Adattiva Timbrature Tipo" />
-                <TextField id="compensazioneSequenzeEu" label="Sequenze Eu" defaultValue={record.compensazioneSequenzeEu} InputProps={{ readOnly: true }} />
             </TableRow>
-            <TableRow width=''>
-                <TextField id="compensazioneTimbratureFuoriFasciaElastica" label="Timbrature fuori fascia Elastica" defaultValue={record.compensazioneTimbratureFuoriFasciaElastica} InputProps={{ readOnly: true }} />
-                <TextField id="compensazioneSpostaTimbraturaTipo" label="Sposta Timbratura Tipo" defaultValue={record.compensazioneSpostaTimbraturaTipo} InputProps={{ readOnly: true }} />
+            <TableRow >
+                <TextField id="compensazioneSequenzeEu" label="Sequenze Eu" defaultValue={record.compensazioneSequenzeEu} InputProps={{ readOnly: true }} className={classes.textInput} />
+                <TextField id="compensazioneTimbratureFuoriFasciaElastica" style={{ width: 250 }} label="Timbrature fuori fascia Elastica" defaultValue={record.compensazioneTimbratureFuoriFasciaElastica} InputProps={{ readOnly: true }} className={classes.textInput} />
+                <TextField id="compensazioneSpostaTimbraturaTipo" label="Sposta Timbratura Tipo" defaultValue={record.compensazioneSpostaTimbraturaTipo} InputProps={{ readOnly: true }} className={classes.textInput} />
+            </TableRow>
+            <TableRow>
                 <FormControlLabel control={
                     <CheckBox id="compensazioneDisattivaFasceDopoIndividuaTipo" checked={record.compensazioneDisattivaFasceDopoIndividuaTipo} InputProps={{ readOnly: true }} />
                 } label="Disattiva fasce dopo individua Tipo" />

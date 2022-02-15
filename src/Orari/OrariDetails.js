@@ -1,6 +1,5 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
@@ -9,7 +8,6 @@ import CardGenerale from '../Cards/CardGenerale'
 import CardOrarioSpeciali from '../Cards/CardOrarioSpeciali'
 import CardEsperto from '../Cards/CardEsperto'
 import CardAvanzato from '../Cards/CardAvanzato'
-import Table from '@material-ui/core/Table'
 import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles({
@@ -31,7 +29,7 @@ function TabPanel(props) {
         >
             {value === index && (
                 <Box p={3}>
-                    <Typography>{children}</Typography>
+                    {children}
                 </Box>
             )}
         </div>
@@ -49,8 +47,8 @@ export default function OrariDetails({ record }) {
 
     return (
         <Grid container spacing={1} style={{ width: "100%" }}>
-            <Grid item xs={2} />
-            <Grid item xs={8}>
+            <Grid item xs={1} />
+            <Grid item xs={10}>
                 <Tabs
                     value={value}
                     onChange={handleChange}
@@ -76,7 +74,7 @@ export default function OrariDetails({ record }) {
                     <CardOrarioSpeciali {...record} />
                 </TabPanel>
             </Grid>
-            <Grid item xs={2} />
+            <Grid item xs={1} />
         </Grid>
     );
 }

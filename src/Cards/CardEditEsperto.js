@@ -5,13 +5,13 @@ import { FormDataConsumer } from 'react-admin'
 import TableBody from '@material-ui/core/TableBody'
 import { makeStyles } from '@material-ui/core/styles'
 
-const validateHoursFormat = regex(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Inserire un orario Valido (HH:mm)')
-
 const useStyles = makeStyles({
     textInput: {
         margin: 4
     }
 });
+
+const validateHoursFormat = regex(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Inserire un orario Valido (HH:mm)')
 
 function CardEditEsperto(record) {
     const classes = useStyles();

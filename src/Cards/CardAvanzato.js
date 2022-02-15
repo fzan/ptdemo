@@ -6,8 +6,17 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import CheckBox from '@material-ui/core/Checkbox'
 import List from '@material-ui/core/List'
 import ListSubheader from '@material-ui/core/ListSubheader'
+import { makeStyles } from '@material-ui/core/styles'
+import { ReferenceField } from 'react-admin'
+
+const useStyles = makeStyles({
+    textInput: {
+        margin: 4
+    }
+});
 
 function CardAvanzato(record) {
+    const classes = useStyles();
     return (
         <TableBody>
             <TableRow>
@@ -15,9 +24,9 @@ function CardAvanzato(record) {
                     sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
                     subheader={<ListSubheader color="primary">Orari Sostitutivi</ListSubheader>}
                 >
-                    <TextField id="orariSostitutiviSabato" label="Sabato" defaultValue={record.orariSostitutiviSabato} InputProps={{ readOnly: true }} />
-                    <TextField id="orariSostitutiviDomenicaEFestivo" label="Domenica e Festivi" defaultValue={record.orariSostitutiviDomenicaEFestivo} InputProps={{ readOnly: true }} />
-                    <TextField id="orariSostitutiviPreFestivo" label="PreFestivo" defaultValue={record.orariSostitutiviPreFestivo} InputProps={{ readOnly: true }} />
+                    <TextField id="orariSostitutiviSabato" label="Sabato" defaultValue={record.orariSostitutiviSabato} InputProps={{ readOnly: true }} className={classes.textInput} />
+                    <TextField id="orariSostitutiviDomenicaEFestivo" label="Domenica e Festivi" defaultValue={record.orariSostitutiviDomenicaEFestivo} InputProps={{ readOnly: true }} className={classes.textInput} />
+                    <TextField id="orariSostitutiviPreFestivo" label="PreFestivo" defaultValue={record.orariSostitutiviPreFestivo} InputProps={{ readOnly: true }} className={classes.textInput} />
                 </List>
             </TableRow>
             <TableRow>
@@ -54,11 +63,23 @@ function CardAvanzato(record) {
                     sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
                     subheader={<ListSubheader color="primary">Profilo di rielaborazione</ListSubheader>}
                 >
-                    <TextField id="profilosId" label="PROFILOID" defaultValue={record.profilosId} InputProps={{ readOnly: true }} />
+
+                    <ReferenceField source="profilosId" reference="profilos" link={false}>
+                        <Gianfe />
+                    </ReferenceField>
+
                 </List>
             </TableRow>
         </TableBody>
     );
+}
+
+const Gianfe = (props) => {
+    return (
+        <div>
+            <TextField  label="Profilo" defaultValue={props.record.nome} InputProps={{ readOnly: true }} />
+        </div>
+    )
 }
 
 export default CardAvanzato;

@@ -6,8 +6,16 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import CheckBox from '@material-ui/core/Checkbox'
 import List from '@material-ui/core/List'
 import ListSubheader from '@material-ui/core/ListSubheader'
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles({
+    textInput: {
+        margin: 4
+    }
+});
 
 function CardOrarioSpeciali(record) {
+    const classes = useStyles();
     return (
         <TableBody>
             <List
@@ -31,8 +39,8 @@ function CardOrarioSpeciali(record) {
                 subheader={<ListSubheader color="primary">Ore teoriche e tipologia della giornata</ListSubheader>}
             >
                 <TableRow width=''>
-                    <TextField id="oreTeoricheHHTeoriche" label="HH teoriche" defaultValue={record.oreTeoricheHHTeoriche} InputProps={{ readOnly: true }} />
-                    <TextField id="oreTeoricheTipoGG" label="Tipo GG" defaultValue={record.oreTeoricheTipoGG} InputProps={{ readOnly: true }} />
+                    <TextField id="oreTeoricheHHTeoriche" label="HH teoriche" defaultValue={record.oreTeoricheHHTeoriche} InputProps={{ readOnly: true }} className={classes.textInput} />
+                    <TextField id="oreTeoricheTipoGG" label="Tipo GG" defaultValue={record.oreTeoricheTipoGG} InputProps={{ readOnly: true }} className={classes.textInput} />
                 </TableRow>
             </List>
             <List

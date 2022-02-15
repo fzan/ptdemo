@@ -34,7 +34,7 @@ const SettingTime = (props) => {
     const inputValue = useInput(props)
     const onChange = inputValue.input.onChange
     return (
-        <div>
+        <>
             <TableRow>
                 <span>
                     <TextInput source={props.source} onClick={() => setShowTime(true)} label={props.label} InputProps={{ readOnly: true }} />
@@ -50,7 +50,7 @@ const SettingTime = (props) => {
                     />
                 )}
             </TableRow>
-        </div>
+        </>
     )
 }
 
