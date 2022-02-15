@@ -1,33 +1,61 @@
-import * as React from "react"
+import * as React from 'react'
 import { useState } from 'react'
-import { Edit, TextInput, SelectInput, BooleanInput, NumberInput, ReferenceInput, SimpleForm, DateInput, TextField } from "react-admin"
-import Grid from '@material-ui/core/Grid'
+import { TextInput, SelectInput, BooleanInput, NumberInput, useInput, FormDataConsumer, regex, required } from 'react-admin'
 import Typography from '@material-ui/core/Typography'
-import { useInput, FormDataConsumer } from 'react-admin'
 import TimeKeeper from 'react-timekeeper'
 import TableBody from '@material-ui/core/TableBody'
 import TableRow from '@material-ui/core/TableRow'
-import { ColorPicker, createColor } from "material-ui-color"
+import { ColorPicker } from 'material-ui-color'
+import { makeStyles } from '@material-ui/core/styles'
 
-const ColorPickerGianf = (props) => {
+const validateHoursFormat = regex(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Inserire un orario Valido (HH:mm)')
+
+const useStyles = makeStyles({
+    textInput: {
+        margin: 4
+    }
+});
+
+const ColorPickerCustom = (props) => {
     const {
         input: { name, onChange, value, ...rest },
         meta: { touched, error }
     } = useInput(props)
-    console.log(props.value)
     return (
         <>
-            <span style={{ verticalAlign: 'bottom' }}>Colore </span>
-            <ColorPicker
-                value={value}
-                onChange={onChange}
-            ></ColorPicker>
-            <div></div>
+            <span style={{ verticalAlign: 'bottom' }}>Colore</span>
+            <ColorPicker value={value} onChange={onChange} />
         </>
     )
 }
 
+const SettingTime = (props) => {
+    const [showTime, setShowTime] = useState(false);
+    const inputValue = useInput(props)
+    const onChange = inputValue.input.onChange
+    return (
+        <div>
+            <TableRow>
+                <span>
+                    <TextInput source={props.source} onClick={() => setShowTime(true)} label={props.label} InputProps={{ readOnly: true }} />
+                </span>
+            </TableRow>
+            <TableRow>
+                {showTime && (
+                    <TimeKeeper
+                        time={props.value}
+                        onChange={(data) => onChange(data.formatted24)}
+                        onDoneClick={() => setShowTime(false)}
+                        switchToMinuteOnHourSelect
+                    />
+                )}
+            </TableRow>
+        </div>
+    )
+}
+
 function CardEditGenerale(record) {
+    const classes = useStyles();
     return (
         <TableBody>
             <FormDataConsumer>
@@ -37,54 +65,55 @@ function CardEditGenerale(record) {
                     </Typography>
                 )}
             </FormDataConsumer>
-            <br />
+
+            <TextInput source="codice" className={classes.textInput} />
+            <TextInput source="breve" className={classes.textInput} />
+            <TextInput source="descrizione" className={classes.textInput} />
+
             <TableRow>
-                <TextInput source="codice" />
-                <TextInput source="breve" />
-                <TextInput source="descrizione" />
+                <FormDataConsumer>
+                    {({ formData, ...rest }) => (
+                        <ColorPickerCustom source="colore" value={formData.colore} {...record} />
+                    )}
+                </FormDataConsumer>
             </TableRow>
-            {/* <TextField source="breve" label="PEPPINIELLO" addLabel={true} /> */}
-            {/* <Typography gutterBottom variant="h8" component="div">
-                Colore
-            </Typography>*/}
-
-            {/* <TextField source="breve" label="PEPPINIELLO" addLabel={true} /> */}
-            <FormDataConsumer>
-                {({ formData, ...rest }) => (
-                    <ColorPickerGianf source="colore" value={formData.colore} {...record} />
-                )}
-            </FormDataConsumer>
-
-            <br />
             <br />
             <Typography gutterBottom variant="h7" component="div">
                 Tipologia, ore previste e competenza dei risultati
             </Typography>
 
             <TableRow>
-                <SelectInput source="tipologiaTipo" label="Tipo" allowEmpty="True"  choices={[
+                <SelectInput source="tipologiaTipo" label="Tipo" allowEmpty="True" className={classes.textInput} choices={[
                     { id: 'Rigido', name: 'Rigido' },
                     { id: 'Elastico', name: 'Elastico' },
                     { id: 'Flessibile', name: 'Flessibile' },
                 ]} />
-                <TextInput source="tipologiaOreBase" label="Ore Base" keyboardType='numeric' />
-                <TextInput source="tipologiaOreMinime" label="Ore Minime" />
+                <TextInput source="tipologiaOreBase" label="Ore Base" className={classes.textInput} validate={[required(), validateHoursFormat]} />
+                <TextInput source="tipologiaOreMinime" label="Ore Minime" className={classes.textInput} validate={[required(), validateHoursFormat]} />
             </TableRow>
-            <SelectInput source="tipologiaGiornoDiSalvataggio" allowEmpty="True"  choices={[
+            <SelectInput source="tipologiaGiornoDiSalvataggio" allowEmpty="True" choices={[
                 { id: 'Entrata', name: 'ENTRATA - Tutto sul GG di Ingresso' },
                 { id: 'Uscita', name: 'USCITA - Tutto sul GG di Uscita' },
                 { id: 'Cavaliere', name: 'CAVALIERE - Seleettivo' },
             ]} />
             <br />
-            <br />
-
             <Typography gutterBottom variant="h7" component="div">
                 Intervallo Timbrature
             </Typography>
 
             <TableRow>
-                <DateInput source="timbratureDalle" label="Dalle" />
-                <DateInput source="timbratureAlle" label="Alle" />
+                <FormDataConsumer>
+                    {({ formData, ...rest }) => (
+                        <SettingTime source="timbratureDalle" value={formData.timbratureDalle} label="Dalle" {...record} />
+                    )}
+                </FormDataConsumer>
+
+                <FormDataConsumer>
+                    {({ formData, ...rest }) => (
+                        <SettingTime source="timbratureAlle" value={formData.timbratureDalle} label="Alle" {...record} />
+                    )}
+                </FormDataConsumer>
+
                 <NumberInput source="timbratureGiorniSuccessiviPerTimbratura" label="giorni dopo" />
             </TableRow>
 

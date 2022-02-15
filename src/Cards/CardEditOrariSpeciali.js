@@ -1,14 +1,17 @@
 import * as React from "react"
-import { useState } from 'react'
-import { Edit, TextInput, SelectInput, BooleanInput, NumberInput, ReferenceInput, SimpleForm, DateInput, TextField } from "react-admin"
-import Grid from '@material-ui/core/Grid'
+import { SelectInput, BooleanInput, FormDataConsumer } from "react-admin"
 import Typography from '@material-ui/core/Typography'
-import { useInput, FormDataConsumer } from 'react-admin'
-import TimeKeeper from 'react-timekeeper'
 import TableBody from '@material-ui/core/TableBody'
-import TableRow from '@material-ui/core/TableRow'
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles({
+    textInput: {
+        margin: 4
+    }
+});
 
 function CardEditOrariSpeciali(record) {
+    const classes = useStyles();
     return (
         <TableBody>
             <FormDataConsumer>
@@ -29,11 +32,11 @@ function CardEditOrariSpeciali(record) {
             <Typography gutterBottom variant="h7" component="div">
                 Ore teoriche e tipologia della giornata
             </Typography>
-            <SelectInput source="oreTeoricheHHTeoriche" label="HH teoriche" allowEmpty="True" choices={[
+            <SelectInput source="oreTeoricheHHTeoriche" label="HH teoriche" allowEmpty="True" className={classes.textInput} choices={[
                 { id: 'minime', name: 'Minime' },
                 { id: 'base', name: 'Base' },
             ]} />
-            <SelectInput source="oreTeoricheTipoGG" label="Tipo GG" allowEmpty="True" choices={[
+            <SelectInput source="oreTeoricheTipoGG" label="Tipo GG" allowEmpty="True" className={classes.textInput} choices={[
                 { id: 'lavorativo', name: 'Lavorativo' },
                 { id: 'nonLavorativo', name: 'Non Lavorativo' },
                 { id: 'festivo', name: 'Festivo' },

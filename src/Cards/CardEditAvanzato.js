@@ -1,14 +1,18 @@
 import * as React from "react"
-import { useState } from 'react'
-import { Edit, TextInput, SelectInput, BooleanInput, NumberInput, ReferenceInput, SimpleForm, DateInput, TextField } from "react-admin"
-import Grid from '@material-ui/core/Grid'
+import { SelectInput, BooleanInput, ReferenceInput, FormDataConsumer } from "react-admin"
 import Typography from '@material-ui/core/Typography'
-import { useInput, FormDataConsumer } from 'react-admin'
-import TimeKeeper from 'react-timekeeper'
 import TableBody from '@material-ui/core/TableBody'
 import TableRow from '@material-ui/core/TableRow'
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles({
+    textInput: {
+        margin: 4
+    }
+});
 
 function CardEditAvanzato(record) {
+    const classes = useStyles();
     return (
         <TableBody>
             <FormDataConsumer>
@@ -23,13 +27,13 @@ function CardEditAvanzato(record) {
                 Orari Sostitutivi
             </Typography>
             <TableRow>
-                <ReferenceInput source="orariSostitutiviSabato" label="Sabato" allowEmpty="True" reference="orarios">
+                <ReferenceInput source="orariSostitutiviSabato" label="Sabato" allowEmpty="True" reference="orarios" className={classes.textInput}>
                     <SelectInput optionText="descrizione" />
                 </ReferenceInput>
-                <ReferenceInput source="orariSostitutiviDomenicaEFestivo" style={{ width: 200 }} label="Domenica e Festivo" allowEmpty="True" reference="orarios">
+                <ReferenceInput source="orariSostitutiviDomenicaEFestivo" style={{ width: 200 }} label="Domenica e Festivo" allowEmpty="True" reference="orarios" className={classes.textInput}>
                     <SelectInput optionText="descrizione" />
                 </ReferenceInput>
-                <ReferenceInput source="orariSostitutiviPreFestivo" label="PreFestivo" allowEmpty="True" reference="orarios">
+                <ReferenceInput source="orariSostitutiviPreFestivo" label="PreFestivo" allowEmpty="True" reference="orarios" className={classes.textInput}>
                     <SelectInput optionText="descrizione" />
                 </ReferenceInput>
             </TableRow>
@@ -46,7 +50,7 @@ function CardEditAvanzato(record) {
             </Typography>
 
             <BooleanInput source="lavoroStraordinarioAutorizzato" />
-            <SelectInput source="lavoroStraordinarioArrotondamento" label="Arrotondamento" allowEmpty="True"  choices={[
+            <SelectInput source="lavoroStraordinarioArrotondamento" label="Arrotondamento" allowEmpty="True" choices={[
                 { id: 'ogniSingolaVoce', name: 'Ogni singola voce' },
                 { id: 'titolare', name: 'Solo il titolare' },
                 { id: 'primaSingolaVoce', name: 'Prima ogni singola voce' },
