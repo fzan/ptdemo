@@ -155,6 +155,8 @@ const dataProvider = localStorageDataProvider({
         fasceDellaGiornatas: [
             { id: 1, orarioId: 1, causale: 'Notturno 2', dalle: '00:00', alle: '04:59', priorita: 0 },
             { id: 2, orarioId: 1, causale: 'Notturno 2', dalle: '20:00', alle: '23:59', priorita: 0 },
+            { id: 6, orarioId: 1, causale: 'Antonio 2', dalle: '00:00', alle: '04:59', priorita: 0 },
+            { id: 7, orarioId: 1, causale: 'Giuseppe 2', dalle: '20:00', alle: '23:59', priorita: 0 },
             { id: 3, orarioId: 2, causale: 'Notturno 2', dalle: '20:00', alle: '23:59', priorita: 0 },
             { id: 4, orarioId: 3, causale: 'Notturno 2', dalle: '00:00', alle: '04:59', priorita: 0 },
             { id: 5, orarioId: 3, causale: 'Notturno 2', dalle: '20:00', alle: '23:59', priorita: 0 }
