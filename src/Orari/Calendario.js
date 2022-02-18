@@ -1,186 +1,193 @@
-import React, { useContext, useState } from 'react'
-import { useAuthenticated } from 'react-admin';
-import { useTranslate } from 'react-admin';
-
+import React from 'react'
+import FullCalendar, { formatDate } from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
+// import interactionPlugin from '@fullcalendar/interaction'
+import { INITIAL_EVENTS, createEventId } from './event-utils'
 // import { Calendar } from '@fullcalendar/core';
-import FullCalendar, { formatDate } from "@fullcalendar/react";
-import Calendar from "@daypilot/daypilot-lite-react"
-import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid";
-// import interactionPlugin from "@fullcalendar/interaction";
-//import rrulePlugin from '@fullcalendar/rrule'
-import itLocale from '@fullcalendar/core/locales/it';
+import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
 
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Select from '@material-ui/core/Select';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import DeleteIcon from '@material-ui/icons/Delete';
+const events = [
+  { title: "ENTRATA", id: "1", color: "green" },
+  { title: "USCITA", id: "2", color: "red" }
+]
 
-// import { CalendarContext } from "./Calendars"
+export default class DemoApp extends React.Component {
 
-let Calenda = (props) => {
-  // useAuthenticated()
+  state = {
+    weekendsVisible: true,
+    currentEvents: []
+  }
 
-  // const [modal, setModal, events, setEvents, selection, setSelection, addHoliday, removeHoliday] = useContext(CalendarContext);
-  //if (events && events.length > 0) debugger;
+  componentDidMount() {
+    let draggableEl = document.getElementById("external-events");
+    new Draggable(draggableEl, {
+      itemSelector: ".fc-event",
+      eventData: function (eventEl) {
+        debugger
+        let title = eventEl.getAttribute("title");
+        let color = eventEl.getAttribute("color");
+        let id = eventEl.getAttribute("data");
+        return {
+          title: title,
+          id: id,
+          overlap: false,
+          backgroundColor: color
+        };
+      }
+    });
+  }
 
-  return <>
-    <FullCalendar //Calendar
-      plugins={[dayGridPlugin, timeGridPlugin]} //, interactionPlugin
-      // headerToolbar={{
-      //     // left: "prev,next today",
-      //     // center: "title",
-      //     right: "timeGridDay" //,timeGridWeek,timeGridDay
-      // }}
-      initialView="timeGridDay"
-      editable={true}
-      selectable={true}
-      selectMirror={true}
-      dayMaxEvents={true}
-      weekends={true}
-      allDayContent={false}
-      stickyHeaderDates={false}
-      allowEventOverlap={false}
-      locale={itLocale}
-      contentHeight="auto"
-      slotDuration={'00:30:00'}
-      headerToolbar={false}
-      dayHeaders={false}
-      events={[
-        {
-          title: 'Andonio',
-          start: '2022-02-17T03:30:00',
-          end: '2022-02-17T05:30:00'
-        },
-      ]}
-      // events={events} // alternatively, use the `events` setting to fetch from a feed
-      // select={null} //this.handleDateSelect))
-      // eventContent={(eventInfo) => renderEventContent(eventInfo, removeHoliday)} // custom render function
-      // dateClick={(event) => {
-      //     setSelection(event)
-      //     setModal(true)
-      // }} //this.handleEventClick
-      eventsSet={null} // called after events are initialized/added/changed/removed this.handleEvents
-      /*dayCellContent={(date, cell) => {
-         //BADGES
-          return (
-              <React.Fragment><i class="fa fa-plane" aria-hidden="true">{date.dayNumberText}</i></React.Fragment>
-      )}}*/
-      /* you can update a remote database when these fire:
-      eventAdd={function(){}}
-      eventChange={function(){}}
-      eventRemove={function(){}}
-      */
-      dateClick={(info) => {
-        alert('clicked ' + info.dateStr);
-      }}
-      select={(info) => {
-        alert('selected ' + info.startStr + ' to ' + info.endStr);
-      }}
-    />
-    {/* <FormDialog /> */}
-  </>
+  render() {
+    return (
+      <div className='demo-app'>
+        {this.renderSidebar()}
+        <div
+          id="external-events"
+          style={{
+            padding: "10px",
+            width: "80%",
+            height: "auto",
+            maxHeight: "-webkit-fill-available"
+          }}
+        >
+          <p align="center">
+            <strong> Events</strong>
+          </p>
+          {events.map(event => (
+            <div
+              className="fc-event"
+              title={event.title}
+              data={event.id}
+              key={event.id}
+              style={{ backgroundColor: event.color }}
+              color={event.color}
+              overlap={false}
+            >
+              {event.title}
+            </div>
+          ))}
+        </div>
+        <div className='demo-app-main'>
+          <FullCalendar
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            headerToolbar={{
+              left: 'myCustomButton'
+            }}
+            customButtons={{
+              myCustomButton: {
+                text: 'Cambio Fasce Orarie',
+                click: function () {
+                  alert('modifica componente!');
+                },
+              },
+            }}
+            initialView='timeGridDay'
+            editable={true}
+            selectable={true}
+            selectMirror={true}
+            dayMaxEvents={true}
+            weekends={this.state.weekendsVisible}
+            initialEvents={INITIAL_EVENTS} // alternatively, use the `events` setting to fetch from a feed
+            select={this.handleDateSelect}
+            eventContent={renderEventContent} // custom render function
+            eventClick={this.handleEventClick}
+            eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
+            droppable={true}
+          /* you can update a remote database when these fire:
+          eventAdd={function(){}}
+          eventChange={function(){}}
+          eventRemove={function(){}}
+          */
+          />
+        </div>
+      </div>
+    )
+  }
+
+  renderSidebar() {
+    return (
+      <div className='demo-app-sidebar'>
+        <div className='demo-app-sidebar-section'>
+          <h2>Instructions</h2>
+          <ul>
+            <li>Select dates and you will be prompted to create a new event</li>
+            <li>Drag, drop, and resize events</li>
+            <li>Click an event to delete it</li>
+          </ul>
+        </div>
+        <div className='demo-app-sidebar-section'>
+          <label>
+            <input
+              type='checkbox'
+              checked={this.state.weekendsVisible}
+              onChange={this.handleWeekendsToggle}
+            ></input>
+            toggle weekends
+          </label>
+        </div>
+        <div className='demo-app-sidebar-section'>
+          <h2>All Events ({this.state.currentEvents.length})</h2>
+          <ul>
+            {this.state.currentEvents.map(renderSidebarEvent)}
+          </ul>
+        </div>
+      </div>
+    )
+  }
+
+  handleWeekendsToggle = () => {
+    this.setState({
+      weekendsVisible: !this.state.weekendsVisible
+    })
+  }
+
+  handleDateSelect = (selectInfo) => {
+    let title = prompt('Please enter a new title for your event')
+    let calendarApi = selectInfo.view.calendar
+
+    calendarApi.unselect() // clear date selection
+
+    if (title) {
+      calendarApi.addEvent({
+        id: createEventId(),
+        title,
+        start: selectInfo.startStr,
+        end: selectInfo.endStr,
+        allDay: false,
+
+      })
+    }
+  }
+
+  handleEventClick = (clickInfo) => {
+    if (window.confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+      clickInfo.event.remove()
+    }
+  }
+
+  handleEvents = (events) => {
+    this.setState({
+      currentEvents: events
+    })
+  }
+
 }
 
-// const renderEventContent = (eventInfo, removeHoliday) => {
-//     return (
-//         <div style={{ padding: "1px" }}>
-//             <i>{eventInfo.event.title}</i> <span style={{ float: "right" }}>
-//                 <DeleteIcon onClick={() => {
-//                     const id = eventInfo.event.id
-//                     removeHoliday(id)
-//                 }
-//             }/></span>
-//         </div>
-//     );
-// }
+function renderEventContent(eventInfo) {
+  return (
+    <>
+      <b>{eventInfo.timeText}</b>
+      <i>{eventInfo.event.title}</i>
+    </>
+  )
+}
 
-
-// const FormDialog = (props) => {
-
-//     const translate = useTranslate()
-//     const [modal,
-//         setModal,
-//         events,
-//         setEvents,
-//         selection,
-//         setSelection,
-//         addHoliday,
-//         removeHoliday] = useContext(CalendarContext);
-//     const [name, setName] = useState("")
-//     const [type,setType] = useState("Yearly")
-
-//     const handleClickOpen = () => {
-//         setModal(true);
-//     };
-
-//     const handleClose = () => {
-//         setName("")
-//         setModal(false)
-//     };
-
-//     const handleSubmit = (selection, data) => {
-
-//         addHoliday(selection.dateStr,data)
-//         setName("")
-//         setModal(false)
-
-//     };
-
-//     return (
-//         <div>
-//             <Dialog
-//                 maxWidth={'lg'}
-//                 open={modal}
-//                 onClose={handleClose}
-//                 aria-labelledby="form-dialog-title"
-//             >
-//                 <DialogTitle id="form-dialog-title">{translate("resources.Calendars.holidayDialogTitle")}</DialogTitle>
-//                 <DialogContent>
-//                     {/*<DialogContentText>
-//                         Impostazioni Festività
-//                     </DialogContentText>*/}
-//                     <TextField
-
-//                         autoFocus
-//                         margin="dense"
-//                         id="name"
-//                         label="Nome festa"
-//                         onChange={(event) => setName(event.target.value)}
-//                         value={name}
-//                     />
-//                     <br />
-//                     <br />
-//                     &nbsp;
-//                     <InputLabel id="holiday-type">Tipo festività</InputLabel>
-//                     <Select
-//                         labelId="holiday-type"
-//                         id="holiday-type-select"
-//                         value={type}
-//                         onChange={(event) => setType(event.target.value)}
-//                     >
-//                         <MenuItem value={"Yearly"}>Ripetuta annualmente</MenuItem>
-//                         <MenuItem value={"Daily"}>Singola</MenuItem>
-
-//                     </Select>
-//                 </DialogContent>
-//                 <DialogActions>
-//                     <Button onClick={handleClose} color="primary">
-//                         Cancella
-//                     </Button>
-//                     <Button onClick={() => handleSubmit(selection, { name, type })} color="primary">
-//                         conferma
-//                     </Button>
-//                 </DialogActions>
-//             </Dialog>
-//         </div>
-//     );
-// }
-
-export default Calenda
+function renderSidebarEvent(event) {
+  return (
+    <li key={event.id}>
+      <b>{formatDate(event.start, { year: 'numeric', month: 'short', day: 'numeric' })}</b>
+      <i>{event.title}</i>
+    </li>
+  )
+}
