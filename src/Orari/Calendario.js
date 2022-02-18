@@ -4,8 +4,9 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 // import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from './event-utils'
-// import { Calendar } from '@fullcalendar/core';
 import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
+
+const DataStandard = "2020-01-01"
 
 const events = [
   { title: "ENTRATA", id: "1", color: "green" },
@@ -14,6 +15,8 @@ const events = [
 
 export default class DemoApp extends React.Component {
 
+  calendarRef = React.createRef();
+
   state = {
     weekendsVisible: true,
     currentEvents: []
@@ -21,10 +24,10 @@ export default class DemoApp extends React.Component {
 
   componentDidMount() {
     let draggableEl = document.getElementById("external-events");
+    this.calendarRef.current.getApi().gotoDate(DataStandard);
     new Draggable(draggableEl, {
       itemSelector: ".fc-event",
       eventData: function (eventEl) {
-        debugger
         let title = eventEl.getAttribute("title");
         let color = eventEl.getAttribute("color");
         let id = eventEl.getAttribute("data");
@@ -68,11 +71,14 @@ export default class DemoApp extends React.Component {
             </div>
           ))}
         </div>
+
         <div className='demo-app-main'>
           <FullCalendar
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             headerToolbar={{
-              left: 'myCustomButton'
+              left: "myCustomButton",
+              // center: "title",
+              right: '' //,timeGridWeek,timeGridDay
             }}
             customButtons={{
               myCustomButton: {
@@ -90,10 +96,11 @@ export default class DemoApp extends React.Component {
             weekends={this.state.weekendsVisible}
             initialEvents={INITIAL_EVENTS} // alternatively, use the `events` setting to fetch from a feed
             select={this.handleDateSelect}
-            eventContent={renderEventContent} // custom render function
+            // eventContent={renderEventContent} // custom render function (al click)
             eventClick={this.handleEventClick}
-            eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
+            // eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
             droppable={true}
+            ref={this.calendarRef}
           /* you can update a remote database when these fire:
           eventAdd={function(){}}
           eventChange={function(){}}
@@ -155,7 +162,6 @@ export default class DemoApp extends React.Component {
         start: selectInfo.startStr,
         end: selectInfo.endStr,
         allDay: false,
-
       })
     }
   }
@@ -171,7 +177,6 @@ export default class DemoApp extends React.Component {
       currentEvents: events
     })
   }
-
 }
 
 function renderEventContent(eventInfo) {
