@@ -5,12 +5,10 @@ import CardEditAvanzato from "../Cards/CardEditAvanzato"
 import CardEditOrariSpeciali from "../Cards/CardEditOrariSpeciali"
 import CardEditEsperto from "../Cards/CardEditEsperto"
 import Grid from '@material-ui/core/Grid'
-import { ReferenceManyField, SingleFieldList, ChipField, Datagrid, TextField, useTranslate } from 'react-admin'
+import { useTranslate } from 'react-admin'
 import Button from '@material-ui/core/Button'
-import DeleteButtonWithConfirmation from '../Common/DeleteButtonWithConfirmation'
 import { Link } from 'react-router-dom'
 import Calenda from './Calendario'
-import Calendar from './Calendar'
 
 export const OrariEdit = props => {
     const redirectPayCodes = props.id ? `/Schedules/${props.id}/1` : null
@@ -33,23 +31,7 @@ export const OrariEdit = props => {
                             <CardEditOrariSpeciali {...props.record} />
                         </FormTab>
                         <FormTab label="Fasce di Giornata">
-                            {/* <ReferenceManyField reference="fasceDellaGiornatas" target="orarioId">
-                                <Datagrid>
-                                    <TextField source="causale" />
-                                    <DeleteButtonWithConfirmation redirect={redirectPayCodes} undoable={false} />
-                                </Datagrid>
-                            </ReferenceManyField>
-                            <CreateScheduleRoundButton /> */}
-                            {/* <TimeRange data={[]} ></TimeRange> */}
-                            {/* <TimeRangePicker hourmarkers hourlines timeupdate={pickerupdate} /> */}
-                            {/* <TimePicker/> */}
-                            {/* <Timesheet/> */}
-                            {/* <Calendar /> */}
                             <Calenda />
-
-                        </FormTab>
-                        <FormTab label="Test">
-                            <Calendar/>
                         </FormTab>
                     </TabbedForm>
                 </Grid>
