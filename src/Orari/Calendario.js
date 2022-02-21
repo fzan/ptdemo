@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FullCalendar, { formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
@@ -7,6 +7,10 @@ import { INITIAL_EVENTS, createEventId } from './event-utils'
 import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
 import Grid from '@material-ui/core/Grid'
 import { withDataProvider } from 'react-admin'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css'; // needs additional webpack config!
+import bootstrap5Plugin from '@fullcalendar/bootstrap5';
+
 
 const DataStandard = "2020-01-01"
 
@@ -21,15 +25,16 @@ class DemoApp extends React.Component {
 
   state = {
     weekendsVisible: true,
-    currentEvents: []
+    currentEvents: [],
+    defaultSlotDuration: ['01:00:00', '00:30:00', '00:15:00', '00:10:00', '00:05:00'],
+    slotDuration: 0
   }
 
   componentDidMount() {
-    debugger
     this.props.dataProvider.getList('orarios', { pagination: { page: 1, perPage: 10000 }, sort: { field: "id", order: "asc" } }).then(data => {
       console.log(data)
     })
-
+    debugger
     let draggableEl = document.getElementById("external-events");
     this.calendarRef.current.getApi().gotoDate(DataStandard);
     new Draggable(draggableEl, {
@@ -49,6 +54,7 @@ class DemoApp extends React.Component {
   }
 
   render() {
+    let _that = this
     return (
       <>
         <p align="center">
@@ -94,20 +100,35 @@ class DemoApp extends React.Component {
           <Grid item xs={10}>
             <div className='demo-app-main'>
               <FullCalendar
-                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, bootstrap5Plugin]}
                 headerToolbar={{
-                  left: "myCustomButton",
+                  left: "DiminuzioneFasciaOraria,AumentoFasciaOraria",
                   // center: "title",
                   right: '' //,timeGridWeek,timeGridDay
                 }}
                 customButtons={{
-                  myCustomButton: {
-                    text: 'Cambio Fasce Orarie',
+                  AumentoFasciaOraria: {
+                    // text: 'A',
+                    icon: 'bi-arrows-expand',
                     click: function () {
-                      alert('modifica componente!');
+                      // debugger
+                      if (_that.state.slotDuration < 4) {
+                        _that.setState({ slotDuration: _that.state.slotDuration + 1 })
+                      }
+                    },
+                  },
+                  DiminuzioneFasciaOraria: {
+                    icon: 'bi-arrows-collapse',
+                    click: function () {
+                      // debugger
+                      if (_that.state.slotDuration > 0) {
+                        _that.setState({ slotDuration: _that.state.slotDuration - 1 })
+                      }
                     },
                   },
                 }}
+                contentHeight= {500}
+                themeSystem='bootstrap5'
                 initialView='timeGridDay'
                 editable={true}
                 selectable={true}
@@ -126,12 +147,10 @@ class DemoApp extends React.Component {
                 defaultTimedEventDuration={'01:00:00'}
                 forceEventDuration={true}
                 select={null}
-              // eventAdd={this.handleDateSelect}
-              /* you can update a remote database when these fire:
-              eventAdd={function () { }}
-              eventChange={function () { }}
-              eventRemove={function () { }}
-              */
+                slotDuration={this.state.defaultSlotDuration[this.state.slotDuration]}
+              // refetchResources={true}
+              // slotLabelInterval={15}
+
               />
             </div>
           </Grid>
@@ -158,13 +177,6 @@ class DemoApp extends React.Component {
         </div>
       </div>
     )
-  }
-
-  handleWeekendsToggle = () => {
-
-    this.setState({
-      weekendsVisible: !this.state.weekendsVisible
-    })
   }
 
   handleDateSelect = (selectInfo) => {
@@ -212,9 +224,7 @@ function renderSidebarEvent(event) {
     <li key={event.id}>
       <i>{event.title}</i>
       <b> Dalle {formatDate(event.start, { hour: 'numeric', minute: 'numeric' })}</b>
-
       <b> alle {formatDate(event.end, { hour: 'numeric', minute: 'numeric' })}</b>
-      {/* <b> Alle {formatDate(event.start.getTime() + (60 * 60 * 1000), { hour: 'numeric', minute: 'numeric' })}</b>} */}
     </li>
   )
 }

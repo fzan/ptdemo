@@ -26,7 +26,7 @@ export const OrariEdit = props => {
                         <FormTab label="Orari Speciali">
                             <CardEditOrariSpeciali {...props.record} />
                         </FormTab>
-                        <FormTab label="Fasce di Giornata">
+                        <FormTab label="Timbrature">
                             <Calenda />
                         </FormTab>
                     </TabbedForm>

@@ -4,7 +4,7 @@ import CardContent from "@material-ui/core/CardContent";
 
 export default () => (
   <Card>
-    <h1>Demo dashboard 1</h1>
-    <CardContent>Demo</CardContent>
+    <h1>Demo</h1>
+    <CardContent>Proietti Planet 2.0</CardContent>
   </Card>
 );

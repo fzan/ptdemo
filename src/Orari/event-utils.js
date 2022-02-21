@@ -5,12 +5,12 @@ let todayStr = new Date().toISOString().replace(/T.*$/, '') // YYYY-MM-DD of tod
 export const INITIAL_EVENTS = [
   {
     id: createEventId(),
-    title: 'All-day event',
+    title: 'Dummy event',
     start: todayStr + 'T16:00:00'
   },
   {
     id: createEventId(),
-    title: 'Timed event',
+    title: 'Dummy event 2',
     start: todayStr + 'T12:00:00'
   }
 ]
