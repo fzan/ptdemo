@@ -1,5 +1,5 @@
 import * as React from "react";
-import { List, TextField, ReferenceField, DateField, Datagrid } from "react-admin"
+import { List, TextField, Datagrid } from "react-admin"
 
 export const VociList = props => (
     <List {...props}>

@@ -4,8 +4,8 @@ import { Edit, SimpleForm, TextInput, ReferenceInput, SelectInput } from "react-
 export const FascedelmonteoreEdit = props => (
     <Edit {...props}>
         <SimpleForm>
-            <TextInput source="id" />
-            <ReferenceInput source="orarioId" reference="orarios"><SelectInput optionText="id" /></ReferenceInput>
+            {/* <TextInput source="id" /> */}
+            <ReferenceInput source="orarioId" reference="orarios"><SelectInput optionText="descrizione" /></ReferenceInput>
             <TextInput source="causale" />
             <TextInput source="dalle" />
             <TextInput source="alle" />

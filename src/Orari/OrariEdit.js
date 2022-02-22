@@ -10,11 +10,11 @@ import Calenda from './Calendario'
 export const OrariEdit = props => {
     return (
         <Edit {...props}>
-            <Grid container spacing={1} style={{ width: "100%" }}>
+            <Grid style={{ display: 'flex', justifyContent: 'center' }} >
                 <Grid item xs={1} />
-                <Grid item xs={10}>
-                    <TabbedForm>
-                        <FormTab label="Generale">
+                <Grid item xs={10} >
+                    <TabbedForm >
+                        <FormTab label="Generale" >
                             <CardEditGenerale {...props.record} />
                         </FormTab>
                         <FormTab label="Avanzato">

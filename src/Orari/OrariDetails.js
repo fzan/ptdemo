@@ -2,7 +2,6 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import CardGenerale from '../Cards/CardGenerale'
 import CardOrarioSpeciali from '../Cards/CardOrarioSpeciali'
@@ -38,7 +37,7 @@ function TabPanel(props) {
 
 
 export default function OrariDetails({ record }) {
-    const classes = useStyles();
+    // const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -54,23 +53,23 @@ export default function OrariDetails({ record }) {
                     onChange={handleChange}
                     indicatorColor="primary"
                     textColor="primary"
-                    centered
+                    centered={true}
                 >
                     <Tab label="Generale" />
                     <Tab label="Avanzato" />
                     <Tab label="Esperto" />
                     <Tab label="Orario Speciali" />
                 </Tabs>
-                <TabPanel value={value} index={0}>
+                <TabPanel value={value} index={0} style={{ display: 'flex', justifyContent: 'center' }}>
                     <CardGenerale {...record} />
                 </TabPanel>
-                <TabPanel value={value} index={1}>
+                <TabPanel value={value} index={1} style={{ display: 'flex', justifyContent: 'center' }}>
                     <CardAvanzato {...record} />
                 </TabPanel>
-                <TabPanel value={value} index={2}>
+                <TabPanel value={value} index={2} style={{ display: 'flex', justifyContent: 'center' }}>
                     <CardEsperto {...record} />
                 </TabPanel>
-                <TabPanel value={value} index={3}>
+                <TabPanel value={value} index={3} style={{ display: 'flex', justifyContent: 'center' }}>
                     <CardOrarioSpeciali {...record} />
                 </TabPanel>
             </Grid>

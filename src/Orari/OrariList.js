@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ReferenceField, List, Datagrid, DateField, TextField, BooleanField, NumberField } from "react-admin";
+import { List, Datagrid, TextField } from "react-admin";
 import OrariDetails from "./OrariDetails";
 import CheckBoxTwoToneIcon from '@material-ui/icons/CheckBoxTwoTone';
 import CheckBoxOutlineBlankTwoToneIcon from '@material-ui/icons/CheckBoxOutlineBlankTwoTone';

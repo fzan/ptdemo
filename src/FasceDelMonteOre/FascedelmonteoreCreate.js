@@ -4,8 +4,8 @@ import { Create, SimpleForm, TextInput, ReferenceInput, SelectInput } from "reac
 export const FascedelmonteoreCreate = props => (
     <Create {...props}>
         <SimpleForm>
-            <TextInput source="id" />
-            <ReferenceInput source="orarioId" reference="orarios"><SelectInput optionText="id" /></ReferenceInput>
+            {/* <TextInput source="id" /> */}
+            <ReferenceInput source="orarioId" reference="orarios"><SelectInput optionText="descrizione" /></ReferenceInput>
             <TextInput source="causale" />
             <TextInput source="dalle" />
             <TextInput source="alle" />

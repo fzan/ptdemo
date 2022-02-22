@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import FullCalendar, { formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
@@ -34,7 +34,7 @@ class DemoApp extends React.Component {
     this.props.dataProvider.getList('orarios', { pagination: { page: 1, perPage: 10000 }, sort: { field: "id", order: "asc" } }).then(data => {
       console.log(data)
     })
-    debugger
+    // debugger
     let draggableEl = document.getElementById("external-events");
     this.calendarRef.current.getApi().gotoDate(DataStandard);
     new Draggable(draggableEl, {
@@ -58,7 +58,7 @@ class DemoApp extends React.Component {
     return (
       <>
         <p align="center">
-          <strong>Inserimento Fasce di Giornata</strong>
+          <strong>Inserimento Fasce di Timbrature</strong>
         </p>
         <Grid container spacing={1} style={{ width: "100%" }}>
           <Grid item xs={2}>
@@ -127,7 +127,7 @@ class DemoApp extends React.Component {
                     },
                   },
                 }}
-                contentHeight= {500}
+                contentHeight={500}
                 themeSystem='bootstrap5'
                 initialView='timeGridDay'
                 editable={true}

@@ -1,17 +1,17 @@
 import * as React from "react";
-import { ReferenceField, List, Datagrid,DateField, TextField } from "react-admin";
+import { ReferenceField, List, Datagrid, TextField } from "react-admin";
 
 export const FasceList = props => (
     <List {...props}>
         <Datagrid rowClick="edit">
-            <TextField source="id" />
-            <ReferenceField label="Tipologia Orario" source="orarioId" reference="orarios">
-                <TextField source="id" />
+            {/* <TextField source="id" /> */}
+            <ReferenceField label="Tipologia Orario" source="orarioId" reference="orarios" link={false}>
+                <TextField source="descrizione" />
             </ReferenceField>
-            <DateField source="causale" />
+            <TextField source="causale" />
             <TextField source="dalle" />
             <TextField source="alle" />
-            <DateField source="priorita" />
+            <TextField source="priorita" />
         </Datagrid>
     </List>
 );
