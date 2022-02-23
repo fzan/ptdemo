@@ -1,5 +1,5 @@
 import React from "react";
-import { Admin, Resource } from "react-admin";
+import { Admin, Resource, resolveBrowserLocale } from "react-admin";
 import merge from 'deepmerge'
 import italianCustom from './Translations/italianCustom'
 import englishCustom from "./Translations/englishCustom"
@@ -45,11 +45,11 @@ import dataProvider from "./data";
 const raLanguageItalian = require('ra-language-italian');
 
 const messages = {
-  'en': merge(englishMessages, englishCustom),
-  'it': merge(raLanguageItalian, italianCustom)
+  "it": merge(raLanguageItalian, italianCustom),
+  "en": merge(englishMessages, englishCustom)
 };
 
-const i18nProvider = polyglotI18nProvider(locale => messages['it']); //locale
+const i18nProvider = polyglotI18nProvider(locale => messages[locale] ? messages[locale] : messages.in, resolveBrowserLocale());
 
 
 const App = () => (
@@ -60,7 +60,6 @@ const App = () => (
     <Resource name="fasceDellaGiornatas" list={FasceList} edit={FasceEdit} create={FasceCreate} icon={CollectionsBookmarkIcon} />
     <Resource name="fasceDelMonteOres" list={FascedelmonteoreList} edit={FascedelmonteoreEdit} create={FascedelmonteoreCreate} icon={RestoreIcon} />
     <Resource name="timbratureTipos" list={TimbraturetipoList} edit={TimbraturetipoEdit} create={TimbraturetipoCreate} icon={LabelIcon} />
-
     <Resource name="arrotondamentoTimbratures" list={ArrotondamentotimbratureList} edit={ArrotondamentotimbratureEdit} create={ArrotondamentotimbratureCreate} icon={RotateRightIcon} />
     <Resource name="arrotondamentoStraordinarios" list={ArrotondamentostraordinarioList} edit={ArrotondamentostraordinarioEdit} create={ArrotondamentostraordinarioCreate} icon={RotateLeftIcon} />
     <Resource name="pauses" list={PauseList} edit={PauseEdit} create={PauseCreate} icon={PauseCircleOutlineIcon} />
