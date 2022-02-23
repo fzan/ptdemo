@@ -31,7 +31,20 @@ module.exports = {
             name: "Arrot. Straordinario"
         },
         pauses: {
-            name: "Pause"
+            name: "Pause",
+            fields: {
+                orario: "Orario",
+                descrizione: "Descrizione",
+                dalle: "Dalle",
+                alle: "Alle",
+                min: "Min",
+                max: "Max",
+                obbl: "Obbl",
+                tipologia: "Tipologia",
+                voce: "Voce",
+                eccedenze: "Eccedenze",
+                vocePerSegnalazione: "Voce per segnalazione"
+            }
         }
     }
 }
