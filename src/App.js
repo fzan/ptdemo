@@ -42,6 +42,8 @@ import Dashboard from "./Dashboard";
 import authProvider from "./authProvider";
 import dataProvider from "./data";
 
+import MyLayout from "./Layout/AppLayout";
+
 const raLanguageItalian = require('ra-language-italian');
 
 const messages = {
@@ -49,11 +51,11 @@ const messages = {
   "en": merge(englishMessages, englishCustom)
 };
 
-const i18nProvider = polyglotI18nProvider(locale => messages[locale] ? messages[locale] : messages.in, resolveBrowserLocale());
+const i18nProvider = polyglotI18nProvider(locale => messages[locale] ? messages[locale] : messages.it, resolveBrowserLocale());
 
 
 const App = () => (
-  <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider} i18nProvider={i18nProvider} >
+  <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider} i18nProvider={i18nProvider} layout={MyLayout} >
     <Resource name="orarios" list={OrariList} edit={OrariEdit} create={OrariCreate} icon={AccessTimeIcon} />
     <Resource name="profilos" list={ProfiliList} icon={UserIcon} />
     <Resource name="vocis" list={VociList} />
