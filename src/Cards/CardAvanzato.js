@@ -7,7 +7,7 @@ import CheckBox from '@material-ui/core/Checkbox'
 import List from '@material-ui/core/List'
 import ListSubheader from '@material-ui/core/ListSubheader'
 import { makeStyles } from '@material-ui/core/styles'
-import { ReferenceField } from 'react-admin'
+import { ReferenceField, useTranslate } from 'react-admin'
 
 const useStyles = makeStyles({
     textInput: {
@@ -16,56 +16,57 @@ const useStyles = makeStyles({
 });
 
 function CardAvanzato(record) {
-    const classes = useStyles();
+    const translate = useTranslate()
+    const classes = useStyles()
     return (
         <TableBody>
             <TableRow>
                 <List
                     sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-                    subheader={<ListSubheader color="primary">Orari Sostitutivi</ListSubheader>}
+                    subheader={<ListSubheader color="primary">{translate('resources.cardAvanzato.fields.subTitle1')}</ListSubheader>}
                 >
-                    <TextField id="orariSostitutiviSabato" label="Sabato" defaultValue={record.orariSostitutiviSabato} InputProps={{ readOnly: true }} className={classes.textInput} />
-                    <TextField id="orariSostitutiviDomenicaEFestivo" label="Domenica e Festivi" defaultValue={record.orariSostitutiviDomenicaEFestivo} InputProps={{ readOnly: true }} className={classes.textInput} />
-                    <TextField id="orariSostitutiviPreFestivo" label="PreFestivo" defaultValue={record.orariSostitutiviPreFestivo} InputProps={{ readOnly: true }} className={classes.textInput} />
+                    <TextField id="orariSostitutiviSabato" label={translate('resources.cardAvanzato.fields.orariSostitutiviSabato')} defaultValue={record.orariSostitutiviSabato} InputProps={{ readOnly: true }} className={classes.textInput} />
+                    <TextField id="orariSostitutiviDomenicaEFestivo" label={translate('resources.cardAvanzato.fields.orariSostitutiviDomenicaEFestivo')} defaultValue={record.orariSostitutiviDomenicaEFestivo} InputProps={{ readOnly: true }} className={classes.textInput} />
+                    <TextField id="orariSostitutiviPreFestivo" label={translate('resources.cardAvanzato.fields.orariSostitutiviPreFestivo')} defaultValue={record.orariSostitutiviPreFestivo} InputProps={{ readOnly: true }} className={classes.textInput} />
                 </List>
             </TableRow>
             <TableRow>
                 <List
                     sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-                    subheader={<ListSubheader color="primary">Timbrature conformi</ListSubheader>}
+                    subheader={<ListSubheader color="primary">{translate('resources.cardAvanzato.fields.subTitle2')}</ListSubheader>}
                 >
                     <FormControlLabel control={
                         <CheckBox id="segnalareTimbratureFuoriFasce" checked={record.segnalareTimbratureFuoriFasce} InputProps={{ readOnly: true }} />
-                    } label="Segnalare timbrature fuori fasce" />
+                    } label={translate('resources.cardAvanzato.fields.segnalareTimbratureFuoriFasce')} />
                 </List>
             </TableRow>
 
             <TableRow>
                 <List
                     sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-                    subheader={<ListSubheader color="primary">Computo del lavoro straordinario</ListSubheader>}
+                    subheader={<ListSubheader color="primary">{translate('resources.cardAvanzato.fields.subTitle3')}</ListSubheader>}
                 >
                     <FormControlLabel control={
                         <CheckBox id="lavoroStraordinarioAutorizzato" checked={record.lavoroStraordinarioAutorizzato} InputProps={{ readOnly: true }} />
-                    } label="Straorinario autorizzato" />
+                    } label={translate('resources.cardAvanzato.fields.lavoroStraordinarioAutorizzato')} />
                 </List>
             </TableRow>
             <TableRow>
-                <TextField id="lavoroStraordinarioArrotondamento" label="Arrotondamento" defaultValue={record.lavoroStraordinarioArrotondamento} InputProps={{ readOnly: true }} />
+                <TextField id="lavoroStraordinarioArrotondamento" label={translate('resources.cardAvanzato.fields.lavoroStraordinarioArrotondamento')} defaultValue={record.lavoroStraordinarioArrotondamento} InputProps={{ readOnly: true }} />
             </TableRow>
             <TableRow>
                 <FormControlLabel control={
                     <CheckBox id="lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare" checked={record.lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare} InputProps={{ readOnly: true }} />
-                } label="Arrotondamento sulle fasce da Autorizzare" />
+                } label={translate('resources.cardAvanzato.fields.lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare')} />
             </TableRow>
             <TableRow>
                 <List
                     sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-                    subheader={<ListSubheader color="primary">Profilo di rielaborazione</ListSubheader>}
+                    subheader={<ListSubheader color="primary">{translate('resources.cardAvanzato.fields.subTitle4')}</ListSubheader>}
                 >
 
                     <ReferenceField source="profilosId" reference="profilos" link={false}>
-                        <Gianfe />
+                        <ProfiloDiRielaborazione />
                     </ReferenceField>
 
                 </List>
@@ -74,10 +75,11 @@ function CardAvanzato(record) {
     );
 }
 
-const Gianfe = (props) => {
+const ProfiloDiRielaborazione = (props) => {
+    const translate = useTranslate()
     return (
         <div>
-            <TextField  label="Profilo" defaultValue={props.record.nome} InputProps={{ readOnly: true }} />
+            <TextField label={translate('resources.cardAvanzato.fields.subTitle1')} defaultValue={props.record.nome} InputProps={{ readOnly: true }} />
         </div>
     )
 }

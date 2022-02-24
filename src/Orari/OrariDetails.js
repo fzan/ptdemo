@@ -8,6 +8,7 @@ import CardOrarioSpeciali from '../Cards/CardOrarioSpeciali'
 import CardEsperto from '../Cards/CardEsperto'
 import CardAvanzato from '../Cards/CardAvanzato'
 import Grid from '@material-ui/core/Grid'
+import { useTranslate } from 'react-admin'
 
 const useStyles = makeStyles({
     root: {
@@ -35,8 +36,8 @@ function TabPanel(props) {
     );
 }
 
-
 export default function OrariDetails({ record }) {
+    const translate = useTranslate()
     // const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
@@ -55,10 +56,10 @@ export default function OrariDetails({ record }) {
                     textColor="primary"
                     centered={true}
                 >
-                    <Tab label="Generale" />
-                    <Tab label="Avanzato" />
-                    <Tab label="Esperto" />
-                    <Tab label="Orario Speciali" />
+                    <Tab label={translate('resources.orariDetails.fields.generale')} />
+                    <Tab label={translate('resources.orariDetails.fields.avanzato')} />
+                    <Tab label={translate('resources.orariDetails.fields.esperto')} />
+                    <Tab label={translate('resources.orariDetails.fields.orarioSpeciale')} />
                 </Tabs>
                 <TabPanel value={value} index={0} style={{ display: 'flex', justifyContent: 'center' }}>
                     <CardGenerale {...record} />
