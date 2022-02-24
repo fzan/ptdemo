@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useState } from 'react'
-import { TextInput, SelectInput, BooleanInput, NumberInput, useInput, FormDataConsumer, regex, required } from 'react-admin'
+import { TextInput, SelectInput, BooleanInput, NumberInput, useInput, FormDataConsumer, regex, required, useTranslate } from 'react-admin'
 import Typography from '@material-ui/core/Typography'
 import TimeKeeper from 'react-timekeeper'
 import TableBody from '@material-ui/core/TableBody'
@@ -17,13 +17,14 @@ const useStyles = makeStyles({
 });
 
 const ColorPickerCustom = (props) => {
+    const translate = useTranslate();
     const {
         input: { name, onChange, value, ...rest },
         meta: { touched, error }
     } = useInput(props)
     return (
         <>
-            <span style={{ verticalAlign: 'bottom' }}>Colore</span>
+            <span style={{ verticalAlign: 'bottom' }}>{translate('resources.cardGenerale.fields.colore')}</span>
             <ColorPicker value={value} onChange={onChange} />
         </>
     )
@@ -55,20 +56,21 @@ const SettingTime = (props) => {
 }
 
 function CardEditGenerale(record) {
+    const translate = useTranslate();
     const classes = useStyles();
     return (
         <TableBody>
             <FormDataConsumer>
                 {({ formData, ...rest }) => (
                     <Typography gutterBottom variant="h5" component="div">
-                        Orario  {formData.descrizione}
+                        {translate('resources.cardGenerale.fields.orario')}  {formData.descrizione}
                     </Typography>
                 )}
             </FormDataConsumer>
 
-            <TextInput source="codice" className={classes.textInput} />
-            <TextInput source="breve" className={classes.textInput} />
-            <TextInput source="descrizione" className={classes.textInput} />
+            <TextInput source="codice" label={translate('resources.cardGenerale.fields.codice')} className={classes.textInput} />
+            <TextInput source="breve" label={translate('resources.cardGenerale.fields.breve')} className={classes.textInput} />
+            <TextInput source="descrizione" label={translate('resources.cardGenerale.fields.descrizione')} className={classes.textInput} />
 
             <TableRow>
                 <FormDataConsumer>
@@ -79,46 +81,45 @@ function CardEditGenerale(record) {
             </TableRow>
             <br />
             <Typography gutterBottom variant="h7" component="div">
-                Tipologia, ore previste e competenza dei risultati
+                {translate('resources.cardGenerale.fields.subTitle1')}
             </Typography>
 
             <TableRow>
-                <SelectInput source="tipologiaTipo" label="Tipo" allowEmpty="True" className={classes.textInput} choices={[
-                    { id: 'Rigido', name: 'Rigido' },
-                    { id: 'Elastico', name: 'Elastico' },
-                    { id: 'Flessibile', name: 'Flessibile' },
+                <SelectInput source="tipologiaTipo" label={translate('resources.cardGenerale.fields.tipologiaTipo')} allowEmpty="True" className={classes.textInput} choices={[
+                    { id: 'Rigido', name: translate('resources.cardGenerale.fields.rigido') },
+                    { id: 'Elastico', name: translate('resources.cardGenerale.fields.elastico') },
+                    { id: 'Flessibile', name: translate('resources.cardGenerale.fields.flessibile') },
                 ]} />
-                <TextInput source="tipologiaOreBase" label="Ore Base" className={classes.textInput} validate={[required(), validateHoursFormat]} />
-                <TextInput source="tipologiaOreMinime" label="Ore Minime" className={classes.textInput} validate={[required(), validateHoursFormat]} />
+                <TextInput source="tipologiaOreBase" label={translate('resources.cardGenerale.fields.tipologiaOreBase')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
+                <TextInput source="tipologiaOreMinime" label={translate('resources.cardGenerale.fields.tipologiaOreMinime')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
             </TableRow>
-            <SelectInput source="tipologiaGiornoDiSalvataggio" allowEmpty="True" choices={[
-                { id: 'Entrata', name: 'ENTRATA - Tutto sul GG di Ingresso' },
-                { id: 'Uscita', name: 'USCITA - Tutto sul GG di Uscita' },
-                { id: 'Cavaliere', name: 'CAVALIERE - Seleettivo' },
+            <SelectInput source="tipologiaGiornoDiSalvataggio" label={translate('resources.cardGenerale.fields.tipologiaGiornoDiSalvataggio')} allowEmpty="True" choices={[
+                { id: 'Entrata', name: translate('resources.cardGenerale.fields.entrata') },
+                { id: 'Uscita', name: translate('resources.cardGenerale.fields.uscita') },
+                { id: 'Cavaliere', name: translate('resources.cardGenerale.fields.cavaliere') },
             ]} />
             <br />
             <Typography gutterBottom variant="h7" component="div">
-                Intervallo Timbrature
+                {translate('resources.cardGenerale.fields.subTitle2')}
             </Typography>
 
             <TableRow>
                 <FormDataConsumer>
                     {({ formData, ...rest }) => (
-                        <SettingTime source="timbratureDalle" value={formData.timbratureDalle} label="Dalle" {...record} />
+                        <SettingTime source="timbratureDalle" value={formData.timbratureDalle} label={translate('resources.cardGenerale.fields.timbratureDalle')} {...record} />
                     )}
                 </FormDataConsumer>
 
                 <FormDataConsumer>
                     {({ formData, ...rest }) => (
-                        <SettingTime source="timbratureAlle" value={formData.timbratureDalle} label="Alle" {...record} />
+                        <SettingTime source="timbratureAlle" value={formData.timbratureDalle} label={translate('resources.cardGenerale.fields.timbratureAlle')} {...record} />
                     )}
                 </FormDataConsumer>
-
-                <NumberInput source="timbratureGiorniSuccessiviPerTimbratura" label="giorni dopo" />
+                <NumberInput source="timbratureGiorniSuccessiviPerTimbratura" label={translate('resources.cardGenerale.fields.giorniSuccessivi')} />
             </TableRow>
 
-            <BooleanInput source="timbratureTimbratureSuPiuGiorni" />
-            <BooleanInput source="timbratureCausaliFuoriIntervallo" />
+            <BooleanInput source="timbratureTimbratureSuPiuGiorni" label={translate('resources.cardGenerale.fields.timbratureTimbratureSuPiuGiorni')} />
+            <BooleanInput source="timbratureCausaliFuoriIntervallo" label={translate('resources.cardGenerale.fields.timbratureCausaliFuoriIntervallo')} />
         </TableBody>
     );
 }

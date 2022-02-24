@@ -116,7 +116,8 @@ module.exports = {
                 generale: "General",
                 avanzato: "Advanced",
                 esperto: "Expert",
-                orarioSpeciale: "Special Time"
+                orarioSpeciale: "Special Time",
+                timbrature: "Stampings"
             }
         },
         cardGenerale: {
@@ -134,7 +135,16 @@ module.exports = {
                 timbratureAlle: "To",
                 timbratureGiorniSuccessiviPerTimbratura: "Subsequent days for stamping",
                 timbratureTimbratureSuPiuGiorni: "Stamping over several days",
-                timbratureCausaliFuoriIntervallo: "Cause them out of range"
+                timbratureCausaliFuoriIntervallo: "Cause them out of range",
+                orario: "Hours",
+                rigido: "Stiff",
+                elastico: "Elastic",
+                flessibile: "Flexible",
+                entrata: "ENTRANCE - All about the entrance GG",
+                uscita: "EXIT - All about the Day of GG",
+                cavaliere: "KNIGHT - Selective",
+                subTitle2: "Stamping Interval",
+                giorniSuccessivi: "Days Later"
             }
         },
         cardAvanzato: {

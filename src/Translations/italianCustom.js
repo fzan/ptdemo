@@ -116,7 +116,8 @@ module.exports = {
                 generale: "Generale",
                 avanzato: "Avanzato",
                 esperto: "Esperto",
-                orarioSpeciale: "Orario Speciali"
+                orarioSpeciale: "Orario Speciali",
+                timbrature: "Timbrature"
             }
         },
         cardGenerale: {
@@ -134,7 +135,16 @@ module.exports = {
                 timbratureAlle: "Alle",
                 timbratureGiorniSuccessiviPerTimbratura: "Giorni successivi per timbratura",
                 timbratureTimbratureSuPiuGiorni: "Timbrature su piu giorni",
-                timbratureCausaliFuoriIntervallo: "Causali fuori intervallo"
+                timbratureCausaliFuoriIntervallo: "Causali fuori intervallo",
+                orario: "Orario",
+                rigido: "Rigido",
+                elastico: "Elastico",
+                flessibile: "Flessibile",
+                entrata: "ENTRATA - Tutto sul GG di Ingresso",
+                uscita: "USCITA - Tutto sul GG di Uscita",
+                cavaliere: "CAVALIERE - Selettivo",
+                subTitle2: "Intervallo Timbrature",
+                giorniSuccessivi: "Giorni Successivi"
             }
         },
         cardAvanzato: {
