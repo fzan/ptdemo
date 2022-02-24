@@ -116,7 +116,7 @@ module.exports = {
                 generale: "General",
                 avanzato: "Advanced",
                 esperto: "Expert",
-                orarioSpeciale: "Speciale Time"
+                orarioSpeciale: "Special Time"
             }
         },
         cardGenerale: {
@@ -137,7 +137,7 @@ module.exports = {
                 timbratureCausaliFuoriIntervallo: "Cause them out of range"
             }
         },
-        cardAvanzato:{
+        cardAvanzato: {
             fields: {
                 subTitle1: "Replacement Hours",
                 orariSostitutiviSabato: "Saturday",
@@ -151,6 +151,42 @@ module.exports = {
                 lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare: "Rounding on the bands to be authorized",
                 subTitle4: "Profile of reworking",
                 profilo: "Profile"
+            }
+        },
+        cardEsperto: {
+            fields: {
+                compensazioneCompensazioneSelettiva: "Selective Compensation",
+                compensazioneCumuloAssenze: "Cumulation of Absences",
+                compensazioneCumuloStraordinario: "Extraordinary cumulation",
+                compensazioneMassimale: "Maximal",
+                compensazioneSaldoPositivo: "Positive Balance",
+                compensazioneFasceSeAssenza: "Bands if Absence",
+                compensazionePauseNonRispettate: "Breaks not respected",
+                compensazioneDeduzioneAdattivaTimbratureTipo: "Adaptive Deduction Stamping Type",
+                compensazioneSequenzeEu: "Eu sequences",
+                compensazioneTimbratureFuoriFasciaElastica: "Stamping out of the Elastic band",
+                compensazioneSpostaTimbraturaTipo: "Move Stamping Type",
+                compensazioneDisattivaFasceDopoIndividuaTipo: "Disable bands after locate Type",
+                compensazioneOrarioRigido: "Rigid timetable",
+            }
+        },
+        cardOrarioSpeciali: {
+            fields: {
+                subTitle1: "Post-processing for days without stamping",
+                postElaborazioniCompensazioneAutomatica: "Apply Automatic Compensation",
+                postElaborazioniVociAutomatiche: "Generate Automatic Voices",
+                postElaborazioniUsaTipoReali: "Use real and / or virtual Type even without stamping",
+                subTitle2: "Theoretical hours and type of day",
+                oreTeoricheHHTeoriche: 'HH theoretical',
+                oreTeoricheTipoGG: 'Type GG',
+                subTitle3: "Processing engine strategies",
+                strategieIgnorareTimbratureOrfane: "Ignore orphaned clockings",
+                strategieTimbratureDiscriminazioneAutomatica: "Include the stampings in the automatic discrimination phase",
+                strategieGiustificativiRigidi: "Convert partial vouchers (rigid)",
+                strategieGiustificativiFlex: "Convert partial vouchers (flex)",
+                strategieGiustificativiAssenzaTimbrature: "Justifications assigned even without stamping",
+                subTitle4: "Service orders",
+                OmissioneDescrizioneOrdiniServizio: "Omit the description in the service orders"
             }
         }
     }

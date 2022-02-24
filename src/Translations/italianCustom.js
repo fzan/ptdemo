@@ -119,12 +119,12 @@ module.exports = {
                 orarioSpeciale: "Orario Speciali"
             }
         },
-        cardGenerale:{
+        cardGenerale: {
             fields: {
                 descrizione: "Descrizione",
-                codice : "Codice",
-                breve : "Breve",
-                colore : "Colore",
+                codice: "Codice",
+                breve: "Breve",
+                colore: "Colore",
                 subTitle1: " Tipologia, ore previste e competenza dei risultati",
                 tipologiaTipo: "Tipologia Tipo",
                 tipologiaOreBase: "Ore Base",
@@ -137,7 +137,7 @@ module.exports = {
                 timbratureCausaliFuoriIntervallo: "Causali fuori intervallo"
             }
         },
-        cardAvanzato:{
+        cardAvanzato: {
             fields: {
                 subTitle1: "Orari Sostitutivi",
                 orariSostitutiviSabato: "Sabato",
@@ -151,6 +151,42 @@ module.exports = {
                 lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare: "Arrotondamento sulle fasce da Autorizzare",
                 subTitle4: "Profilo di rielaborazione",
                 profilo: "Profilo"
+            }
+        },
+        cardEsperto: {
+            fields: {
+                compensazioneCompensazioneSelettiva: "Compensazione Selettiva",
+                compensazioneCumuloAssenze: "Cumulo Assenze",
+                compensazioneCumuloStraordinario: "Cumulo Straordinario",
+                compensazioneMassimale: "Massimale",
+                compensazioneSaldoPositivo: "Saldo Positivo",
+                compensazioneFasceSeAssenza: "Fasce se Assenza",
+                compensazionePauseNonRispettate: "Pause non Rispettate",
+                compensazioneDeduzioneAdattivaTimbratureTipo: "Deduzione Adattiva Timbrature Tipo",
+                compensazioneSequenzeEu: "Sequenze Eu",
+                compensazioneTimbratureFuoriFasciaElastica: "Timbrature fuori fascia Elastica",
+                compensazioneSpostaTimbraturaTipo: "Sposta Timbratura Tipo",
+                compensazioneDisattivaFasceDopoIndividuaTipo: "Disattiva fasce dopo individua Tipo",
+                compensazioneOrarioRigido: "Orario Rigido",
+            }
+        },
+        cardOrarioSpeciali: {
+            fields: {
+                subTitle1: "Post-Elaborazioni per giornate prive di timbrature",
+                postElaborazioniCompensazioneAutomatica: "Applicare Compensazione Automatica",
+                postElaborazioniVociAutomatiche: "Generare Voci Automatiche",
+                postElaborazioniUsaTipoReali: "Usare Tipo reali e/o virtuali anche senza timbrature",
+                subTitle2: "Ore teoriche e tipologia della giornata",
+                oreTeoricheHHTeoriche: 'HH teoriche',
+                oreTeoricheTipoGG: 'Tipo GG',
+                subTitle3: "Strategie per il motore di elaborazione",
+                strategieIgnorareTimbratureOrfane: "Ignorare timbrature orfane",
+                strategieTimbratureDiscriminazioneAutomatica: "Includere le timbrature nella fase di discriminazione automatica",
+                strategieGiustificativiRigidi: "Convertire giustificativi parziali (rigidi)",
+                strategieGiustificativiFlex: "Convertire giustificativi parziali (flex)",
+                strategieGiustificativiAssenzaTimbrature: "Giustificativi assegnati anche senza timbratura",
+                subTitle4: "Ordini di servizio",
+                OmissioneDescrizioneOrdiniServizio: "Omettere la descrizione neglio ordini di servizio"
             }
         }
     }
