@@ -1,5 +1,5 @@
 import * as React from "react"
-import { SelectInput, BooleanInput, FormDataConsumer } from "react-admin"
+import { SelectInput, BooleanInput, FormDataConsumer, useTranslate } from "react-admin"
 import Typography from '@material-ui/core/Typography'
 import TableBody from '@material-ui/core/TableBody'
 import { makeStyles } from '@material-ui/core/styles'
@@ -11,50 +11,51 @@ const useStyles = makeStyles({
 });
 
 function CardEditOrariSpeciali(record) {
+    const translate = useTranslate()
     const classes = useStyles();
     return (
         <TableBody>
             <FormDataConsumer>
                 {({ formData, ...rest }) => (
                     <Typography gutterBottom variant="h5" component="div">
-                        Orario  {formData.descrizione}
+                        {translate('resources.cardGenerale.fields.orario')}   {formData.descrizione}
                     </Typography>
                 )}
             </FormDataConsumer>
             <br />
             <Typography gutterBottom variant="h7" component="div">
-                Post-Elaborazioni per giornate prive di timbrature
+                {translate('resources.cardOrarioSpeciali.fields.subTitle1')}
             </Typography>
-            <BooleanInput source="postElaborazioniCompensazioneAutomatica" label="Applicare Compensazione automatica" />
-            <BooleanInput source="postElaborazioniVociAutomatiche" label="Generare voci Automatiche" />
-            <BooleanInput source="postElaborazioniUsaTipoReali" label="Usare tipo reali e/o virtuali anche senza timbrature" />
+            <BooleanInput source="postElaborazioniCompensazioneAutomatica" label={translate('resources.cardOrarioSpeciali.fields.postElaborazioniCompensazioneAutomatica')} />
+            <BooleanInput source="postElaborazioniVociAutomatiche" label={translate('resources.cardOrarioSpeciali.fields.postElaborazioniVociAutomatiche')} />
+            <BooleanInput source="postElaborazioniUsaTipoReali" label={translate('resources.cardOrarioSpeciali.fields.postElaborazioniUsaTipoReali')} />
             <br />
             <Typography gutterBottom variant="h7" component="div">
-                Ore teoriche e tipologia della giornata
+                {translate('resources.cardOrarioSpeciali.fields.subTitle2')}
             </Typography>
-            <SelectInput source="oreTeoricheHHTeoriche" label="HH teoriche" allowEmpty="True" className={classes.textInput} choices={[
-                { id: 'minime', name: 'Minime' },
-                { id: 'base', name: 'Base' },
+            <SelectInput source="oreTeoricheHHTeoriche" label={translate('resources.cardOrarioSpeciali.fields.oreTeoricheHHTeoriche')} allowEmpty="True" className={classes.textInput} choices={[
+                { id: 'minime', name: translate('resources.cardOrarioSpeciali.fields.minime') },
+                { id: 'base', name: translate('resources.cardOrarioSpeciali.fields.base') },
             ]} />
-            <SelectInput source="oreTeoricheTipoGG" label="Tipo GG" allowEmpty="True" className={classes.textInput} choices={[
-                { id: 'lavorativo', name: 'Lavorativo' },
-                { id: 'nonLavorativo', name: 'Non Lavorativo' },
-                { id: 'festivo', name: 'Festivo' },
+            <SelectInput source="oreTeoricheTipoGG" label={translate('resources.cardOrarioSpeciali.fields.oreTeoricheTipoGG')} allowEmpty="True" className={classes.textInput} choices={[
+                { id: 'lavorativo', name: translate('resources.cardOrarioSpeciali.fields.lavorativo') },
+                { id: 'nonLavorativo', name: translate('resources.cardOrarioSpeciali.fields.nonLavorativo') },
+                { id: 'festivo', name: translate('resources.cardOrarioSpeciali.fields.festivo') },
             ]} />
             <br />
             <Typography gutterBottom variant="h7" component="div">
-                Strategie per il motore di elaborazione
+                {translate('resources.cardOrarioSpeciali.fields.subTitle3')}
             </Typography>
-            <BooleanInput source="strategieIgnorareTimbratureOrfane" />
-            <BooleanInput source="strategieTimbratureDiscriminazioneAutomatica" />
-            <BooleanInput source="strategieGiustificativiRigidi" />
-            <BooleanInput source="strategieGiustificativiFlex" />
-            <BooleanInput source="strategieGiustificativiAssenzaTimbrature" />
+            <BooleanInput source="strategieIgnorareTimbratureOrfane" label={translate('resources.cardOrarioSpeciali.fields.strategieIgnorareTimbratureOrfane')} />
+            <BooleanInput source="strategieTimbratureDiscriminazioneAutomatica" label={translate('resources.cardOrarioSpeciali.fields.strategieTimbratureDiscriminazioneAutomatica')} />
+            <BooleanInput source="strategieGiustificativiRigidi" label={translate('resources.cardOrarioSpeciali.fields.strategieGiustificativiRigidi')} />
+            <BooleanInput source="strategieGiustificativiFlex" label={translate('resources.cardOrarioSpeciali.fields.strategieGiustificativiFlex')} />
+            <BooleanInput source="strategieGiustificativiAssenzaTimbrature" label={translate('resources.cardOrarioSpeciali.fields.strategieGiustificativiAssenzaTimbrature')} />
             <br />
             <Typography gutterBottom variant="h7" component="div">
-                Ordini di servizio
+                {translate('resources.cardOrarioSpeciali.fields.subTitle4')}
             </Typography>
-            <BooleanInput source="OmissioneDescrizioneOrdiniServizio" />
+            <BooleanInput source="OmissioneDescrizioneOrdiniServizio" label={translate('resources.cardOrarioSpeciali.fields.OmissioneDescrizioneOrdiniServizio')} />
         </TableBody>
     );
 }

@@ -28,10 +28,10 @@ function CardEditEsperto(record) {
                         <BooleanInput source="compensazioneCompensazioneSelettiva" label={translate('resources.cardEsperto.fields.compensazioneCompensazioneSelettiva')} />
                         {formData.compensazioneCompensazioneSelettiva ?
                             <>
-                                <ReferenceInput source="compensazioneCumuloAssenze" reference="vocis" label={translate('resources.cardEsperto.fields.compensazioneCumuloAssenze')} className={classes.textInput}>
+                                <ReferenceInput source="compensazioneCumuloAssenze" style={{ width: 250 }} reference="vocis" label={translate('resources.cardEsperto.fields.compensazioneCumuloAssenze')} className={classes.textInput}>
                                     <SelectInput optionText="title" />
                                 </ReferenceInput>
-                                <ReferenceInput style={{ width: 200 }} source="compensazioneCumuloStraordinario" reference="vocis" label={translate('resources.cardEsperto.fields.compensazioneCumuloStraordinario')} className={classes.textInput}>
+                                <ReferenceInput style={{ width: 250 }} source="compensazioneCumuloStraordinario" reference="vocis" label={translate('resources.cardEsperto.fields.compensazioneCumuloStraordinario')} className={classes.textInput}>
                                     <SelectInput optionText="title" />
                                 </ReferenceInput>
                                 <TextInput source="compensazioneMassimale" label={translate('resources.cardEsperto.fields.compensazioneMassimale')} className={classes.textInput} validate={[required(), validateHoursFormat]} />

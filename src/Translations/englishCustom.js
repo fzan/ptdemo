@@ -203,7 +203,18 @@ module.exports = {
                 strategieGiustificativiFlex: "Convert partial vouchers (flex)",
                 strategieGiustificativiAssenzaTimbrature: "Justifications assigned even without stamping",
                 subTitle4: "Service orders",
-                OmissioneDescrizioneOrdiniServizio: "Omit the description in the service orders"
+                OmissioneDescrizioneOrdiniServizio: "Omit the description in the service orders",
+                minime: "Minimum",
+                base: "Base",
+                lavorativo: "WorkDay",
+                nonLavorativo: "Not WorkDay",
+                festivo: "Holiday",
+            }
+        },
+        calendario: {
+            fields: {
+                entrata: "ENTRATA",
+                uscita: "USCITA",
             }
         }
     }
