@@ -160,7 +160,11 @@ module.exports = {
                 lavoroStraordinarioArrotondamento: "Rounding",
                 lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare: "Rounding on the bands to be authorized",
                 subTitle4: "Profile of reworking",
-                profilo: "Profile"
+                profilo: "Profile",
+                ogniSingolaVoce: "Every single item",
+                titolare: "Only the owner",
+                primaSingolaVoce: "Every single item first",
+                primaIlTotale: "Total first"
             }
         },
         cardEsperto: {
@@ -177,7 +181,7 @@ module.exports = {
                 compensazioneTimbratureFuoriFasciaElastica: "Stamping out of the Elastic band",
                 compensazioneSpostaTimbraturaTipo: "Move Stamping Type",
                 compensazioneDisattivaFasceDopoIndividuaTipo: "Disable bands after locate Type",
-                compensazioneOrarioRigido: "Rigid timetable",
+                compensazioneOrarioRigido: "Rigid timetable"
             }
         },
         cardOrarioSpeciali: {

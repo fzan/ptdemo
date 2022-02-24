@@ -160,7 +160,11 @@ module.exports = {
                 lavoroStraordinarioArrotondamento: "Arrotondamento",
                 lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare: "Arrotondamento sulle fasce da Autorizzare",
                 subTitle4: "Profilo di rielaborazione",
-                profilo: "Profilo"
+                profilo: "Profilo",
+                ogniSingolaVoce: "Ogni singola voce",
+                titolare: "Solo il titolare",
+                primaSingolaVoce: "Prima ogni singola voce",
+                primaIlTotale: "Prima il totale"
             }
         },
         cardEsperto: {
@@ -177,7 +181,7 @@ module.exports = {
                 compensazioneTimbratureFuoriFasciaElastica: "Timbrature fuori fascia Elastica",
                 compensazioneSpostaTimbraturaTipo: "Sposta Timbratura Tipo",
                 compensazioneDisattivaFasceDopoIndividuaTipo: "Disattiva fasce dopo individua Tipo",
-                compensazioneOrarioRigido: "Orario Rigido",
+                compensazioneOrarioRigido: "Orario Rigido"
             }
         },
         cardOrarioSpeciali: {
