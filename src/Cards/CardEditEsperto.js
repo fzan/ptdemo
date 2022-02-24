@@ -1,5 +1,5 @@
 import * as React from "react"
-import { TextInput, SelectInput, BooleanInput, ReferenceInput, regex, required } from "react-admin"
+import { TextInput, SelectInput, BooleanInput, ReferenceInput, regex, required, useTranslate } from "react-admin"
 import Typography from '@material-ui/core/Typography'
 import { FormDataConsumer } from 'react-admin'
 import TableBody from '@material-ui/core/TableBody'
@@ -14,49 +14,50 @@ const useStyles = makeStyles({
 const validateHoursFormat = regex(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Inserire un orario Valido (HH:mm)')
 
 function CardEditEsperto(record) {
-    const classes = useStyles();
+    const translate = useTranslate()
+    const classes = useStyles()
     return (
         <TableBody>
             <FormDataConsumer>
                 {({ formData, ...rest }) => (
                     <>
                         <Typography gutterBottom variant="h5" component="div">
-                            Orario  {formData.descrizione}
+                            {translate('resources.cardGenerale.fields.orario')}  {formData.descrizione}
                         </Typography>
                         <br />
-                        <BooleanInput source="compensazioneCompensazioneSelettiva" label="Compensazione Selettiva" />
+                        <BooleanInput source="compensazioneCompensazioneSelettiva" label={translate('resources.cardEsperto.fields.compensazioneCompensazioneSelettiva')} />
                         {formData.compensazioneCompensazioneSelettiva ?
                             <>
-                                <ReferenceInput source="compensazioneCumuloAssenze" reference="vocis" label="Cumulo Assenze" className={classes.textInput}>
+                                <ReferenceInput source="compensazioneCumuloAssenze" reference="vocis" label={translate('resources.cardEsperto.fields.compensazioneCumuloAssenze')} className={classes.textInput}>
                                     <SelectInput optionText="title" />
                                 </ReferenceInput>
-                                <ReferenceInput style={{ width: 200 }} source="compensazioneCumuloStraordinario" reference="vocis" label="Cumulo Straordinario" className={classes.textInput}>
+                                <ReferenceInput style={{ width: 200 }} source="compensazioneCumuloStraordinario" reference="vocis" label={translate('resources.cardEsperto.fields.compensazioneCumuloStraordinario')} className={classes.textInput}>
                                     <SelectInput optionText="title" />
                                 </ReferenceInput>
-                                <TextInput source="compensazioneMassimale" label="Massimale" className={classes.textInput} validate={[required(), validateHoursFormat]} />
-                                <BooleanInput source="compensazioneSaldoPositivo" label="Usa saldo positivo per compensare monte ore" />
-                                <BooleanInput source="compensazioneFasceSeAssenza" label="Considera fasce anche in caso di assenza" />
-                                <BooleanInput source="compensazionePauseNonRispettate" label="Estendi anche su pause non rispettate" />
-                                <BooleanInput source="compensazioneDeduzioneAdattivaTimbratureTipo" label="Deduzione adattiva delle timbrature tipo" />
+                                <TextInput source="compensazioneMassimale" label={translate('resources.cardEsperto.fields.compensazioneMassimale')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
+                                <BooleanInput source="compensazioneSaldoPositivo" label={translate('resources.cardEsperto.fields.compensazioneSaldoPositivo')} />
+                                <BooleanInput source="compensazioneFasceSeAssenza" label={translate('resources.cardEsperto.fields.compensazioneFasceSeAssenza')} />
+                                <BooleanInput source="compensazionePauseNonRispettate" label={translate('resources.cardEsperto.fields.compensazionePauseNonRispettate')} />
+                                <BooleanInput source="compensazioneDeduzioneAdattivaTimbratureTipo" label={translate('resources.cardEsperto.fields.compensazioneDeduzioneAdattivaTimbratureTipo')} />
                                 {formData.compensazioneDeduzioneAdattivaTimbratureTipo ?
                                     <>
-                                        <SelectInput source="compensazioneSequenzeEu" label="Sequenza UE" allowEmpty="True" className={classes.textInput} choices={[
-                                            { id: 'prima', name: 'Solo prima' },
-                                            { id: 'tutteDallaPrima', name: 'TUTTE - desunte dalla prima' },
-                                            { id: 'tutteIndipendenti', name: 'TUTTE - In modo indipendente' },
+                                        <SelectInput source="compensazioneSequenzeEu" label={translate('resources.cardEsperto.fields.compensazioneSequenzeEu')} allowEmpty="True" className={classes.textInput} choices={[
+                                            { id: 'prima', name: translate('resources.cardEsperto.fields.prima') },
+                                            { id: 'tutteDallaPrima', name: translate('resources.cardEsperto.fields.tutteDallaPrima') },
+                                            { id: 'tutteIndipendenti', name: translate('resources.cardEsperto.fields.tutteIndipendenti') },
                                         ]} />
-                                        <SelectInput style={{ width: 280 }} source="compensazioneTimbratureFuoriFasciaElastica" label="Timbrature fuori fascia elastica" allowEmpty="True" className={classes.textInput} choices={[
+                                        <SelectInput style={{ width: 280 }} source="compensazioneTimbratureFuoriFasciaElastica" label={translate('resources.cardEsperto.fields.compensazioneTimbratureFuoriFasciaElastica')} allowEmpty="True" className={classes.textInput} choices={[
                                             { id: 'escludere', name: 'Escludere' },
                                             { id: 'considerare', name: 'Considerare' },
                                         ]} />
-                                        <SelectInput style={{ width: 230 }} source="compensazioneSpostaTimbraturaTipo" label="Sposta timbrature tipo" allowEmpty="True" className={classes.textInput} choices={[
+                                        <SelectInput style={{ width: 230 }} source="compensazioneSpostaTimbraturaTipo" label={translate('resources.cardEsperto.fields.compensazioneSpostaTimbraturaTipo')} allowEmpty="True" className={classes.textInput} choices={[
                                             { id: 'sinoAlLimite', name: 'Sino al limite della fascia' },
                                             { id: 'ignoraLimiti', name: 'Ignora limiti' },
                                         ]} />
-                                        <BooleanInput source="compensazioneDisattivaFasceDopoIndividuaTipo" label="Disattiva le fasce dopo aver individuato le tipo" />
+                                        <BooleanInput source="compensazioneDisattivaFasceDopoIndividuaTipo" label={translate('resources.cardEsperto.fields.compensazioneDisattivaFasceDopoIndividuaTipo')} />
                                         {formData.compensazioneDisattivaFasceDopoIndividuaTipo ?
                                             <>
-                                                <BooleanInput source="compensazioneOrarioRigido" label="Orario diviene [rigido]" />
+                                                <BooleanInput source="compensazioneOrarioRigido" label={translate('resources.cardEsperto.fields.compensazioneOrarioRigido')} />
                                             </> :
                                             <> </>
                                         }

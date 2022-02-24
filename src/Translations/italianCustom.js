@@ -181,7 +181,10 @@ module.exports = {
                 compensazioneTimbratureFuoriFasciaElastica: "Timbrature fuori fascia Elastica",
                 compensazioneSpostaTimbraturaTipo: "Sposta Timbratura Tipo",
                 compensazioneDisattivaFasceDopoIndividuaTipo: "Disattiva fasce dopo individua Tipo",
-                compensazioneOrarioRigido: "Orario Rigido"
+                compensazioneOrarioRigido: "Orario Rigido",
+                prima: "Solo prima",
+                tutteDallaPrima: "TUTTE - desunte dalla prima",
+                tutteIndipendenti: "TUTTE - In modo indipendente"
             }
         },
         cardOrarioSpeciali: {

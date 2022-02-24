@@ -181,7 +181,10 @@ module.exports = {
                 compensazioneTimbratureFuoriFasciaElastica: "Stamping out of the Elastic band",
                 compensazioneSpostaTimbraturaTipo: "Move Stamping Type",
                 compensazioneDisattivaFasceDopoIndividuaTipo: "Disable bands after locate Type",
-                compensazioneOrarioRigido: "Rigid timetable"
+                compensazioneOrarioRigido: "Rigid timetable",
+                prima: "Only First",
+                tutteDallaPrima: "ALL - deduced from the first",
+                tutteIndipendenti: "ALL - Independently"
             }
         },
         cardOrarioSpeciali: {
