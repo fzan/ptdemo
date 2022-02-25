@@ -216,6 +216,14 @@ module.exports = {
             fields: {
                 entrata: "ENTRATA",
                 uscita: "USCITA",
+                title: "Inserimento Fasce di Timbrature",
+                istruzioni: "Istruzioni",
+                istruzioni1: "Puoi spostare e ricalibrare la fascia oraria",
+                istruzioni2: "Click su un evento per poterlo eliminare",
+                eventiInseriti: "Eventi Inseriti",
+                alert: "Sei sicuro di volere eliminare l'evento ",
+                dalle: "Dalle",
+                alle: "Alle"
             }
         }
     }

@@ -215,6 +215,14 @@ module.exports = {
             fields: {
                 entrata: "ENTRATA",
                 uscita: "USCITA",
+                title: "Insertion of Stamping Bands",
+                istruzioni: "Instruction",
+                istruzioni1: "You can move and recalibrate the time slot",
+                istruzioni2: "Click on an event to be able to delete it",
+                eventiInseriti: "Events Posted",
+                alert: "Are you sure you want to delete the event ",
+                dalle: "From",
+                alle: "To"
             }
         }
     }
