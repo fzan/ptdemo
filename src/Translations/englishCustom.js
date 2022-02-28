@@ -195,7 +195,7 @@ module.exports = {
                 realTypesWithoutStamping: "Use real and / or virtual Type even without stamping",
                 subTitle2: "Theoretical hours and type of day",
                 theoreticalHours: 'HH theoretical',
-                oreTeoricheTipoGG: 'Type GG',
+                typeOfDay: 'Type GG',
                 subTitle3: "Processing engine strategies",
                 strategieIgnorareTimbratureOrfane: "Ignore orphaned clockings",
                 strategieTimbratureDiscriminazioneAutomatica: "Include the stampings in the automatic discrimination phase",

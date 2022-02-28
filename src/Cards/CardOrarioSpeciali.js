@@ -42,7 +42,7 @@ function CardOrarioSpeciali(record) {
             >
                 <TableRow width=''>
                     <TextField id="theoreticalHours" label={translate('resources.cardOrarioSpeciali.fields.theoreticalHours')} defaultValue={record.theoreticalHours} InputProps={{ readOnly: true }} className={classes.textInput} />
-                    <TextField id="oreTeoricheTipoGG" label={translate('resources.cardOrarioSpeciali.fields.oreTeoricheTipoGG')} defaultValue={record.oreTeoricheTipoGG} InputProps={{ readOnly: true }} className={classes.textInput} />
+                    <TextField id="typeOfDay" label={translate('resources.cardOrarioSpeciali.fields.typeOfDay')} defaultValue={record.typeOfDay} InputProps={{ readOnly: true }} className={classes.textInput} />
                 </TableRow>
             </List>
             <List

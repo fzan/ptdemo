@@ -37,7 +37,7 @@ function CardEditOrariSpeciali(record) {
                 { id: 'minime', name: translate('resources.cardOrarioSpeciali.fields.minime') },
                 { id: 'base', name: translate('resources.cardOrarioSpeciali.fields.base') },
             ]} />
-            <SelectInput source="oreTeoricheTipoGG" label={translate('resources.cardOrarioSpeciali.fields.oreTeoricheTipoGG')} allowEmpty="True" className={classes.textInput} choices={[
+            <SelectInput source="typeOfDay" label={translate('resources.cardOrarioSpeciali.fields.typeOfDay')} allowEmpty="True" className={classes.textInput} choices={[
                 { id: 'lavorativo', name: translate('resources.cardOrarioSpeciali.fields.lavorativo') },
                 { id: 'nonLavorativo', name: translate('resources.cardOrarioSpeciali.fields.nonLavorativo') },
                 { id: 'festivo', name: translate('resources.cardOrarioSpeciali.fields.festivo') },

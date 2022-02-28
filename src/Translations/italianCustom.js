@@ -195,7 +195,7 @@ module.exports = {
                 realTypesWithoutStamping: "Usare Tipo reali e/o virtuali anche senza timbrature",
                 subTitle2: "Ore teoriche e tipologia della giornata",
                 theoreticalHours: 'HH teoriche',
-                oreTeoricheTipoGG: 'Tipo GG',
+                typeOfDay: 'Tipo GG',
                 subTitle3: "Strategie per il motore di elaborazione",
                 strategieIgnorareTimbratureOrfane: "Ignorare timbrature orfane",
                 strategieTimbratureDiscriminazioneAutomatica: "Includere le timbrature nella fase di discriminazione automatica",
