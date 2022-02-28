@@ -29,7 +29,7 @@ const FasciaTimbrature = (props) => {
 const OrariSostitutivi = (props) => {
     return (
         <div>
-            {(props.record.saturday === '' && props.record.sundayHolyday === '' && props.record.orariSostitutiviPreFestivo === '') ? <CheckBoxOutlineBlankTwoToneIcon /> : <CheckBoxTwoToneIcon />}
+            {(props.record.saturday === '' && props.record.sundayHolyday === '' && props.record.preHolyday === '') ? <CheckBoxOutlineBlankTwoToneIcon /> : <CheckBoxTwoToneIcon />}
         </div>
     )
 }

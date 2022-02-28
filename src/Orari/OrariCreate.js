@@ -23,7 +23,7 @@ export const OrariCreate = props => (
             <BooleanInput source="causalCodesOutOfRange" />
             <DateInput source="saturday" />
             <DateInput source="sundayHolyday" />
-            <DateInput source="orariSostitutiviPreFestivo" />
+            <DateInput source="preHolyday" />
             <BooleanInput source="segnalareTimbratureFuoriFasce" />
             <BooleanInput source="lavoroStraordinarioAutorizzato" />
             <TextInput source="lavoroStraordinarioArrotondamento" />

@@ -152,7 +152,7 @@ module.exports = {
                 subTitle1: "Replacement Hours",
                 saturday: "Saturday",
                 sundayHolyday: "Sunday and Holidays",
-                orariSostitutiviPreFestivo: "Pre-holiday",
+                preHolyday: "Pre-holiday",
                 subTitle2: "Compliant stampings",
                 segnalareTimbratureFuoriFasce: "Report out-of-time stampings",
                 subTitle3: "Computation of overtime",

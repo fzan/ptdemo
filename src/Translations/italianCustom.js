@@ -152,7 +152,7 @@ module.exports = {
                 subTitle1: "Orari Sostitutivi",
                 saturday: "Sabato",
                 sundayHolyday: "Domenica e Festivi",
-                orariSostitutiviPreFestivo: "PreFestivo",
+                preHolyday: "PreFestivo",
                 subTitle2: "Timbrature conformi",
                 segnalareTimbratureFuoriFasce: "Segnalare timbrature fuori fasce",
                 subTitle3: "Computo del lavoro straordinario",
