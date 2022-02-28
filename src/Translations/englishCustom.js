@@ -46,7 +46,7 @@ module.exports = {
                 dalle: "From",
                 alle: "To",
                 priorita: "Priority",
-                orarioId: "Type of Time"
+                scheduleId: "Type of Time"
             }
         },
         fasceDelMonteOres: {
@@ -55,7 +55,7 @@ module.exports = {
                 causale: "Causal",
                 dalle: "From",
                 alle: "To",
-                orarioId: "Type of Time"
+                scheduleId: "Type of Time"
             }
         },
         timbratureTipos: {
@@ -67,7 +67,7 @@ module.exports = {
                 gg: "GG",
                 timbratura: "Stamping",
                 tipo: "Type",
-                orarioId: "Type of Time"
+                scheduleId: "Type of Time"
             }
         },
         arrotondamentoTimbratures: {
@@ -80,7 +80,7 @@ module.exports = {
                 minuti: "Minutes",
                 plus_toll: "Plus Toll",
                 cumula: "Cumulate",
-                orarioId: "Type of Time"
+                scheduleId: "Type of Time"
             },
         },
         arrotondamentoStraordinarios: {
@@ -91,7 +91,7 @@ module.exports = {
                 ora: "Hour",
                 minuti: "Minutes",
                 toll: "toll",
-                orarioId: "Type of Time"
+                scheduleId: "Type of Time"
             },
         },
         pauses: {
@@ -108,7 +108,7 @@ module.exports = {
                 voce: "Item",
                 eccedenze: "Surpluses",
                 vocePerSegnalazione: "Item for Reports",
-                orarioId: "Type of Time"
+                scheduleId: "Type of Time"
             }
         },
         orariDetails: {

@@ -5,7 +5,7 @@ export const PauseEdit = props => (
     <Edit {...props}>
         <SimpleForm>
             <TextInput source="id" />
-            <ReferenceInput source="orarioId" reference="orarios"><SelectInput optionText="id" /></ReferenceInput>
+            <ReferenceInput source="scheduleId" reference="orarios"><SelectInput optionText="id" /></ReferenceInput>
             <TextInput source="descrizione" />
             <TextInput source="dalle" />
             <TextInput source="alle" />

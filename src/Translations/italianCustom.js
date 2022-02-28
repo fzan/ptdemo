@@ -46,7 +46,7 @@ module.exports = {
                 dalle: "Dalle",
                 alle: "Alle",
                 priorita: "Priorità",
-                orarioId: "Tipologia Orario"
+                scheduleId: "Tipologia Orario"
             }
         },
         fasceDelMonteOres: {
@@ -55,7 +55,7 @@ module.exports = {
                 causale: "Causale",
                 dalle: "Dalle",
                 alle: "Alle",
-                orarioId: "Tipologia Orario"
+                scheduleId: "Tipologia Orario"
             }
         },
         timbratureTipos: {
@@ -67,7 +67,7 @@ module.exports = {
                 gg: "GG",
                 timbratura: "Timbratura",
                 tipo: "Tipo",
-                orarioId: "Tipologia Orario"
+                scheduleId: "Tipologia Orario"
             }
         },
         arrotondamentoTimbratures: {
@@ -80,7 +80,7 @@ module.exports = {
                 minuti: "Minuti",
                 plus_toll: "Plus Toll",
                 cumula: "Cumula",
-                orarioId: "Tipologia Orario"
+                scheduleId: "Tipologia Orario"
             }
         },
         arrotondamentoStraordinarios: {
@@ -91,7 +91,7 @@ module.exports = {
                 ora: "Ora",
                 minuti: "Minuti",
                 toll: "toll",
-                orarioId: "Tipologia Orario"
+                scheduleId: "Tipologia Orario"
             }
         },
         pauses: {
@@ -108,7 +108,7 @@ module.exports = {
                 voce: "Voce",
                 eccedenze: "Eccedenze",
                 vocePerSegnalazione: "Voce per segnalazione",
-                orarioId: "Tipologia Orario"
+                scheduleId: "Tipologia Orario"
             }
         },
         orariDetails: {

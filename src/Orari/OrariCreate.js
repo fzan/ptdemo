@@ -5,7 +5,7 @@ export const OrariCreate = props => (
     <Create {...props}>
         <SimpleForm>
             <TextInput source="id" />
-            <ReferenceInput source="orarioId" reference="orarios">
+            <ReferenceInput source="scheduleId" reference="orarios">
                 <SelectInput optionText="id" />
             </ReferenceInput>
             <TextInput source="codice" />
