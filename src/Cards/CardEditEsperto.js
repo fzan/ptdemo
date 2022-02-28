@@ -31,7 +31,7 @@ function CardEditEsperto(record) {
                                 <ReferenceInput source="cumulativeAbsence" style={{ width: 250 }} reference="vocis" label={translate('resources.cardEsperto.fields.cumulativeAbsence')} className={classes.textInput}>
                                     <SelectInput optionText="title" />
                                 </ReferenceInput>
-                                <ReferenceInput style={{ width: 250 }} source="compensazioneCumuloStraordinario" reference="vocis" label={translate('resources.cardEsperto.fields.compensazioneCumuloStraordinario')} className={classes.textInput}>
+                                <ReferenceInput style={{ width: 250 }} source="cumulativeOvertime" reference="vocis" label={translate('resources.cardEsperto.fields.cumulativeOvertime')} className={classes.textInput}>
                                     <SelectInput optionText="title" />
                                 </ReferenceInput>
                                 <TextInput source="compensazioneMassimale" label={translate('resources.cardEsperto.fields.compensazioneMassimale')} className={classes.textInput} validate={[required(), validateHoursFormat]} />

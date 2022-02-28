@@ -171,7 +171,7 @@ module.exports = {
             fields: {
                 selectiveCompensation: "Compensazione Selettiva",
                 cumulativeAbsence: "Cumulo Assenze",
-                compensazioneCumuloStraordinario: "Cumulo Straordinario",
+                cumulativeOvertime: "Cumulo Straordinario",
                 compensazioneMassimale: "Massimale",
                 compensazioneSaldoPositivo: "Saldo Positivo",
                 compensazioneFasceSeAssenza: "Fasce se Assenza",
