@@ -46,7 +46,7 @@ function CardEditEsperto(record) {
                                             { id: 'tutteDallaPrima', name: translate('resources.cardEsperto.fields.tutteDallaPrima') },
                                             { id: 'tutteIndipendenti', name: translate('resources.cardEsperto.fields.tutteIndipendenti') },
                                         ]} />
-                                        <SelectInput style={{ width: 280 }} source="compensazioneTimbratureFuoriFasciaElastica" label={translate('resources.cardEsperto.fields.compensazioneTimbratureFuoriFasciaElastica')} allowEmpty="True" className={classes.textInput} choices={[
+                                        <SelectInput style={{ width: 280 }} source="PunchOutsideElasticBand" label={translate('resources.cardEsperto.fields.PunchOutsideElasticBand')} allowEmpty="True" className={classes.textInput} choices={[
                                             { id: 'escludere', name: 'Escludere' },
                                             { id: 'considerare', name: 'Considerare' },
                                         ]} />
