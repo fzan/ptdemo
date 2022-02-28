@@ -50,7 +50,7 @@ function CardEditEsperto(record) {
                                             { id: 'escludere', name: 'Escludere' },
                                             { id: 'considerare', name: 'Considerare' },
                                         ]} />
-                                        <SelectInput style={{ width: 230 }} source="compensazioneSpostaTimbraturaTipo" label={translate('resources.cardEsperto.fields.compensazioneSpostaTimbraturaTipo')} allowEmpty="True" className={classes.textInput} choices={[
+                                        <SelectInput style={{ width: 230 }} source="movePunchType" label={translate('resources.cardEsperto.fields.movePunchType')} allowEmpty="True" className={classes.textInput} choices={[
                                             { id: 'sinoAlLimite', name: 'Sino al limite della fascia' },
                                             { id: 'ignoraLimiti', name: 'Ignora limiti' },
                                         ]} />

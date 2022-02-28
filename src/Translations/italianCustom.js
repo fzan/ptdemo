@@ -179,7 +179,7 @@ module.exports = {
                 adaptiveDeductionOfStandardPunch: "Deduzione Adattiva Timbrature Tipo",
                 eUSequences: "Sequenze Eu",
                 PunchOutsideElasticBand: "Timbrature fuori fascia Elastica",
-                compensazioneSpostaTimbraturaTipo: "Sposta Timbratura Tipo",
+                movePunchType: "Sposta Timbratura Tipo",
                 compensazioneDisattivaFasceDopoIndividuaTipo: "Disattiva fasce dopo individua Tipo",
                 compensazioneOrarioRigido: "Orario Rigido",
                 prima: "Solo prima",

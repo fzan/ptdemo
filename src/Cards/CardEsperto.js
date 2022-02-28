@@ -46,7 +46,7 @@ function CardEsperto(record) {
             <TableRow >
                 <TextField id="eUSequences" label={translate('resources.cardEsperto.fields.eUSequences')} defaultValue={record.eUSequences} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="PunchOutsideElasticBand" style={{ width: 250 }} label={translate('resources.cardEsperto.fields.PunchOutsideElasticBand')} defaultValue={record.PunchOutsideElasticBand} InputProps={{ readOnly: true }} className={classes.textInput} />
-                <TextField id="compensazioneSpostaTimbraturaTipo" label={translate('resources.cardEsperto.fields.compensazioneSpostaTimbraturaTipo')} defaultValue={record.compensazioneSpostaTimbraturaTipo} InputProps={{ readOnly: true }} className={classes.textInput} />
+                <TextField id="movePunchType" label={translate('resources.cardEsperto.fields.movePunchType')} defaultValue={record.movePunchType} InputProps={{ readOnly: true }} className={classes.textInput} />
             </TableRow>
             <TableRow>
                 <FormControlLabel control={

@@ -179,7 +179,7 @@ module.exports = {
                 adaptiveDeductionOfStandardPunch: "Adaptive Deduction Stamping Type",
                 eUSequences: "Eu sequences",
                 PunchOutsideElasticBand: "Stamping out of the Elastic band",
-                compensazioneSpostaTimbraturaTipo: "Move Stamping Type",
+                movePunchType: "Move Stamping Type",
                 compensazioneDisattivaFasceDopoIndividuaTipo: "Disable bands after locate Type",
                 compensazioneOrarioRigido: "Rigid timetable",
                 prima: "Only First",
