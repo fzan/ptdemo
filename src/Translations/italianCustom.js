@@ -97,7 +97,7 @@ module.exports = {
         pauses: {
             name: "Pause",
             fields: {
-                orario: "Orario",
+                scheduledIdLabel: "Orario",
                 description: "Descrizione",
                 from: "Dalle",
                 to: "Alle",
@@ -136,10 +136,10 @@ module.exports = {
                 nextDays: "Giorni successivi per timbratura",
                 onMoreDays: "Timbrature su piu giorni",
                 causalCodesOutOfRange: "Causali fuori intervallo",
-                orario: "Orario",
-                rigido: "Rigido",
-                elastico: "Elastico",
-                flessibile: "Flessibile",
+                scheduledIdLabel: "Orario",
+                stiff: "Rigido",
+                elastic: "Elastico",
+                flexible: "Flessibile",
                 entrata: "ENTRATA - Tutto sul GG di Ingresso",
                 uscita: "USCITA - Tutto sul GG di Uscita",
                 cavaliere: "CAVALIERE - Selettivo",

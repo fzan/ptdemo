@@ -97,7 +97,7 @@ module.exports = {
         pauses: {
             name: "Pauses",
             fields: {
-                orario: "Time",
+                scheduledIdLabel: "Time",
                 description: "Description",
                 from: "From",
                 to: "To",
@@ -136,10 +136,10 @@ module.exports = {
                 nextDays: "Subsequent days for stamping",
                 onMoreDays: "Stamping over several days",
                 causalCodesOutOfRange: "Cause them out of range",
-                orario: "Hours",
-                rigido: "Stiff",
-                elastico: "Elastic",
-                flessibile: "Flexible",
+                scheduledIdLabel: "Hours",
+                stiff: "Stiff",
+                elastic: "Elastic",
+                flexible: "Flexible",
                 entrata: "ENTRANCE - All about the entrance GG",
                 uscita: "EXIT - All about the Day of GG",
                 cavaliere: "KNIGHT - Selective",

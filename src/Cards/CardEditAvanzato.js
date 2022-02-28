@@ -19,7 +19,7 @@ function CardEditAvanzato(record) {
             <FormDataConsumer>
                 {({ formData, ...rest }) => (
                     <Typography gutterBottom variant="h5" component="div">
-                        {translate('resources.cardGenerale.fields.orario')}  {formData.description}
+                        {translate('resources.cardGenerale.fields.scheduledIdLabel')}  {formData.description}
                     </Typography>
                 )}
             </FormDataConsumer>

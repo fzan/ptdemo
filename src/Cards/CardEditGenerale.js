@@ -63,7 +63,7 @@ function CardEditGenerale(record) {
             <FormDataConsumer>
                 {({ formData, ...rest }) => (
                     <Typography gutterBottom variant="h5" component="div">
-                        {translate('resources.cardGenerale.fields.orario')}  {formData.description}
+                        {translate('resources.cardGenerale.fields.scheduledIdLabel')}  {formData.description}
                     </Typography>
                 )}
             </FormDataConsumer>
@@ -86,9 +86,9 @@ function CardEditGenerale(record) {
 
             <TableRow>
                 <SelectInput source="type" label={translate('resources.cardGenerale.fields.type')} allowEmpty="True" className={classes.textInput} choices={[
-                    { id: 'Rigido', name: translate('resources.cardGenerale.fields.rigido') },
-                    { id: 'Elastico', name: translate('resources.cardGenerale.fields.elastico') },
-                    { id: 'Flessibile', name: translate('resources.cardGenerale.fields.flessibile') },
+                    { id: 'stiff', name: translate('resources.cardGenerale.fields.stiff') },
+                    { id: 'elastic', name: translate('resources.cardGenerale.fields.elastic') },
+                    { id: 'flexible', name: translate('resources.cardGenerale.fields.flexible') },
                 ]} />
                 <TextInput source="base" label={translate('resources.cardGenerale.fields.base')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
                 <TextInput source="minimum" label={translate('resources.cardGenerale.fields.minimum')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
