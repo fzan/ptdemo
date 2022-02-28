@@ -131,7 +131,7 @@ module.exports = {
                 base: "Ore Base",
                 minimum: "Ore Minime",
                 savingDay: "Giorno di Salvataggio",
-                timbratureDalle: "Dalle",
+                from: "Dalle",
                 timbratureAlle: "Alle",
                 timbratureGiorniSuccessiviPerTimbratura: "Giorni successivi per timbratura",
                 timbratureTimbratureSuPiuGiorni: "Timbrature su piu giorni",

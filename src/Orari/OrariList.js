@@ -18,7 +18,7 @@ const VisualizzazioneBool = (props) => {
 }
 const FasciaTimbrature = (props) => {
     return (
-        <div>Dalle {props.record.timbratureDalle} Alle {props.record.timbratureAlle}
+        <div>Dalle {props.record.from} Alle {props.record.timbratureAlle}
             {props.record.timbratureGiorniSuccessiviPerTimbratura === 1 ? ' Del Giorno seguente' :
                 props.record.timbratureGiorniSuccessiviPerTimbratura > 1 ? ' Di ' + props.record.timbratureGiorniSuccessiviPerTimbratura + ' Giorni successivi' :
                     null
