@@ -172,7 +172,7 @@ module.exports = {
                 selectiveCompensation: "Selective Compensation",
                 cumulativeAbsence: "Cumulation of Absences",
                 cumulativeOvertime: "Extraordinary cumulation",
-                compensazioneMassimale: "Maximal",
+                maximal: "Maximal",
                 compensazioneSaldoPositivo: "Positive Balance",
                 compensazioneFasceSeAssenza: "Bands if Absence",
                 compensazionePauseNonRispettate: "Breaks not respected",

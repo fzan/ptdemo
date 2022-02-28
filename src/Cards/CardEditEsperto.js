@@ -34,7 +34,7 @@ function CardEditEsperto(record) {
                                 <ReferenceInput style={{ width: 250 }} source="cumulativeOvertime" reference="vocis" label={translate('resources.cardEsperto.fields.cumulativeOvertime')} className={classes.textInput}>
                                     <SelectInput optionText="title" />
                                 </ReferenceInput>
-                                <TextInput source="compensazioneMassimale" label={translate('resources.cardEsperto.fields.compensazioneMassimale')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
+                                <TextInput source="maximal" label={translate('resources.cardEsperto.fields.maximal')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
                                 <BooleanInput source="compensazioneSaldoPositivo" label={translate('resources.cardEsperto.fields.compensazioneSaldoPositivo')} />
                                 <BooleanInput source="compensazioneFasceSeAssenza" label={translate('resources.cardEsperto.fields.compensazioneFasceSeAssenza')} />
                                 <BooleanInput source="compensazionePauseNonRispettate" label={translate('resources.cardEsperto.fields.compensazionePauseNonRispettate')} />
