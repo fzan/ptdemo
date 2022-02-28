@@ -22,7 +22,7 @@ function CardEditEsperto(record) {
                 {({ formData, ...rest }) => (
                     <>
                         <Typography gutterBottom variant="h5" component="div">
-                            {translate('resources.cardGenerale.fields.orario')}  {formData.descrizione}
+                            {translate('resources.cardGenerale.fields.orario')}  {formData.description}
                         </Typography>
                         <br />
                         <BooleanInput source="compensazioneCompensazioneSelettiva" label={translate('resources.cardEsperto.fields.compensazioneCompensazioneSelettiva')} />

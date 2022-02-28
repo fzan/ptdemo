@@ -15,7 +15,7 @@ module.exports = {
             name: "TimeTables",
             fields: {
                 code: "Code",
-                descrizione: "Description",
+                description: "Description",
                 tipologiaTipo: "Type",
                 tipologiaGiornoDiSalvataggio: "Saving Day",
                 orePreviste: "Scheduled Hours",
@@ -98,7 +98,7 @@ module.exports = {
             name: "Pauses",
             fields: {
                 orario: "Time",
-                descrizione: "Description",
+                description: "Description",
                 dalle: "From",
                 alle: "To",
                 min: "Min",
@@ -122,7 +122,7 @@ module.exports = {
         },
         cardGenerale: {
             fields: {
-                descrizione: "Description",
+                description: "Description",
                 code: "Code",
                 brief: "Short",
                 colore: "Colour",

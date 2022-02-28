@@ -18,7 +18,7 @@ function CardEditOrariSpeciali(record) {
             <FormDataConsumer>
                 {({ formData, ...rest }) => (
                     <Typography gutterBottom variant="h5" component="div">
-                        {translate('resources.cardGenerale.fields.orario')}   {formData.descrizione}
+                        {translate('resources.cardGenerale.fields.orario')}   {formData.description}
                     </Typography>
                 )}
             </FormDataConsumer>

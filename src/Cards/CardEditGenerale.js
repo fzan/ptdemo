@@ -63,14 +63,14 @@ function CardEditGenerale(record) {
             <FormDataConsumer>
                 {({ formData, ...rest }) => (
                     <Typography gutterBottom variant="h5" component="div">
-                        {translate('resources.cardGenerale.fields.orario')}  {formData.descrizione}
+                        {translate('resources.cardGenerale.fields.orario')}  {formData.description}
                     </Typography>
                 )}
             </FormDataConsumer>
 
             <TextInput source="code" label={translate('resources.cardGenerale.fields.code')} className={classes.textInput} />
             <TextInput source="brief" label={translate('resources.cardGenerale.fields.brief')} className={classes.textInput} />
-            <TextInput source="descrizione" label={translate('resources.cardGenerale.fields.descrizione')} className={classes.textInput} />
+            <TextInput source="description" label={translate('resources.cardGenerale.fields.description')} className={classes.textInput} />
 
             <TableRow>
                 <FormDataConsumer>

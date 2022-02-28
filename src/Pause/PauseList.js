@@ -6,9 +6,9 @@ export const PauseList = props => (
         <Datagrid rowClick="edit">
             {/* <TextField source="id" /> */}
             <ReferenceField source="scheduleId" reference="orarios" link={false}>
-                <TextField source="descrizione" />
+                <TextField source="description" />
             </ReferenceField>
-            <TextField source="descrizione" />
+            <TextField source="description" />
             <TextField source="dalle" />
             <TextField source="alle" />
             <TextField source="min" />

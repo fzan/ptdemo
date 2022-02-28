@@ -19,7 +19,7 @@ function CardEditAvanzato(record) {
             <FormDataConsumer>
                 {({ formData, ...rest }) => (
                     <Typography gutterBottom variant="h5" component="div">
-                        {translate('resources.cardGenerale.fields.orario')}  {formData.descrizione}
+                        {translate('resources.cardGenerale.fields.orario')}  {formData.description}
                     </Typography>
                 )}
             </FormDataConsumer>
@@ -29,13 +29,13 @@ function CardEditAvanzato(record) {
             </Typography>
             <TableRow>
                 <ReferenceInput source="orariSostitutiviSabato" label={translate('resources.cardAvanzato.fields.orariSostitutiviSabato')} allowEmpty="True" reference="orarios" className={classes.textInput}>
-                    <SelectInput optionText="descrizione" />
+                    <SelectInput optionText="description" />
                 </ReferenceInput>
                 <ReferenceInput source="orariSostitutiviDomenicaEFestivo" style={{ width: 200 }} label={translate('resources.cardAvanzato.fields.orariSostitutiviDomenicaEFestivo')} allowEmpty="True" reference="orarios" className={classes.textInput}>
-                    <SelectInput optionText="descrizione" />
+                    <SelectInput optionText="description" />
                 </ReferenceInput>
                 <ReferenceInput source="orariSostitutiviPreFestivo" label={translate('resources.cardAvanzato.fields.orariSostitutiviPreFestivo')} allowEmpty="True" reference="orarios" className={classes.textInput}>
-                    <SelectInput optionText="descrizione" />
+                    <SelectInput optionText="description" />
                 </ReferenceInput>
             </TableRow>
 

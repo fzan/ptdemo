@@ -15,7 +15,7 @@ module.exports = {
             name: "Orari",
             fields: {
                 code: "code",
-                descrizione: "Descrizione",
+                description: "Descrizione",
                 tipologiaTipo: "Tipo",
                 tipologiaGiornoDiSalvataggio: "Giorno Di Salvataggio",
                 orePreviste: "Ore Previste",
@@ -98,7 +98,7 @@ module.exports = {
             name: "Pause",
             fields: {
                 orario: "Orario",
-                descrizione: "Descrizione",
+                description: "Descrizione",
                 dalle: "Dalle",
                 alle: "Alle",
                 min: "Min",
@@ -122,7 +122,7 @@ module.exports = {
         },
         cardGenerale: {
             fields: {
-                descrizione: "Descrizione",
+                description: "Descrizione",
                 code: "code",
                 brief: "Breve",
                 colore: "Colore",

@@ -38,7 +38,7 @@ export const OrariList = props => (
     <List {...props} bulkActionButtons={false} >
         <Datagrid rowClick="edit" expand={<OrariDetails />}>
             <TextField source="code" />
-            <TextField source="descrizione" />
+            <TextField source="description" />
             <TextField source="tipologiaTipo" />
             <TextField source="tipologiaGiornoDiSalvataggio" />
             <OrePreviste source="orePreviste" />
