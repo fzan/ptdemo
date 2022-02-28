@@ -181,7 +181,7 @@ module.exports = {
                 PunchOutsideElasticBand: "Timbrature fuori fascia Elastica",
                 movePunchType: "Sposta Timbratura Tipo",
                 deactivateBandsAfterIdentifiedType: "Disattiva fasce dopo individua Tipo",
-                compensazioneOrarioRigido: "Orario Rigido",
+                scheduleBecomeStiff: "Orario Rigido",
                 prima: "Solo prima",
                 tutteDallaPrima: "TUTTE - desunte dalla prima",
                 tutteIndipendenti: "TUTTE - In modo indipendente"

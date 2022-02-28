@@ -57,7 +57,7 @@ function CardEditEsperto(record) {
                                         <BooleanInput source="deactivateBandsAfterIdentifiedType" label={translate('resources.cardEsperto.fields.deactivateBandsAfterIdentifiedType')} />
                                         {formData.deactivateBandsAfterIdentifiedType ?
                                             <>
-                                                <BooleanInput source="compensazioneOrarioRigido" label={translate('resources.cardEsperto.fields.compensazioneOrarioRigido')} />
+                                                <BooleanInput source="scheduleBecomeStiff" label={translate('resources.cardEsperto.fields.scheduleBecomeStiff')} />
                                             </> :
                                             <> </>
                                         }

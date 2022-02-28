@@ -181,7 +181,7 @@ module.exports = {
                 PunchOutsideElasticBand: "Stamping out of the Elastic band",
                 movePunchType: "Move Stamping Type",
                 deactivateBandsAfterIdentifiedType: "Disable bands after locate Type",
-                compensazioneOrarioRigido: "Rigid timetable",
+                scheduleBecomeStiff: "Rigid timetable",
                 prima: "Only First",
                 tutteDallaPrima: "ALL - deduced from the first",
                 tutteIndipendenti: "ALL - Independently"
