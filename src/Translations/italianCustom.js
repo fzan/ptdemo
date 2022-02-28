@@ -198,7 +198,7 @@ module.exports = {
                 typeOfDay: 'Tipo GG',
                 subTitle3: "Strategie per il motore di elaborazione",
                 ignoreOrphanedPunch: "Ignorare timbrature orfane",
-                strategieTimbratureDiscriminazioneAutomatica: "Includere le timbrature nella fase di discriminazione automatica",
+                includePunchInAutomaticTimeDiscriminationPhase: "Includere le timbrature nella fase di discriminazione automatica",
                 strategieGiustificativiRigidi: "Convertire giustificativi parziali (rigidi)",
                 strategieGiustificativiFlex: "Convertire giustificativi parziali (flex)",
                 strategieGiustificativiAssenzaTimbrature: "Giustificativi assegnati anche senza timbratura",

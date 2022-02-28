@@ -54,8 +54,8 @@ function CardOrarioSpeciali(record) {
                         <CheckBox id="ignoreOrphanedPunch" checked={record.ignoreOrphanedPunch} InputProps={{ readOnly: true }} />
                     } label={translate('resources.cardOrarioSpeciali.fields.ignoreOrphanedPunch')} />
                     <FormControlLabel control={
-                        <CheckBox id="strategieTimbratureDiscriminazioneAutomatica" checked={record.strategieTimbratureDiscriminazioneAutomatica} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.strategieTimbratureDiscriminazioneAutomatica')} />
+                        <CheckBox id="includePunchInAutomaticTimeDiscriminationPhase" checked={record.includePunchInAutomaticTimeDiscriminationPhase} InputProps={{ readOnly: true }} />
+                    } label={translate('resources.cardOrarioSpeciali.fields.includePunchInAutomaticTimeDiscriminationPhase')} />
                     <FormControlLabel control={
                         <CheckBox id="strategieGiustificativiRigidi" checked={record.strategieGiustificativiRigidi} InputProps={{ readOnly: true }} />
                     } label={translate('resources.cardOrarioSpeciali.fields.strategieGiustificativiRigidi')} />

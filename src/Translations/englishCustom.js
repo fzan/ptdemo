@@ -198,7 +198,7 @@ module.exports = {
                 typeOfDay: 'Type GG',
                 subTitle3: "Processing engine strategies",
                 ignoreOrphanedPunch: "Ignore orphaned clockings",
-                strategieTimbratureDiscriminazioneAutomatica: "Include the stampings in the automatic discrimination phase",
+                includePunchInAutomaticTimeDiscriminationPhase: "Include the stampings in the automatic discrimination phase",
                 strategieGiustificativiRigidi: "Convert partial vouchers (rigid)",
                 strategieGiustificativiFlex: "Convert partial vouchers (flex)",
                 strategieGiustificativiAssenzaTimbrature: "Justifications assigned even without stamping",
