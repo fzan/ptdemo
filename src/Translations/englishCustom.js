@@ -128,7 +128,7 @@ module.exports = {
                 color: "Colour",
                 subTitle1: " Type, expected hours and competence of the results",
                 type: "Type",
-                tipologiaOreBase: "Base Hours",
+                base: "Base Hours",
                 tipologiaOreMinime: "Minimum Hours",
                 tipologiaGiornoDiSalvataggio: "Saving Day",
                 timbratureDalle: "From",

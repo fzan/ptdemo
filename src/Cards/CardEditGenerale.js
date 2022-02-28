@@ -90,7 +90,7 @@ function CardEditGenerale(record) {
                     { id: 'Elastico', name: translate('resources.cardGenerale.fields.elastico') },
                     { id: 'Flessibile', name: translate('resources.cardGenerale.fields.flessibile') },
                 ]} />
-                <TextInput source="tipologiaOreBase" label={translate('resources.cardGenerale.fields.tipologiaOreBase')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
+                <TextInput source="base" label={translate('resources.cardGenerale.fields.base')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
                 <TextInput source="tipologiaOreMinime" label={translate('resources.cardGenerale.fields.tipologiaOreMinime')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
             </TableRow>
             <SelectInput source="tipologiaGiornoDiSalvataggio" label={translate('resources.cardGenerale.fields.tipologiaGiornoDiSalvataggio')} allowEmpty="True" choices={[

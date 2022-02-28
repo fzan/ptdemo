@@ -6,7 +6,7 @@ import CheckBoxOutlineBlankTwoToneIcon from '@material-ui/icons/CheckBoxOutlineB
 
 const OrePreviste = (props) => {
     return (
-        <div>Min {props.record.tipologiaOreBase} -*- Medie {props.record.tipologiaOreMinime}</div>
+        <div>Min {props.record.base} -*- Medie {props.record.tipologiaOreMinime}</div>
     )
 }
 const VisualizzazioneBool = (props) => {
