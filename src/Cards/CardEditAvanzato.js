@@ -43,7 +43,7 @@ function CardEditAvanzato(record) {
                 {translate('resources.cardAvanzato.fields.subTitle2')}
             </Typography>
             <TableRow>
-                <BooleanInput source="segnalareTimbratureFuoriFasce"  label={translate('resources.cardAvanzato.fields.segnalareTimbratureFuoriFasce')} />
+                <BooleanInput source="reportPunchOutOfBands"  label={translate('resources.cardAvanzato.fields.reportPunchOutOfBands')} />
             </TableRow>
 
             <Typography gutterBottom variant="h7" component="div">

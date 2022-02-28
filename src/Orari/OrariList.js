@@ -44,7 +44,7 @@ export const OrariList = props => (
             <OrePreviste source="orePreviste" />
             <VisualizzazioneBool source="nextDays" />
             <FasciaTimbrature source="fasciaTimbrature" />
-            <VisualizzazioneBool source="segnalareTimbratureFuoriFasce" />
+            <VisualizzazioneBool source="reportPunchOutOfBands" />
             <VisualizzazioneBool source="compensazioneCompensazioneSelettiva" />
             <OrariSostitutivi source="orariSostitutivi" />
             <VisualizzazioneBool source="profilosId" />

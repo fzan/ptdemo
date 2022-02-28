@@ -24,7 +24,7 @@ export const OrariCreate = props => (
             <DateInput source="saturday" />
             <DateInput source="sundayHolyday" />
             <DateInput source="preHolyday" />
-            <BooleanInput source="segnalareTimbratureFuoriFasce" />
+            <BooleanInput source="reportPunchOutOfBands" />
             <BooleanInput source="lavoroStraordinarioAutorizzato" />
             <TextInput source="lavoroStraordinarioArrotondamento" />
             <BooleanInput source="lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare" />

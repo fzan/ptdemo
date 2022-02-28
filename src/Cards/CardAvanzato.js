@@ -36,8 +36,8 @@ function CardAvanzato(record) {
                     subheader={<ListSubheader color="primary">{translate('resources.cardAvanzato.fields.subTitle2')}</ListSubheader>}
                 >
                     <FormControlLabel control={
-                        <CheckBox id="segnalareTimbratureFuoriFasce" checked={record.segnalareTimbratureFuoriFasce} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardAvanzato.fields.segnalareTimbratureFuoriFasce')} />
+                        <CheckBox id="reportPunchOutOfBands" checked={record.reportPunchOutOfBands} InputProps={{ readOnly: true }} />
+                    } label={translate('resources.cardAvanzato.fields.reportPunchOutOfBands')} />
                 </List>
             </TableRow>
 

@@ -21,7 +21,7 @@ module.exports = {
                 orePreviste: "Scheduled Hours",
                 nextDays: "Multiple Days",
                 fasciaTimbrature: "Band Stampings",
-                segnalareTimbratureFuoriFasce: "Stamping Compliance",
+                reportPunchOutOfBands: "Stamping Compliance",
                 compensazioneCompensazioneSelettiva: "Selective Compensation",
                 orariSostitutivi: "Replacement Hours",
                 profilosId: "Reworkings"
@@ -154,7 +154,7 @@ module.exports = {
                 sundayHolyday: "Sunday and Holidays",
                 preHolyday: "Pre-holiday",
                 subTitle2: "Compliant stampings",
-                segnalareTimbratureFuoriFasce: "Report out-of-time stampings",
+                reportPunchOutOfBands: "Report out-of-time stampings",
                 subTitle3: "Computation of overtime",
                 lavoroStraordinarioAutorizzato: "Extraordinary authorized",
                 lavoroStraordinarioArrotondamento: "Rounding",

@@ -21,7 +21,7 @@ module.exports = {
                 orePreviste: "Ore Previste",
                 nextDays: "Copre più Giorni",
                 fasciaTimbrature: "Fascia Timbrature",
-                segnalareTimbratureFuoriFasce: "Conformità Timbrature",
+                reportPunchOutOfBands: "Conformità Timbrature",
                 compensazioneCompensazioneSelettiva: "Compensazione Selettiva",
                 orariSostitutivi: "Orari Sostitutivi",
                 profilosId: "Rielaborazioni"
@@ -154,7 +154,7 @@ module.exports = {
                 sundayHolyday: "Domenica e Festivi",
                 preHolyday: "PreFestivo",
                 subTitle2: "Timbrature conformi",
-                segnalareTimbratureFuoriFasce: "Segnalare timbrature fuori fasce",
+                reportPunchOutOfBands: "Segnalare timbrature fuori fasce",
                 subTitle3: "Computo del lavoro straordinario",
                 lavoroStraordinarioAutorizzato: "Straordinario autorizzato",
                 lavoroStraordinarioArrotondamento: "Arrotondamento",
