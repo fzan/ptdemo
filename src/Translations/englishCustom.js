@@ -107,7 +107,7 @@ module.exports = {
                 tipologia: "Tipology",
                 entry: "Item",
                 surpluses: "Surpluses",
-                vocePerSegnalazione: "Item for Reports",
+                reporting: "Item for Reports",
                 scheduleId: "Type of Time"
             }
         },

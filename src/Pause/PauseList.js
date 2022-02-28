@@ -17,7 +17,7 @@ export const PauseList = props => (
             <TextField source="tipologia" />
             <TextField source="entry" />
             <TextField source="surpluses" />
-            <TextField source="vocePerSegnalazione" />
+            <TextField source="reporting" />
         </Datagrid>
     </List>
 );

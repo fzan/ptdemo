@@ -15,7 +15,7 @@ export const PauseEdit = props => (
             <TextInput source="tipologia" />
             <DateInput source="entry" />
             <TextInput source="surpluses" />
-            <DateInput source="vocePerSegnalazione" />
+            <DateInput source="reporting" />
         </SimpleForm>
     </Edit>
 );
