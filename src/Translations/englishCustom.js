@@ -76,7 +76,7 @@ module.exports = {
                 v: "V",
                 from: "From",
                 tipo: "Type",
-                ora: "Hour",
+                hour: "Hour",
                 minuti: "Minutes",
                 plus_toll: "Plus Toll",
                 cumula: "Cumulate",
@@ -88,7 +88,7 @@ module.exports = {
             fields: {
                 from: "From",
                 tipo: "Type",
-                ora: "Hour",
+                hour: "Hour",
                 minuti: "Minutes",
                 toll: "toll",
                 scheduleId: "Type of Time"

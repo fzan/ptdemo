@@ -89,7 +89,7 @@ export default class TimeRange extends React.Component {
         }
 
         return rows.map((tRow, index) => (
-            <HalfHour key={index} ora={tRow} bgColor={stripeShade(index, this.state.selectedHours.indexOf(tRow)>-1)}/>
+            <HalfHour key={index} hour={tRow} bgColor={stripeShade(index, this.state.selectedHours.indexOf(tRow)>-1)}/>
         ));
     }
 

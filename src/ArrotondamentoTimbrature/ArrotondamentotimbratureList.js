@@ -11,7 +11,7 @@ export const ArrotondamentotimbratureList = props => (
             <TextField source="v" />
             <TextField source="from" />
             <TextField source="tipo" />
-            <TextField source="ora" />
+            <TextField source="hour" />
             <TextField source="minuti" />
             <TextField source="plus_toll" />
             <TextField source="cumula" />

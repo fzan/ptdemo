@@ -8,7 +8,7 @@ export const ArrotondamentostraordinarioCreate = props => (
             <ReferenceInput source="scheduleId" reference="orarios"><SelectInput optionText="description" /></ReferenceInput>
             <TextInput source="from" />
             <TextInput source="tipo" />
-            <TextInput source="ora" />
+            <TextInput source="hour" />
             <TextInput source="minuti" />
             <TextInput source="toll" />
         </SimpleForm>

@@ -1,10 +1,10 @@
 import React from "react";
 
 
-const HalfHour = ({ora, bgColor}) => {
+const HalfHour = ({hour, bgColor}) => {
     return(
-        <td style={bgColor} data-hour={ora}>
-            {/* {ora/2} */}
+        <td style={bgColor} data-hour={hour}>
+            {/* {hour/2} */}
         </td>
     )
 };
