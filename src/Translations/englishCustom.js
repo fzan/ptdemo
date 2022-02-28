@@ -200,7 +200,7 @@ module.exports = {
                 ignoreOrphanedPunch: "Ignore orphaned clockings",
                 includePunchInAutomaticTimeDiscriminationPhase: "Include the stampings in the automatic discrimination phase",
                 partialReceiptsIntoAssignedStiff: "Convert partial vouchers (rigid)",
-                strategieGiustificativiFlex: "Convert partial vouchers (flex)",
+                partialReceiptsIntoAssignedFlex: "Convert partial vouchers (flex)",
                 strategieGiustificativiAssenzaTimbrature: "Justifications assigned even without stamping",
                 subTitle4: "Service orders",
                 OmissioneDescrizioneOrdiniServizio: "Omit the description in the service orders",

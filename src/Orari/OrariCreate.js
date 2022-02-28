@@ -52,7 +52,7 @@ export const OrariCreate = props => (
             <BooleanInput source="ignoreOrphanedPunch" />
             <BooleanInput source="includePunchInAutomaticTimeDiscriminationPhase" />
             <BooleanInput source="partialReceiptsIntoAssignedStiff" />
-            <BooleanInput source="strategieGiustificativiFlex" />
+            <BooleanInput source="partialReceiptsIntoAssignedFlex" />
             <BooleanInput source="strategieGiustificativiAssenzaTimbrature" />
             <BooleanInput source="OmissioneDescrizioneOrdiniServizio" />
         </SimpleForm>

@@ -49,7 +49,7 @@ function CardEditOrariSpeciali(record) {
             <BooleanInput source="ignoreOrphanedPunch" label={translate('resources.cardOrarioSpeciali.fields.ignoreOrphanedPunch')} />
             <BooleanInput source="includePunchInAutomaticTimeDiscriminationPhase" label={translate('resources.cardOrarioSpeciali.fields.includePunchInAutomaticTimeDiscriminationPhase')} />
             <BooleanInput source="partialReceiptsIntoAssignedStiff" label={translate('resources.cardOrarioSpeciali.fields.partialReceiptsIntoAssignedStiff')} />
-            <BooleanInput source="strategieGiustificativiFlex" label={translate('resources.cardOrarioSpeciali.fields.strategieGiustificativiFlex')} />
+            <BooleanInput source="partialReceiptsIntoAssignedFlex" label={translate('resources.cardOrarioSpeciali.fields.partialReceiptsIntoAssignedFlex')} />
             <BooleanInput source="strategieGiustificativiAssenzaTimbrature" label={translate('resources.cardOrarioSpeciali.fields.strategieGiustificativiAssenzaTimbrature')} />
             <br />
             <Typography gutterBottom variant="h7" component="div">

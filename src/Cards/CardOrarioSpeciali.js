@@ -62,8 +62,8 @@ function CardOrarioSpeciali(record) {
                 </TableRow>
                 <TableRow>
                     <FormControlLabel control={
-                        <CheckBox id="strategieGiustificativiFlex" checked={record.strategieGiustificativiFlex} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.strategieGiustificativiFlex')} />
+                        <CheckBox id="partialReceiptsIntoAssignedFlex" checked={record.partialReceiptsIntoAssignedFlex} InputProps={{ readOnly: true }} />
+                    } label={translate('resources.cardOrarioSpeciali.fields.partialReceiptsIntoAssignedFlex')} />
                     <FormControlLabel control={
                         <CheckBox id="strategieGiustificativiAssenzaTimbrature" checked={record.strategieGiustificativiAssenzaTimbrature} InputProps={{ readOnly: true }} />
                     } label={translate('resources.cardOrarioSpeciali.fields.strategieGiustificativiAssenzaTimbrature')} />
