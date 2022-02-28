@@ -199,7 +199,7 @@ module.exports = {
                 subTitle3: "Strategie per il motore di elaborazione",
                 ignoreOrphanedPunch: "Ignorare timbrature orfane",
                 includePunchInAutomaticTimeDiscriminationPhase: "Includere le timbrature nella fase di discriminazione automatica",
-                strategieGiustificativiRigidi: "Convertire giustificativi parziali (rigidi)",
+                partialReceiptsIntoAssignedStiff: "Convertire giustificativi parziali (rigidi)",
                 strategieGiustificativiFlex: "Convertire giustificativi parziali (flex)",
                 strategieGiustificativiAssenzaTimbrature: "Giustificativi assegnati anche senza timbratura",
                 subTitle4: "Ordini di servizio",
