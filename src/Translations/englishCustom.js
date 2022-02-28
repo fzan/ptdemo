@@ -65,7 +65,7 @@ module.exports = {
                 from: "From",
                 to: "To",
                 gg: "GG",
-                timbratura: "Stamping",
+                punch: "Stamping",
                 tipo: "Type",
                 scheduleId: "Type of Time"
             }

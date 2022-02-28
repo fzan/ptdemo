@@ -65,7 +65,7 @@ module.exports = {
                 from: "Dalle",
                 to: "Alle",
                 gg: "GG",
-                timbratura: "Timbratura",
+                punch: "Timbratura",
                 tipo: "Tipo",
                 scheduleId: "Tipologia Orario"
             }

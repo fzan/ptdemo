@@ -12,7 +12,7 @@ export const TimbraturetipoList = props => (
             <TextField source="from" />
             <TextField source="to" />
             <TextField source="gg" />
-            <TextField source="timbratura" />
+            <TextField source="punch" />
             <TextField source="tipo" />
         </Datagrid>
     </List>

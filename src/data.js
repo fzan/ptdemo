@@ -197,7 +197,7 @@ const dataProvider = localStorageDataProvider({
                 from: '03:55', // 3: from = from
                 to: '04:05', // 4: alle = to
                 gg: 0, // 5: gg = gg (rimane lo stesso perche non so che fa)
-                punch: '04:00', // 6: Timbratura = punch
+                punch: '04:00', // 6: punch = punch
                 type: 'virtuale' // 7: Tipo = type
             },
             { id: 2, scheduleId: 1, v: 'U', from: '20:00', to: '23:59', gg: 0, punch: '20:00', type: 'reale' },

@@ -10,7 +10,7 @@ export const TimbraturetipoEdit = props => (
             <TextInput source="from" />
             <TextInput source="to" />
             <TextInput source="gg" />
-            <TextInput source="timbratura" />
+            <TextInput source="punch" />
             <TextInput source="tipo" />
         </SimpleForm>
     </Edit>
