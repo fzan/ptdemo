@@ -21,7 +21,7 @@ function CardGenerale(record) {
             <TableRow >
                 <TextField id="Descrizione" label={translate('resources.cardGenerale.fields.descrizione')} defaultValue={record.descrizione} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="code" label={translate('resources.cardGenerale.fields.code')} defaultValue={record.code} InputProps={{ readOnly: true }} className={classes.textInput} />
-                <TextField id="Breve" label={translate('resources.cardGenerale.fields.breve')} defaultValue={record.breve} InputProps={{ readOnly: true }} className={classes.textInput} />
+                <TextField id="brief" label={translate('resources.cardGenerale.fields.brief')} defaultValue={record.brief} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="Colore" label={translate('resources.cardGenerale.fields.colore')} defaultValue={record.colore} InputProps={{ readOnly: true }} className={classes.textInput} />
             </TableRow>
 

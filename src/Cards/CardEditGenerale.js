@@ -69,7 +69,7 @@ function CardEditGenerale(record) {
             </FormDataConsumer>
 
             <TextInput source="code" label={translate('resources.cardGenerale.fields.code')} className={classes.textInput} />
-            <TextInput source="breve" label={translate('resources.cardGenerale.fields.breve')} className={classes.textInput} />
+            <TextInput source="brief" label={translate('resources.cardGenerale.fields.brief')} className={classes.textInput} />
             <TextInput source="descrizione" label={translate('resources.cardGenerale.fields.descrizione')} className={classes.textInput} />
 
             <TableRow>

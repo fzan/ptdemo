@@ -124,7 +124,7 @@ module.exports = {
             fields: {
                 descrizione: "Description",
                 code: "Code",
-                breve: "Short",
+                brief: "Short",
                 colore: "Colour",
                 subTitle1: " Type, expected hours and competence of the results",
                 tipologiaTipo: "Type",
