@@ -51,8 +51,8 @@ function CardOrarioSpeciali(record) {
             >
                 <TableRow>
                     <FormControlLabel control={
-                        <CheckBox id="strategieIgnorareTimbratureOrfane" checked={record.strategieIgnorareTimbratureOrfane} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.strategieIgnorareTimbratureOrfane')} />
+                        <CheckBox id="ignoreOrphanedPunch" checked={record.ignoreOrphanedPunch} InputProps={{ readOnly: true }} />
+                    } label={translate('resources.cardOrarioSpeciali.fields.ignoreOrphanedPunch')} />
                     <FormControlLabel control={
                         <CheckBox id="strategieTimbratureDiscriminazioneAutomatica" checked={record.strategieTimbratureDiscriminazioneAutomatica} InputProps={{ readOnly: true }} />
                     } label={translate('resources.cardOrarioSpeciali.fields.strategieTimbratureDiscriminazioneAutomatica')} />

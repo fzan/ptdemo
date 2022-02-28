@@ -197,7 +197,7 @@ module.exports = {
                 theoreticalHours: 'HH theoretical',
                 typeOfDay: 'Type GG',
                 subTitle3: "Processing engine strategies",
-                strategieIgnorareTimbratureOrfane: "Ignore orphaned clockings",
+                ignoreOrphanedPunch: "Ignore orphaned clockings",
                 strategieTimbratureDiscriminazioneAutomatica: "Include the stampings in the automatic discrimination phase",
                 strategieGiustificativiRigidi: "Convert partial vouchers (rigid)",
                 strategieGiustificativiFlex: "Convert partial vouchers (flex)",

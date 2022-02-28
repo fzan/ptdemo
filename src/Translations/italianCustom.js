@@ -197,7 +197,7 @@ module.exports = {
                 theoreticalHours: 'HH teoriche',
                 typeOfDay: 'Tipo GG',
                 subTitle3: "Strategie per il motore di elaborazione",
-                strategieIgnorareTimbratureOrfane: "Ignorare timbrature orfane",
+                ignoreOrphanedPunch: "Ignorare timbrature orfane",
                 strategieTimbratureDiscriminazioneAutomatica: "Includere le timbrature nella fase di discriminazione automatica",
                 strategieGiustificativiRigidi: "Convertire giustificativi parziali (rigidi)",
                 strategieGiustificativiFlex: "Convertire giustificativi parziali (flex)",

@@ -46,7 +46,7 @@ function CardEditOrariSpeciali(record) {
             <Typography gutterBottom variant="h7" component="div">
                 {translate('resources.cardOrarioSpeciali.fields.subTitle3')}
             </Typography>
-            <BooleanInput source="strategieIgnorareTimbratureOrfane" label={translate('resources.cardOrarioSpeciali.fields.strategieIgnorareTimbratureOrfane')} />
+            <BooleanInput source="ignoreOrphanedPunch" label={translate('resources.cardOrarioSpeciali.fields.ignoreOrphanedPunch')} />
             <BooleanInput source="strategieTimbratureDiscriminazioneAutomatica" label={translate('resources.cardOrarioSpeciali.fields.strategieTimbratureDiscriminazioneAutomatica')} />
             <BooleanInput source="strategieGiustificativiRigidi" label={translate('resources.cardOrarioSpeciali.fields.strategieGiustificativiRigidi')} />
             <BooleanInput source="strategieGiustificativiFlex" label={translate('resources.cardOrarioSpeciali.fields.strategieGiustificativiFlex')} />

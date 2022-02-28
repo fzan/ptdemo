@@ -49,7 +49,7 @@ export const OrariCreate = props => (
             <BooleanInput source="realTypesWithoutStamping" />
             <TextInput source="theoreticalHours" />
             <TextInput source="typeOfDay" />
-            <BooleanInput source="strategieIgnorareTimbratureOrfane" />
+            <BooleanInput source="ignoreOrphanedPunch" />
             <BooleanInput source="strategieTimbratureDiscriminazioneAutomatica" />
             <BooleanInput source="strategieGiustificativiRigidi" />
             <BooleanInput source="strategieGiustificativiFlex" />
