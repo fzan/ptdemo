@@ -150,7 +150,7 @@ module.exports = {
         cardAvanzato: {
             fields: {
                 subTitle1: "Orari Sostitutivi",
-                orariSostitutiviSabato: "Sabato",
+                saturday: "Sabato",
                 orariSostitutiviDomenicaEFestivo: "Domenica e Festivi",
                 orariSostitutiviPreFestivo: "PreFestivo",
                 subTitle2: "Timbrature conformi",

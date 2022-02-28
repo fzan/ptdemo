@@ -25,7 +25,7 @@ function CardAvanzato(record) {
                     sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
                     subheader={<ListSubheader color="primary">{translate('resources.cardAvanzato.fields.subTitle1')}</ListSubheader>}
                 >
-                    <TextField id="orariSostitutiviSabato" label={translate('resources.cardAvanzato.fields.orariSostitutiviSabato')} defaultValue={record.orariSostitutiviSabato} InputProps={{ readOnly: true }} className={classes.textInput} />
+                    <TextField id="saturday" label={translate('resources.cardAvanzato.fields.saturday')} defaultValue={record.saturday} InputProps={{ readOnly: true }} className={classes.textInput} />
                     <TextField id="orariSostitutiviDomenicaEFestivo" label={translate('resources.cardAvanzato.fields.orariSostitutiviDomenicaEFestivo')} defaultValue={record.orariSostitutiviDomenicaEFestivo} InputProps={{ readOnly: true }} className={classes.textInput} />
                     <TextField id="orariSostitutiviPreFestivo" label={translate('resources.cardAvanzato.fields.orariSostitutiviPreFestivo')} defaultValue={record.orariSostitutiviPreFestivo} InputProps={{ readOnly: true }} className={classes.textInput} />
                 </List>

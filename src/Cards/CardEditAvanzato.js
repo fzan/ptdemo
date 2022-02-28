@@ -28,7 +28,7 @@ function CardEditAvanzato(record) {
                 {translate('resources.cardAvanzato.fields.subTitle1')}
             </Typography>
             <TableRow>
-                <ReferenceInput source="orariSostitutiviSabato" label={translate('resources.cardAvanzato.fields.orariSostitutiviSabato')} allowEmpty="True" reference="orarios" className={classes.textInput}>
+                <ReferenceInput source="saturday" label={translate('resources.cardAvanzato.fields.saturday')} allowEmpty="True" reference="orarios" className={classes.textInput}>
                     <SelectInput optionText="description" />
                 </ReferenceInput>
                 <ReferenceInput source="orariSostitutiviDomenicaEFestivo" style={{ width: 200 }} label={translate('resources.cardAvanzato.fields.orariSostitutiviDomenicaEFestivo')} allowEmpty="True" reference="orarios" className={classes.textInput}>

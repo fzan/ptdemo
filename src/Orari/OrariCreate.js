@@ -21,7 +21,7 @@ export const OrariCreate = props => (
             <NumberInput source="nextDays" />
             <BooleanInput source="onMoreDays" />
             <BooleanInput source="causalCodesOutOfRange" />
-            <DateInput source="orariSostitutiviSabato" />
+            <DateInput source="saturday" />
             <DateInput source="orariSostitutiviDomenicaEFestivo" />
             <DateInput source="orariSostitutiviPreFestivo" />
             <BooleanInput source="segnalareTimbratureFuoriFasce" />
