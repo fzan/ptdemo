@@ -10,7 +10,7 @@ export const TimbraturetipoList = props => (
             </ReferenceField>
             <TextField source="v" />
             <TextField source="from" />
-            <TextField source="alle" />
+            <TextField source="to" />
             <TextField source="gg" />
             <TextField source="timbratura" />
             <TextField source="tipo" />

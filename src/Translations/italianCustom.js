@@ -44,7 +44,7 @@ module.exports = {
             fields: {
                 causalCode: "Causale",
                 from: "Dalle",
-                alle: "Alle",
+                to: "Alle",
                 priority: "Priorità",
                 scheduleId: "Tipologia Orario"
             }
@@ -54,7 +54,7 @@ module.exports = {
             fields: {
                 causalCode: "Causale",
                 from: "Dalle",
-                alle: "Alle",
+                to: "Alle",
                 scheduleId: "Tipologia Orario"
             }
         },
@@ -63,7 +63,7 @@ module.exports = {
             fields: {
                 v: "V",
                 from: "Dalle",
-                alle: "Alle",
+                to: "Alle",
                 gg: "GG",
                 timbratura: "Timbratura",
                 tipo: "Tipo",
@@ -100,7 +100,7 @@ module.exports = {
                 orario: "Orario",
                 description: "Descrizione",
                 from: "Dalle",
-                alle: "Alle",
+                to: "Alle",
                 min: "Min",
                 max: "Max",
                 obbl: "Obbl",
@@ -223,7 +223,7 @@ module.exports = {
                 eventiInseriti: "Eventi Inseriti",
                 alert: "Sei sicuro di volere eliminare l'evento ",
                 from: "Dalle",
-                alle: "Alle"
+                to: "Alle"
             }
         }
     }

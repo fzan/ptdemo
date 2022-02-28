@@ -8,7 +8,7 @@ export const PauseEdit = props => (
             <ReferenceInput source="scheduleId" reference="orarios"><SelectInput optionText="id" /></ReferenceInput>
             <TextInput source="description" />
             <TextInput source="from" />
-            <TextInput source="alle" />
+            <TextInput source="to" />
             <TextInput source="min" />
             <TextInput source="max" />
             <DateInput source="obbl" />

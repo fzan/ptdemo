@@ -8,7 +8,7 @@ export const TimbraturetipoCreate = props => (
             <ReferenceInput source="scheduleId" reference="orarios"><SelectInput optionText="description" /></ReferenceInput>
             <TextInput source="v" />
             <TextInput source="from" />
-            <TextInput source="alle" />
+            <TextInput source="to" />
             <TextInput source="gg" />
             <TextInput source="timbratura" />
             <TextInput source="tipo" />

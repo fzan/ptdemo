@@ -44,7 +44,7 @@ module.exports = {
             fields: {
                 causalCode: "Causal",
                 from: "From",
-                alle: "To",
+                to: "To",
                 priority: "Priority",
                 scheduleId: "Type of Time"
             }
@@ -54,7 +54,7 @@ module.exports = {
             fields: {
                 causalCode: "Causal",
                 from: "From",
-                alle: "To",
+                to: "To",
                 scheduleId: "Type of Time"
             }
         },
@@ -63,7 +63,7 @@ module.exports = {
             fields: {
                 v: "V",
                 from: "From",
-                alle: "To",
+                to: "To",
                 gg: "GG",
                 timbratura: "Stamping",
                 tipo: "Type",
@@ -100,7 +100,7 @@ module.exports = {
                 orario: "Time",
                 description: "Description",
                 from: "From",
-                alle: "To",
+                to: "To",
                 min: "Min",
                 max: "Max",
                 obbl: "Obbl",
@@ -222,7 +222,7 @@ module.exports = {
                 eventiInseriti: "Events Posted",
                 alert: "Are you sure you want to delete the event ",
                 from: "From",
-                alle: "To"
+                to: "To"
             }
         }
     }
