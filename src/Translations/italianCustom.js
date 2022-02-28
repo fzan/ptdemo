@@ -22,7 +22,7 @@ module.exports = {
                 nextDays: "Copre più Giorni",
                 fasciaTimbrature: "Fascia Timbrature",
                 segnalareTimbratureFuoriFasce: "Conformità Timbrature",
-                compensazioneCompensazioneSelettiva: "Compensazione Selettiva",
+                selectiveCompensation: "Compensazione Selettiva",
                 orariSostitutivi: "Orari Sostitutivi",
                 profilosId: "Rielaborazioni"
             },
@@ -169,7 +169,7 @@ module.exports = {
         },
         cardEsperto: {
             fields: {
-                compensazioneCompensazioneSelettiva: "Compensazione Selettiva",
+                selectiveCompensation: "Compensazione Selettiva",
                 compensazioneCumuloAssenze: "Cumulo Assenze",
                 compensazioneCumuloStraordinario: "Cumulo Straordinario",
                 compensazioneMassimale: "Massimale",

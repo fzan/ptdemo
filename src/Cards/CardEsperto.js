@@ -21,8 +21,8 @@ function CardEsperto(record) {
         <TableBody>
             <TableRow>
                 <FormControlLabel control={
-                    <CheckBox id="compensazioneCompensazioneSelettiva" checked={record.compensazioneCompensazioneSelettiva} InputProps={{ readOnly: true }} />
-                } label={translate('resources.cardEsperto.fields.compensazioneCompensazioneSelettiva')} />
+                    <CheckBox id="selectiveCompensation" checked={record.selectiveCompensation} InputProps={{ readOnly: true }} />
+                } label={translate('resources.cardEsperto.fields.selectiveCompensation')} />
             </TableRow>
             <TableRow >
                 <TextField id="compensazioneCumuloAssenze" label={translate('resources.cardEsperto.fields.compensazioneCumuloAssenze')} defaultValue={record.compensazioneCumuloAssenze} InputProps={{ readOnly: true }} className={classes.textInput} />

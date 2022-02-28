@@ -31,7 +31,7 @@ export const OrariCreate = props => (
             <ReferenceInput source="profilosId" reference="profilos">
                 <SelectInput optionText="id" />
             </ReferenceInput>
-            <BooleanInput source="compensazioneCompensazioneSelettiva" />
+            <BooleanInput source="selectiveCompensation" />
             <DateInput source="compensazioneCumuloAssenze" />
             <DateInput source="compensazioneCumuloStraordinario" />
             <TextInput source="compensazioneMassimale" />

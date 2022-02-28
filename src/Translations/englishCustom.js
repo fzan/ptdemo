@@ -22,7 +22,7 @@ module.exports = {
                 nextDays: "Multiple Days",
                 fasciaTimbrature: "Band Stampings",
                 reportPunchOutOfBands: "Stamping Compliance",
-                compensazioneCompensazioneSelettiva: "Selective Compensation",
+                selectiveCompensation: "Selective Compensation",
                 orariSostitutivi: "Replacement Hours",
                 profilosId: "Reworkings"
             },
@@ -169,7 +169,7 @@ module.exports = {
         },
         cardEsperto: {
             fields: {
-                compensazioneCompensazioneSelettiva: "Selective Compensation",
+                selectiveCompensation: "Selective Compensation",
                 compensazioneCumuloAssenze: "Cumulation of Absences",
                 compensazioneCumuloStraordinario: "Extraordinary cumulation",
                 compensazioneMassimale: "Maximal",
