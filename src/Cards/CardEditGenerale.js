@@ -118,7 +118,7 @@ function CardEditGenerale(record) {
                 <NumberInput source="nextDays" label={translate('resources.cardGenerale.fields.nextDaysLabel')} />
             </TableRow>
 
-            <BooleanInput source="timbratureTimbratureSuPiuGiorni" label={translate('resources.cardGenerale.fields.timbratureTimbratureSuPiuGiorni')} />
+            <BooleanInput source="onMoreDays" label={translate('resources.cardGenerale.fields.onMoreDays')} />
             <BooleanInput source="timbratureCausaliFuoriIntervallo" label={translate('resources.cardGenerale.fields.timbratureCausaliFuoriIntervallo')} />
         </TableBody>
     );

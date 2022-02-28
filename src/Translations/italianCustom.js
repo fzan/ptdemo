@@ -134,7 +134,7 @@ module.exports = {
                 from: "Dalle",
                 to: "Alle",
                 nextDays: "Giorni successivi per timbratura",
-                timbratureTimbratureSuPiuGiorni: "Timbrature su piu giorni",
+                onMoreDays: "Timbrature su piu giorni",
                 timbratureCausaliFuoriIntervallo: "Causali fuori intervallo",
                 orario: "Orario",
                 rigido: "Rigido",

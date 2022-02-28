@@ -134,7 +134,7 @@ module.exports = {
                 from: "From",
                 to: "To",
                 nextDays: "Subsequent days for stamping",
-                timbratureTimbratureSuPiuGiorni: "Stamping over several days",
+                onMoreDays: "Stamping over several days",
                 timbratureCausaliFuoriIntervallo: "Cause them out of range",
                 orario: "Hours",
                 rigido: "Stiff",

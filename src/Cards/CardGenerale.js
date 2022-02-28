@@ -43,8 +43,8 @@ function CardGenerale(record) {
             </TableRow>
             <TableRow>
                 <FormControlLabel control={
-                    <CheckBox id="timbratureTimbratureSuPiuGiorni" checked={record.timbratureTimbratureSuPiuGiorni} InputProps={{ readOnly: true }} />
-                } label={translate('resources.cardGenerale.fields.timbratureTimbratureSuPiuGiorni')} />
+                    <CheckBox id="onMoreDays" checked={record.onMoreDays} InputProps={{ readOnly: true }} />
+                } label={translate('resources.cardGenerale.fields.onMoreDays')} />
                 <FormControlLabel control={
                     <CheckBox id="timbratureCausaliFuoriIntervallo" checked={record.timbratureCausaliFuoriIntervallo} InputProps={{ readOnly: true }} />
                 } label={translate('resources.cardGenerale.fields.timbratureCausaliFuoriIntervallo')} />
