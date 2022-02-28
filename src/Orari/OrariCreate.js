@@ -26,7 +26,7 @@ export const OrariCreate = props => (
             <DateInput source="preHolyday" />
             <BooleanInput source="reportPunchOutOfBands" />
             <BooleanInput source="overtimeMustBeAuthorized" />
-            <TextInput source="lavoroStraordinarioArrotondamento" />
+            <TextInput source="rounding" />
             <BooleanInput source="lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare" />
             <ReferenceInput source="profilosId" reference="profilos">
                 <SelectInput optionText="id" />

@@ -157,7 +157,7 @@ module.exports = {
                 reportPunchOutOfBands: "Report out-of-time stampings",
                 subTitle3: "Computation of overtime",
                 overtimeMustBeAuthorized: "Extraordinary authorized",
-                lavoroStraordinarioArrotondamento: "Rounding",
+                rounding: "Rounding",
                 lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare: "Rounding on the bands to be authorized",
                 subTitle4: "Profile of reworking",
                 profilo: "Profile",

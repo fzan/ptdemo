@@ -52,7 +52,7 @@ function CardAvanzato(record) {
                 </List>
             </TableRow>
             <TableRow>
-                <TextField id="lavoroStraordinarioArrotondamento" label={translate('resources.cardAvanzato.fields.lavoroStraordinarioArrotondamento')} defaultValue={record.lavoroStraordinarioArrotondamento} InputProps={{ readOnly: true }} />
+                <TextField id="rounding" label={translate('resources.cardAvanzato.fields.rounding')} defaultValue={record.rounding} InputProps={{ readOnly: true }} />
             </TableRow>
             <TableRow>
                 <FormControlLabel control={
