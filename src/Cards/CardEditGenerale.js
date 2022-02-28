@@ -119,7 +119,7 @@ function CardEditGenerale(record) {
             </TableRow>
 
             <BooleanInput source="onMoreDays" label={translate('resources.cardGenerale.fields.onMoreDays')} />
-            <BooleanInput source="timbratureCausaliFuoriIntervallo" label={translate('resources.cardGenerale.fields.timbratureCausaliFuoriIntervallo')} />
+            <BooleanInput source="causalCodesOutOfRange" label={translate('resources.cardGenerale.fields.causalCodesOutOfRange')} />
         </TableBody>
     );
 }

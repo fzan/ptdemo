@@ -46,8 +46,8 @@ function CardGenerale(record) {
                     <CheckBox id="onMoreDays" checked={record.onMoreDays} InputProps={{ readOnly: true }} />
                 } label={translate('resources.cardGenerale.fields.onMoreDays')} />
                 <FormControlLabel control={
-                    <CheckBox id="timbratureCausaliFuoriIntervallo" checked={record.timbratureCausaliFuoriIntervallo} InputProps={{ readOnly: true }} />
-                } label={translate('resources.cardGenerale.fields.timbratureCausaliFuoriIntervallo')} />
+                    <CheckBox id="causalCodesOutOfRange" checked={record.causalCodesOutOfRange} InputProps={{ readOnly: true }} />
+                } label={translate('resources.cardGenerale.fields.causalCodesOutOfRange')} />
             </TableRow>
 
         </TableBody >

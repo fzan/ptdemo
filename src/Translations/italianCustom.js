@@ -135,7 +135,7 @@ module.exports = {
                 to: "Alle",
                 nextDays: "Giorni successivi per timbratura",
                 onMoreDays: "Timbrature su piu giorni",
-                timbratureCausaliFuoriIntervallo: "Causali fuori intervallo",
+                causalCodesOutOfRange: "Causali fuori intervallo",
                 orario: "Orario",
                 rigido: "Rigido",
                 elastico: "Elastico",
