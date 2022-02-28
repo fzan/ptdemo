@@ -9,7 +9,7 @@ export const ArrotondamentostraordinarioCreate = props => (
             <TextInput source="from" />
             <TextInput source="tipo" />
             <TextInput source="hour" />
-            <TextInput source="minuti" />
+            <TextInput source="minutes" />
             <TextInput source="toll" />
         </SimpleForm>
     </Create>

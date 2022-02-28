@@ -77,9 +77,9 @@ module.exports = {
                 from: "Dalle",
                 tipo: "Tipo",
                 hour: "Ora",
-                minuti: "Minuti",
+                minutes: "Minuti",
                 plus_toll: "Plus Toll",
-                cumula: "Cumula",
+                cumulate: "Cumula",
                 scheduleId: "Tipologia Orario"
             }
         },
@@ -89,7 +89,7 @@ module.exports = {
                 from: "Dalle",
                 tipo: "Tipo",
                 hour: "Ora",
-                minuti: "Minuti",
+                minutes: "Minuti",
                 toll: "toll",
                 scheduleId: "Tipologia Orario"
             }

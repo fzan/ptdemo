@@ -12,9 +12,9 @@ export const ArrotondamentotimbratureList = props => (
             <TextField source="from" />
             <TextField source="tipo" />
             <TextField source="hour" />
-            <TextField source="minuti" />
+            <TextField source="minutes" />
             <TextField source="plus_toll" />
-            <TextField source="cumula" />
+            <TextField source="cumulate" />
         </Datagrid>
     </List>
 );

@@ -11,7 +11,7 @@ export const ArrotondamentostraordinarioList = props => (
             <TextField source="from" />
             <TextField source="tipo" />
             <TextField source="hour" />
-            <TextField source="minuti" />
+            <TextField source="minutes" />
             <TextField source="toll" />
         </Datagrid>
     </List>

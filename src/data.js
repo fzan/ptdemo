@@ -218,7 +218,7 @@ const dataProvider = localStorageDataProvider({
                 hour: '', // 6: Ora = hour
                 minutes: '30', // 7: Minuti = minutes
                 plusToll: '', // 8: Plus/Toll = plusToll (non so che fa/ dove si modifica) ('plus' ha senso anche in inglese e 'toll' sta per tolleranza, che è Tollerance. Lasciamo cosi)
-                cumulate: '' // 9: Cumula = cumulate (non so che fa/ dove si modifica)
+                cumulate: '' // 9: cumulate = cumulate (non so che fa/ dove si modifica)
             },
             { id: 2, scheduleId: 1, v: 'U', from: '20:00', to: '20:59', type: 'Ora Specificata', hour: '20:00', minutes: '', plusToll: '', cumulate: '' },
             { id: 3, scheduleId: 1, v: 'U', from: '21:00', to: '23:59', type: 'Difetto', hour: '', minutes: '30', plusToll: '', cumulate: '' },

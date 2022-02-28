@@ -10,9 +10,9 @@ export const ArrotondamentotimbratureCreate = props => (
             <TextInput source="from" />
             <TextInput source="tipo" />
             <TextInput source="hour" />
-            <TextInput source="minuti" />
+            <TextInput source="minutes" />
             <TextInput source="plus_toll" />
-            <TextInput source="cumula" />
+            <TextInput source="cumulate" />
         </SimpleForm>
     </Create>
 );
