@@ -4,7 +4,7 @@ import OrariDetails from "./OrariDetails";
 import CheckBoxTwoToneIcon from '@material-ui/icons/CheckBoxTwoTone';
 import CheckBoxOutlineBlankTwoToneIcon from '@material-ui/icons/CheckBoxOutlineBlankTwoTone';
 
-const OrePreviste = (props) => {
+const scheduledHours = (props) => {
     return (
         <div>Min {props.record.base} -*- Medie {props.record.minimum}</div>
     )
@@ -16,7 +16,7 @@ const VisualizzazioneBool = (props) => {
         </div>
     )
 }
-const FasciaTimbrature = (props) => {
+const bandStampings = (props) => {
     return (
         <div>from {props.record.from} to {props.record.to}
             {props.record.nextDays === 1 ? ' Del Giorno seguente' :
@@ -26,7 +26,7 @@ const FasciaTimbrature = (props) => {
         </div>
     )
 }
-const OrariSostitutivi = (props) => {
+const replacementHours = (props) => {
     return (
         <div>
             {(props.record.saturday === '' && props.record.sundayHolyday === '' && props.record.preHolyday === '') ? <CheckBoxOutlineBlankTwoToneIcon /> : <CheckBoxTwoToneIcon />}
@@ -41,12 +41,12 @@ export const OrariList = props => (
             <TextField source="description" />
             <TextField source="type" />
             <TextField source="savingDay" />
-            <OrePreviste source="orePreviste" />
+            <scheduledHours source="scheduledHours" />
             <VisualizzazioneBool source="nextDays" />
-            <FasciaTimbrature source="fasciaTimbrature" />
+            <bandStampings source="bandStampings" />
             <VisualizzazioneBool source="reportPunchOutOfBands" />
             <VisualizzazioneBool source="selectiveCompensation" />
-            <OrariSostitutivi source="orariSostitutivi" />
+            <replacementHours source="replacementHours" />
             <VisualizzazioneBool source="profilosId" />
         </Datagrid>
     </List>

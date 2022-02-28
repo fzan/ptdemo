@@ -12,7 +12,7 @@ export const PauseCreate = props => (
             <TextInput source="min" />
             <TextInput source="max" />
             <DateInput source="obbl" />
-            <TextInput source="tipologia" />
+            <TextInput source="typology" />
             <DateInput source="entry" />
             <TextInput source="surpluses" />
             <DateInput source="reporting" />

@@ -14,7 +14,7 @@ export const PauseList = props => (
             <TextField source="min" />
             <TextField source="max" />
             <TextField source="obbl" />
-            <TextField source="tipologia" />
+            <TextField source="typology" />
             <TextField source="entry" />
             <TextField source="surpluses" />
             <TextField source="reporting" />
