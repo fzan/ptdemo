@@ -29,8 +29,8 @@ function CardOrarioSpeciali(record) {
                         <CheckBox id="applyAutomaticCompensation" checked={record.applyAutomaticCompensation} InputProps={{ readOnly: true }} />
                     } label={translate('resources.cardOrarioSpeciali.fields.applyAutomaticCompensation')} />
                     <FormControlLabel control={
-                        <CheckBox id="postElaborazioniVociAutomatiche" checked={record.postElaborazioniVociAutomatiche} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.postElaborazioniVociAutomatiche')} />
+                        <CheckBox id="generateAutomaticEntries" checked={record.generateAutomaticEntries} InputProps={{ readOnly: true }} />
+                    } label={translate('resources.cardOrarioSpeciali.fields.generateAutomaticEntries')} />
                     <FormControlLabel control={
                         <CheckBox id="postElaborazioniUsaTipoReali" checked={record.postElaborazioniUsaTipoReali} InputProps={{ readOnly: true }} />
                     } label={translate('resources.cardOrarioSpeciali.fields.postElaborazioniUsaTipoReali')} />

@@ -191,7 +191,7 @@ module.exports = {
             fields: {
                 subTitle1: "Post-Elaborazioni per giornate prive di timbrature",
                 applyAutomaticCompensation: "Applicare Compensazione Automatica",
-                postElaborazioniVociAutomatiche: "Generare Voci Automatiche",
+                generateAutomaticEntries: "Generare Voci Automatiche",
                 postElaborazioniUsaTipoReali: "Usare Tipo reali e/o virtuali anche senza timbrature",
                 subTitle2: "Ore teoriche e tipologia della giornata",
                 oreTeoricheHHTeoriche: 'HH teoriche',

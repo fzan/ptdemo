@@ -27,7 +27,7 @@ function CardEditOrariSpeciali(record) {
                 {translate('resources.cardOrarioSpeciali.fields.subTitle1')}
             </Typography>
             <BooleanInput source="applyAutomaticCompensation" label={translate('resources.cardOrarioSpeciali.fields.applyAutomaticCompensation')} />
-            <BooleanInput source="postElaborazioniVociAutomatiche" label={translate('resources.cardOrarioSpeciali.fields.postElaborazioniVociAutomatiche')} />
+            <BooleanInput source="generateAutomaticEntries" label={translate('resources.cardOrarioSpeciali.fields.generateAutomaticEntries')} />
             <BooleanInput source="postElaborazioniUsaTipoReali" label={translate('resources.cardOrarioSpeciali.fields.postElaborazioniUsaTipoReali')} />
             <br />
             <Typography gutterBottom variant="h7" component="div">
