@@ -42,7 +42,7 @@ module.exports = {
         fasceDellaGiornatas: {
             name: "Time Slots of the Day",
             fields: {
-                causale: "Causal",
+                causalCode: "Causal",
                 dalle: "From",
                 alle: "To",
                 priorita: "Priority",
@@ -52,7 +52,7 @@ module.exports = {
         fasceDelMonteOres: {
             name: "Slots of the Total Hours",
             fields: {
-                causale: "Causal",
+                causalCode: "Causal",
                 dalle: "From",
                 alle: "To",
                 scheduleId: "Type of Time"

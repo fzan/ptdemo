@@ -8,7 +8,7 @@ export const FascedelmonteoreList = props => (
             <ReferenceField source="scheduleId" reference="orarios" link={false} >
                 <TextField source="description" />
             </ReferenceField>
-            <TextField source="causale" />
+            <TextField source="causalCode" />
             <TextField source="dalle" />
             <TextField source="alle" />
         </Datagrid>

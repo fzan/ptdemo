@@ -161,7 +161,7 @@ const dataProvider = localStorageDataProvider({
             {
                 id: 1,
                 scheduleId: 1,
-                causalCode: 'Notturno 2', // 2: causalCode = Causale
+                causalCode: 'Notturno 2', // 2: causalCode = causalCode
                 from: '00:00', // 3: Dalle = from
                 to: '04:59', // 4: Alle = to
                 priority: 0 // 5: Priorità = priority
@@ -178,7 +178,7 @@ const dataProvider = localStorageDataProvider({
             {
                 id: 1,
                 scheduleId: 1,
-                causalCode: 'Maggior presenza', // 2: causalCode = causale
+                causalCode: 'Maggior presenza', // 2: causalCode = causalCode
                 from: '00:00', // 3: Dalle = from
                 to: '07:59'// 4: Alle = to
             },

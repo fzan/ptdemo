@@ -8,7 +8,7 @@ export const FasceList = props => (
             <ReferenceField source="scheduleId" reference="orarios" link={false}>
                 <TextField source="description" />
             </ReferenceField>
-            <TextField source="causale" />
+            <TextField source="causalCode" />
             <TextField source="dalle" />
             <TextField source="alle" />
             <TextField source="priorita" />

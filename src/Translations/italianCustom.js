@@ -42,7 +42,7 @@ module.exports = {
         fasceDellaGiornatas: {
             name: "Fasce della Giornata",
             fields: {
-                causale: "Causale",
+                causalCode: "Causale",
                 dalle: "Dalle",
                 alle: "Alle",
                 priorita: "Priorità",
@@ -52,7 +52,7 @@ module.exports = {
         fasceDelMonteOres: {
             name: "Fasce del monte ore",
             fields: {
-                causale: "Causale",
+                causalCode: "Causale",
                 dalle: "Dalle",
                 alle: "Alle",
                 scheduleId: "Tipologia Orario"
