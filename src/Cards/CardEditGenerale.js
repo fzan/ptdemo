@@ -24,7 +24,7 @@ const ColorPickerCustom = (props) => {
     } = useInput(props)
     return (
         <>
-            <span style={{ verticalAlign: 'bottom' }}>{translate('resources.cardGenerale.fields.colore')}</span>
+            <span style={{ verticalAlign: 'bottom' }}>{translate('resources.cardGenerale.fields.color')}</span>
             <ColorPicker value={value} onChange={onChange} />
         </>
     )
@@ -75,7 +75,7 @@ function CardEditGenerale(record) {
             <TableRow>
                 <FormDataConsumer>
                     {({ formData, ...rest }) => (
-                        <ColorPickerCustom source="colore" value={formData.colore} {...record} />
+                        <ColorPickerCustom source="color" value={formData.color} {...record} />
                     )}
                 </FormDataConsumer>
             </TableRow>

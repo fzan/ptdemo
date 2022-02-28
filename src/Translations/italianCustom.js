@@ -125,7 +125,7 @@ module.exports = {
                 description: "Descrizione",
                 code: "code",
                 brief: "Breve",
-                colore: "Colore",
+                color: "Colore",
                 subTitle1: " Tipologia, ore previste e competenza dei risultati",
                 tipologiaTipo: "Tipologia Tipo",
                 tipologiaOreBase: "Ore Base",
