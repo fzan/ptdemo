@@ -175,7 +175,7 @@ module.exports = {
                 maximal: "Massimale",
                 positiveBalanceForCompensateHours: "Saldo Positivo",
                 bandsInCaseOfAbsence: "Fasce se Assenza",
-                compensazionePauseNonRispettate: "Pause non Rispettate",
+                extendOverMissedPauses: "Pause non Rispettate",
                 compensazioneDeduzioneAdattivaTimbratureTipo: "Deduzione Adattiva Timbrature Tipo",
                 compensazioneSequenzeEu: "Sequenze Eu",
                 compensazioneTimbratureFuoriFasciaElastica: "Timbrature fuori fascia Elastica",

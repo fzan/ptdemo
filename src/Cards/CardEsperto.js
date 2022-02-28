@@ -37,8 +37,8 @@ function CardEsperto(record) {
                     <CheckBox id="bandsInCaseOfAbsence" checked={record.bandsInCaseOfAbsence} InputProps={{ readOnly: true }} />
                 } label={translate('resources.cardEsperto.fields.bandsInCaseOfAbsence')} />
                 <FormControlLabel control={
-                    <CheckBox id="compensazionePauseNonRispettate" checked={record.compensazionePauseNonRispettate} InputProps={{ readOnly: true }} />
-                } label={translate('resources.cardEsperto.fields.compensazionePauseNonRispettate')} />
+                    <CheckBox id="extendOverMissedPauses" checked={record.extendOverMissedPauses} InputProps={{ readOnly: true }} />
+                } label={translate('resources.cardEsperto.fields.extendOverMissedPauses')} />
                 <FormControlLabel control={
                     <CheckBox id="compensazioneDeduzioneAdattivaTimbratureTipo" checked={record.compensazioneDeduzioneAdattivaTimbratureTipo} InputProps={{ readOnly: true }} />
                 } label={translate('resources.cardEsperto.fields.compensazioneDeduzioneAdattivaTimbratureTipo')} />
