@@ -9,7 +9,7 @@ export const FasceCreate = props => (
             <DateInput source="causalCode" />
             <TextInput source="dalle" />
             <TextInput source="alle" />
-            <DateInput source="priorita" />
+            <DateInput source="priority" />
         </SimpleForm>
     </Create>
 );

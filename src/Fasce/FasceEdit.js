@@ -9,7 +9,7 @@ export const FasceEdit = props => (
             <TextInput source="causalCode" />
             <TextInput source="dalle" />
             <TextInput source="alle" />
-            <TextInput source="priorita" />
+            <TextInput source="priority" />
         </SimpleForm>
     </Edit>
 );

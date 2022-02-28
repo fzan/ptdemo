@@ -45,7 +45,7 @@ module.exports = {
                 causalCode: "Causale",
                 dalle: "Dalle",
                 alle: "Alle",
-                priorita: "Priorità",
+                priority: "Priorità",
                 scheduleId: "Tipologia Orario"
             }
         },
