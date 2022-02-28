@@ -180,7 +180,7 @@ module.exports = {
                 eUSequences: "Eu sequences",
                 PunchOutsideElasticBand: "Stamping out of the Elastic band",
                 movePunchType: "Move Stamping Type",
-                compensazioneDisattivaFasceDopoIndividuaTipo: "Disable bands after locate Type",
+                deactivateBandsAfterIdentifiedType: "Disable bands after locate Type",
                 compensazioneOrarioRigido: "Rigid timetable",
                 prima: "Only First",
                 tutteDallaPrima: "ALL - deduced from the first",

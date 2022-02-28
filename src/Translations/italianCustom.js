@@ -180,7 +180,7 @@ module.exports = {
                 eUSequences: "Sequenze Eu",
                 PunchOutsideElasticBand: "Timbrature fuori fascia Elastica",
                 movePunchType: "Sposta Timbratura Tipo",
-                compensazioneDisattivaFasceDopoIndividuaTipo: "Disattiva fasce dopo individua Tipo",
+                deactivateBandsAfterIdentifiedType: "Disattiva fasce dopo individua Tipo",
                 compensazioneOrarioRigido: "Orario Rigido",
                 prima: "Solo prima",
                 tutteDallaPrima: "TUTTE - desunte dalla prima",

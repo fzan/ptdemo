@@ -50,8 +50,8 @@ function CardEsperto(record) {
             </TableRow>
             <TableRow>
                 <FormControlLabel control={
-                    <CheckBox id="compensazioneDisattivaFasceDopoIndividuaTipo" checked={record.compensazioneDisattivaFasceDopoIndividuaTipo} InputProps={{ readOnly: true }} />
-                } label={translate('resources.cardEsperto.fields.compensazioneDisattivaFasceDopoIndividuaTipo')} />
+                    <CheckBox id="deactivateBandsAfterIdentifiedType" checked={record.deactivateBandsAfterIdentifiedType} InputProps={{ readOnly: true }} />
+                } label={translate('resources.cardEsperto.fields.deactivateBandsAfterIdentifiedType')} />
                 <FormControlLabel control={
                     <CheckBox id="compensazioneOrarioRigido" checked={record.compensazioneOrarioRigido} InputProps={{ readOnly: true }} />
                 } label={translate('resources.cardEsperto.fields.compensazioneOrarioRigido')} />

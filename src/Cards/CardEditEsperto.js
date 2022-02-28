@@ -54,8 +54,8 @@ function CardEditEsperto(record) {
                                             { id: 'sinoAlLimite', name: 'Sino al limite della fascia' },
                                             { id: 'ignoraLimiti', name: 'Ignora limiti' },
                                         ]} />
-                                        <BooleanInput source="compensazioneDisattivaFasceDopoIndividuaTipo" label={translate('resources.cardEsperto.fields.compensazioneDisattivaFasceDopoIndividuaTipo')} />
-                                        {formData.compensazioneDisattivaFasceDopoIndividuaTipo ?
+                                        <BooleanInput source="deactivateBandsAfterIdentifiedType" label={translate('resources.cardEsperto.fields.deactivateBandsAfterIdentifiedType')} />
+                                        {formData.deactivateBandsAfterIdentifiedType ?
                                             <>
                                                 <BooleanInput source="compensazioneOrarioRigido" label={translate('resources.cardEsperto.fields.compensazioneOrarioRigido')} />
                                             </> :
