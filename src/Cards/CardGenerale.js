@@ -29,7 +29,7 @@ function CardGenerale(record) {
                 {translate('resources.cardGenerale.fields.subTitle1')}
             </TableRow>
             <TableRow>
-                <TextField id="tipologiaTipo" label={translate('resources.cardGenerale.fields.tipologiaTipo')} defaultValue={record.tipologiaTipo} InputProps={{ readOnly: true }} className={classes.textInput} />
+                <TextField id="type" label={translate('resources.cardGenerale.fields.type')} defaultValue={record.type} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="tipologiaOreBase" label={translate('resources.cardGenerale.fields.tipologiaOreBase')} defaultValue={record.tipologiaOreBase} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="tipologiaOreMinime" label={translate('resources.cardGenerale.fields.tipologiaOreMinime')} defaultValue={record.tipologiaOreMinime} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="tipologiaGiornoDiSalvataggio" label={translate('resources.cardGenerale.fields.tipologiaGiornoDiSalvataggio')} defaultValue={record.tipologiaGiornoDiSalvataggio} InputProps={{ readOnly: true }} className={classes.textInput} />

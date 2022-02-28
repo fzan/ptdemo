@@ -16,7 +16,7 @@ module.exports = {
             fields: {
                 code: "code",
                 description: "Descrizione",
-                tipologiaTipo: "Tipo",
+                type: "Tipo",
                 tipologiaGiornoDiSalvataggio: "Giorno Di Salvataggio",
                 orePreviste: "Ore Previste",
                 timbratureGiorniSuccessiviPerTimbratura: "Copre più Giorni",
@@ -127,7 +127,7 @@ module.exports = {
                 brief: "Breve",
                 color: "Colore",
                 subTitle1: " Tipologia, ore previste e competenza dei risultati",
-                tipologiaTipo: "Tipologia Tipo",
+                type: "Tipologia Tipo",
                 tipologiaOreBase: "Ore Base",
                 tipologiaOreMinime: "Ore Minime",
                 tipologiaGiornoDiSalvataggio: "Giorno di Salvataggio",

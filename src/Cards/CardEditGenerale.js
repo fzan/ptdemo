@@ -85,7 +85,7 @@ function CardEditGenerale(record) {
             </Typography>
 
             <TableRow>
-                <SelectInput source="tipologiaTipo" label={translate('resources.cardGenerale.fields.tipologiaTipo')} allowEmpty="True" className={classes.textInput} choices={[
+                <SelectInput source="type" label={translate('resources.cardGenerale.fields.type')} allowEmpty="True" className={classes.textInput} choices={[
                     { id: 'Rigido', name: translate('resources.cardGenerale.fields.rigido') },
                     { id: 'Elastico', name: translate('resources.cardGenerale.fields.elastico') },
                     { id: 'Flessibile', name: translate('resources.cardGenerale.fields.flessibile') },
