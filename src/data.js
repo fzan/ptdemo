@@ -3,219 +3,285 @@ import localStorageDataProvider from 'ra-data-local-storage';
 const dataProvider = localStorageDataProvider({
     loggingEnabled: true,
     defaultData: {
-        orarios: [
-            {
+        // modificaGenerale.png, modificaAvanzato.png, modificaEsperto.png e modificaOrariSpeciali.png
+        schedules: [
+            {   // 1: General = Generale
                 id: 1,
-                orarioId: 1,
-                codice: '0Q',
-                breve: '',
-                descrizione: 'Prova Quadro 8h',
-                colore: '',
-                tipologiaTipo: 'Elastico',
-                tipologiaOreBase: '08:00',
-                tipologiaOreMinime: '08:00',
-                tipologiaGiornoDiSalvataggio: 'Entrata',
-                timbratureDalle: '04:30',
-                timbratureAlle: '19:00',
-                timbratureGiorniSuccessiviPerTimbratura: 1,
-                timbratureTimbratureSuPiuGiorni: true,
-                timbratureCausaliFuoriIntervallo: false,
-                orariSostitutiviSabato: '',
-                orariSostitutiviDomenicaEFestivo: '',
-                orariSostitutiviPreFestivo: '',
-                segnalareTimbratureFuoriFasce: false,
-                lavoroStraordinarioAutorizzato: true,
-                lavoroStraordinarioArrotondamento: 'titolare',
-                lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare: false,
-                profilosId: 1,
-                compensazioneCompensazioneSelettiva: false,
-                compensazioneCumuloAssenze: '',
-                compensazioneCumuloStraordinario: '',
-                compensazioneMassimale: '00:00',
-                compensazioneSaldoPositivo: false,
-                compensazioneFasceSeAssenza: false,
-                compensazionePauseNonRispettate: false,
-                compensazioneDeduzioneAdattivaTimbratureTipo: false,
-                compensazioneSequenzeEu: '',
-                compensazioneTimbratureFuoriFasciaElastica: '',
-                compensazioneSpostaTimbraturaTipo: '',
-                compensazioneDisattivaFasceDopoIndividuaTipo: false,
-                compensazioneOrarioRigido: false,
-                postElaborazioniCompensazioneAutomatica: false,
-                postElaborazioniVociAutomatiche: false,
-                postElaborazioniUsaTipoReali: true,
-                oreTeoricheHHTeoriche: 'minime',
-                oreTeoricheTipoGG: 'lavorativo',
-                strategieIgnorareTimbratureOrfane: false,
-                strategieTimbratureDiscriminazioneAutomatica: false,
-                strategieGiustificativiRigidi: true,
-                strategieGiustificativiFlex: false,
-                strategieGiustificativiAssenzaTimbrature: true,
-                OmissioneDescrizioneOrdiniServizio: false
+                scheduleId: 1,
+                code: '0Q', // 2: Codice = code
+                brief: '', // 3: Breve = brief
+                description: 'Prova Quadro 8h', // 4: Descrizione = description
+                color: '', // 5: Colore = color
+                type: 'Elastico', // 6: Tipo = type
+                base: '08:00', // 7: Base: base
+                minimum: '08:00', // 8: Minime = minimum
+                savingDay: 'Entrata', // 9: Giorno sul quale verranno salvati i risultati = savingDay
+                from: '04:30', // 10: Dalle = from 
+                to: '19:00', // 11: Alle = to
+                nextDays: 1, // 12: giorni dopo = nextDays
+                onMoreDays: true, // 13: Le timbrature possono distribuirsi su più giorni = onMoreDays
+                causalCodesOutOfRange: false, // 14: Causali eccezione/sub-orario anche fuori intervallo = causalCodesOutOfRange
+                // 15: Advanced = Avanzato
+                saturday: '', // 16: Sabato = saturday
+                sundayHolyday: '', // 17: Dom/Festivo = sundayHolyday 
+                preHolyday: '', // 18: PreFestivo = preHolyday
+                reportPunchOutOfBands: false, // 19: Segnalare timbrature fuori dalle fasce predefinite = reportPunchOutOfBands
+                overtimeMustBeAuthorized: true, // 20: Il lavoro straordinario DEVE essere autorizzato = overtimeMustBeAuthorized
+                rounding: 'titolare', // 21: Arrotondamento = rounding 
+                applyRoundingInBandsToBeAuthorized: false, // 22: Applicare arrotondamento alle fasce da autorizzare = applyRoundingInBandsToBeAuthorized
+                profilosId: 1, // 23: Profilo di rielaborazione = profilosId
+                // 24: Expert = Esperto
+                selectiveCompensation: false, // 25: Compensazione selettiva = selectiveCompensation
+                cumulativeAbsence: '', // 26: Voce per cumulo assenza = cumulativeAbsence
+                cumulativeOvertime: '', // 27: Voce per cumulo lavoro straordinario = cumulativeOvertime
+                maximal: '00:00', // 28: Massimale = maximal
+                positiveBalanceForCompensateHours: false, // 29: Usa saldo positivo per compensare mente ore = positiveBalanceForCompensateHours
+                bandsInCaseOfAbsence: false, //30: Considera fasce anche in caso di assenza = bandsInCaseOfAbsence
+                extendOverMissedPauses: false, //31: Estendi anche su pause non rispettate = extendOverMissedPauses
+                adaptiveDeductionOfStandardPunch: false, // 32: Deduzione adattiva delle timbrature tipo = adaptiveDeductionOfStandardPunch
+                eUSequences: '', // 33: Sequenze EU = eUSequences
+                PunchOutsideElasticBand: '', // 34: Timbrature fuori fascia elastica = PunchOutsideElasticBand
+                movePunchType: '', // 35: Sposta timbrature tipo = movePunchType
+                deactivateBandsAfterIdentifiedType: false, // 36: Disattiva la fasce dopo aver individuato le tipo = deactivateBandsAfterIdentifiedType
+                scheduleBecomeStiff: false, // 37: Orario diviene [Rigido] = scheduleBecomeStiff 
+                // 38: Special Schedules = Orari speciali 
+                applyAutomaticCompensation: false, // 39: Applicare compensazione automatica = applyAutomaticCompensation
+                generateAutomaticEntries: false, // 40: Generare voci automatiche = generateAutomaticEntries
+                realTypesWithoutStamping: true, // 41: Usare tipo reali e/o virtuali anche senza timbrature = realTypesWithoutStamping
+                theoreticalHours: 'minime', // 42: HH teoriche = theoreticalHours
+                typeOfDay: 'lavorativo', // 43: Tipo GG = typeOfDay 
+                ignoreOrphanedPunch: false, // 44: Ignorare eventuali timbrature orfane = ignoreOrphanedPunch
+                includePunchInAutomaticTimeDiscriminationPhase: false, // 45: Includere le timbrature [tipo NO] nella fase di discriminazione automatica dell'orario = includePunchInAutomaticTimeDiscriminationPhase
+                partialReceiptsIntoAssignedStiff: true, // 46: Convertire giustificativi parziali [rigidi] in assegnati = partialReceiptsIntoAssignedStiff
+                partialReceiptsIntoAssignedFlex: false, // 47: Convertire giustificativi parziali [flex] in assegnati = partialReceiptsIntoAssignedFlex
+                receiptsAssignedInAbsenceOfPunch: true, //48: Giustif. assegnati anche in assenza di timbrature = receiptsAssignedInAbsenceOfPunch
+                omitDescriptionInServiceOrders: false //49: Omettere la descrizione neglio ordini di servizio = omitDescriptionInServiceOrders
             },
             {
                 id: 2,
-                orarioId: 2,
-                codice: '0Q7',
-                breve: '',
-                descrizione: 'Prova Quadro 7h',
-                colore: '',
-                tipologiaTipo: 'Elastico',
-                tipologiaOreBase: '07:00',
-                tipologiaOreMinime: '07:00',
-                tipologiaGiornoDiSalvataggio: 'Entrata',
-                timbratureDalle: '04:00',
-                timbratureAlle: '',
-                timbratureGiorniSuccessiviPerTimbratura: 0,
-                timbratureTimbratureSuPiuGiorni: true,
-                timbratureCausaliFuoriIntervallo: false,
-                orariSostitutiviSabato: '',
-                orariSostitutiviDomenicaEFestivo: '',
-                orariSostitutiviPreFestivo: '',
-                segnalareTimbratureFuoriFasce: true,
-                lavoroStraordinarioAutorizzato: true,
-                lavoroStraordinarioArrotondamento: 'titolare',
-                lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare: false,
+                scheduleId: 2,
+                code: '0Q7',
+                brief: '',
+                description: 'Prova Quadro 7h',
+                color: '',
+                type: 'Elastico',
+                base: '07:00',
+                minimum: '07:00',
+                savingDay: 'Entrata',
+                from: '04:00',
+                to: '',
+                nextDays: 0,
+                onMoreDays: true,
+                causalCodesOutOfRange: false,
+                saturday: '',
+                sundayHolyday: '',
+                preHolyday: '',
+                reportPunchOutOfBands: true,
+                overtimeMustBeAuthorized: true,
+                rounding: 'titolare',
+                applyRoundingInBandsToBeAuthorized: false,
                 profilosId: 0,
-                compensazioneCompensazioneSelettiva: false,
-                compensazioneCumuloAssenze: '',
-                compensazioneCumuloStraordinario: '',
-                compensazioneMassimale: '00:00',
-                compensazioneSaldoPositivo: false,
-                compensazioneFasceSeAssenza: false,
-                compensazionePauseNonRispettate: false,
-                compensazioneDeduzioneAdattivaTimbratureTipo: false,
-                compensazioneSequenzeEu: '',
-                compensazioneTimbratureFuoriFasciaElastica: '',
-                compensazioneSpostaTimbraturaTipo: '',
-                compensazioneDisattivaFasceDopoIndividuaTipo: false,
-                compensazioneOrarioRigido: false,
-                postElaborazioniCompensazioneAutomatica: false,
-                postElaborazioniVociAutomatiche: false,
-                postElaborazioniUsaTipoReali: true,
-                oreTeoricheHHTeoriche: 'minime',
-                oreTeoricheTipoGG: 'lavorativo',
-                strategieIgnorareTimbratureOrfane: false,
-                strategieTimbratureDiscriminazioneAutomatica: false,
-                strategieGiustificativiRigidi: true,
-                strategieGiustificativiFlex: false,
-                strategieGiustificativiAssenzaTimbrature: true,
-                OmissioneDescrizioneOrdiniServizio: false
+                selectiveCompensation: false,
+                cumulativeAbsence: '',
+                cumulativeOvertime: '',
+                maximal: '00:00',
+                positiveBalanceForCompensateHours: false,
+                bandsInCaseOfAbsence: false,
+                extendOverMissedPauses: false,
+                adaptiveDeductionOfStandardPunch: false,
+                eUSequences: '',
+                PunchOutsideElasticBand: '',
+                movePunchType: '',
+                deactivateBandsAfterIdentifiedType: false,
+                scheduleBecomeStiff: false,
+                applyAutomaticCompensation: false,
+                generateAutomaticEntries: false,
+                realTypesWithoutStamping: true,
+                theoreticalHours: 'minime',
+                typeOfDay: 'lavorativo',
+                ignoreOrphanedPunch: false,
+                includePunchInAutomaticTimeDiscriminationPhase: false,
+                partialReceiptsIntoAssignedStiff: true,
+                partialReceiptsIntoAssignedFlex: false,
+                receiptsAssignedInAbsenceOfPunch: true,
+                omitDescriptionInServiceOrders: false
             },
             {
                 id: 3,
-                orarioId: 3,
-                codice: 'D01',
-                breve: '',
-                descrizione: 'Dirigenti',
-                colore: '',
-                tipologiaTipo: 'Elastico',
-                tipologiaOreBase: '08:00',
-                tipologiaOreMinime: '08:00',
-                tipologiaGiornoDiSalvataggio: 'Entrata',
-                timbratureDalle: '05:00',
-                timbratureAlle: '',
-                timbratureGiorniSuccessiviPerTimbratura: 2,
-                timbratureTimbratureSuPiuGiorni: true,
-                timbratureCausaliFuoriIntervallo: false,
-                orariSostitutiviSabato: '',
-                orariSostitutiviDomenicaEFestivo: '',
-                orariSostitutiviPreFestivo: 'asd',
-                segnalareTimbratureFuoriFasce: false,
-                lavoroStraordinarioAutorizzato: true,
-                lavoroStraordinarioArrotondamento: 'titolare',
-                lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare: false,
+                scheduleId: 3,
+                code: 'D01',
+                brief: '',
+                description: 'Dirigenti',
+                color: '',
+                type: 'Elastico',
+                base: '08:00',
+                minimum: '08:00',
+                savingDay: 'Entrata',
+                from: '05:00',
+                to: '',
+                nextDays: 2,
+                onMoreDays: true,
+                causalCodesOutOfRange: false,
+                saturday: '',
+                sundayHolyday: '',
+                preHolyday: 'asd',
+                reportPunchOutOfBands: false,
+                overtimeMustBeAuthorized: true,
+                rounding: 'titolare',
+                applyRoundingInBandsToBeAuthorized: false,
                 profilosId: 6,
-                compensazioneCompensazioneSelettiva: false,
-                compensazioneCumuloAssenze: '',
-                compensazioneCumuloStraordinario: '',
-                compensazioneMassimale: '03:00',
-                compensazioneSaldoPositivo: false,
-                compensazioneFasceSeAssenza: true,
-                compensazionePauseNonRispettate: false,
-                compensazioneDeduzioneAdattivaTimbratureTipo: true,
-                compensazioneSequenzeEu: 'Solo Prima',
-                compensazioneTimbratureFuoriFasciaElastica: 'Considerare',
-                compensazioneSpostaTimbraturaTipo: 'Sino al limite della fascia',
-                compensazioneDisattivaFasceDopoIndividuaTipo: true,
-                compensazioneOrarioRigido: true,
-                postElaborazioniCompensazioneAutomatica: false,
-                postElaborazioniVociAutomatiche: false,
-                postElaborazioniUsaTipoReali: true,
-                oreTeoricheHHTeoriche: 'minime',
-                oreTeoricheTipoGG: 'lavorativo',
-                strategieIgnorareTimbratureOrfane: false,
-                strategieTimbratureDiscriminazioneAutomatica: false,
-                strategieGiustificativiRigidi: true,
-                strategieGiustificativiFlex: false,
-                strategieGiustificativiAssenzaTimbrature: true,
-                OmissioneDescrizioneOrdiniServizio: false
+                selectiveCompensation: false,
+                cumulativeAbsence: '',
+                cumulativeOvertime: '',
+                maximal: '03:00',
+                positiveBalanceForCompensateHours: false,
+                bandsInCaseOfAbsence: true,
+                extendOverMissedPauses: false,
+                adaptiveDeductionOfStandardPunch: true,
+                eUSequences: 'Solo Prima',
+                PunchOutsideElasticBand: 'Considerare',
+                movePunchType: 'Sino al limite della fascia',
+                deactivateBandsAfterIdentifiedType: true,
+                scheduleBecomeStiff: true,
+                applyAutomaticCompensation: false,
+                generateAutomaticEntries: false,
+                realTypesWithoutStamping: true,
+                theoreticalHours: 'minime',
+                typeOfDay: 'lavorativo',
+                ignoreOrphanedPunch: false,
+                includePunchInAutomaticTimeDiscriminationPhase: false,
+                partialReceiptsIntoAssignedStiff: true,
+                partialReceiptsIntoAssignedFlex: false,
+                receiptsAssignedInAbsenceOfPunch: true,
+                omitDescriptionInServiceOrders: false
             }
         ],
-        fasceDellaGiornatas: [
-            { id: 1, orarioId: 1, causale: 'Notturno 2', dalle: '00:00', alle: '04:59', priorita: 0 },
-            { id: 2, orarioId: 1, causale: 'Notturno 2', dalle: '20:00', alle: '23:59', priorita: 0 },
-            { id: 6, orarioId: 1, causale: 'Notturno 2', dalle: '00:00', alle: '04:59', priorita: 0 },
-            { id: 7, orarioId: 1, causale: 'Notturno 2', dalle: '20:00', alle: '23:59', priorita: 0 },
-            { id: 3, orarioId: 2, causale: 'Notturno 2', dalle: '20:00', alle: '23:59', priorita: 0 },
-            { id: 4, orarioId: 3, causale: 'Notturno 2', dalle: '00:00', alle: '04:59', priorita: 0 },
-            { id: 5, orarioId: 3, causale: 'Notturno 2', dalle: '20:00', alle: '23:59', priorita: 0 }
+        // fasceDellaGiornata.png 
+        workingDayBands: [ // 1: workingDayBands = Fasce della giornata
+            {
+                id: 1,
+                scheduleId: 1,
+                causalCode: 'Notturno 2', // 2: causalCode = Causale
+                from: '00:00', // 3: Dalle = from
+                to: '04:59', // 4: Alle = to
+                priority: 0 // 5: Priorità = priority
+            },
+            { id: 2, scheduleId: 1, causalCode: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 },
+            { id: 6, scheduleId: 1, causalCode: 'Notturno 2', from: '00:00', to: '04:59', priority: 0 },
+            { id: 7, scheduleId: 1, causalCode: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 },
+            { id: 3, scheduleId: 2, causalCode: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 },
+            { id: 4, scheduleId: 3, causalCode: 'Notturno 2', from: '00:00', to: '04:59', priority: 0 },
+            { id: 5, scheduleId: 3, causalCode: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 }
         ],
-        fasceDelMonteOres: [
-            { id: 1, orarioId: 1, causale: 'Maggior presenza', dalle: '00:00', alle: '07:59' },
-            { id: 2, orarioId: 1, causale: 'Maggior presenza', dalle: '08:00', alle: '23:59' },
-            { id: 3, orarioId: 2, causale: 'Maggior presenza', dalle: '00:00', alle: '06:59' },
-            { id: 4, orarioId: 2, causale: 'Maggior presenza', dalle: '07:00', alle: '23:59' },
-            { id: 5, orarioId: 3, causale: 'Maggior presenza', dalle: '00:00', alle: '07:59' },
-            { id: 6, orarioId: 3, causale: 'Maggior presenza', dalle: '08:00', alle: '23:59' }
+        // fasceDelMonteOre.png
+        workingHourBands: [ // 1: workingHourBands = Fasce del monte ore
+            {
+                id: 1,
+                scheduleId: 1,
+                causalCode: 'Maggior presenza', // 2: causalCode = causale
+                from: '00:00', // 3: Dalle = from
+                to: '07:59'// 4: Alle = to
+            },
+            { id: 2, scheduleId: 1, causalCode: 'Maggior presenza', from: '08:00', to: '23:59' },
+            { id: 3, scheduleId: 2, causalCode: 'Maggior presenza', from: '00:00', to: '06:59' },
+            { id: 4, scheduleId: 2, causalCode: 'Maggior presenza', from: '07:00', to: '23:59' },
+            { id: 5, scheduleId: 3, causalCode: 'Maggior presenza', from: '00:00', to: '07:59' },
+            { id: 6, scheduleId: 3, causalCode: 'Maggior presenza', from: '08:00', to: '23:59' }
         ],
-        timbratureTipos: [
-            { id: 1, orarioId: 1, v: 'E', dalle: '03:55', alle: '04:05', gg: 0, timbratura: '04:00', tipo: 'virtuale' },
-            { id: 2, orarioId: 1, v: 'U', dalle: '20:00', alle: '23:59', gg: 0, timbratura: '20:00', tipo: 'reale' },
-            { id: 3, orarioId: 2, v: 'E', dalle: '03:55', alle: '04:05', gg: 0, timbratura: '04:00', tipo: 'virtuale' },
-            { id: 4, orarioId: 2, v: 'U', dalle: '04:00', alle: '04:10', gg: 0, timbratura: '04:05', tipo: 'virtuale' },
-            { id: 5, orarioId: 3, v: 'E', dalle: '04:55', alle: '05:05', gg: 0, timbratura: '05:00', tipo: 'virtuale' },
-            { id: 6, orarioId: 3, v: 'U', dalle: '20:00', alle: '23:59', gg: 0, timbratura: '20:00', tipo: 'reale' }
+        // timbratureTipo.png
+        punchTypes: [ // 1: punchTypes = Timbrature Tipo
+            {
+                id: 1,
+                scheduleId: 1,
+                v: 'E', //2 v : v (rimane lo stesso che tanto sarebbe stato Valore per Value [a naso])
+                from: '03:55', // 3: Dalle = from
+                to: '04:05', // 4: alle = to
+                gg: 0, // 5: gg = gg (rimane lo stesso perche non so che fa)
+                punch: '04:00', // 6: Timbratura = punch
+                type: 'virtuale' // 7: Tipo = type
+            },
+            { id: 2, scheduleId: 1, v: 'U', from: '20:00', to: '23:59', gg: 0, punch: '20:00', type: 'reale' },
+            { id: 3, scheduleId: 2, v: 'E', from: '03:55', to: '04:05', gg: 0, punch: '04:00', type: 'virtuale' },
+            { id: 4, scheduleId: 2, v: 'U', from: '04:00', to: '04:10', gg: 0, punch: '04:05', type: 'virtuale' },
+            { id: 5, scheduleId: 3, v: 'E', from: '04:55', to: '05:05', gg: 0, punch: '05:00', type: 'virtuale' },
+            { id: 6, scheduleId: 3, v: 'U', from: '20:00', to: '23:59', gg: 0, punch: '20:00', type: 'reale' }
         ],
-        arrotondamentoTimbratures: [
-            { id: 1, orarioId: 1, v: 'U', dalle: '00:00', dalle: '04:00', tipo: 'Difetto', ora: '', minuti: '30', plus_toll: '', cumula: '' },
-            { id: 2, orarioId: 1, v: 'U', dalle: '20:00', dalle: '20:59', tipo: 'Ora Specificata', ora: '20:00', minuti: '', plus_toll: '', cumula: '' },
-            { id: 3, orarioId: 1, v: 'U', dalle: '21:00', dalle: '23:59', tipo: 'Difetto', ora: '', minuti: '30', plus_toll: '', cumula: '' },
-            { id: 4, orarioId: 3, v: 'U', dalle: '00:00', dalle: '05:00', tipo: 'Difetto', ora: '', minuti: '30', plus_toll: '', cumula: '' },
-            { id: 5, orarioId: 3, v: 'U', dalle: '20:00', dalle: '20:59', tipo: 'Ora Specificata', ora: '20:00', minuti: '', plus_toll: '', cumula: '' },
-            { id: 6, orarioId: 3, v: 'U', dalle: '21:00', dalle: '23:59', tipo: 'Difetto', ora: '', minuti: '30', plus_toll: '', cumula: '' }
+        // arrotondamentoTimbrature1.png e arrotondamentoTimbrature2.png
+        punchRoundings: [ // 1: punchRoundings = Arrotondamento Timbrature
+            {
+                id: 1,
+                scheduleId: 1,
+                v: 'U', // 2 v : v (rimane lo stesso che tanto sarebbe stato Valore per Value [a naso])
+                from: '00:00', // 3: Dalle = from
+                to: '04:00', // 4: alle = to
+                type: 'Difetto', // 5: Tipo = type
+                hour: '', // 6: Ora = hour
+                minutes: '30', // 7: Minuti = minutes
+                plusToll: '', // 8: Plus/Toll = plusToll (non so che fa/ dove si modifica) ('plus' ha senso anche in inglese e 'toll' sta per tolleranza, che è Tollerance. Lasciamo cosi)
+                cumulate: '' // 9: Cumula = cumulate (non so che fa/ dove si modifica)
+            },
+            { id: 2, scheduleId: 1, v: 'U', from: '20:00', to: '20:59', type: 'Ora Specificata', hour: '20:00', minutes: '', plusToll: '', cumulate: '' },
+            { id: 3, scheduleId: 1, v: 'U', from: '21:00', to: '23:59', type: 'Difetto', hour: '', minutes: '30', plusToll: '', cumulate: '' },
+            { id: 4, scheduleId: 3, v: 'U', from: '00:00', to: '05:00', type: 'Difetto', hour: '', minutes: '30', plusToll: '', cumulate: '' },
+            { id: 5, scheduleId: 3, v: 'U', from: '20:00', to: '20:59', type: 'Ora Specificata', hour: '20:00', minutes: '', plusToll: '', cumulate: '' },
+            { id: 6, scheduleId: 3, v: 'U', from: '21:00', to: '23:59', type: 'Difetto', hour: '', minutes: '30', plusToll: '', cumulate: '' }
         ],
-        arrotondamentoStraordinarios: [
-            { id: 1, orarioId: 1, dalle: '00:00', dalle: '00:59', tipo: 'Ora Specificata', ora: '00:00', minuti: '', toll: '' },
-            { id: 2, orarioId: 1, dalle: '01:00', dalle: '23:59', tipo: 'Difetto', ora: '', minuti: '30', toll: '' },
-            { id: 3, orarioId: 2, dalle: '00:00', dalle: '00:59', tipo: 'Ora Specificata', ora: '00:00', minuti: '', toll: '' },
-            { id: 4, orarioId: 2, dalle: '01:00', dalle: '23:59', tipo: 'Difetto', ora: '', minuti: '30', toll: '' },
-            { id: 5, orarioId: 3, dalle: '00:00', dalle: '23:59', tipo: 'Ora Specificata', ora: '00:00', minuti: '', toll: '' }
+        // arrotondamentoStraordinario.png
+        overtimeRoundings: [ // 1: overtimeRoundings = Arrotondamento Straordinario
+            {
+                id: 1,
+                scheduleId: 1,
+                from: '00:00', // 2: Dalle = from
+                to: '00:59', // 3: alle = to
+                type: 'Ora Specificata', // 4: Tipo = type
+                hour: '00:00', // 5: Ora = hour
+                minutes: '', // 6: Minuti = minutes
+                toll: '' // 7: Toll = toll (la lasciamo cosi)
+            },
+            { id: 2, scheduleId: 1, from: '01:00', to: '23:59', type: 'Difetto', hour: '', minutes: '30', toll: '' },
+            { id: 3, scheduleId: 2, from: '00:00', to: '00:59', type: 'Ora Specificata', hour: '00:00', minutes: '', toll: '' },
+            { id: 4, scheduleId: 2, from: '01:00', to: '23:59', type: 'Difetto', hour: '', minutes: '30', toll: '' },
+            { id: 5, scheduleId: 3, from: '00:00', to: '23:59', type: 'Ora Specificata', hour: '00:00', minutes: '', toll: '' }
         ],
-        pauses: [
-            { id: 1, orarioId: 2, descrizione: 'Pausa Pranzo', dalle: '12:30', alle: '14:30', min: '00:45', max: '00:35', obbl: '', tipologia: 'Pausa Pranzo', voce: '', eccedenze: 'SOLO eccesso non lavorato', vocePerSegnalazione: '' }
+        // pause1.png , pause2.png e pause3.png
+        pauses: [ // 1: pauses = Pause
+            {
+                id: 1,
+                scheduleId: 2,
+                description: 'Pausa Pranzo', // 2: Descrizione = description
+                from: '12:30', // 2: Dalle = from
+                to: '14:30', // 3: Alle = to
+                min: '00:45', // 4: Min = min
+                max: '00:35', // 5: Max = max
+                mandatory: '', // 6: Obbl. = mandatory ("Obbl." dovrebbe stare per Obbligatoria, quindi "mandatory" )
+                typology: 'Pausa Pranzo', // 7: Tipologia = typology
+                entry: '', // 8: voce = entry 
+                surpluses: 'SOLO eccesso non lavorato', // 9: Eccedenze = surpluses
+                reporting: '' // 10: Voce per Segnalazione = reporting
+            }
         ],
+        //questi 2 sono semplicemente per la popolazione di uno scenario base. Non hanno nessuna logica collegata
         profilos: [
-            { id: 1, nome: '00 - Quadri (prova)' },
-            { id: 2, nome: 'G - Banca ore 100%' },
-            { id: 3, nome: 'G - Banca ore 50%' },
-            { id: 4, nome: 'G - No Straordinario' },
-            { id: 5, nome: 'G - Straordinario 100%' },
-            { id: 6, nome: 'O - Genova Giornaliero' },
-            { id: 7, nome: 'O - Genova Riposo' },
-            { id: 8, nome: 'O - Priolo Giornaliero' }
+            { id: 1, name: '00 - Quadri (prova)' },
+            { id: 2, name: 'G - Banca ore 100%' },
+            { id: 3, name: 'G - Banca ore 50%' },
+            { id: 4, name: 'G - No Straordinario' },
+            { id: 5, name: 'G - Straordinario 100%' },
+            { id: 6, name: 'O - Genova Giornaliero' },
+            { id: 7, name: 'O - Genova Riposo' },
+            { id: 8, name: 'O - Priolo Giornaliero' }
         ],
-        vocis: [
-            { id: 1, title: 'AARI Perm. Arca per riunioni' },
-            { id: 2, title: 'AFEG Festività Goduta' },
-            { id: 3, title: 'AI Assenza ingiustificata' },
-            { id: 4, title: 'AIHH Assenza non giustificata' },
-            { id: 5, title: 'ALOP Assenza giorno semifestivo' },
-            { id: 6, title: 'ARIT Ritardo' },
-            { id: 7, title: 'ASPG Aspettativa' },
-            { id: 8, title: 'ASRE Assemb. Sind. retribuita' },
-            { id: 9, title: 'FLEN Flessibilità negativa' },
-            { id: 10, title: 'FLEP Flessibilità positiva' }
+        voices: [
+            { id: 1, name: 'AARI Perm. Arca per riunioni' },
+            { id: 2, name: 'AFEG Festività Goduta' },
+            { id: 3, name: 'AI Assenza ingiustificata' },
+            { id: 4, name: 'AIHH Assenza non giustificata' },
+            { id: 5, name: 'ALOP Assenza giorno semifestivo' },
+            { id: 6, name: 'ARIT Ritardo' },
+            { id: 7, name: 'ASPG Aspettativa' },
+            { id: 8, name: 'ASRE Assemb. Sind. retribuita' },
+            { id: 9, name: 'FLEN Flessibilità negativa' },
+            { id: 10, name: 'FLEP Flessibilità positiva' }
         ]
     }
 
