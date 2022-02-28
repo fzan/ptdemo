@@ -14,7 +14,7 @@ module.exports = {
         orarios: {
             name: "Orari",
             fields: {
-                codice: "Codice",
+                code: "code",
                 descrizione: "Descrizione",
                 tipologiaTipo: "Tipo",
                 tipologiaGiornoDiSalvataggio: "Giorno Di Salvataggio",
@@ -123,7 +123,7 @@ module.exports = {
         cardGenerale: {
             fields: {
                 descrizione: "Descrizione",
-                codice: "Codice",
+                code: "code",
                 breve: "Breve",
                 colore: "Colore",
                 subTitle1: " Tipologia, ore previste e competenza dei risultati",

@@ -37,7 +37,7 @@ const OrariSostitutivi = (props) => {
 export const OrariList = props => (
     <List {...props} bulkActionButtons={false} >
         <Datagrid rowClick="edit" expand={<OrariDetails />}>
-            <TextField source="codice" />
+            <TextField source="code" />
             <TextField source="descrizione" />
             <TextField source="tipologiaTipo" />
             <TextField source="tipologiaGiornoDiSalvataggio" />

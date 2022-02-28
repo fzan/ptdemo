@@ -8,7 +8,7 @@ export const OrariCreate = props => (
             <ReferenceInput source="scheduleId" reference="orarios">
                 <SelectInput optionText="id" />
             </ReferenceInput>
-            <TextInput source="codice" />
+            <TextInput source="code" />
             <DateInput source="breve" />
             <TextInput source="descrizione" />
             <DateInput source="colore" />

@@ -14,7 +14,7 @@ module.exports = {
         orarios: {
             name: "TimeTables",
             fields: {
-                codice: "Code",
+                code: "Code",
                 descrizione: "Description",
                 tipologiaTipo: "Type",
                 tipologiaGiornoDiSalvataggio: "Saving Day",
@@ -123,7 +123,7 @@ module.exports = {
         cardGenerale: {
             fields: {
                 descrizione: "Description",
-                codice: "Code",
+                code: "Code",
                 breve: "Short",
                 colore: "Colour",
                 subTitle1: " Type, expected hours and competence of the results",

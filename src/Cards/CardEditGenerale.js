@@ -68,7 +68,7 @@ function CardEditGenerale(record) {
                 )}
             </FormDataConsumer>
 
-            <TextInput source="codice" label={translate('resources.cardGenerale.fields.codice')} className={classes.textInput} />
+            <TextInput source="code" label={translate('resources.cardGenerale.fields.code')} className={classes.textInput} />
             <TextInput source="breve" label={translate('resources.cardGenerale.fields.breve')} className={classes.textInput} />
             <TextInput source="descrizione" label={translate('resources.cardGenerale.fields.descrizione')} className={classes.textInput} />
 
