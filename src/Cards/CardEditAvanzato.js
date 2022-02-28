@@ -57,7 +57,7 @@ function CardEditAvanzato(record) {
                 { id: 'primaSingolaVoce', name: translate('resources.cardAvanzato.fields.primaSingolaVoce') },
                 { id: 'primaIlTotale', name: translate('resources.cardAvanzato.fields.primaIlTotale') },
             ]} />
-            <BooleanInput source="lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare" label={translate('resources.cardAvanzato.fields.lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare')} />
+            <BooleanInput source="applyRoundingInBandsToBeAuthorized" label={translate('resources.cardAvanzato.fields.applyRoundingInBandsToBeAuthorized')} />
 
             <Typography gutterBottom variant="h7" component="div">
                 {translate('resources.cardAvanzato.fields.subTitle4')}

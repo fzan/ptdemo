@@ -56,8 +56,8 @@ function CardAvanzato(record) {
             </TableRow>
             <TableRow>
                 <FormControlLabel control={
-                    <CheckBox id="lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare" checked={record.lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare} InputProps={{ readOnly: true }} />
-                } label={translate('resources.cardAvanzato.fields.lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare')} />
+                    <CheckBox id="applyRoundingInBandsToBeAuthorized" checked={record.applyRoundingInBandsToBeAuthorized} InputProps={{ readOnly: true }} />
+                } label={translate('resources.cardAvanzato.fields.applyRoundingInBandsToBeAuthorized')} />
             </TableRow>
             <TableRow>
                 <List

@@ -158,7 +158,7 @@ module.exports = {
                 subTitle3: "Computo del lavoro straordinario",
                 lavoroStraordinarioAutorizzato: "Straordinario autorizzato",
                 rounding: "Arrotondamento",
-                lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare: "Arrotondamento sulle fasce da Autorizzare",
+                applyRoundingInBandsToBeAuthorized: "Arrotondamento sulle fasce da Autorizzare",
                 subTitle4: "Profilo di rielaborazione",
                 profilo: "Profilo",
                 ogniSingolaVoce: "Ogni singola voce",

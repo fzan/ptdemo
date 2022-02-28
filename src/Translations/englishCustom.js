@@ -158,7 +158,7 @@ module.exports = {
                 subTitle3: "Computation of overtime",
                 overtimeMustBeAuthorized: "Extraordinary authorized",
                 rounding: "Rounding",
-                lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare: "Rounding on the bands to be authorized",
+                applyRoundingInBandsToBeAuthorized: "Rounding on the bands to be authorized",
                 subTitle4: "Profile of reworking",
                 profilo: "Profile",
                 ogniSingolaVoce: "Every single item",
