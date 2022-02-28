@@ -7,7 +7,7 @@ export const ArrotondamentotimbratureEdit = props => (
             {/* <TextInput source="id" /> */}
             <ReferenceInput source="scheduleId" reference="orarios"><SelectInput optionText="description" /></ReferenceInput>
             <TextInput source="v" />
-            <TextInput source="dalle" />
+            <TextInput source="from" />
             <TextInput source="tipo" />
             <TextInput source="ora" />
             <TextInput source="minuti" />

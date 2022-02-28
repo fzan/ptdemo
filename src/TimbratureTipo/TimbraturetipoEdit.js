@@ -7,7 +7,7 @@ export const TimbraturetipoEdit = props => (
             {/* <TextInput source="id" /> */}
             <ReferenceInput source="scheduleId" reference="orarios"><SelectInput optionText="description" /></ReferenceInput>
             <TextInput source="v" />
-            <TextInput source="dalle" />
+            <TextInput source="from" />
             <TextInput source="alle" />
             <TextInput source="gg" />
             <TextInput source="timbratura" />

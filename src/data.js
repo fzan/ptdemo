@@ -16,7 +16,7 @@ const dataProvider = localStorageDataProvider({
                 base: '08:00', // 7: Base: base
                 minimum: '08:00', // 8: Minime = minimum
                 savingDay: 'Entrata', // 9: Giorno sul quale verranno salvati i risultati = savingDay
-                from: '04:30', // 10: Dalle = from 
+                from: '04:30', // 10: from = from 
                 to: '19:00', // 11: Alle = to
                 nextDays: 1, // 12: giorni dopo = nextDays
                 onMoreDays: true, // 13: Le timbrature possono distribuirsi su più giorni = onMoreDays
@@ -25,7 +25,7 @@ const dataProvider = localStorageDataProvider({
                 saturday: '', // 16: Sabato = saturday
                 sundayHolyday: '', // 17: Dom/Festivo = sundayHolyday 
                 preHolyday: '', // 18: PreFestivo = preHolyday
-                reportPunchOutOfBands: false, // 19: Segnalare timbrature fuori dalle fasce predefinite = reportPunchOutOfBands
+                reportPunchOutOfBands: false, // 19: Segnalare timbrature fuori from fasce predefinite = reportPunchOutOfBands
                 overtimeMustBeAuthorized: true, // 20: Il lavoro straordinario DEVE essere autorizzato = overtimeMustBeAuthorized
                 rounding: 'titolare', // 21: Arrotondamento = rounding 
                 applyRoundingInBandsToBeAuthorized: false, // 22: Applicare arrotondamento alle fasce da autorizzare = applyRoundingInBandsToBeAuthorized
@@ -162,7 +162,7 @@ const dataProvider = localStorageDataProvider({
                 id: 1,
                 scheduleId: 1,
                 causalCode: 'Notturno 2', // 2: causalCode = causalCode
-                from: '00:00', // 3: Dalle = from
+                from: '00:00', // 3: from = from
                 to: '04:59', // 4: Alle = to
                 priority: 0 // 5: Priorità = priority
             },
@@ -179,7 +179,7 @@ const dataProvider = localStorageDataProvider({
                 id: 1,
                 scheduleId: 1,
                 causalCode: 'Maggior presenza', // 2: causalCode = causalCode
-                from: '00:00', // 3: Dalle = from
+                from: '00:00', // 3: from = from
                 to: '07:59'// 4: Alle = to
             },
             { id: 2, scheduleId: 1, causalCode: 'Maggior presenza', from: '08:00', to: '23:59' },
@@ -194,7 +194,7 @@ const dataProvider = localStorageDataProvider({
                 id: 1,
                 scheduleId: 1,
                 v: 'E', //2 v : v (rimane lo stesso che tanto sarebbe stato Valore per Value [a naso])
-                from: '03:55', // 3: Dalle = from
+                from: '03:55', // 3: from = from
                 to: '04:05', // 4: alle = to
                 gg: 0, // 5: gg = gg (rimane lo stesso perche non so che fa)
                 punch: '04:00', // 6: Timbratura = punch
@@ -212,7 +212,7 @@ const dataProvider = localStorageDataProvider({
                 id: 1,
                 scheduleId: 1,
                 v: 'U', // 2 v : v (rimane lo stesso che tanto sarebbe stato Valore per Value [a naso])
-                from: '00:00', // 3: Dalle = from
+                from: '00:00', // 3: from = from
                 to: '04:00', // 4: alle = to
                 type: 'Difetto', // 5: Tipo = type
                 hour: '', // 6: Ora = hour
@@ -231,7 +231,7 @@ const dataProvider = localStorageDataProvider({
             {
                 id: 1,
                 scheduleId: 1,
-                from: '00:00', // 2: Dalle = from
+                from: '00:00', // 2: from = from
                 to: '00:59', // 3: alle = to
                 type: 'Ora Specificata', // 4: Tipo = type
                 hour: '00:00', // 5: Ora = hour
@@ -249,7 +249,7 @@ const dataProvider = localStorageDataProvider({
                 id: 1,
                 scheduleId: 2,
                 description: 'Pausa Pranzo', // 2: Descrizione = description
-                from: '12:30', // 2: Dalle = from
+                from: '12:30', // 2: from = from
                 to: '14:30', // 3: Alle = to
                 min: '00:45', // 4: Min = min
                 max: '00:35', // 5: Max = max

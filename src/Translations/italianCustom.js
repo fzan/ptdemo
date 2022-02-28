@@ -43,7 +43,7 @@ module.exports = {
             name: "Fasce della Giornata",
             fields: {
                 causalCode: "Causale",
-                dalle: "Dalle",
+                from: "Dalle",
                 alle: "Alle",
                 priority: "Priorità",
                 scheduleId: "Tipologia Orario"
@@ -53,7 +53,7 @@ module.exports = {
             name: "Fasce del monte ore",
             fields: {
                 causalCode: "Causale",
-                dalle: "Dalle",
+                from: "Dalle",
                 alle: "Alle",
                 scheduleId: "Tipologia Orario"
             }
@@ -62,7 +62,7 @@ module.exports = {
             name: "Timbrature tipo",
             fields: {
                 v: "V",
-                dalle: "Dalle",
+                from: "Dalle",
                 alle: "Alle",
                 gg: "GG",
                 timbratura: "Timbratura",
@@ -74,7 +74,7 @@ module.exports = {
             name: "Arrot. Timbrature",
             fields: {
                 v: "V",
-                dalle: "Dalle",
+                from: "Dalle",
                 tipo: "Tipo",
                 ora: "Ora",
                 minuti: "Minuti",
@@ -86,7 +86,7 @@ module.exports = {
         arrotondamentoStraordinarios: {
             name: "Arrot. Straordinario",
             fields: {
-                dalle: "Dalle",
+                from: "Dalle",
                 tipo: "Tipo",
                 ora: "Ora",
                 minuti: "Minuti",
@@ -99,7 +99,7 @@ module.exports = {
             fields: {
                 orario: "Orario",
                 description: "Descrizione",
-                dalle: "Dalle",
+                from: "Dalle",
                 alle: "Alle",
                 min: "Min",
                 max: "Max",
@@ -222,7 +222,7 @@ module.exports = {
                 istruzioni2: "Click su un evento per poterlo eliminare",
                 eventiInseriti: "Eventi Inseriti",
                 alert: "Sei sicuro di volere eliminare l'evento ",
-                dalle: "Dalle",
+                from: "Dalle",
                 alle: "Alle"
             }
         }

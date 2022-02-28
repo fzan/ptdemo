@@ -9,7 +9,7 @@ export const ArrotondamentotimbratureList = props => (
                 <TextField source="descrizione" />
             </ReferenceField>
             <TextField source="v" />
-            <TextField source="dalle" />
+            <TextField source="from" />
             <TextField source="tipo" />
             <TextField source="ora" />
             <TextField source="minuti" />

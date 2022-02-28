@@ -9,7 +9,7 @@ export const FascedelmonteoreList = props => (
                 <TextField source="description" />
             </ReferenceField>
             <TextField source="causalCode" />
-            <TextField source="dalle" />
+            <TextField source="from" />
             <TextField source="alle" />
         </Datagrid>
     </List>

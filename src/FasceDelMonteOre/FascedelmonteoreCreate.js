@@ -7,7 +7,7 @@ export const FascedelmonteoreCreate = props => (
             {/* <TextInput source="id" /> */}
             <ReferenceInput source="scheduleId" reference="orarios"><SelectInput optionText="description" /></ReferenceInput>
             <TextInput source="causalCode" />
-            <TextInput source="dalle" />
+            <TextInput source="from" />
             <TextInput source="alle" />
         </SimpleForm>
     </Create>

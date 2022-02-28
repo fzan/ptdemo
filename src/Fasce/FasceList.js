@@ -9,7 +9,7 @@ export const FasceList = props => (
                 <TextField source="description" />
             </ReferenceField>
             <TextField source="causalCode" />
-            <TextField source="dalle" />
+            <TextField source="from" />
             <TextField source="alle" />
             <TextField source="priority" />
         </Datagrid>

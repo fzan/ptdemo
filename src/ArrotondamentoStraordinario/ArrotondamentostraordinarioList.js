@@ -8,7 +8,7 @@ export const ArrotondamentostraordinarioList = props => (
             <ReferenceField source="scheduleId" reference="orarios" link={false}>
                 <TextField source="description" />
             </ReferenceField>
-            <TextField source="dalle" />
+            <TextField source="from" />
             <TextField source="tipo" />
             <TextField source="ora" />
             <TextField source="minuti" />

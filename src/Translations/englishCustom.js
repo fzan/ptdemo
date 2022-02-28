@@ -43,7 +43,7 @@ module.exports = {
             name: "Time Slots of the Day",
             fields: {
                 causalCode: "Causal",
-                dalle: "From",
+                from: "From",
                 alle: "To",
                 priority: "Priority",
                 scheduleId: "Type of Time"
@@ -53,7 +53,7 @@ module.exports = {
             name: "Slots of the Total Hours",
             fields: {
                 causalCode: "Causal",
-                dalle: "From",
+                from: "From",
                 alle: "To",
                 scheduleId: "Type of Time"
             }
@@ -62,7 +62,7 @@ module.exports = {
             name: "Type Stampings",
             fields: {
                 v: "V",
-                dalle: "From",
+                from: "From",
                 alle: "To",
                 gg: "GG",
                 timbratura: "Stamping",
@@ -74,7 +74,7 @@ module.exports = {
             name: "Rounding off Stampings",
             fields: {
                 v: "V",
-                dalle: "From",
+                from: "From",
                 tipo: "Type",
                 ora: "Hour",
                 minuti: "Minutes",
@@ -86,7 +86,7 @@ module.exports = {
         arrotondamentoStraordinarios: {
             name: "Extraordinary Rounding",
             fields: {
-                dalle: "From",
+                from: "From",
                 tipo: "Type",
                 ora: "Hour",
                 minuti: "Minutes",
@@ -99,7 +99,7 @@ module.exports = {
             fields: {
                 orario: "Time",
                 description: "Description",
-                dalle: "From",
+                from: "From",
                 alle: "To",
                 min: "Min",
                 max: "Max",
@@ -221,7 +221,7 @@ module.exports = {
                 istruzioni2: "Click on an event to be able to delete it",
                 eventiInseriti: "Events Posted",
                 alert: "Are you sure you want to delete the event ",
-                dalle: "From",
+                from: "From",
                 alle: "To"
             }
         }

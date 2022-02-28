@@ -222,7 +222,7 @@ function renderSidebarEvent(event) {
   return (
     <li key={event.id}>
       <i>{event.title}</i>
-      <b> Dalle {formatDate(event.start, { hour: 'numeric', minute: 'numeric' })}</b>
+      <b> from {formatDate(event.start, { hour: 'numeric', minute: 'numeric' })}</b>
       <b> alle {formatDate(event.end, { hour: 'numeric', minute: 'numeric' })}</b>
     </li>
   )

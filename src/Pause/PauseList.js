@@ -9,7 +9,7 @@ export const PauseList = props => (
                 <TextField source="description" />
             </ReferenceField>
             <TextField source="description" />
-            <TextField source="dalle" />
+            <TextField source="from" />
             <TextField source="alle" />
             <TextField source="min" />
             <TextField source="max" />
