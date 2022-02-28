@@ -201,7 +201,7 @@ module.exports = {
                 includePunchInAutomaticTimeDiscriminationPhase: "Include the stampings in the automatic discrimination phase",
                 partialReceiptsIntoAssignedStiff: "Convert partial vouchers (rigid)",
                 partialReceiptsIntoAssignedFlex: "Convert partial vouchers (flex)",
-                strategieGiustificativiAssenzaTimbrature: "Justifications assigned even without stamping",
+                receiptsAssignedInAbsenceOfPunch: "Justifications assigned even without stamping",
                 subTitle4: "Service orders",
                 OmissioneDescrizioneOrdiniServizio: "Omit the description in the service orders",
                 minime: "Minimum",

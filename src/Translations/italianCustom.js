@@ -201,7 +201,7 @@ module.exports = {
                 includePunchInAutomaticTimeDiscriminationPhase: "Includere le timbrature nella fase di discriminazione automatica",
                 partialReceiptsIntoAssignedStiff: "Convertire giustificativi parziali (rigidi)",
                 partialReceiptsIntoAssignedFlex: "Convertire giustificativi parziali (flex)",
-                strategieGiustificativiAssenzaTimbrature: "Giustificativi assegnati anche senza timbratura",
+                receiptsAssignedInAbsenceOfPunch: "Giustificativi assegnati anche senza timbratura",
                 subTitle4: "Ordini di servizio",
                 OmissioneDescrizioneOrdiniServizio: "Omettere la descrizione neglio ordini di servizio",
                 minime: "Minime",
