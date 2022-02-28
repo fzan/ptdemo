@@ -177,7 +177,7 @@ module.exports = {
                 bandsInCaseOfAbsence: "Bands if Absence",
                 extendOverMissedPauses: "Breaks not respected",
                 adaptiveDeductionOfStandardPunch: "Adaptive Deduction Stamping Type",
-                compensazioneSequenzeEu: "Eu sequences",
+                eUSequences: "Eu sequences",
                 compensazioneTimbratureFuoriFasciaElastica: "Stamping out of the Elastic band",
                 compensazioneSpostaTimbraturaTipo: "Move Stamping Type",
                 compensazioneDisattivaFasceDopoIndividuaTipo: "Disable bands after locate Type",

@@ -177,7 +177,7 @@ module.exports = {
                 bandsInCaseOfAbsence: "Fasce se Assenza",
                 extendOverMissedPauses: "Pause non Rispettate",
                 adaptiveDeductionOfStandardPunch: "Deduzione Adattiva Timbrature Tipo",
-                compensazioneSequenzeEu: "Sequenze Eu",
+                eUSequences: "Sequenze Eu",
                 compensazioneTimbratureFuoriFasciaElastica: "Timbrature fuori fascia Elastica",
                 compensazioneSpostaTimbraturaTipo: "Sposta Timbratura Tipo",
                 compensazioneDisattivaFasceDopoIndividuaTipo: "Disattiva fasce dopo individua Tipo",

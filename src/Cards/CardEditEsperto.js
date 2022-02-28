@@ -41,7 +41,7 @@ function CardEditEsperto(record) {
                                 <BooleanInput source="adaptiveDeductionOfStandardPunch" label={translate('resources.cardEsperto.fields.adaptiveDeductionOfStandardPunch')} />
                                 {formData.adaptiveDeductionOfStandardPunch ?
                                     <>
-                                        <SelectInput source="compensazioneSequenzeEu" label={translate('resources.cardEsperto.fields.compensazioneSequenzeEu')} allowEmpty="True" className={classes.textInput} choices={[
+                                        <SelectInput source="eUSequences" label={translate('resources.cardEsperto.fields.eUSequences')} allowEmpty="True" className={classes.textInput} choices={[
                                             { id: 'prima', name: translate('resources.cardEsperto.fields.prima') },
                                             { id: 'tutteDallaPrima', name: translate('resources.cardEsperto.fields.tutteDallaPrima') },
                                             { id: 'tutteIndipendenti', name: translate('resources.cardEsperto.fields.tutteIndipendenti') },
