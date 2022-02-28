@@ -129,7 +129,7 @@ module.exports = {
                 subTitle1: " Tipologia, ore previste e competenza dei risultati",
                 type: "Tipologia Tipo",
                 base: "Ore Base",
-                tipologiaOreMinime: "Ore Minime",
+                minimum: "Ore Minime",
                 tipologiaGiornoDiSalvataggio: "Giorno di Salvataggio",
                 timbratureDalle: "Dalle",
                 timbratureAlle: "Alle",

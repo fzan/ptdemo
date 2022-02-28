@@ -14,7 +14,7 @@ export const OrariCreate = props => (
             <DateInput source="color" />
             <TextInput source="type" />
             <TextInput source="base" />
-            <TextInput source="tipologiaOreMinime" />
+            <TextInput source="minimum" />
             <TextInput source="tipologiaGiornoDiSalvataggio" />
             <TextInput source="timbratureDalle" />
             <TextInput source="timbratureAlle" />
