@@ -40,8 +40,8 @@ function CardEsperto(record) {
                     <CheckBox id="extendOverMissedPauses" checked={record.extendOverMissedPauses} InputProps={{ readOnly: true }} />
                 } label={translate('resources.cardEsperto.fields.extendOverMissedPauses')} />
                 <FormControlLabel control={
-                    <CheckBox id="compensazioneDeduzioneAdattivaTimbratureTipo" checked={record.compensazioneDeduzioneAdattivaTimbratureTipo} InputProps={{ readOnly: true }} />
-                } label={translate('resources.cardEsperto.fields.compensazioneDeduzioneAdattivaTimbratureTipo')} />
+                    <CheckBox id="adaptiveDeductionOfStandardPunch" checked={record.adaptiveDeductionOfStandardPunch} InputProps={{ readOnly: true }} />
+                } label={translate('resources.cardEsperto.fields.adaptiveDeductionOfStandardPunch')} />
             </TableRow>
             <TableRow >
                 <TextField id="compensazioneSequenzeEu" label={translate('resources.cardEsperto.fields.compensazioneSequenzeEu')} defaultValue={record.compensazioneSequenzeEu} InputProps={{ readOnly: true }} className={classes.textInput} />

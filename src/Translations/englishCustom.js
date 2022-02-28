@@ -176,7 +176,7 @@ module.exports = {
                 positiveBalanceForCompensateHours: "Positive Balance",
                 bandsInCaseOfAbsence: "Bands if Absence",
                 extendOverMissedPauses: "Breaks not respected",
-                compensazioneDeduzioneAdattivaTimbratureTipo: "Adaptive Deduction Stamping Type",
+                adaptiveDeductionOfStandardPunch: "Adaptive Deduction Stamping Type",
                 compensazioneSequenzeEu: "Eu sequences",
                 compensazioneTimbratureFuoriFasciaElastica: "Stamping out of the Elastic band",
                 compensazioneSpostaTimbraturaTipo: "Move Stamping Type",

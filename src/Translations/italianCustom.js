@@ -176,7 +176,7 @@ module.exports = {
                 positiveBalanceForCompensateHours: "Saldo Positivo",
                 bandsInCaseOfAbsence: "Fasce se Assenza",
                 extendOverMissedPauses: "Pause non Rispettate",
-                compensazioneDeduzioneAdattivaTimbratureTipo: "Deduzione Adattiva Timbrature Tipo",
+                adaptiveDeductionOfStandardPunch: "Deduzione Adattiva Timbrature Tipo",
                 compensazioneSequenzeEu: "Sequenze Eu",
                 compensazioneTimbratureFuoriFasciaElastica: "Timbrature fuori fascia Elastica",
                 compensazioneSpostaTimbraturaTipo: "Sposta Timbratura Tipo",

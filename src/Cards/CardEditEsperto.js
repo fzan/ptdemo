@@ -38,8 +38,8 @@ function CardEditEsperto(record) {
                                 <BooleanInput source="positiveBalanceForCompensateHours" label={translate('resources.cardEsperto.fields.positiveBalanceForCompensateHours')} />
                                 <BooleanInput source="bandsInCaseOfAbsence" label={translate('resources.cardEsperto.fields.bandsInCaseOfAbsence')} />
                                 <BooleanInput source="extendOverMissedPauses" label={translate('resources.cardEsperto.fields.extendOverMissedPauses')} />
-                                <BooleanInput source="compensazioneDeduzioneAdattivaTimbratureTipo" label={translate('resources.cardEsperto.fields.compensazioneDeduzioneAdattivaTimbratureTipo')} />
-                                {formData.compensazioneDeduzioneAdattivaTimbratureTipo ?
+                                <BooleanInput source="adaptiveDeductionOfStandardPunch" label={translate('resources.cardEsperto.fields.adaptiveDeductionOfStandardPunch')} />
+                                {formData.adaptiveDeductionOfStandardPunch ?
                                     <>
                                         <SelectInput source="compensazioneSequenzeEu" label={translate('resources.cardEsperto.fields.compensazioneSequenzeEu')} allowEmpty="True" className={classes.textInput} choices={[
                                             { id: 'prima', name: translate('resources.cardEsperto.fields.prima') },
