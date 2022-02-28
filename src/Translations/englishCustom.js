@@ -194,7 +194,7 @@ module.exports = {
                 generateAutomaticEntries: "Generate Automatic Voices",
                 realTypesWithoutStamping: "Use real and / or virtual Type even without stamping",
                 subTitle2: "Theoretical hours and type of day",
-                oreTeoricheHHTeoriche: 'HH theoretical',
+                theoreticalHours: 'HH theoretical',
                 oreTeoricheTipoGG: 'Type GG',
                 subTitle3: "Processing engine strategies",
                 strategieIgnorareTimbratureOrfane: "Ignore orphaned clockings",

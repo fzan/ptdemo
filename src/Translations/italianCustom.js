@@ -194,7 +194,7 @@ module.exports = {
                 generateAutomaticEntries: "Generare Voci Automatiche",
                 realTypesWithoutStamping: "Usare Tipo reali e/o virtuali anche senza timbrature",
                 subTitle2: "Ore teoriche e tipologia della giornata",
-                oreTeoricheHHTeoriche: 'HH teoriche',
+                theoreticalHours: 'HH teoriche',
                 oreTeoricheTipoGG: 'Tipo GG',
                 subTitle3: "Strategie per il motore di elaborazione",
                 strategieIgnorareTimbratureOrfane: "Ignorare timbrature orfane",

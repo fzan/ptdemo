@@ -33,7 +33,7 @@ function CardEditOrariSpeciali(record) {
             <Typography gutterBottom variant="h7" component="div">
                 {translate('resources.cardOrarioSpeciali.fields.subTitle2')}
             </Typography>
-            <SelectInput source="oreTeoricheHHTeoriche" label={translate('resources.cardOrarioSpeciali.fields.oreTeoricheHHTeoriche')} allowEmpty="True" className={classes.textInput} choices={[
+            <SelectInput source="theoreticalHours" label={translate('resources.cardOrarioSpeciali.fields.theoreticalHours')} allowEmpty="True" className={classes.textInput} choices={[
                 { id: 'minime', name: translate('resources.cardOrarioSpeciali.fields.minime') },
                 { id: 'base', name: translate('resources.cardOrarioSpeciali.fields.base') },
             ]} />
