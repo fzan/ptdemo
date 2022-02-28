@@ -44,7 +44,7 @@ export const OrariCreate = props => (
             <DateInput source="movePunchType" />
             <BooleanInput source="deactivateBandsAfterIdentifiedType" />
             <BooleanInput source="scheduleBecomeStiff" />
-            <BooleanInput source="postElaborazioniCompensazioneAutomatica" />
+            <BooleanInput source="applyAutomaticCompensation" />
             <BooleanInput source="postElaborazioniVociAutomatiche" />
             <BooleanInput source="postElaborazioniUsaTipoReali" />
             <TextInput source="oreTeoricheHHTeoriche" />

@@ -190,7 +190,7 @@ module.exports = {
         cardOrarioSpeciali: {
             fields: {
                 subTitle1: "Post-processing for days without stamping",
-                postElaborazioniCompensazioneAutomatica: "Apply Automatic Compensation",
+                applyAutomaticCompensation: "Apply Automatic Compensation",
                 postElaborazioniVociAutomatiche: "Generate Automatic Voices",
                 postElaborazioniUsaTipoReali: "Use real and / or virtual Type even without stamping",
                 subTitle2: "Theoretical hours and type of day",

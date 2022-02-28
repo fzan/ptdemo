@@ -190,7 +190,7 @@ module.exports = {
         cardOrarioSpeciali: {
             fields: {
                 subTitle1: "Post-Elaborazioni per giornate prive di timbrature",
-                postElaborazioniCompensazioneAutomatica: "Applicare Compensazione Automatica",
+                applyAutomaticCompensation: "Applicare Compensazione Automatica",
                 postElaborazioniVociAutomatiche: "Generare Voci Automatiche",
                 postElaborazioniUsaTipoReali: "Usare Tipo reali e/o virtuali anche senza timbrature",
                 subTitle2: "Ore teoriche e tipologia della giornata",
