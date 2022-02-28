@@ -32,7 +32,7 @@ function CardGenerale(record) {
                 <TextField id="type" label={translate('resources.cardGenerale.fields.type')} defaultValue={record.type} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="base" label={translate('resources.cardGenerale.fields.base')} defaultValue={record.base} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="minimum" label={translate('resources.cardGenerale.fields.minimum')} defaultValue={record.minimum} InputProps={{ readOnly: true }} className={classes.textInput} />
-                <TextField id="tipologiaGiornoDiSalvataggio" label={translate('resources.cardGenerale.fields.tipologiaGiornoDiSalvataggio')} defaultValue={record.tipologiaGiornoDiSalvataggio} InputProps={{ readOnly: true }} className={classes.textInput} />
+                <TextField id="savingDay" label={translate('resources.cardGenerale.fields.savingDay')} defaultValue={record.savingDay} InputProps={{ readOnly: true }} className={classes.textInput} />
             </TableRow>
 
 

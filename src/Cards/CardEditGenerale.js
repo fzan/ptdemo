@@ -93,7 +93,7 @@ function CardEditGenerale(record) {
                 <TextInput source="base" label={translate('resources.cardGenerale.fields.base')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
                 <TextInput source="minimum" label={translate('resources.cardGenerale.fields.minimum')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
             </TableRow>
-            <SelectInput source="tipologiaGiornoDiSalvataggio" label={translate('resources.cardGenerale.fields.tipologiaGiornoDiSalvataggio')} allowEmpty="True" choices={[
+            <SelectInput source="savingDay" label={translate('resources.cardGenerale.fields.savingDay')} allowEmpty="True" choices={[
                 { id: 'Entrata', name: translate('resources.cardGenerale.fields.entrata') },
                 { id: 'Uscita', name: translate('resources.cardGenerale.fields.uscita') },
                 { id: 'Cavaliere', name: translate('resources.cardGenerale.fields.cavaliere') },

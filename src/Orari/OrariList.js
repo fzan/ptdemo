@@ -40,7 +40,7 @@ export const OrariList = props => (
             <TextField source="code" />
             <TextField source="description" />
             <TextField source="type" />
-            <TextField source="tipologiaGiornoDiSalvataggio" />
+            <TextField source="savingDay" />
             <OrePreviste source="orePreviste" />
             <VisualizzazioneBool source="timbratureGiorniSuccessiviPerTimbratura" />
             <FasciaTimbrature source="fasciaTimbrature" />
