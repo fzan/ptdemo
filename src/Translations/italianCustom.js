@@ -106,7 +106,7 @@ module.exports = {
                 obbl: "Obbl",
                 tipologia: "Tipologia",
                 entry: "Voce",
-                eccedenze: "Eccedenze",
+                surpluses: "Eccedenze",
                 vocePerSegnalazione: "Voce per segnalazione",
                 scheduleId: "Tipologia Orario"
             }
