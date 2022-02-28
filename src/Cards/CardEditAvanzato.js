@@ -50,7 +50,7 @@ function CardEditAvanzato(record) {
                 {translate('resources.cardAvanzato.fields.subTitle3')}
             </Typography>
 
-            <BooleanInput source="lavoroStraordinarioAutorizzato"  label={translate('resources.cardAvanzato.fields.lavoroStraordinarioAutorizzato')} />
+            <BooleanInput source="overtimeMustBeAuthorized"  label={translate('resources.cardAvanzato.fields.overtimeMustBeAuthorized')} />
             <SelectInput source="lavoroStraordinarioArrotondamento"  label={translate('resources.cardAvanzato.fields.lavoroStraordinarioArrotondamento')} allowEmpty="True" choices={[
                 { id: 'ogniSingolaVoce', name: translate('resources.cardAvanzato.fields.ogniSingolaVoce') },
                 { id: 'titolare', name:translate('resources.cardAvanzato.fields.titolare') },

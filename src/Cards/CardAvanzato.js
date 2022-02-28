@@ -47,8 +47,8 @@ function CardAvanzato(record) {
                     subheader={<ListSubheader color="primary">{translate('resources.cardAvanzato.fields.subTitle3')}</ListSubheader>}
                 >
                     <FormControlLabel control={
-                        <CheckBox id="lavoroStraordinarioAutorizzato" checked={record.lavoroStraordinarioAutorizzato} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardAvanzato.fields.lavoroStraordinarioAutorizzato')} />
+                        <CheckBox id="overtimeMustBeAuthorized" checked={record.overtimeMustBeAuthorized} InputProps={{ readOnly: true }} />
+                    } label={translate('resources.cardAvanzato.fields.overtimeMustBeAuthorized')} />
                 </List>
             </TableRow>
             <TableRow>

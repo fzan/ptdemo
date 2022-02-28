@@ -156,7 +156,7 @@ module.exports = {
                 subTitle2: "Timbrature conformi",
                 reportPunchOutOfBands: "Segnalare timbrature fuori fasce",
                 subTitle3: "Computo del lavoro straordinario",
-                lavoroStraordinarioAutorizzato: "Straordinario autorizzato",
+                overtimeMustBeAuthorized: "Straordinario autorizzato",
                 lavoroStraordinarioArrotondamento: "Arrotondamento",
                 lavoroStraordinarioArrotondamentoSulleFasceDaAutorizzare: "Arrotondamento sulle fasce da Autorizzare",
                 subTitle4: "Profilo di rielaborazione",
