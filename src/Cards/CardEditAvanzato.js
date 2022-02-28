@@ -31,7 +31,7 @@ function CardEditAvanzato(record) {
                 <ReferenceInput source="saturday" label={translate('resources.cardAvanzato.fields.saturday')} allowEmpty="True" reference="orarios" className={classes.textInput}>
                     <SelectInput optionText="description" />
                 </ReferenceInput>
-                <ReferenceInput source="orariSostitutiviDomenicaEFestivo" style={{ width: 200 }} label={translate('resources.cardAvanzato.fields.orariSostitutiviDomenicaEFestivo')} allowEmpty="True" reference="orarios" className={classes.textInput}>
+                <ReferenceInput source="sundayHolyday" style={{ width: 200 }} label={translate('resources.cardAvanzato.fields.sundayHolyday')} allowEmpty="True" reference="orarios" className={classes.textInput}>
                     <SelectInput optionText="description" />
                 </ReferenceInput>
                 <ReferenceInput source="orariSostitutiviPreFestivo" label={translate('resources.cardAvanzato.fields.orariSostitutiviPreFestivo')} allowEmpty="True" reference="orarios" className={classes.textInput}>

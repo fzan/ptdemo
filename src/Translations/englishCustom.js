@@ -151,7 +151,7 @@ module.exports = {
             fields: {
                 subTitle1: "Replacement Hours",
                 saturday: "Saturday",
-                orariSostitutiviDomenicaEFestivo: "Sunday and Holidays",
+                sundayHolyday: "Sunday and Holidays",
                 orariSostitutiviPreFestivo: "Pre-holiday",
                 subTitle2: "Compliant stampings",
                 segnalareTimbratureFuoriFasce: "Report out-of-time stampings",
