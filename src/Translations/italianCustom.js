@@ -174,7 +174,7 @@ module.exports = {
                 cumulativeOvertime: "Cumulo Straordinario",
                 maximal: "Massimale",
                 positiveBalanceForCompensateHours: "Saldo Positivo",
-                compensazioneFasceSeAssenza: "Fasce se Assenza",
+                bandsInCaseOfAbsence: "Fasce se Assenza",
                 compensazionePauseNonRispettate: "Pause non Rispettate",
                 compensazioneDeduzioneAdattivaTimbratureTipo: "Deduzione Adattiva Timbrature Tipo",
                 compensazioneSequenzeEu: "Sequenze Eu",

@@ -36,7 +36,7 @@ export const OrariCreate = props => (
             <DateInput source="cumulativeOvertime" />
             <TextInput source="maximal" />
             <BooleanInput source="positiveBalanceForCompensateHours" />
-            <BooleanInput source="compensazioneFasceSeAssenza" />
+            <BooleanInput source="bandsInCaseOfAbsence" />
             <BooleanInput source="compensazionePauseNonRispettate" />
             <BooleanInput source="compensazioneDeduzioneAdattivaTimbratureTipo" />
             <DateInput source="compensazioneSequenzeEu" />

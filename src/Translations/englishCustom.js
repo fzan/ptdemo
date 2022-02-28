@@ -174,7 +174,7 @@ module.exports = {
                 cumulativeOvertime: "Extraordinary cumulation",
                 maximal: "Maximal",
                 positiveBalanceForCompensateHours: "Positive Balance",
-                compensazioneFasceSeAssenza: "Bands if Absence",
+                bandsInCaseOfAbsence: "Bands if Absence",
                 compensazionePauseNonRispettate: "Breaks not respected",
                 compensazioneDeduzioneAdattivaTimbratureTipo: "Adaptive Deduction Stamping Type",
                 compensazioneSequenzeEu: "Eu sequences",
