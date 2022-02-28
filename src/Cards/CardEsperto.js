@@ -29,8 +29,8 @@ function CardEsperto(record) {
                 <TextField id="cumulativeOvertime" label={translate('resources.cardEsperto.fields.cumulativeOvertime')} defaultValue={record.cumulativeOvertime} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="maximal" label={translate('resources.cardEsperto.fields.maximal')} defaultValue={record.maximal} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <FormControlLabel control={
-                    <CheckBox id="compensazioneSaldoPositivo" checked={record.compensazioneSaldoPositivo} InputProps={{ readOnly: true }} />
-                } label={translate('resources.cardEsperto.fields.compensazioneSaldoPositivo')} />
+                    <CheckBox id="positiveBalanceForCompensateHours" checked={record.positiveBalanceForCompensateHours} InputProps={{ readOnly: true }} />
+                } label={translate('resources.cardEsperto.fields.positiveBalanceForCompensateHours')} />
             </TableRow>
             <TableRow >
                 <FormControlLabel control={

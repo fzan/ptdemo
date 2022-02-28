@@ -35,7 +35,7 @@ function CardEditEsperto(record) {
                                     <SelectInput optionText="title" />
                                 </ReferenceInput>
                                 <TextInput source="maximal" label={translate('resources.cardEsperto.fields.maximal')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
-                                <BooleanInput source="compensazioneSaldoPositivo" label={translate('resources.cardEsperto.fields.compensazioneSaldoPositivo')} />
+                                <BooleanInput source="positiveBalanceForCompensateHours" label={translate('resources.cardEsperto.fields.positiveBalanceForCompensateHours')} />
                                 <BooleanInput source="compensazioneFasceSeAssenza" label={translate('resources.cardEsperto.fields.compensazioneFasceSeAssenza')} />
                                 <BooleanInput source="compensazionePauseNonRispettate" label={translate('resources.cardEsperto.fields.compensazionePauseNonRispettate')} />
                                 <BooleanInput source="compensazioneDeduzioneAdattivaTimbratureTipo" label={translate('resources.cardEsperto.fields.compensazioneDeduzioneAdattivaTimbratureTipo')} />
