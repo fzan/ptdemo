@@ -28,7 +28,7 @@ function CardEditEsperto(record) {
                         <BooleanInput source="selectiveCompensation" label={translate('resources.cardEsperto.fields.selectiveCompensation')} />
                         {formData.selectiveCompensation ?
                             <>
-                                <ReferenceInput source="compensazioneCumuloAssenze" style={{ width: 250 }} reference="vocis" label={translate('resources.cardEsperto.fields.compensazioneCumuloAssenze')} className={classes.textInput}>
+                                <ReferenceInput source="cumulativeAbsence" style={{ width: 250 }} reference="vocis" label={translate('resources.cardEsperto.fields.cumulativeAbsence')} className={classes.textInput}>
                                     <SelectInput optionText="title" />
                                 </ReferenceInput>
                                 <ReferenceInput style={{ width: 250 }} source="compensazioneCumuloStraordinario" reference="vocis" label={translate('resources.cardEsperto.fields.compensazioneCumuloStraordinario')} className={classes.textInput}>

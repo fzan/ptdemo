@@ -25,7 +25,7 @@ function CardEsperto(record) {
                 } label={translate('resources.cardEsperto.fields.selectiveCompensation')} />
             </TableRow>
             <TableRow >
-                <TextField id="compensazioneCumuloAssenze" label={translate('resources.cardEsperto.fields.compensazioneCumuloAssenze')} defaultValue={record.compensazioneCumuloAssenze} InputProps={{ readOnly: true }} className={classes.textInput} />
+                <TextField id="cumulativeAbsence" label={translate('resources.cardEsperto.fields.cumulativeAbsence')} defaultValue={record.cumulativeAbsence} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="compensazioneCumuloStraordinario" label={translate('resources.cardEsperto.fields.compensazioneCumuloStraordinario')} defaultValue={record.compensazioneCumuloStraordinario} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="compensazioneMassimale" label={translate('resources.cardEsperto.fields.compensazioneMassimale')} defaultValue={record.compensazioneMassimale} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <FormControlLabel control={

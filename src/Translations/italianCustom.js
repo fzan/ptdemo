@@ -170,7 +170,7 @@ module.exports = {
         cardEsperto: {
             fields: {
                 selectiveCompensation: "Compensazione Selettiva",
-                compensazioneCumuloAssenze: "Cumulo Assenze",
+                cumulativeAbsence: "Cumulo Assenze",
                 compensazioneCumuloStraordinario: "Cumulo Straordinario",
                 compensazioneMassimale: "Massimale",
                 compensazioneSaldoPositivo: "Saldo Positivo",
