@@ -115,7 +115,7 @@ function CardEditGenerale(record) {
                         <SettingTime source="to" value={formData.to} label={translate('resources.cardGenerale.fields.to')} {...record} />
                     )}
                 </FormDataConsumer>
-                <NumberInput source="timbratureGiorniSuccessiviPerTimbratura" label={translate('resources.cardGenerale.fields.giorniSuccessivi')} />
+                <NumberInput source="nextDays" label={translate('resources.cardGenerale.fields.nextDaysLabel')} />
             </TableRow>
 
             <BooleanInput source="timbratureTimbratureSuPiuGiorni" label={translate('resources.cardGenerale.fields.timbratureTimbratureSuPiuGiorni')} />

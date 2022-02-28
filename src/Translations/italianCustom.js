@@ -19,7 +19,7 @@ module.exports = {
                 type: "Tipo",
                 savingDay: "Giorno Di Salvataggio",
                 orePreviste: "Ore Previste",
-                timbratureGiorniSuccessiviPerTimbratura: "Copre più Giorni",
+                nextDays: "Copre più Giorni",
                 fasciaTimbrature: "Fascia Timbrature",
                 segnalareTimbratureFuoriFasce: "Conformità Timbrature",
                 compensazioneCompensazioneSelettiva: "Compensazione Selettiva",
@@ -133,7 +133,7 @@ module.exports = {
                 savingDay: "Giorno di Salvataggio",
                 from: "Dalle",
                 to: "Alle",
-                timbratureGiorniSuccessiviPerTimbratura: "Giorni successivi per timbratura",
+                nextDays: "Giorni successivi per timbratura",
                 timbratureTimbratureSuPiuGiorni: "Timbrature su piu giorni",
                 timbratureCausaliFuoriIntervallo: "Causali fuori intervallo",
                 orario: "Orario",
@@ -144,7 +144,7 @@ module.exports = {
                 uscita: "USCITA - Tutto sul GG di Uscita",
                 cavaliere: "CAVALIERE - Selettivo",
                 subTitle2: "Intervallo Timbrature",
-                giorniSuccessivi: "Giorni Successivi"
+                nextDaysLabel: "Giorni Successivi"
             }
         },
         cardAvanzato: {

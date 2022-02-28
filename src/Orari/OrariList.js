@@ -19,8 +19,8 @@ const VisualizzazioneBool = (props) => {
 const FasciaTimbrature = (props) => {
     return (
         <div>Dalle {props.record.from} Alle {props.record.to}
-            {props.record.timbratureGiorniSuccessiviPerTimbratura === 1 ? ' Del Giorno seguente' :
-                props.record.timbratureGiorniSuccessiviPerTimbratura > 1 ? ' Di ' + props.record.timbratureGiorniSuccessiviPerTimbratura + ' Giorni successivi' :
+            {props.record.nextDays === 1 ? ' Del Giorno seguente' :
+                props.record.nextDays > 1 ? ' Di ' + props.record.nextDays + ' Giorni successivi' :
                     null
             }
         </div>
@@ -42,7 +42,7 @@ export const OrariList = props => (
             <TextField source="type" />
             <TextField source="savingDay" />
             <OrePreviste source="orePreviste" />
-            <VisualizzazioneBool source="timbratureGiorniSuccessiviPerTimbratura" />
+            <VisualizzazioneBool source="nextDays" />
             <FasciaTimbrature source="fasciaTimbrature" />
             <VisualizzazioneBool source="segnalareTimbratureFuoriFasce" />
             <VisualizzazioneBool source="compensazioneCompensazioneSelettiva" />

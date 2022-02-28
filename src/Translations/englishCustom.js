@@ -19,7 +19,7 @@ module.exports = {
                 type: "Type",
                 savingDay: "Saving Day",
                 orePreviste: "Scheduled Hours",
-                timbratureGiorniSuccessiviPerTimbratura: "Multiple Days",
+                nextDays: "Multiple Days",
                 fasciaTimbrature: "Band Stampings",
                 segnalareTimbratureFuoriFasce: "Stamping Compliance",
                 compensazioneCompensazioneSelettiva: "Selective Compensation",
@@ -133,7 +133,7 @@ module.exports = {
                 savingDay: "Saving Day",
                 from: "From",
                 to: "To",
-                timbratureGiorniSuccessiviPerTimbratura: "Subsequent days for stamping",
+                nextDays: "Subsequent days for stamping",
                 timbratureTimbratureSuPiuGiorni: "Stamping over several days",
                 timbratureCausaliFuoriIntervallo: "Cause them out of range",
                 orario: "Hours",
@@ -144,7 +144,7 @@ module.exports = {
                 uscita: "EXIT - All about the Day of GG",
                 cavaliere: "KNIGHT - Selective",
                 subTitle2: "Stamping Interval",
-                giorniSuccessivi: "Days Later"
+                nextDaysLabel: "Days Later"
             }
         },
         cardAvanzato: {

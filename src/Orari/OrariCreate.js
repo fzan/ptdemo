@@ -18,7 +18,7 @@ export const OrariCreate = props => (
             <TextInput source="savingDay" />
             <TextInput source="from" />
             <TextInput source="to" />
-            <NumberInput source="timbratureGiorniSuccessiviPerTimbratura" />
+            <NumberInput source="nextDays" />
             <BooleanInput source="timbratureTimbratureSuPiuGiorni" />
             <BooleanInput source="timbratureCausaliFuoriIntervallo" />
             <DateInput source="orariSostitutiviSabato" />

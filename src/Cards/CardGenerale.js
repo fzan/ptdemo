@@ -39,7 +39,7 @@ function CardGenerale(record) {
             <TableRow>
                 <TextField id="from" label={translate('resources.cardGenerale.fields.from')} defaultValue={record.from} InputProps={{ readOnly: true }} className={classes.textInput} />
                 <TextField id="to" label={translate('resources.cardGenerale.fields.to')} defaultValue={record.to} InputProps={{ readOnly: true }} className={classes.textInput} />
-                <TextField id="timbratureGiorniSuccessiviPerTimbratura" label={translate('resources.cardGenerale.fields.timbratureGiorniSuccessiviPerTimbratura')} defaultValue={record.timbratureGiorniSuccessiviPerTimbratura} InputProps={{ readOnly: true }} style={{ width: 230 }} className={classes.textInput} />
+                <TextField id="nextDays" label={translate('resources.cardGenerale.fields.nextDays')} defaultValue={record.nextDays} InputProps={{ readOnly: true }} style={{ width: 230 }} className={classes.textInput} />
             </TableRow>
             <TableRow>
                 <FormControlLabel control={
