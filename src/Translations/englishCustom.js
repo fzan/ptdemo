@@ -203,7 +203,7 @@ module.exports = {
                 partialReceiptsIntoAssignedFlex: "Convert partial vouchers (flex)",
                 receiptsAssignedInAbsenceOfPunch: "Justifications assigned even without stamping",
                 subTitle4: "Service orders",
-                OmissioneDescrizioneOrdiniServizio: "Omit the description in the service orders",
+                omitDescriptionInServiceOrders: "Omit the description in the service orders",
                 minime: "Minimum",
                 base: "Base",
                 lavorativo: "WorkDay",

@@ -75,8 +75,8 @@ function CardOrarioSpeciali(record) {
             >
                 <TableRow>
                     <FormControlLabel control={
-                        <CheckBox id="OmissioneDescrizioneOrdiniServizio" checked={record.OmissioneDescrizioneOrdiniServizio} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.OmissioneDescrizioneOrdiniServizio')} />
+                        <CheckBox id="omitDescriptionInServiceOrders" checked={record.omitDescriptionInServiceOrders} InputProps={{ readOnly: true }} />
+                    } label={translate('resources.cardOrarioSpeciali.fields.omitDescriptionInServiceOrders')} />
                 </TableRow>
             </List>
         </TableBody>

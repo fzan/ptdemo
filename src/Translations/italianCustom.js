@@ -203,7 +203,7 @@ module.exports = {
                 partialReceiptsIntoAssignedFlex: "Convertire giustificativi parziali (flex)",
                 receiptsAssignedInAbsenceOfPunch: "Giustificativi assegnati anche senza timbratura",
                 subTitle4: "Ordini di servizio",
-                OmissioneDescrizioneOrdiniServizio: "Omettere la descrizione neglio ordini di servizio",
+                omitDescriptionInServiceOrders: "Omettere la descrizione neglio ordini di servizio",
                 minime: "Minime",
                 base: "Base",
                 lavorativo: "Lavorativo",

@@ -55,7 +55,7 @@ function CardEditOrariSpeciali(record) {
             <Typography gutterBottom variant="h7" component="div">
                 {translate('resources.cardOrarioSpeciali.fields.subTitle4')}
             </Typography>
-            <BooleanInput source="OmissioneDescrizioneOrdiniServizio" label={translate('resources.cardOrarioSpeciali.fields.OmissioneDescrizioneOrdiniServizio')} />
+            <BooleanInput source="omitDescriptionInServiceOrders" label={translate('resources.cardOrarioSpeciali.fields.omitDescriptionInServiceOrders')} />
         </TableBody>
     );
 }

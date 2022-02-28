@@ -54,7 +54,7 @@ export const OrariCreate = props => (
             <BooleanInput source="partialReceiptsIntoAssignedStiff" />
             <BooleanInput source="partialReceiptsIntoAssignedFlex" />
             <BooleanInput source="receiptsAssignedInAbsenceOfPunch" />
-            <BooleanInput source="OmissioneDescrizioneOrdiniServizio" />
+            <BooleanInput source="omitDescriptionInServiceOrders" />
         </SimpleForm>
     </Create>
 );
