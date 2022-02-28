@@ -13,7 +13,7 @@ export const PauseCreate = props => (
             <TextInput source="max" />
             <DateInput source="obbl" />
             <TextInput source="tipologia" />
-            <DateInput source="voce" />
+            <DateInput source="entry" />
             <TextInput source="eccedenze" />
             <DateInput source="vocePerSegnalazione" />
         </SimpleForm>
