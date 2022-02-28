@@ -132,7 +132,7 @@ module.exports = {
                 minimum: "Minimum Hours",
                 savingDay: "Saving Day",
                 from: "From",
-                timbratureAlle: "To",
+                to: "To",
                 timbratureGiorniSuccessiviPerTimbratura: "Subsequent days for stamping",
                 timbratureTimbratureSuPiuGiorni: "Stamping over several days",
                 timbratureCausaliFuoriIntervallo: "Cause them out of range",
