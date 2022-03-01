@@ -5,10 +5,10 @@ export const ArrotondamentotimbratureCreate = props => (
     <Create {...props}>
         <SimpleForm>
             {/* <TextInput source="id" /> */}
-            <ReferenceInput source="scheduleId" reference="orarios"><SelectInput optionText="description" /></ReferenceInput>
+            <ReferenceInput source="scheduleId" reference="schedules"><SelectInput optionText="description" /></ReferenceInput>
             <TextInput source="v" />
             <TextInput source="from" />
-            <TextInput source="tipo" />
+            <TextInput source="type" />
             <TextInput source="hour" />
             <TextInput source="minutes" />
             <TextInput source="plus_toll" />

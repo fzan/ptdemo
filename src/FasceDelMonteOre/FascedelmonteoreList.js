@@ -5,7 +5,7 @@ export const FascedelmonteoreList = props => (
     <List {...props}>
         <Datagrid rowClick="edit">
             {/* <TextField source="id" /> */}
-            <ReferenceField source="scheduleId" reference="orarios" link={false} >
+            <ReferenceField source="scheduleId" reference="schedules" link={false} >
                 <TextField source="description" />
             </ReferenceField>
             <TextField source="causalCode" />

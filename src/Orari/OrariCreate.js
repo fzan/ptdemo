@@ -5,7 +5,7 @@ export const OrariCreate = props => (
     <Create {...props}>
         <SimpleForm>
             <TextInput source="id" />
-            <ReferenceInput source="scheduleId" reference="orarios">
+            <ReferenceInput source="scheduleId" reference="schedules">
                 <SelectInput optionText="id" />
             </ReferenceInput>
             <TextInput source="code" />
@@ -40,7 +40,7 @@ export const OrariCreate = props => (
             <BooleanInput source="extendOverMissedPauses" />
             <BooleanInput source="adaptiveDeductionOfStandardPunch" />
             <DateInput source="eUSequences" />
-            <DateInput source="PunchOutsideElasticBand" />
+            <DateInput source="punchOutsideElasticBand" />
             <DateInput source="movePunchType" />
             <BooleanInput source="deactivateBandsAfterIdentifiedType" />
             <BooleanInput source="scheduleBecomeStiff" />

@@ -14,8 +14,8 @@ import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 const DataStandard = "2020-01-01"
 
 const events = [
-  { title: "ENTRATA", id: "1", color: "green" },
-  { title: "USCITA", id: "2", color: "red" }
+  { title: "entrance", id: "1", color: "green" },
+  { title: "exit", id: "2", color: "red" }
 ]
 
 class DemoApp extends React.Component {
@@ -30,7 +30,7 @@ class DemoApp extends React.Component {
   }
 
   componentDidMount() {
-    this.props.dataProvider.getList('orarios', { pagination: { page: 1, perPage: 10000 }, sort: { field: "id", order: "asc" } }).then(data => {
+    this.props.dataProvider.getList('schedules', { pagination: { page: 1, perPage: 10000 }, sort: { field: "id", order: "asc" } }).then(data => {
       console.log(data)
     })
     // debugger

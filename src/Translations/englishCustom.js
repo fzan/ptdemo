@@ -11,7 +11,7 @@ module.exports = {
                 title: 'Title'
             }
         },
-        orarios: {
+        schedules: {
             name: "TimeTables",
             fields: {
                 code: "Code",
@@ -30,16 +30,16 @@ module.exports = {
         profilos: {
             name: "Profiles",
             fields: {
-                nome: "Name"
+                name: "Name"
             }
         },
-        vocis: {
+        voices: {
             name: "Voices",
             fields: {
                 title: "Title"
             }
         },
-        fasceDellaGiornatas: {
+        workingDayBands: {
             name: "Time Slots of the Day",
             fields: {
                 causalCode: "Causal",
@@ -49,7 +49,7 @@ module.exports = {
                 scheduleId: "Type of Time"
             }
         },
-        fasceDelMonteOres: {
+        workingHourBands: {
             name: "Slots of the Total Hours",
             fields: {
                 causalCode: "Causal",
@@ -58,7 +58,7 @@ module.exports = {
                 scheduleId: "Type of Time"
             }
         },
-        timbratureTipos: {
+        punchTypes: {
             name: "Type Stampings",
             fields: {
                 v: "V",
@@ -66,16 +66,16 @@ module.exports = {
                 to: "To",
                 gg: "GG",
                 punch: "Stamping",
-                tipo: "Type",
+                type: "Type",
                 scheduleId: "Type of Time"
             }
         },
-        arrotondamentoTimbratures: {
+        punchRoundings: {
             name: "Rounding off Stampings",
             fields: {
                 v: "V",
                 from: "From",
-                tipo: "Type",
+                type: "Type",
                 hour: "Hour",
                 minutes: "Minutes",
                 plus_toll: "Plus Toll",
@@ -83,11 +83,11 @@ module.exports = {
                 scheduleId: "Type of Time"
             },
         },
-        arrotondamentoStraordinarios: {
+        overtimeRoundings: {
             name: "Extraordinary Rounding",
             fields: {
                 from: "From",
-                tipo: "Type",
+                type: "Type",
                 hour: "Hour",
                 minutes: "Minutes",
                 toll: "toll",
@@ -140,9 +140,9 @@ module.exports = {
                 stiff: "Stiff",
                 elastic: "Elastic",
                 flexible: "Flexible",
-                entrata: "ENTRANCE - All about the entrance GG",
-                uscita: "EXIT - All about the Day of GG",
-                cavaliere: "KNIGHT - Selective",
+                entrance: "ENTRANCE - All about the entrance GG",
+                exit: "EXIT - All about the Day of GG",
+                knight: "KNIGHT - Selective",
                 subTitle2: "Stamping Interval",
                 nextDaysLabel: "Days Later"
             }
@@ -160,7 +160,7 @@ module.exports = {
                 rounding: "Rounding",
                 applyRoundingInBandsToBeAuthorized: "Rounding on the bands to be authorized",
                 subTitle4: "Profile of reworking",
-                profilo: "Profile",
+                profilosId: "Profile",
                 ogniSingolaVoce: "Every single item",
                 titolare: "Only the owner",
                 primaSingolaVoce: "Every single item first",
@@ -178,7 +178,7 @@ module.exports = {
                 extendOverMissedPauses: "Breaks not respected",
                 adaptiveDeductionOfStandardPunch: "Adaptive Deduction Stamping Type",
                 eUSequences: "Eu sequences",
-                PunchOutsideElasticBand: "Stamping out of the Elastic band",
+                punchOutsideElasticBand: "Stamping out of the Elastic band",
                 movePunchType: "Move Stamping Type",
                 deactivateBandsAfterIdentifiedType: "Disable bands after locate Type",
                 scheduleBecomeStiff: "Rigid timetable",
@@ -213,8 +213,8 @@ module.exports = {
         },
         calendario: {
             fields: {
-                entrata: "ENTRATA",
-                uscita: "USCITA",
+                entrance: "entrance",
+                exit: "USCITA",
                 title: "Insertion of Stamping Bands",
                 istruzioni: "Instruction",
                 istruzioni1: "You can move and recalibrate the time slot",

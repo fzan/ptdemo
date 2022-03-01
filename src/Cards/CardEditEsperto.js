@@ -46,14 +46,8 @@ function CardEditEsperto(record) {
                                             { id: 'tutteDallaPrima', name: translate('resources.cardEsperto.fields.tutteDallaPrima') },
                                             { id: 'tutteIndipendenti', name: translate('resources.cardEsperto.fields.tutteIndipendenti') },
                                         ]} />
-                                        <SelectInput style={{ width: 280 }} source="PunchOutsideElasticBand" label={translate('resources.cardEsperto.fields.PunchOutsideElasticBand')} allowEmpty="True" className={classes.textInput} choices={[
-                                            { id: 'escludere', name: 'Escludere' },
-                                            { id: 'considerare', name: 'Considerare' },
-                                        ]} />
-                                        <SelectInput style={{ width: 230 }} source="movePunchType" label={translate('resources.cardEsperto.fields.movePunchType')} allowEmpty="True" className={classes.textInput} choices={[
-                                            { id: 'sinoAlLimite', name: 'Sino al limite della fascia' },
-                                            { id: 'ignoraLimiti', name: 'Ignora limiti' },
-                                        ]} />
+                                        <BooleanInput source="punchOutsideElasticBand" label={translate('resources.cardEsperto.fields.punchOutsideElasticBand')} />
+                                        <BooleanInput source="movePunchType" label={translate('resources.cardEsperto.fields.movePunchType')} />
                                         <BooleanInput source="deactivateBandsAfterIdentifiedType" label={translate('resources.cardEsperto.fields.deactivateBandsAfterIdentifiedType')} />
                                         {formData.deactivateBandsAfterIdentifiedType ?
                                             <>

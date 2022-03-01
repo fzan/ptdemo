@@ -18,7 +18,7 @@ function CardEditOrariSpeciali(record) {
             <FormDataConsumer>
                 {({ formData, ...rest }) => (
                     <Typography gutterBottom variant="h5" component="div">
-                        {translate('resources.cardGenerale.fields.scheduledIdLabel')}   {formData.description}
+                        {translate('resources.cardGenerale.fields.orario')}   {formData.description}
                     </Typography>
                 )}
             </FormDataConsumer>
@@ -38,9 +38,9 @@ function CardEditOrariSpeciali(record) {
                 { id: 'base', name: translate('resources.cardOrarioSpeciali.fields.base') },
             ]} />
             <SelectInput source="typeOfDay" label={translate('resources.cardOrarioSpeciali.fields.typeOfDay')} allowEmpty="True" className={classes.textInput} choices={[
-                { id: 'lavorativo', name: translate('resources.cardOrarioSpeciali.fields.lavorativo') },
-                { id: 'nonLavorativo', name: translate('resources.cardOrarioSpeciali.fields.nonLavorativo') },
-                { id: 'festivo', name: translate('resources.cardOrarioSpeciali.fields.festivo') },
+                { id: 0, name: translate('resources.cardOrarioSpeciali.fields.lavorativo') },
+                { id: 1, name: translate('resources.cardOrarioSpeciali.fields.nonLavorativo') },
+                { id: 2, name: translate('resources.cardOrarioSpeciali.fields.festivo') },
             ]} />
             <br />
             <Typography gutterBottom variant="h7" component="div">

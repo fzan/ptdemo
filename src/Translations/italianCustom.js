@@ -11,7 +11,7 @@ module.exports = {
                 title: 'Titolo'
             }
         },
-        orarios: {
+        schedules: {
             name: "Orari",
             fields: {
                 code: "code",
@@ -21,7 +21,7 @@ module.exports = {
                 scheduledHours: "Ore Previste",
                 nextDays: "Copre più Giorni",
                 bandStampings: "Fascia Timbrature",
-                segnalareTimbratureFuoriFasce: "Conformità Timbrature",
+                reportPunchOutOfBands: "Conformità Timbrature",
                 selectiveCompensation: "Compensazione Selettiva",
                 replacementHours: "Orari Sostitutivi",
                 profilosId: "Rielaborazioni"
@@ -30,16 +30,16 @@ module.exports = {
         profilos: {
             name: "Profili",
             fields: {
-                nome: "Nome"
+                name: "Nome"
             }
         },
-        vocis: {
+        voices: {
             name: "Voci",
             fields: {
                 title: "Titolo"
             }
         },
-        fasceDellaGiornatas: {
+        workingDayBands: {
             name: "Fasce della Giornata",
             fields: {
                 causalCode: "Causale",
@@ -49,7 +49,7 @@ module.exports = {
                 scheduleId: "Tipologia Orario"
             }
         },
-        fasceDelMonteOres: {
+        workingHourBands: {
             name: "Fasce del monte ore",
             fields: {
                 causalCode: "Causale",
@@ -58,7 +58,7 @@ module.exports = {
                 scheduleId: "Tipologia Orario"
             }
         },
-        timbratureTipos: {
+        punchTypes: {
             name: "Timbrature tipo",
             fields: {
                 v: "V",
@@ -66,16 +66,16 @@ module.exports = {
                 to: "Alle",
                 gg: "GG",
                 punch: "Timbratura",
-                tipo: "Tipo",
+                type: "Tipo",
                 scheduleId: "Tipologia Orario"
             }
         },
-        arrotondamentoTimbratures: {
+        punchRoundings: {
             name: "Arrot. Timbrature",
             fields: {
                 v: "V",
                 from: "Dalle",
-                tipo: "Tipo",
+                type: "Tipo",
                 hour: "Ora",
                 minutes: "Minuti",
                 plus_toll: "Plus Toll",
@@ -83,11 +83,11 @@ module.exports = {
                 scheduleId: "Tipologia Orario"
             }
         },
-        arrotondamentoStraordinarios: {
+        overtimeRoundings: {
             name: "Arrot. Straordinario",
             fields: {
                 from: "Dalle",
-                tipo: "Tipo",
+                type: "Tipo",
                 hour: "Ora",
                 minutes: "Minuti",
                 toll: "toll",
@@ -140,9 +140,9 @@ module.exports = {
                 stiff: "Rigido",
                 elastic: "Elastico",
                 flexible: "Flessibile",
-                entrata: "ENTRATA - Tutto sul GG di Ingresso",
-                uscita: "USCITA - Tutto sul GG di Uscita",
-                cavaliere: "CAVALIERE - Selettivo",
+                entrance: "ENTRATA - Tutto sul GG di Ingresso",
+                exit: "USCITA - Tutto sul GG di Uscita",
+                knight: "CAVALIERE - Selettivo",
                 subTitle2: "Intervallo Timbrature",
                 nextDaysLabel: "Giorni Successivi"
             }
@@ -154,13 +154,13 @@ module.exports = {
                 sundayHolyday: "Domenica e Festivi",
                 preHolyday: "PreFestivo",
                 subTitle2: "Timbrature conformi",
-                segnalareTimbratureFuoriFasce: "Segnalare timbrature fuori fasce",
+                reportPunchOutOfBands: "Segnalare timbrature fuori fasce",
                 subTitle3: "Computo del lavoro straordinario",
-                lavoroStraordinarioAutorizzato: "Straordinario autorizzato",
+                overtimeMustBeAuthorized: "Straordinario autorizzato",
                 rounding: "Arrotondamento",
                 applyRoundingInBandsToBeAuthorized: "Arrotondamento sulle fasce da Autorizzare",
                 subTitle4: "Profilo di rielaborazione",
-                profilo: "Profilo",
+                profilosId: "Profilo",
                 ogniSingolaVoce: "Ogni singola voce",
                 titolare: "Solo il titolare",
                 primaSingolaVoce: "Prima ogni singola voce",
@@ -178,7 +178,7 @@ module.exports = {
                 extendOverMissedPauses: "Pause non Rispettate",
                 adaptiveDeductionOfStandardPunch: "Deduzione Adattiva Timbrature Tipo",
                 eUSequences: "Sequenze Eu",
-                PunchOutsideElasticBand: "Timbrature fuori fascia Elastica",
+                punchOutsideElasticBand: "Timbrature fuori fascia Elastica",
                 movePunchType: "Sposta Timbratura Tipo",
                 deactivateBandsAfterIdentifiedType: "Disattiva fasce dopo individua Tipo",
                 scheduleBecomeStiff: "Orario Rigido",
@@ -214,8 +214,8 @@ module.exports = {
         },
         calendario: {
             fields: {
-                entrata: "ENTRATA",
-                uscita: "USCITA",
+                entrance: "ENTRATA",
+                exit: "USCITA",
                 title: "Inserimento Fasce di Timbrature",
                 istruzioni: "Istruzioni",
                 istruzioni1: "Puoi spostare e ricalibrare la fascia oraria",

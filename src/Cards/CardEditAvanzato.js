@@ -28,13 +28,13 @@ function CardEditAvanzato(record) {
                 {translate('resources.cardAvanzato.fields.subTitle1')}
             </Typography>
             <TableRow>
-                <ReferenceInput source="saturday" label={translate('resources.cardAvanzato.fields.saturday')} allowEmpty="True" reference="orarios" className={classes.textInput}>
+                <ReferenceInput source="saturday" label={translate('resources.cardAvanzato.fields.saturday')} allowEmpty="True" reference="schedules" className={classes.textInput}>
                     <SelectInput optionText="description" />
                 </ReferenceInput>
-                <ReferenceInput source="sundayHolyday" style={{ width: 200 }} label={translate('resources.cardAvanzato.fields.sundayHolyday')} allowEmpty="True" reference="orarios" className={classes.textInput}>
+                <ReferenceInput source="sundayHolyday" style={{ width: 200 }} label={translate('resources.cardAvanzato.fields.sundayHolyday')} allowEmpty="True" reference="schedules" className={classes.textInput}>
                     <SelectInput optionText="description" />
                 </ReferenceInput>
-                <ReferenceInput source="preHolyday" label={translate('resources.cardAvanzato.fields.preHolyday')} allowEmpty="True" reference="orarios" className={classes.textInput}>
+                <ReferenceInput source="preHolyday" label={translate('resources.cardAvanzato.fields.preHolyday')} allowEmpty="True" reference="schedules" className={classes.textInput}>
                     <SelectInput optionText="description" />
                 </ReferenceInput>
             </TableRow>
@@ -43,19 +43,19 @@ function CardEditAvanzato(record) {
                 {translate('resources.cardAvanzato.fields.subTitle2')}
             </Typography>
             <TableRow>
-                <BooleanInput source="reportPunchOutOfBands"  label={translate('resources.cardAvanzato.fields.reportPunchOutOfBands')} />
+                <BooleanInput source="reportPunchOutOfBands" label={translate('resources.cardAvanzato.fields.reportPunchOutOfBands')} />
             </TableRow>
 
             <Typography gutterBottom variant="h7" component="div">
                 {translate('resources.cardAvanzato.fields.subTitle3')}
             </Typography>
 
-            <BooleanInput source="overtimeMustBeAuthorized"  label={translate('resources.cardAvanzato.fields.overtimeMustBeAuthorized')} />
-            <SelectInput source="rounding"  label={translate('resources.cardAvanzato.fields.rounding')} allowEmpty="True" choices={[
-                { id: 'ogniSingolaVoce', name: translate('resources.cardAvanzato.fields.ogniSingolaVoce') },
-                { id: 'titolare', name:translate('resources.cardAvanzato.fields.titolare') },
-                { id: 'primaSingolaVoce', name: translate('resources.cardAvanzato.fields.primaSingolaVoce') },
-                { id: 'primaIlTotale', name: translate('resources.cardAvanzato.fields.primaIlTotale') },
+            <BooleanInput source="overtimeMustBeAuthorized" label={translate('resources.cardAvanzato.fields.overtimeMustBeAuthorized')} />
+            <SelectInput source="rounding" label={translate('resources.cardAvanzato.fields.rounding')} allowEmpty="True" choices={[
+                { id: 1, name: translate('resources.cardAvanzato.fields.ogniSingolaVoce') },//ogniSingolaVoce
+                { id: 2, name: translate('resources.cardAvanzato.fields.titolare') },//titolare
+                { id: 3, name: translate('resources.cardAvanzato.fields.primaSingolaVoce') },//primaSingolaVoce
+                { id: 4, name: translate('resources.cardAvanzato.fields.primaIlTotale') },//primaIlTotale
             ]} />
             <BooleanInput source="applyRoundingInBandsToBeAuthorized" label={translate('resources.cardAvanzato.fields.applyRoundingInBandsToBeAuthorized')} />
 
@@ -63,7 +63,7 @@ function CardEditAvanzato(record) {
                 {translate('resources.cardAvanzato.fields.subTitle4')}
             </Typography>
             <ReferenceInput source="profilosId" reference="profilos">
-                <SelectInput optionText="nome" />
+                <SelectInput optionText="name" />
             </ReferenceInput>
         </TableBody>
     );

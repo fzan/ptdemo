@@ -5,7 +5,7 @@ export const TimbraturetipoList = props => (
     <List {...props}>
         <Datagrid rowClick="edit">
             {/* <TextField source="id" /> */}
-            <ReferenceField source="scheduleId" reference="orarios" link={false}>
+            <ReferenceField source="scheduleId" reference="schedules" link={false}>
                 <TextField source="description" />
             </ReferenceField>
             <TextField source="v" />
@@ -13,7 +13,7 @@ export const TimbraturetipoList = props => (
             <TextField source="to" />
             <TextField source="gg" />
             <TextField source="punch" />
-            <TextField source="tipo" />
+            <TextField source="type" />
         </Datagrid>
     </List>
 );

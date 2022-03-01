@@ -5,7 +5,7 @@ export const PauseCreate = props => (
     <Create {...props}>
         <SimpleForm>
             <TextInput source="id" />
-            <ReferenceInput source="scheduleId" reference="orarios"><SelectInput optionText="id" /></ReferenceInput>
+            <ReferenceInput source="scheduleId" reference="schedules"><SelectInput optionText="id" /></ReferenceInput>
             <TextInput source="description" />
             <TextInput source="from" />
             <TextInput source="to" />

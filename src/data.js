@@ -7,15 +7,14 @@ const dataProvider = localStorageDataProvider({
         schedules: [
             {   // 1: General = Generale
                 id: 1,
-                scheduleId: 1,
                 code: '0Q', // 2: Codice = code
                 brief: '', // 3: Breve = brief
                 description: 'Prova Quadro 8h', // 4: Descrizione = description
                 color: '', // 5: Colore = color
-                type: 'Elastico', // 6: Tipo = type
+                type: 1, // 6: Tipo = type
                 base: '08:00', // 7: Base: base
                 minimum: '08:00', // 8: Minime = minimum
-                savingDay: 'Entrata', // 9: Giorno sul quale verranno salvati i risultati = savingDay
+                savingDay: 1, // 9: Giorno sul quale verranno salvati i risultati = savingDay
                 from: '04:30', // 10: Dalle = from 
                 to: '19:00', // 11: Alle = to
                 nextDays: 1, // 12: giorni dopo = nextDays
@@ -27,7 +26,7 @@ const dataProvider = localStorageDataProvider({
                 preHolyday: '', // 18: PreFestivo = preHolyday
                 reportPunchOutOfBands: false, // 19: Segnalare timbrature fuori dalle fasce predefinite = reportPunchOutOfBands
                 overtimeMustBeAuthorized: true, // 20: Il lavoro straordinario DEVE essere autorizzato = overtimeMustBeAuthorized
-                rounding: 'titolare', // 21: Arrotondamento = rounding 
+                rounding: 2, // 21: Arrotondamento = rounding 
                 applyRoundingInBandsToBeAuthorized: false, // 22: Applicare arrotondamento alle fasce da autorizzare = applyRoundingInBandsToBeAuthorized
                 profilosId: 1, // 23: Profilo di rielaborazione = profilosId
                 // 24: Expert = Esperto
@@ -40,8 +39,8 @@ const dataProvider = localStorageDataProvider({
                 extendOverMissedPauses: false, //31: Estendi anche su pause non rispettate = extendOverMissedPauses
                 adaptiveDeductionOfStandardPunch: false, // 32: Deduzione adattiva delle timbrature tipo = adaptiveDeductionOfStandardPunch
                 eUSequences: '', // 33: Sequenze EU = eUSequences
-                PunchOutsideElasticBand: '', // 34: Timbrature fuori fascia elastica = PunchOutsideElasticBand
-                movePunchType: '', // 35: Sposta timbrature tipo = movePunchType
+                punchOutsideElasticBand: false, // 34: Timbrature fuori fascia elastica = punchOutsideElasticBand
+                movePunchType: false,  // 35: Sposta timbrature tipo = movePunchType
                 deactivateBandsAfterIdentifiedType: false, // 36: Disattiva la fasce dopo aver individuato le tipo = deactivateBandsAfterIdentifiedType
                 scheduleBecomeStiff: false, // 37: Orario diviene [Rigido] = scheduleBecomeStiff 
                 // 38: Special Schedules = Orari speciali 
@@ -49,7 +48,7 @@ const dataProvider = localStorageDataProvider({
                 generateAutomaticEntries: false, // 40: Generare voci automatiche = generateAutomaticEntries
                 realTypesWithoutStamping: true, // 41: Usare tipo reali e/o virtuali anche senza timbrature = realTypesWithoutStamping
                 theoreticalHours: 'minime', // 42: HH teoriche = theoreticalHours
-                typeOfDay: 'lavorativo', // 43: Tipo GG = typeOfDay 
+                typeOfDay: 0, // 43: Tipo GG = typeOfDay 
                 ignoreOrphanedPunch: false, // 44: Ignorare eventuali timbrature orfane = ignoreOrphanedPunch
                 includePunchInAutomaticTimeDiscriminationPhase: false, // 45: Includere le timbrature [tipo NO] nella fase di discriminazione automatica dell'orario = includePunchInAutomaticTimeDiscriminationPhase
                 partialReceiptsIntoAssignedStiff: true, // 46: Convertire giustificativi parziali [rigidi] in assegnati = partialReceiptsIntoAssignedStiff
@@ -59,15 +58,14 @@ const dataProvider = localStorageDataProvider({
             },
             {
                 id: 2,
-                scheduleId: 2,
                 code: '0Q7',
                 brief: '',
                 description: 'Prova Quadro 7h',
                 color: '',
-                type: 'Elastico',
+                type: 1,
                 base: '07:00',
                 minimum: '07:00',
-                savingDay: 'Entrata',
+                savingDay: 1,
                 from: '04:00',
                 to: '',
                 nextDays: 0,
@@ -78,9 +76,9 @@ const dataProvider = localStorageDataProvider({
                 preHolyday: '',
                 reportPunchOutOfBands: true,
                 overtimeMustBeAuthorized: true,
-                rounding: 'titolare',
+                rounding: 2,
                 applyRoundingInBandsToBeAuthorized: false,
-                profilosId: 0,
+                profilosId: 2,
                 selectiveCompensation: false,
                 cumulativeAbsence: '',
                 cumulativeOvertime: '',
@@ -90,7 +88,7 @@ const dataProvider = localStorageDataProvider({
                 extendOverMissedPauses: false,
                 adaptiveDeductionOfStandardPunch: false,
                 eUSequences: '',
-                PunchOutsideElasticBand: '',
+                punchOutsideElasticBand: false,
                 movePunchType: '',
                 deactivateBandsAfterIdentifiedType: false,
                 scheduleBecomeStiff: false,
@@ -98,7 +96,7 @@ const dataProvider = localStorageDataProvider({
                 generateAutomaticEntries: false,
                 realTypesWithoutStamping: true,
                 theoreticalHours: 'minime',
-                typeOfDay: 'lavorativo',
+                typeOfDay: 0,
                 ignoreOrphanedPunch: false,
                 includePunchInAutomaticTimeDiscriminationPhase: false,
                 partialReceiptsIntoAssignedStiff: true,
@@ -108,15 +106,14 @@ const dataProvider = localStorageDataProvider({
             },
             {
                 id: 3,
-                scheduleId: 3,
                 code: 'D01',
                 brief: '',
                 description: 'Dirigenti',
                 color: '',
-                type: 'Elastico',
+                type: 1,
                 base: '08:00',
                 minimum: '08:00',
-                savingDay: 'Entrata',
+                savingDay: 1,
                 from: '05:00',
                 to: '',
                 nextDays: 2,
@@ -127,7 +124,7 @@ const dataProvider = localStorageDataProvider({
                 preHolyday: 'asd',
                 reportPunchOutOfBands: false,
                 overtimeMustBeAuthorized: true,
-                rounding: 'titolare',
+                rounding: 2,
                 applyRoundingInBandsToBeAuthorized: false,
                 profilosId: 6,
                 selectiveCompensation: false,
@@ -139,7 +136,7 @@ const dataProvider = localStorageDataProvider({
                 extendOverMissedPauses: false,
                 adaptiveDeductionOfStandardPunch: true,
                 eUSequences: 'Solo Prima',
-                PunchOutsideElasticBand: 'Considerare',
+                punchOutsideElasticBand: false,
                 movePunchType: 'Sino al limite della fascia',
                 deactivateBandsAfterIdentifiedType: true,
                 scheduleBecomeStiff: true,
@@ -147,7 +144,7 @@ const dataProvider = localStorageDataProvider({
                 generateAutomaticEntries: false,
                 realTypesWithoutStamping: true,
                 theoreticalHours: 'minime',
-                typeOfDay: 'lavorativo',
+                typeOfDay: 0,
                 ignoreOrphanedPunch: false,
                 includePunchInAutomaticTimeDiscriminationPhase: false,
                 partialReceiptsIntoAssignedStiff: true,

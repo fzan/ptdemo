@@ -56,14 +56,14 @@ const i18nProvider = polyglotI18nProvider(locale => messages[locale] ? messages[
 
 const App = () => (
   <Admin dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider} i18nProvider={i18nProvider} layout={MyLayout} >
-    <Resource name="orarios" list={OrariList} edit={OrariEdit} create={OrariCreate} icon={AccessTimeIcon} />
+    <Resource name="schedules" list={OrariList} edit={OrariEdit} create={OrariCreate} icon={AccessTimeIcon} />
     <Resource name="profilos" list={ProfiliList} icon={UserIcon} />
-    <Resource name="vocis" list={VociList} />
-    <Resource name="fasceDellaGiornatas" list={FasceList} edit={FasceEdit} create={FasceCreate} icon={CollectionsBookmarkIcon} />
-    <Resource name="fasceDelMonteOres" list={FascedelmonteoreList} edit={FascedelmonteoreEdit} create={FascedelmonteoreCreate} icon={RestoreIcon} />
-    <Resource name="timbratureTipos" list={TimbraturetipoList} edit={TimbraturetipoEdit} create={TimbraturetipoCreate} icon={LabelIcon} />
-    <Resource name="arrotondamentoTimbratures" list={ArrotondamentotimbratureList} edit={ArrotondamentotimbratureEdit} create={ArrotondamentotimbratureCreate} icon={RotateRightIcon} />
-    <Resource name="arrotondamentoStraordinarios" list={ArrotondamentostraordinarioList} edit={ArrotondamentostraordinarioEdit} create={ArrotondamentostraordinarioCreate} icon={RotateLeftIcon} />
+    <Resource name="voices" list={VociList} />
+    <Resource name="workingDayBands" list={FasceList} edit={FasceEdit} create={FasceCreate} icon={CollectionsBookmarkIcon} />
+    <Resource name="workingHourBands" list={FascedelmonteoreList} edit={FascedelmonteoreEdit} create={FascedelmonteoreCreate} icon={RestoreIcon} />
+    <Resource name="punchTypes" list={TimbraturetipoList} edit={TimbraturetipoEdit} create={TimbraturetipoCreate} icon={LabelIcon} />
+    <Resource name="punchRoundings" list={ArrotondamentotimbratureList} edit={ArrotondamentotimbratureEdit} create={ArrotondamentotimbratureCreate} icon={RotateRightIcon} />
+    <Resource name="overtimeRoundings" list={ArrotondamentostraordinarioList} edit={ArrotondamentostraordinarioEdit} create={ArrotondamentostraordinarioCreate} icon={RotateLeftIcon} />
     <Resource name="pauses" list={PauseList} edit={PauseEdit} create={PauseCreate} icon={PauseCircleOutlineIcon} />
   </Admin>
 );

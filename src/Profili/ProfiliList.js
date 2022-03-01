@@ -5,7 +5,7 @@ export const ProfiliList = props => (
     <List {...props}>
         <Datagrid rowClick="edit">
             {/* <TextField source="id" /> */}
-            <TextField source="nome" />
+            <TextField source="name" />
         </Datagrid>
     </List>
 );

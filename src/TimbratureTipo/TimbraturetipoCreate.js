@@ -5,13 +5,13 @@ export const TimbraturetipoCreate = props => (
     <Create {...props}>
         <SimpleForm>
             {/* <TextInput source="id" /> */}
-            <ReferenceInput source="scheduleId" reference="orarios"><SelectInput optionText="description" /></ReferenceInput>
+            <ReferenceInput source="scheduleId" reference="schedules"><SelectInput optionText="description" /></ReferenceInput>
             <TextInput source="v" />
             <TextInput source="from" />
             <TextInput source="to" />
             <TextInput source="gg" />
             <TextInput source="punch" />
-            <TextInput source="tipo" />
+            <TextInput source="type" />
         </SimpleForm>
     </Create>
 );

@@ -79,7 +79,7 @@ const ProfiloDiRielaborazione = (props) => {
     const translate = useTranslate()
     return (
         <div>
-            <TextField label={translate('resources.cardAvanzato.fields.subTitle1')} defaultValue={props.record.nome} InputProps={{ readOnly: true }} />
+            <TextField label={translate('resources.cardAvanzato.fields.subTitle1')} defaultValue={props.record.name} InputProps={{ readOnly: true }} />
         </div>
     )
 }

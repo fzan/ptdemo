@@ -5,9 +5,9 @@ export const ArrotondamentostraordinarioEdit = props => (
     <Edit {...props}>
         <SimpleForm>
             {/* <TextInput source="id" /> */}
-            <ReferenceInput source="scheduleId" reference="orarios"><SelectInput optionText="description" /></ReferenceInput>
+            <ReferenceInput source="scheduleId" reference="schedules"><SelectInput optionText="description" /></ReferenceInput>
             <TextInput source="from" />
-            <TextInput source="tipo" />
+            <TextInput source="type" />
             <TextInput source="hour" />
             <TextInput source="minutes" />
             <TextInput source="toll" />
