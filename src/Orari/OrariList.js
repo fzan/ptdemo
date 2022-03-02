@@ -7,7 +7,7 @@ import CheckBoxOutlineBlankTwoToneIcon from '@material-ui/icons/CheckBoxOutlineB
 const ScheduledHours = (props) => {
     const translate = useTranslate()
     return (
-        <div>Min {props.record.base} -*- {translate('resources.homeLabel.fields.medium')} {props.record.minimum}</div>
+        <div>{translate('resources.homeLabel.fields.min')} {props.record.base} -*- {translate('resources.homeLabel.fields.medium')} {props.record.minimum}</div>
     )
 }
 const VisualizzazioneBool = (props) => {
@@ -22,7 +22,7 @@ const BandStampings = (props) => {
     return (
         <div>{translate('resources.homeLabel.fields.from')} {props.record.from} {translate('resources.homeLabel.fields.to')} {props.record.to}
             {props.record.nextDays === 1 ? translate('resources.homeLabel.fields.followingDay') :
-                props.record.nextDays > 1 ?  translate('resources.homeLabel.fields.of') +" "+ + props.record.nextDays +  translate('resources.homeLabel.fields.followingDays') :
+                props.record.nextDays > 1 ? " "+ translate('resources.homeLabel.fields.of') +" "+ props.record.nextDays +  translate('resources.homeLabel.fields.followingDays') :
                     null
             }
         </div>

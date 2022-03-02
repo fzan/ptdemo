@@ -130,7 +130,7 @@ module.exports = {
         cardGenerale: {
             fields: {
                 description: "Descrizione",
-                code: "code",
+                code: "Code",
                 brief: "Breve",
                 color: "Colore",
                 subTitle1: " Tipologia, ore previste e competenza dei risultati",
