@@ -33,11 +33,11 @@ function CardEditOrariSpeciali(record) {
             <Typography gutterBottom variant="h7" component="div">
                 {translate('resources.cardOrarioSpeciali.fields.subTitle2')}
             </Typography>
-            <SelectInput source="theoreticalHours" label={translate('resources.cardOrarioSpeciali.fields.theoreticalHours')} allowEmpty="True" className={classes.textInput} choices={[
+            <SelectInput source="theoreticalHours" label={translate('resources.cardOrarioSpeciali.fields.theoreticalHours')} /* allowEmpty="True" */ className={classes.textInput} choices={[
                 { id: 'minime', name: translate('resources.cardOrarioSpeciali.fields.minime') },
                 { id: 'base', name: translate('resources.cardOrarioSpeciali.fields.base') },
             ]} />
-            <SelectInput source="typeOfDay" label={translate('resources.cardOrarioSpeciali.fields.typeOfDay')} allowEmpty="True" className={classes.textInput} choices={[
+            <SelectInput source="typeOfDay" label={translate('resources.cardOrarioSpeciali.fields.typeOfDay')} className={classes.textInput} choices={[
                 { id: 0, name: translate('resources.cardOrarioSpeciali.fields.lavorativo') },
                 { id: 1, name: translate('resources.cardOrarioSpeciali.fields.nonLavorativo') },
                 { id: 2, name: translate('resources.cardOrarioSpeciali.fields.festivo') },

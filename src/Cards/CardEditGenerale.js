@@ -86,17 +86,17 @@ function CardEditGenerale(record) {
 
             <TableRow>
                 <SelectInput source="type" label={translate('resources.cardGenerale.fields.type')} allowEmpty="True" className={classes.textInput} choices={[
-                    { id: 1, name: translate('resources.cardGenerale.fields.stiff') },
-                    { id: 2, name: translate('resources.cardGenerale.fields.elastic') },
-                    { id: 3, name: translate('resources.cardGenerale.fields.flexible') },
+                    { id: 1, name: translate('resources.cardGenerale.fields.stiff') }, // Rigido
+                    { id: 2, name: translate('resources.cardGenerale.fields.elastic') }, // Elastico
+                    { id: 3, name: translate('resources.cardGenerale.fields.flexible') }, // Flessibile
                 ]} />
                 <TextInput source="base" label={translate('resources.cardGenerale.fields.base')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
                 <TextInput source="minimum" label={translate('resources.cardGenerale.fields.minimum')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
             </TableRow>
             <SelectInput source="savingDay" label={translate('resources.cardGenerale.fields.savingDay')} allowEmpty="True" choices={[
-                { id: 1, name: translate('resources.cardGenerale.fields.entrance') },
-                { id: 2, name: translate('resources.cardGenerale.fields.exit') },
-                { id: 3, name: translate('resources.cardGenerale.fields.knight') },
+                { id: 1, name: translate('resources.cardGenerale.fields.entrance') }, //Entrata
+                { id: 2, name: translate('resources.cardGenerale.fields.exit') }, //Uscita
+                { id: 3, name: translate('resources.cardGenerale.fields.knight') }, //Cavaliere
             ]} />
             <br />
             <Typography gutterBottom variant="h7" component="div">

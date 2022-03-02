@@ -7,13 +7,26 @@ import CheckBox from '@material-ui/core/Checkbox'
 import List from '@material-ui/core/List'
 import ListSubheader from '@material-ui/core/ListSubheader'
 import { makeStyles } from '@material-ui/core/styles'
-import { useTranslate } from 'react-admin'
+import { useTranslate, SelectField, Labeled } from 'react-admin'
 
 const useStyles = makeStyles({
     textInput: {
         margin: 4
     }
 });
+
+
+const theoreticalHoursChoices = [
+    { id: 1, name: 'resources.cardOrarioSpeciali.fields.minime' },
+    { id: 2, name: 'resources.cardOrarioSpeciali.fields.base' }
+];
+
+const typeOfDayChoices = [
+    { id: 0, name: 'resources.cardOrarioSpeciali.fields.lavorativo' },
+    { id: 1, name: 'resources.cardOrarioSpeciali.fields.nonLavorativo' },
+    { id: 2, name: 'resources.cardOrarioSpeciali.fields.festivo' },
+]
+
 
 function CardOrarioSpeciali(record) {
     const translate = useTranslate()
@@ -41,8 +54,12 @@ function CardOrarioSpeciali(record) {
                 subheader={<ListSubheader color="primary">{translate('resources.cardOrarioSpeciali.fields.subTitle2')}</ListSubheader>}
             >
                 <TableRow width=''>
-                    <TextField id="theoreticalHours" label={translate('resources.cardOrarioSpeciali.fields.theoreticalHours')} defaultValue={record.theoreticalHours} InputProps={{ readOnly: true }} className={classes.textInput} />
-                    <TextField id="typeOfDay" label={translate('resources.cardOrarioSpeciali.fields.typeOfDay')} defaultValue={record.typeOfDay} InputProps={{ readOnly: true }} className={classes.textInput} />
+                    <Labeled label={translate('resources.cardOrarioSpeciali.fields.theoreticalHours')}>
+                        <SelectField source="theoreticalHours" choices={theoreticalHoursChoices}> </SelectField>
+                    </Labeled>
+                    <Labeled label={translate('resources.cardOrarioSpeciali.fields.typeOfDay')}>
+                        <SelectField source="typeOfDay" choices={typeOfDayChoices}></SelectField>
+                    </Labeled>
                 </TableRow>
             </List>
             <List

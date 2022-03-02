@@ -11,7 +11,7 @@ const dataProvider = localStorageDataProvider({
                 brief: '', // 3: Breve = brief
                 description: 'Prova Quadro 8h', // 4: Descrizione = description
                 color: '', // 5: Colore = color
-                type: 1, // 6: Tipo = type
+                type: 1, // 6: Tipo = type // 1: Rigido, 2: Elastico, 3: Flessibile 
                 base: '08:00', // 7: Base: base
                 minimum: '08:00', // 8: Minime = minimum
                 savingDay: 1, // 9: Giorno sul quale verranno salvati i risultati = savingDay
@@ -47,7 +47,7 @@ const dataProvider = localStorageDataProvider({
                 applyAutomaticCompensation: false, // 39: Applicare compensazione automatica = applyAutomaticCompensation
                 generateAutomaticEntries: false, // 40: Generare voci automatiche = generateAutomaticEntries
                 realTypesWithoutStamping: true, // 41: Usare tipo reali e/o virtuali anche senza timbrature = realTypesWithoutStamping
-                theoreticalHours: 'minime', // 42: HH teoriche = theoreticalHours
+                theoreticalHours: 1, // 42: HH teoriche = theoreticalHours
                 typeOfDay: 0, // 43: Tipo GG = typeOfDay 
                 ignoreOrphanedPunch: false, // 44: Ignorare eventuali timbrature orfane = ignoreOrphanedPunch
                 includePunchInAutomaticTimeDiscriminationPhase: false, // 45: Includere le timbrature [tipo NO] nella fase di discriminazione automatica dell'orario = includePunchInAutomaticTimeDiscriminationPhase
@@ -95,7 +95,7 @@ const dataProvider = localStorageDataProvider({
                 applyAutomaticCompensation: false,
                 generateAutomaticEntries: false,
                 realTypesWithoutStamping: true,
-                theoreticalHours: 'minime',
+                theoreticalHours: 1,
                 typeOfDay: 0,
                 ignoreOrphanedPunch: false,
                 includePunchInAutomaticTimeDiscriminationPhase: false,
@@ -143,7 +143,7 @@ const dataProvider = localStorageDataProvider({
                 applyAutomaticCompensation: false,
                 generateAutomaticEntries: false,
                 realTypesWithoutStamping: true,
-                theoreticalHours: 'minime',
+                theoreticalHours: 1,
                 typeOfDay: 0,
                 ignoreOrphanedPunch: false,
                 includePunchInAutomaticTimeDiscriminationPhase: false,

@@ -2,7 +2,14 @@ module.exports = {
     resources: {
         homeLabel: {
             fields: {
-                homeLabel: "Questa è la prima Demo per il sistema"
+                homeLabel: "Questa è la prima Demo per il sistema",
+                medium: "medie",
+                min: "min",
+                from: "Dalle",
+                to: "alle",
+                of: "Di",
+                followingDay: " Del Giorno seguente",
+                followingDays: " Giorni successivi"
             }
         },
         posts: {
