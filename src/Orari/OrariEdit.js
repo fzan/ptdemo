@@ -11,28 +11,22 @@ export const OrariEdit = props => {
     const translate = useTranslate()
     return (
         <Edit {...props}>
-            <Grid style={{ display: 'flex', justifyContent: 'center' }} >
-                <Grid item xs={1} />
-                <Grid item xs={10} >
-                    <TabbedForm >
-                        <FormTab label={translate('resources.orariDetails.fields.generale')} >
-                            <CardEditGenerale {...props.record} />
-                        </FormTab>
-                        <FormTab label={translate('resources.orariDetails.fields.avanzato')} >
-                            <CardEditAvanzato {...props.record} />
-                        </FormTab>
-                        <FormTab label={translate('resources.orariDetails.fields.esperto')}>
-                            <CardEditEsperto {...props.record} />
-                        </FormTab>
-                        <FormTab label={translate('resources.orariDetails.fields.orarioSpeciale')}>
-                            <CardEditOrariSpeciali {...props.record} />
-                        </FormTab>
-                        <FormTab label={translate('resources.orariDetails.fields.timbrature')}>
-                            <Calenda />
-                        </FormTab>
-                    </TabbedForm>
-                </Grid>
-                <Grid item xs={1} />
-            </Grid>
+            <TabbedForm>
+                <FormTab label={translate('resources.orariDetails.fields.generale')} >
+                    <CardEditGenerale {...props.record} />
+                </FormTab>
+                <FormTab label={translate('resources.orariDetails.fields.avanzato')} >
+                    <CardEditAvanzato {...props.record} />
+                </FormTab>
+                <FormTab label={translate('resources.orariDetails.fields.esperto')}>
+                    <CardEditEsperto {...props.record} />
+                </FormTab>
+                <FormTab label={translate('resources.orariDetails.fields.orarioSpeciale')}>
+                    <CardEditOrariSpeciali {...props.record} />
+                </FormTab>
+                <FormTab label={translate('resources.orariDetails.fields.timbrature')}>
+                    <Calenda />
+                </FormTab>
+            </TabbedForm>
         </Edit >)
 }
