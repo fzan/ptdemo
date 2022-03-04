@@ -193,15 +193,16 @@ const dataProvider = localStorageDataProvider({
                 v: 'E', //2 v : v (rimane lo stesso che tanto sarebbe stato Valore per Value [a naso])
                 from: '03:55', // 3: Dalle = from
                 to: '04:05', // 4: alle = to
-                gg: 0, // 5: gg = gg (rimane lo stesso perche non so che fa)
+                gg: 0, // 5: gg = gg (se > 0 sono le "TO" + "gg" giorni...COMODISSIMO!)
                 punch: '04:00', // 6: Timbratura = punch
-                type: 'virtuale' // 7: Tipo = type
+                type: 'virtuale', // 7: Tipo = type
+                delType: '', // 0: tutte le timbature intervallo, 1: solo la prima,2  solo l'ultima
             },
-            { id: 2, scheduleId: 1, v: 'U', from: '20:00', to: '23:59', gg: 0, punch: '20:00', type: 'reale' },
-            { id: 3, scheduleId: 2, v: 'E', from: '03:55', to: '04:05', gg: 0, punch: '04:00', type: 'virtuale' },
-            { id: 4, scheduleId: 2, v: 'U', from: '04:00', to: '04:10', gg: 0, punch: '04:05', type: 'virtuale' },
-            { id: 5, scheduleId: 3, v: 'E', from: '04:55', to: '05:05', gg: 0, punch: '05:00', type: 'virtuale' },
-            { id: 6, scheduleId: 3, v: 'U', from: '20:00', to: '23:59', gg: 0, punch: '20:00', type: 'reale' }
+            { id: 2, scheduleId: 1, v: 'U', from: '20:00', to: '23:59', gg: 0, punch: '20:00', type: 'reale', delType: '' },
+            { id: 3, scheduleId: 2, v: 'E', from: '03:55', to: '04:05', gg: 0, punch: '04:00', type: 'virtuale', delType: '' },
+            { id: 4, scheduleId: 2, v: 'U', from: '04:00', to: '04:10', gg: 0, punch: '04:05', type: 'virtuale', delType: '' },
+            { id: 5, scheduleId: 3, v: 'E', from: '04:55', to: '05:05', gg: 0, punch: '05:00', type: 'virtuale', delType: '' },
+            { id: 6, scheduleId: 3, v: 'U', from: '20:00', to: '23:59', gg: 0, punch: '20:00', type: 'reale', delType: '' }
         ],
         // arrotondamentoTimbrature1.png e arrotondamentoTimbrature2.png
         punchRoundings: [ // 1: punchRoundings = Arrotondamento Timbrature
