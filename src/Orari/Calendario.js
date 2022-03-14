@@ -14,8 +14,8 @@ import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 const DataStandard = "2020-01-01"
 
 const events = [
-  { title: "entrance", id: "1", color: "green" },
-  { title: "exit", id: "2", color: "red" }
+  { title: "ENTRATA", id: "1", color: "green" },
+  { title: "USCITA", id: "2", color: "red" }
 ]
 
 class DemoApp extends React.Component {
@@ -31,9 +31,8 @@ class DemoApp extends React.Component {
 
   componentDidMount() {
     this.props.dataProvider.getList('schedules', { pagination: { page: 1, perPage: 10000 }, sort: { field: "id", order: "asc" } }).then(data => {
-      console.log(data)
+      // console.log(data)
     })
-    // debugger
     let draggableEl = document.getElementById("external-events");
     this.calendarRef.current.getApi().gotoDate(DataStandard);
     new Draggable(draggableEl, {
@@ -128,7 +127,7 @@ class DemoApp extends React.Component {
                 }}
                 contentHeight={500}
                 themeSystem='bootstrap5'
-                initialView='timeGridDay'
+                initialView='timeGridWeek' //timeGridWeek
                 editable={true}
                 selectable={true}
                 selectMirror={false}

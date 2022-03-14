@@ -158,17 +158,17 @@ const dataProvider = localStorageDataProvider({
             {
                 id: 1,
                 scheduleId: 1,
-                causalCode: 'Notturno 2', // 2: causalCode = Causale
+                causalCodeId: 'Notturno 2', // 2: causalCode = Causale
                 from: '00:00', // 3: Dalle = from
                 to: '04:59', // 4: Alle = to
                 priority: 0 // 5: Priorità = priority
             },
-            { id: 2, scheduleId: 1, causalCode: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 },
-            { id: 6, scheduleId: 1, causalCode: 'Notturno 2', from: '00:00', to: '04:59', priority: 0 },
-            { id: 7, scheduleId: 1, causalCode: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 },
-            { id: 3, scheduleId: 2, causalCode: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 },
-            { id: 4, scheduleId: 3, causalCode: 'Notturno 2', from: '00:00', to: '04:59', priority: 0 },
-            { id: 5, scheduleId: 3, causalCode: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 }
+            { id: 2, scheduleId: 1, causalCodeId: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 },
+            { id: 6, scheduleId: 1, causalCodeId: 'Notturno 2', from: '00:00', to: '04:59', priority: 0 },
+            { id: 7, scheduleId: 1, causalCodeId: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 },
+            { id: 3, scheduleId: 2, causalCodeId: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 },
+            { id: 4, scheduleId: 3, causalCodeId: 'Notturno 2', from: '00:00', to: '04:59', priority: 0 },
+            { id: 5, scheduleId: 3, causalCodeId: 'Notturno 2', from: '20:00', to: '23:59', priority: 0 }
         ],
         // fasceDelMonteOre.png
         workingHourBands: [ // 1: workingHourBands = Fasce del monte ore
@@ -198,7 +198,7 @@ const dataProvider = localStorageDataProvider({
                 type: 'virtuale', // 7: Tipo = type
                 delType: '', // 0: tutte le timbature intervallo, 1: solo la prima,2  solo l'ultima
             },
-            { id: 2, scheduleId: 1, v: 'U', from: '20:00', to: '23:59', gg: 0, punch: '20:00', type: 'reale', delType: '' },
+            { id: 2, scheduleId: 1, v: 'U', from: '19:59', to: '23:59', gg: 0, punch: '20:00', type: 'reale', delType: '' },
             { id: 3, scheduleId: 2, v: 'E', from: '03:55', to: '04:05', gg: 0, punch: '04:00', type: 'virtuale', delType: '' },
             { id: 4, scheduleId: 2, v: 'U', from: '04:00', to: '04:10', gg: 0, punch: '04:05', type: 'virtuale', delType: '' },
             { id: 5, scheduleId: 3, v: 'E', from: '04:55', to: '05:05', gg: 0, punch: '05:00', type: 'virtuale', delType: '' },
@@ -242,20 +242,24 @@ const dataProvider = localStorageDataProvider({
             { id: 5, scheduleId: 3, from: '00:00', to: '23:59', type: 'Ora Specificata', hour: '00:00', minutes: '', toll: '' }
         ],
         // pause1.png , pause2.png e pause3.png
-        pauses: [ // 1: pauses = Pause
+        breaks: [ // 1: breaks = Pause
             {
                 id: 1,
                 scheduleId: 2,
                 description: 'Pausa Pranzo', // 2: Descrizione = description
                 from: '12:30', // 2: Dalle = from
                 to: '14:30', // 3: Alle = to
+                fromStartingDay: '',
+                toStartingDay: '',
                 min: '00:45', // 4: Min = min
                 max: '00:35', // 5: Max = max
                 mandatory: '', // 6: Obbl. = mandatory ("Obbl." dovrebbe stare per Obbligatoria, quindi "mandatory" )
+                minMandatory: '', //Sarebbe Prop2 sul vb di Rolando
                 typology: 'Pausa Pranzo', // 7: Tipologia = typology
                 entry: '', // 8: voce = entry 
                 surpluses: 'SOLO eccesso non lavorato', // 9: Eccedenze = surpluses
-                reporting: '' // 10: Voce per Segnalazione = reporting
+                reporting: '', // 10: Voce per Segnalazione = reporting
+                pivot: ''
             }
         ],
         //questi 2 sono semplicemente per la popolazione di uno scenario base. Non hanno nessuna logica collegata

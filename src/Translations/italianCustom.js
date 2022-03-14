@@ -49,7 +49,7 @@ module.exports = {
         workingDayBands: {
             name: "Fasce della Giornata",
             fields: {
-                causalCode: "Causale",
+                causalCodeId: "Causale",
                 from: "Dalle",
                 to: "Alle",
                 priority: "Priorità",
@@ -101,7 +101,7 @@ module.exports = {
                 scheduleId: "Tipologia Orario"
             }
         },
-        pauses: {
+        breaks: {
             name: "Pause",
             fields: {
                 scheduledIdLabel: "Orario",

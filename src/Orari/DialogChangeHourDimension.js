@@ -19,7 +19,7 @@ export default function AlertDialog() {
   };
 
   return (
-    <div>
+    <>
       <Button variant="outlined" onClick={handleClickOpen}>
         Open alert dialog
       </Button>
@@ -45,6 +45,6 @@ export default function AlertDialog() {
           </Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </>
   );
 }

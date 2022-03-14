@@ -49,7 +49,7 @@ module.exports = {
         workingDayBands: {
             name: "Time Slots of the Day",
             fields: {
-                causalCode: "Causal",
+                causalCodeId: "Causal",
                 from: "From",
                 to: "To",
                 priority: "Priority",
@@ -101,8 +101,8 @@ module.exports = {
                 scheduleId: "Type of Time"
             },
         },
-        pauses: {
-            name: "Pauses",
+        breaks: {
+            name: "Breaks",
             fields: {
                 scheduledIdLabel: "Time",
                 description: "Description",

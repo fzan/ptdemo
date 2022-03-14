@@ -6,7 +6,7 @@ export const FasceEdit = props => (
         <SimpleForm>
             {/* <TextInput source="id" /> */}
             <ReferenceInput source="scheduleId" reference="schedules"><SelectInput optionText="description" /></ReferenceInput>
-            <TextInput source="causalCode" />
+            <TextInput source="causalCodeId" />
             <TextInput source="from" />
             <TextInput source="to" />
             <TextInput source="priority" />

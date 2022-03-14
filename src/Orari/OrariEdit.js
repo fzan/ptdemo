@@ -4,8 +4,8 @@ import CardEditGenerale from "../Cards/CardEditGenerale"
 import CardEditAvanzato from "../Cards/CardEditAvanzato"
 import CardEditOrariSpeciali from "../Cards/CardEditOrariSpeciali"
 import CardEditEsperto from "../Cards/CardEditEsperto"
-import Grid from '@material-ui/core/Grid'
 import Calenda from './Calendario'
+import InOutCalendar from "./InOutCalendar"
 
 export const OrariEdit = props => {
     const translate = useTranslate()
@@ -26,6 +26,11 @@ export const OrariEdit = props => {
                 </FormTab>
                 <FormTab label={translate('resources.orariDetails.fields.timbrature')}>
                     <Calenda />
+                    {/* <InOutCalendar/> */}
+                </FormTab>
+                <FormTab label='inOut'>
+                    {/* <Calenda /> */}
+                    <InOutCalendar {...props.record} />
                 </FormTab>
             </TabbedForm>
         </Edit >)

@@ -1,11 +1,11 @@
 import * as React from 'react'
-import TextField from '@material-ui/core/TextField'
+import Table from '@material-ui/core/Table'
+import TableContainer from '@material-ui/core/TableContainer'
 import TableBody from '@material-ui/core/TableBody'
 import TableRow from '@material-ui/core/TableRow'
+import TableCell from '@material-ui/core/TableCell'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import CheckBox from '@material-ui/core/Checkbox'
-import List from '@material-ui/core/List'
-import ListSubheader from '@material-ui/core/ListSubheader'
 import { makeStyles } from '@material-ui/core/styles'
 import { useTranslate, SelectField, Labeled } from 'react-admin'
 
@@ -14,7 +14,6 @@ const useStyles = makeStyles({
         margin: 4
     }
 });
-
 
 const theoreticalHoursChoices = [
     { id: 1, name: 'resources.cardOrarioSpeciali.fields.minime' },
@@ -27,76 +26,111 @@ const typeOfDayChoices = [
     { id: 2, name: 'resources.cardOrarioSpeciali.fields.festivo' },
 ]
 
-
 function CardOrarioSpeciali(record) {
     const translate = useTranslate()
     const classes = useStyles()
     return (
-        <TableBody>
-            <List
-                sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-                subheader={<ListSubheader color="primary">{translate('resources.cardOrarioSpeciali.fields.subTitle1')}</ListSubheader>}
-            >
-                <TableRow>
-                    <FormControlLabel control={
-                        <CheckBox id="applyAutomaticCompensation" checked={record.applyAutomaticCompensation} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.applyAutomaticCompensation')} />
-                    <FormControlLabel control={
-                        <CheckBox id="generateAutomaticEntries" checked={record.generateAutomaticEntries} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.generateAutomaticEntries')} />
-                    <FormControlLabel control={
-                        <CheckBox id="realTypesWithoutStamping" checked={record.realTypesWithoutStamping} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.realTypesWithoutStamping')} />
-                </TableRow>
-            </List>
-            <List
-                sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-                subheader={<ListSubheader color="primary">{translate('resources.cardOrarioSpeciali.fields.subTitle2')}</ListSubheader>}
-            >
-                <TableRow width=''>
-                    <Labeled label={translate('resources.cardOrarioSpeciali.fields.theoreticalHours')}>
-                        <SelectField source="theoreticalHours" choices={theoreticalHoursChoices}> </SelectField>
-                    </Labeled>
-                    <Labeled label={translate('resources.cardOrarioSpeciali.fields.typeOfDay')}>
-                        <SelectField source="typeOfDay" choices={typeOfDayChoices}></SelectField>
-                    </Labeled>
-                </TableRow>
-            </List>
-            <List
-                sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-                subheader={<ListSubheader color="primary">{translate('resources.cardOrarioSpeciali.fields.subTitle3')}</ListSubheader>}
-            >
-                <TableRow>
-                    <FormControlLabel control={
-                        <CheckBox id="ignoreOrphanedPunch" checked={record.ignoreOrphanedPunch} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.ignoreOrphanedPunch')} />
-                    <FormControlLabel control={
-                        <CheckBox id="includePunchInAutomaticTimeDiscriminationPhase" checked={record.includePunchInAutomaticTimeDiscriminationPhase} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.includePunchInAutomaticTimeDiscriminationPhase')} />
-                    <FormControlLabel control={
-                        <CheckBox id="partialReceiptsIntoAssignedStiff" checked={record.partialReceiptsIntoAssignedStiff} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.partialReceiptsIntoAssignedStiff')} />
-                </TableRow>
-                <TableRow>
-                    <FormControlLabel control={
-                        <CheckBox id="partialReceiptsIntoAssignedFlex" checked={record.partialReceiptsIntoAssignedFlex} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.partialReceiptsIntoAssignedFlex')} />
-                    <FormControlLabel control={
-                        <CheckBox id="receiptsAssignedInAbsenceOfPunch" checked={record.receiptsAssignedInAbsenceOfPunch} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.receiptsAssignedInAbsenceOfPunch')} />
-                </TableRow>
-            </List>
-            <List
-                sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-                subheader={<ListSubheader color="primary">{translate('resources.cardOrarioSpeciali.fields.subTitle4')}</ListSubheader>}
-            >
-                <TableRow>
-                    <FormControlLabel control={
-                        <CheckBox id="omitDescriptionInServiceOrders" checked={record.omitDescriptionInServiceOrders} InputProps={{ readOnly: true }} />
-                    } label={translate('resources.cardOrarioSpeciali.fields.omitDescriptionInServiceOrders')} />
-                </TableRow>
-            </List>
-        </TableBody>
+        <TableContainer>
+            <Table>
+                <TableBody>
+
+                    <TableRow>
+                        <TableCell>
+                            {translate('resources.cardOrarioSpeciali.fields.subTitle1')}
+                        </TableCell>
+                    </TableRow>
+
+                    <TableRow>
+                        <TableCell>
+                            <FormControlLabel control={
+                                <CheckBox id="applyAutomaticCompensation" checked={record.applyAutomaticCompensation} />
+                            } label={translate('resources.cardOrarioSpeciali.fields.applyAutomaticCompensation')} />
+                        </TableCell>
+                        <TableCell>
+                            <FormControlLabel control={
+                                <CheckBox id="generateAutomaticEntries" checked={record.generateAutomaticEntries} />
+                            } label={translate('resources.cardOrarioSpeciali.fields.generateAutomaticEntries')} />
+                        </TableCell>
+                        <TableCell>
+                            <FormControlLabel control={
+                                <CheckBox id="realTypesWithoutStamping" checked={record.realTypesWithoutStamping} />
+                            } label={translate('resources.cardOrarioSpeciali.fields.realTypesWithoutStamping')} />
+                        </TableCell>
+                    </TableRow>
+
+                    <TableRow>
+                        <TableCell>
+                            {translate('resources.cardOrarioSpeciali.fields.subTitle2')}
+                        </TableCell>
+                    </TableRow>
+
+                    <TableRow >
+                        <TableCell>
+                            <Labeled label={translate('resources.cardOrarioSpeciali.fields.theoreticalHours')}>
+                                <SelectField source="theoreticalHours" choices={theoreticalHoursChoices} />
+                            </Labeled>
+                        </TableCell>
+                        <TableCell>
+                            <Labeled label={translate('resources.cardOrarioSpeciali.fields.typeOfDay')}>
+                                <SelectField source="typeOfDay" choices={typeOfDayChoices} />
+                            </Labeled>
+                        </TableCell>
+                    </TableRow>
+
+                    <TableRow>
+                        <TableCell>
+                            {translate('resources.cardOrarioSpeciali.fields.subTitle3')}
+                        </TableCell>
+                    </TableRow>
+
+                    <TableRow>
+                        <TableCell>
+                            <FormControlLabel control={
+                                <CheckBox id="ignoreOrphanedPunch" checked={record.ignoreOrphanedPunch} />
+                            } label={translate('resources.cardOrarioSpeciali.fields.ignoreOrphanedPunch')} />
+                        </TableCell>
+                        <TableCell>
+                            <FormControlLabel control={
+                                <CheckBox id="includePunchInAutomaticTimeDiscriminationPhase" checked={record.includePunchInAutomaticTimeDiscriminationPhase} />
+                            } label={translate('resources.cardOrarioSpeciali.fields.includePunchInAutomaticTimeDiscriminationPhase')} />
+                        </TableCell>
+                        <TableCell>
+                            <FormControlLabel control={
+                                <CheckBox id="partialReceiptsIntoAssignedStiff" checked={record.partialReceiptsIntoAssignedStiff} />
+                            } label={translate('resources.cardOrarioSpeciali.fields.partialReceiptsIntoAssignedStiff')} />
+                        </TableCell>
+                    </TableRow>
+
+                    <TableRow>
+                        <TableCell>
+                            <FormControlLabel control={
+                                <CheckBox id="partialReceiptsIntoAssignedFlex" checked={record.partialReceiptsIntoAssignedFlex} />
+                            } label={translate('resources.cardOrarioSpeciali.fields.partialReceiptsIntoAssignedFlex')} />
+                        </TableCell>
+                        <TableCell>
+                            <FormControlLabel control={
+                                <CheckBox id="receiptsAssignedInAbsenceOfPunch" checked={record.receiptsAssignedInAbsenceOfPunch} />
+                            } label={translate('resources.cardOrarioSpeciali.fields.receiptsAssignedInAbsenceOfPunch')} />
+                        </TableCell>
+                    </TableRow>
+
+                    <TableRow>
+                        <TableCell>
+                            {translate('resources.cardOrarioSpeciali.fields.subTitle4')}
+                        </TableCell>
+                    </TableRow>
+
+                    <TableRow>
+                        <TableCell>
+                            <FormControlLabel control={
+                                <CheckBox id="omitDescriptionInServiceOrders" checked={record.omitDescriptionInServiceOrders} />
+                            } label={translate('resources.cardOrarioSpeciali.fields.omitDescriptionInServiceOrders')} />
+                        </TableCell>
+                    </TableRow>
+
+                </TableBody>
+            </Table>
+        </TableContainer>
     );
 }
 

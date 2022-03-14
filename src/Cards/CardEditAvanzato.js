@@ -51,17 +51,19 @@ function CardEditAvanzato(record) {
             </Typography>
 
             <BooleanInput source="overtimeMustBeAuthorized" label={translate('resources.cardAvanzato.fields.overtimeMustBeAuthorized')} />
+
             <SelectInput source="rounding" label={translate('resources.cardAvanzato.fields.rounding')} allowEmpty="True" choices={[
-                { id: 1, name: translate('resources.cardAvanzato.fields.ogniSingolaVoce') },//ogniSingolaVoce
-                { id: 2, name: translate('resources.cardAvanzato.fields.titolare') },//titolare
-                { id: 3, name: translate('resources.cardAvanzato.fields.primaSingolaVoce') },//primaSingolaVoce
-                { id: 4, name: translate('resources.cardAvanzato.fields.primaIlTotale') },//primaIlTotale
+                { id: 1, name: translate('resources.cardAvanzato.fields.ogniSingolaVoce') },
+                { id: 2, name: translate('resources.cardAvanzato.fields.titolare') },
+                { id: 3, name: translate('resources.cardAvanzato.fields.primaSingolaVoce') },
+                { id: 4, name: translate('resources.cardAvanzato.fields.primaIlTotale') },
             ]} />
             <BooleanInput source="applyRoundingInBandsToBeAuthorized" label={translate('resources.cardAvanzato.fields.applyRoundingInBandsToBeAuthorized')} />
 
             <Typography gutterBottom variant="h7" component="div">
                 {translate('resources.cardAvanzato.fields.subTitle4')}
             </Typography>
+
             <ReferenceInput source="profilosId" reference="profilos">
                 <SelectInput optionText="name" />
             </ReferenceInput>

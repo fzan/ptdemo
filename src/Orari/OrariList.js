@@ -7,41 +7,40 @@ import CheckBoxOutlineBlankTwoToneIcon from '@material-ui/icons/CheckBoxOutlineB
 const ScheduledHours = (props) => {
     const translate = useTranslate()
     return (
-        <div>{translate('resources.homeLabel.fields.min')} {props.record.base} -*- {translate('resources.homeLabel.fields.medium')} {props.record.minimum}</div>
+        <>{translate('resources.homeLabel.fields.min')} {props.record.base} -*- {translate('resources.homeLabel.fields.medium')} {props.record.minimum}</>
     )
 }
 const VisualizzazioneBool = (props) => {
     return (
-        <div>
+        <>
             {props.record[props.source] ? <CheckBoxTwoToneIcon /> : <CheckBoxOutlineBlankTwoToneIcon />}
-        </div>
+        </>
     )
 }
 const BandStampings = (props) => {
     const translate = useTranslate()
     return (
-        <div>{translate('resources.homeLabel.fields.from')} {props.record.from} {translate('resources.homeLabel.fields.to')} {props.record.to}
+        <>
+            {translate('resources.homeLabel.fields.from')} {props.record.from} {translate('resources.homeLabel.fields.to')} {props.record.to}
             {props.record.nextDays === 1 ? translate('resources.homeLabel.fields.followingDay') :
-                props.record.nextDays > 1 ? " "+ translate('resources.homeLabel.fields.of') +" "+ props.record.nextDays +  translate('resources.homeLabel.fields.followingDays') :
+                props.record.nextDays > 1 ? " " + translate('resources.homeLabel.fields.of') + " " + props.record.nextDays + translate('resources.homeLabel.fields.followingDays') :
                     null
             }
-        </div>
+        </>
     )
 }
 const ReplacementHours = (props) => {
     return (
-        <div>
+        <>
             {(props.record.saturday === '' && props.record.sundayHolyday === '' && props.record.preHolyday === '') ? <CheckBoxOutlineBlankTwoToneIcon /> : <CheckBoxTwoToneIcon />}
-        </div>
+        </>
     )
 }
-
 const typeChoices = [
     { id: 1, name: 'resources.cardGenerale.fields.stiff' },
     { id: 2, name: 'resources.cardGenerale.fields.elastic' },
     { id: 3, name: 'resources.cardGenerale.fields.flexible' },
 ];
-
 const savingDayChoices = [
     { id: 1, name: 'resources.cardGenerale.fields.entrance' },
     { id: 2, name: 'resources.cardGenerale.fields.exit' },

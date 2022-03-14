@@ -64,7 +64,7 @@ const App = () => (
     <Resource name="punchTypes" list={TimbraturetipoList} edit={TimbraturetipoEdit} create={TimbraturetipoCreate} icon={LabelIcon} />
     <Resource name="punchRoundings" list={ArrotondamentotimbratureList} edit={ArrotondamentotimbratureEdit} create={ArrotondamentotimbratureCreate} icon={RotateRightIcon} />
     <Resource name="overtimeRoundings" list={ArrotondamentostraordinarioList} edit={ArrotondamentostraordinarioEdit} create={ArrotondamentostraordinarioCreate} icon={RotateLeftIcon} />
-    <Resource name="pauses" list={PauseList} edit={PauseEdit} create={PauseCreate} icon={PauseCircleOutlineIcon} />
+    <Resource name="breaks" list={PauseList} edit={PauseEdit} create={PauseCreate} icon={PauseCircleOutlineIcon} />
   </Admin>
 );
 
