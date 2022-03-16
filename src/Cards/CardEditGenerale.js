@@ -84,13 +84,13 @@ function CardEditGenerale(record) {
             </Grid>
 
             <Grid container  >
-                <Grid item xs={12} sm={4} md={3}>
+                <Grid item xs={12} sm="auto" md="auto">
                     <TextInput source="code" label={translate('resources.cardGenerale.fields.code')} className={classes.textInput} />
                 </Grid>
-                <Grid item xs={12} sm={4} md={3} >
+                <Grid item xs={12} sm="auto" md="auto">
                     <TextInput source="brief" label={translate('resources.cardGenerale.fields.brief')} className={classes.textInput} />
                 </Grid>
-                <Grid item xs={12} sm={4} md={3} >
+                <Grid item xs={12} sm="auto" md="auto">
                     <TextInput source="description" label={translate('resources.cardGenerale.fields.description')} className={classes.textInput} />
                 </Grid>
                 <Grid item xs md xl={4} />
@@ -115,17 +115,17 @@ function CardEditGenerale(record) {
             </Grid>
 
             <Grid container >
-                <Grid item xs={12} sm={4} md={3} >
+                <Grid item xs={12} sm="auto" md="auto">
                     <SelectInput source="type" label={translate('resources.cardGenerale.fields.type')} allowEmpty className={classes.textInput} choices={[
                         { id: 1, name: translate('resources.cardGenerale.fields.stiff') }, // Rigido
                         { id: 2, name: translate('resources.cardGenerale.fields.elastic') }, // Elastico
                         { id: 3, name: translate('resources.cardGenerale.fields.flexible') }, // Flessibile
                     ]} />
                 </Grid>
-                <Grid item xs={12} sm={4} md={3} >
+                <Grid item xs={12} sm="auto" md="auto">
                     <TextInput source="base" label={translate('resources.cardGenerale.fields.base')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
                 </Grid>
-                <Grid item xs={12} sm={4} md={3}>
+                <Grid item xs={12} sm="auto" md="auto">
                     <TextInput source="minimum" label={translate('resources.cardGenerale.fields.minimum')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
                 </Grid>
                 <Grid item xs md={6} />
@@ -150,21 +150,21 @@ function CardEditGenerale(record) {
             </Grid>
 
             <Grid container  >
-                <Grid item xs={12} sm={4} md={2} >
+                <Grid item xs={12} sm="auto" md="auto">
                     <FormDataConsumer>
                         {({ formData }) => (
                             <SettingTime source="from" value={formData.from} label={translate('resources.cardGenerale.fields.from')} {...record} />
                         )}
                     </FormDataConsumer>
                 </Grid>
-                <Grid item xs={12} sm={4} md={2} >
+                <Grid item xs={12} sm="auto" md="auto">
                     <FormDataConsumer>
                         {({ formData }) => (
                             <SettingTime source="to" value={formData.to} label={translate('resources.cardGenerale.fields.to')} {...record} />
                         )}
                     </FormDataConsumer>
                 </Grid>
-                <Grid item xs={12} sm={4} md={2} >
+                <Grid item xs={12} sm="auto" md="auto">
                     <NumberInput source="nextDays" label={translate('resources.cardGenerale.fields.nextDaysLabel')} />
                 </Grid>
                 <Grid item xs md />

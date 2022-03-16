@@ -37,17 +37,17 @@ function CardEditAvanzato(record) {
             </Grid>
 
             <Grid container>
-                <Grid item xs={12} sm={4} md={3}>
+                <Grid item xs={12} sm="auto" md="auto">
                     <ReferenceInput source="saturday" label={translate('resources.cardAvanzato.fields.saturday')} allowEmpty reference="schedules" className={classes.textInput}>
                         <SelectInput optionText="description" />
                     </ReferenceInput>
                 </Grid>
-                <Grid item xs={12} sm={4} md={3}>
+                <Grid item xs={12} sm="auto" md="auto">
                     <ReferenceInput source="preHolyday" label={translate('resources.cardAvanzato.fields.preHolyday')} allowEmpty reference="schedules" className={classes.textInput}>
                         <SelectInput optionText="description" />
                     </ReferenceInput>
                 </Grid>
-                <Grid item xs={12} sm={4} md={3}>
+                <Grid item xs={12} sm="auto" md="auto">
                     <ReferenceInput source="sundayHolyday" label={translate('resources.cardAvanzato.fields.sundayHolyday')} allowEmpty reference="schedules" className={classes.textInput}>
                         <SelectInput optionText="description" />
                     </ReferenceInput>
