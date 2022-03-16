@@ -22,7 +22,6 @@ function CardEditEsperto(record) {
                 {({ formData, ...rest }) => (
                     <>
                         <Grid container>
-                            <Grid item xs />
                             <Grid item xs={10} md={6} style={{ textAlign: 'center' }}>
                                 <FormDataConsumer>
                                     {({ formData }) => (
