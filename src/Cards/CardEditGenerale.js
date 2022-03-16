@@ -11,15 +11,15 @@ const validateHoursFormat = regex(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Inserire
 
 const useStyles = makeStyles({
     textInput: {
-        // margin: 4
+        margin: 4
     }
 });
 
 const ColorPickerCustom = (props) => {
     const translate = useTranslate();
     const {
-        input: { name, onChange, value, ...rest },
-        meta: { touched, error }
+        input: { onChange, value }, /*, ...rest*/
+       /* meta: { touched, error }   */
     } = useInput(props)
     return (
         <>

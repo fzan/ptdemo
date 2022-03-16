@@ -28,7 +28,7 @@ export default function InOutCalendar({ record }) {
             sort: { field: 'id', order: 'ASC' },
             filter: { scheduleId: record.id },
         }).then(res => setRows(res.data));
-    }, []) /* record.id */
+    }, [record.id]) /*  */
 
     const slotHeader = 48 //48
     const formatHour = 'HH:mm'
