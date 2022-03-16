@@ -18,7 +18,7 @@ function CardEditOrariSpeciali(record) {
 
             <Grid container>
                 <Grid item xs />
-                <Grid item xs={6} style={{ textAlign: 'center' }}>
+                <Grid item xs={10} md={6} style={{ textAlign: 'center' }}>
                     <FormDataConsumer>
                         {({ formData }) => (
                             <Typography gutterBottom variant="h5" component="div">

@@ -19,7 +19,7 @@ const ColorPickerCustom = (props) => {
     const translate = useTranslate();
     const {
         input: { onChange, value }, /*, ...rest*/
-       /* meta: { touched, error }   */
+        /* meta: { touched, error }   */
     } = useInput(props)
     return (
         <>
@@ -71,8 +71,7 @@ function CardEditGenerale(record) {
         <Grid container spacing={1} style={{ width: "100%" }}>
 
             <Grid container>
-                <Grid item xs />
-                <Grid item xs={6} style={{ textAlign: 'center' }}>
+                <Grid item xs={10} md={6} style={{ textAlign: 'center' }}>
                     <FormDataConsumer>
                         {({ formData }) => (
                             <Typography gutterBottom variant="h5" component="div">
@@ -81,23 +80,24 @@ function CardEditGenerale(record) {
                         )}
                     </FormDataConsumer>
                 </Grid>
-                <Grid item xs />
+                <Grid item xs md />
             </Grid>
 
             <Grid container  >
-                <Grid item xs={4} >
+                <Grid item xs={12} sm={4} md={3}>
                     <TextInput source="code" label={translate('resources.cardGenerale.fields.code')} className={classes.textInput} />
                 </Grid>
-                <Grid item xs={4} >
+                <Grid item xs={12} sm={4} md={3} >
                     <TextInput source="brief" label={translate('resources.cardGenerale.fields.brief')} className={classes.textInput} />
                 </Grid>
-                <Grid item xs={4} >
+                <Grid item xs={12} sm={4} md={3} >
                     <TextInput source="description" label={translate('resources.cardGenerale.fields.description')} className={classes.textInput} />
                 </Grid>
+                <Grid item xs md xl={4} />
             </Grid>
 
             <Grid container>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={4} md={3}>
                     <FormDataConsumer>
                         {({ formData }) => (
                             <ColorPickerCustom source="color" value={formData.color} {...record} />
@@ -107,32 +107,32 @@ function CardEditGenerale(record) {
                 <Grid item xs />
             </Grid >
 
-            <Grid container spacing={1} >
-                <Grid item xs />
-                <Grid item xs={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
+            <Grid container >
+                <Grid item xs={10} md={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
                     {translate('resources.cardGenerale.fields.subTitle1')}
                 </Grid>
-                <Grid item xs />
+                <Grid item xs md />
             </Grid>
 
-            <Grid container  >
-                <Grid item xs={4} >
+            <Grid container >
+                <Grid item xs={12} sm={4} md={3} >
                     <SelectInput source="type" label={translate('resources.cardGenerale.fields.type')} allowEmpty className={classes.textInput} choices={[
                         { id: 1, name: translate('resources.cardGenerale.fields.stiff') }, // Rigido
                         { id: 2, name: translate('resources.cardGenerale.fields.elastic') }, // Elastico
                         { id: 3, name: translate('resources.cardGenerale.fields.flexible') }, // Flessibile
                     ]} />
                 </Grid>
-                <Grid item xs={4} >
+                <Grid item xs={12} sm={4} md={3} >
                     <TextInput source="base" label={translate('resources.cardGenerale.fields.base')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
                 </Grid>
-                <Grid item xs={4} >
+                <Grid item xs={12} sm={4} md={3}>
                     <TextInput source="minimum" label={translate('resources.cardGenerale.fields.minimum')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
                 </Grid>
+                <Grid item xs md={6} />
             </Grid>
 
             <Grid container>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={4} md={3}>
                     <SelectInput source="savingDay" label={translate('resources.cardGenerale.fields.savingDay')} allowEmpty choices={[
                         { id: 1, name: translate('resources.cardGenerale.fields.entrance') }, //Entrata
                         { id: 2, name: translate('resources.cardGenerale.fields.exit') }, //Uscita
@@ -143,41 +143,41 @@ function CardEditGenerale(record) {
             </Grid >
 
             <Grid container spacing={1} >
-                <Grid item xs />
                 <Grid item xs={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
                     {translate('resources.cardGenerale.fields.subTitle2')}
                 </Grid>
-                <Grid item xs />
+                <Grid item xs md />
             </Grid>
 
             <Grid container  >
-                <Grid item xs={4} >
+                <Grid item xs={12} sm={4} md={2} >
                     <FormDataConsumer>
                         {({ formData }) => (
                             <SettingTime source="from" value={formData.from} label={translate('resources.cardGenerale.fields.from')} {...record} />
                         )}
                     </FormDataConsumer>
                 </Grid>
-                <Grid item xs={4} >
+                <Grid item xs={12} sm={4} md={2} >
                     <FormDataConsumer>
                         {({ formData }) => (
                             <SettingTime source="to" value={formData.to} label={translate('resources.cardGenerale.fields.to')} {...record} />
                         )}
                     </FormDataConsumer>
                 </Grid>
-                <Grid item xs={4} >
+                <Grid item xs={12} sm={4} md={2} >
                     <NumberInput source="nextDays" label={translate('resources.cardGenerale.fields.nextDaysLabel')} />
                 </Grid>
+                <Grid item xs md />
             </Grid>
 
             <Grid container>
-                <Grid item xs={2} >
+                <Grid item xs={12} sm={4} md={4}>
                     <BooleanInput source="onMoreDays" label={translate('resources.cardGenerale.fields.onMoreDays')} />
                 </Grid>
-                <Grid item xs={2} >
+                <Grid item xs={12} sm={4} md={4}>
                     <BooleanInput source="causalCodesOutOfRange" label={translate('resources.cardGenerale.fields.causalCodesOutOfRange')} />
                 </Grid>
-                <Grid item xs />
+                <Grid item xs md={1} />
             </Grid>
 
         </Grid>

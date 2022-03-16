@@ -17,8 +17,7 @@ function CardEditAvanzato(record) {
         <Grid container spacing={1} style={{ width: "100%" }}>
 
             <Grid container>
-                <Grid item xs />
-                <Grid item xs={6} style={{ textAlign: 'center' }}>
+                <Grid item xs={10} md={6} style={{ textAlign: 'center' }}>
                     <FormDataConsumer>
                         {({ formData }) => (
                             <Typography gutterBottom variant="h5" component="div">
@@ -27,29 +26,28 @@ function CardEditAvanzato(record) {
                         )}
                     </FormDataConsumer>
                 </Grid>
-                <Grid item xs />
+                <Grid item xs md />
             </Grid>
 
-            <Grid container spacing={1} >
-                <Grid item xs />
-                <Grid item xs={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
+            <Grid container >
+                <Grid item xs={10} md={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
                     {translate('resources.cardAvanzato.fields.subTitle1')}
                 </Grid>
                 <Grid item xs />
             </Grid>
 
             <Grid container>
-                <Grid item xs={3} >
+                <Grid item xs={12} sm={4} md={3}>
                     <ReferenceInput source="saturday" label={translate('resources.cardAvanzato.fields.saturday')} allowEmpty reference="schedules" className={classes.textInput}>
                         <SelectInput optionText="description" />
                     </ReferenceInput>
                 </Grid>
-                <Grid item xs={3} >
+                <Grid item xs={12} sm={4} md={3}>
                     <ReferenceInput source="preHolyday" label={translate('resources.cardAvanzato.fields.preHolyday')} allowEmpty reference="schedules" className={classes.textInput}>
                         <SelectInput optionText="description" />
                     </ReferenceInput>
                 </Grid>
-                <Grid item xs={3} >
+                <Grid item xs={12} sm={4} md={3}>
                     <ReferenceInput source="sundayHolyday" label={translate('resources.cardAvanzato.fields.sundayHolyday')} allowEmpty reference="schedules" className={classes.textInput}>
                         <SelectInput optionText="description" />
                     </ReferenceInput>
@@ -58,31 +56,29 @@ function CardEditAvanzato(record) {
             </Grid>
 
 
-            <Grid container spacing={1} >
-                <Grid item xs />
-                <Grid item xs={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
+            <Grid container >
+                <Grid item xs={10} md={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
                     {translate('resources.cardAvanzato.fields.subTitle2')}
                 </Grid>
                 <Grid item xs />
             </Grid>
 
             <Grid container>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <BooleanInput source="reportPunchOutOfBands" label={translate('resources.cardAvanzato.fields.reportPunchOutOfBands')} />
                 </Grid>
                 <Grid item xs />
             </Grid >
 
-            <Grid container spacing={1} >
-                <Grid item xs />
-                <Grid item xs={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
+            <Grid container >
+                <Grid item xs={10} md={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
                     {translate('resources.cardAvanzato.fields.subTitle3')}
                 </Grid>
                 <Grid item xs />
             </Grid>
 
             <Grid container>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <BooleanInput source="overtimeMustBeAuthorized" label={translate('resources.cardAvanzato.fields.overtimeMustBeAuthorized')} />
                 </Grid>
                 <Grid item xs />
@@ -101,15 +97,14 @@ function CardEditAvanzato(record) {
             </Grid >
 
             <Grid container>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <BooleanInput source="applyRoundingInBandsToBeAuthorized" label={translate('resources.cardAvanzato.fields.applyRoundingInBandsToBeAuthorized')} />
                 </Grid>
                 <Grid item xs />
             </Grid >
 
-            <Grid container spacing={1} >
-                <Grid item xs />
-                <Grid item xs={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
+            <Grid container >
+                <Grid item xs={10} md={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
                     {translate('resources.cardAvanzato.fields.subTitle4')}
                 </Grid>
                 <Grid item xs />

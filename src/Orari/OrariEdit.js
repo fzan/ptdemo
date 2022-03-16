@@ -33,12 +33,12 @@ export const OrariEdit = props => {
                 <FormTab label='inOut' toolbar={<UserEditToolbar />}>
                     <InOutCalendar {...props.record} />
                 </FormTab>
-                <FormTab label='Zavorra' toolbar={<UserEditToolbar />}>
+                {/* <FormTab label='Zavorra' toolbar={<UserEditToolbar />}>
                   
                 </FormTab>
                 <FormTab label='Trattore' toolbar={<UserEditToolbar />}>
                    
-                </FormTab>
+                </FormTab> */}
             </TabbedForm>
         </Edit >)
 }

@@ -23,7 +23,7 @@ function CardEditEsperto(record) {
                     <>
                         <Grid container>
                             <Grid item xs />
-                            <Grid item xs={6} style={{ textAlign: 'center' }}>
+                            <Grid item xs={10} md={6} style={{ textAlign: 'center' }}>
                                 <FormDataConsumer>
                                     {({ formData }) => (
                                         <Typography gutterBottom variant="h5" component="div">
@@ -36,7 +36,7 @@ function CardEditEsperto(record) {
                         </Grid>
 
                         <Grid container>
-                            <Grid item xs={6}>
+                            <Grid item xs={12} md={6}>
                                 <BooleanInput source="selectiveCompensation" label={translate('resources.cardEsperto.fields.selectiveCompensation')} />
                             </Grid>
                             <Grid item xs />
@@ -45,44 +45,45 @@ function CardEditEsperto(record) {
                         {formData.selectiveCompensation ?
                             <>
                                 <Grid container  >
-                                    <Grid item xs={4} >
-                                        <ReferenceInput source="cumulativeAbsence" style={{ width: 250 }} reference="vocis" label={translate('resources.cardEsperto.fields.cumulativeAbsence')} className={classes.textInput}>
+                                    <Grid item xs={12} sm="auto" md="auto">
+                                        <ReferenceInput source="cumulativeAbsence" reference="vocis" label={translate('resources.cardEsperto.fields.cumulativeAbsence')} className={classes.textInput}>
                                             <SelectInput optionText="title" />
                                         </ReferenceInput>
                                     </Grid>
-                                    <Grid item xs={4} >
-                                        <ReferenceInput style={{ width: 250 }} source="cumulativeOvertime" reference="vocis" label={translate('resources.cardEsperto.fields.cumulativeOvertime')} className={classes.textInput}>
+                                    <Grid item xs={12} sm="auto" md="auto">
+                                        <ReferenceInput style={{ width: '200px' }} source="cumulativeOvertime" reference="vocis" label={translate('resources.cardEsperto.fields.cumulativeOvertime')} className={classes.textInput}>
                                             <SelectInput optionText="title" />
                                         </ReferenceInput>
                                     </Grid>
-                                    <Grid item xs={4} >
+                                    <Grid item xs={12} sm="auto" md="auto">
                                         <TextInput source="maximal" label={translate('resources.cardEsperto.fields.maximal')} className={classes.textInput} validate={[required(), validateHoursFormat]} />
                                     </Grid>
+                                    <Grid item xs md />
                                 </Grid>
 
                                 <Grid container>
-                                    <Grid item xs={6}>
+                                    <Grid item xs={12} md={6}>
                                         <BooleanInput source="positiveBalanceForCompensateHours" label={translate('resources.cardEsperto.fields.positiveBalanceForCompensateHours')} />
                                     </Grid>
                                     <Grid item xs />
                                 </Grid >
 
                                 <Grid container>
-                                    <Grid item xs={6}>
+                                    <Grid item xs={12} md={6}>
                                         <BooleanInput source="bandsInCaseOfAbsence" label={translate('resources.cardEsperto.fields.bandsInCaseOfAbsence')} />
                                     </Grid>
                                     <Grid item xs />
                                 </Grid >
 
                                 <Grid container>
-                                    <Grid item xs={6}>
+                                    <Grid item xs={12} md={6}>
                                         <BooleanInput source="extendOverMissedPauses" label={translate('resources.cardEsperto.fields.extendOverMissedPauses')} />
                                     </Grid>
                                     <Grid item xs />
                                 </Grid >
 
                                 <Grid container>
-                                    <Grid item xs={6}>
+                                    <Grid item xs={12} md={6}>
                                         <BooleanInput source="adaptiveDeductionOfStandardPunch" label={translate('resources.cardEsperto.fields.adaptiveDeductionOfStandardPunch')} />
                                     </Grid>
                                     <Grid item xs />
@@ -91,7 +92,7 @@ function CardEditEsperto(record) {
                                 {formData.adaptiveDeductionOfStandardPunch ?
                                     <>
                                         <Grid container>
-                                            <Grid item xs={6}>
+                                            <Grid item xs={12} md={6}>
                                                 <SelectInput source="eUSequences" label={translate('resources.cardEsperto.fields.eUSequences')} allowEmpty className={classes.textInput} choices={[
                                                     { id: 'prima', name: translate('resources.cardEsperto.fields.prima') },
                                                     { id: 'tutteDallaPrima', name: translate('resources.cardEsperto.fields.tutteDallaPrima') },
@@ -102,21 +103,21 @@ function CardEditEsperto(record) {
                                         </Grid >
 
                                         <Grid container>
-                                            <Grid item xs={6}>
+                                            <Grid item xs={12} md={6}>
                                                 <BooleanInput source="punchOutsideElasticBand" label={translate('resources.cardEsperto.fields.punchOutsideElasticBand')} />
                                             </Grid>
                                             <Grid item xs />
                                         </Grid >
 
                                         <Grid container>
-                                            <Grid item xs={6}>
+                                            <Grid item xs={12} md={6}>
                                                 <BooleanInput source="movePunchType" label={translate('resources.cardEsperto.fields.movePunchType')} />
                                             </Grid>
                                             <Grid item xs />
                                         </Grid >
 
                                         <Grid container>
-                                            <Grid item xs={6}>
+                                            <Grid item xs={12} md={6}>
                                                 <BooleanInput source="deactivateBandsAfterIdentifiedType" label={translate('resources.cardEsperto.fields.deactivateBandsAfterIdentifiedType')} />
                                             </Grid>
                                             <Grid item xs />
@@ -124,7 +125,7 @@ function CardEditEsperto(record) {
 
                                         {formData.deactivateBandsAfterIdentifiedType ?
                                             <Grid container>
-                                                <Grid item xs={6}>
+                                                <Grid item xs={12} md={6}>
                                                     <BooleanInput source="scheduleBecomeStiff" label={translate('resources.cardEsperto.fields.scheduleBecomeStiff')} />
                                                 </Grid>
                                                 <Grid item xs />
