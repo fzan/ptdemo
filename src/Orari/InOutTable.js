@@ -4,6 +4,7 @@ import Table from "@material-ui/core/Table";
 import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableRow from "@material-ui/core/TableRow";
+import { TableBody } from '@mui/material';
 
 const useStyles = makeStyles({
     table: {
@@ -28,50 +29,59 @@ export default function InOutTable(props) {
                 aria-label="simple table"
                 style={{ tableLayout: "fixed" }}
             >
-                <TableRow style={{ border: '1px solid #dedede' }}>
-                    <TableCell />
-                    {
-                        props.items.header.map((item) =>
-                            <TableCell style={{ border: '1px solid #dedede', heigth: "40px", padding: '8px', marginLeft: '10%', marginRight: '10%' }}>
-                                {item}</TableCell>
-                        )
-                    }
-                </TableRow>
+                <TableBody>
+                    <TableRow style={{ border: '1px solid #dedede' }}>
+                        <TableCell
+                            className={classes.sticky}
+                            component="th"
+                            scope="row"
 
-                <TableRow>
-                    <TableCell
-                        className={classes.sticky}
-                        component="th"
-                        scope="row"
+                        >
 
-                    >
-                        ENTRATA
-                    </TableCell>
-                    {
-                        props.items.rowsE.map((item) =>
-                            item.isActive === true ?
-                                <TableCell className='calendarTableStyle' style={{ backgroundColor: 'green' }} /> :
-                                <TableCell className='calendarTableStyle' />
-                        )
-                    }
-                </TableRow>
+                        </TableCell>
+                        {
+                            props.items.header.map((item, i) =>
+                                <TableCell key={i} style={{ border: '1px solid #dedede', heigth: "40px", padding: '8px', marginLeft: '10%', marginRight: '10%' }}>
+                                    {item}</TableCell>
+                            )
+                        }
+                    </TableRow>
 
-                <TableRow>
-                    <TableCell
-                        className={classes.sticky}
-                        component="th"
-                        scope="row"
-                    >
-                        USCITA
-                    </TableCell>
-                    {
-                        props.items.rowsU.map((item) =>
-                            item.isActive === true ?
-                                <TableCell className='calendarTableStyle' style={{ backgroundColor: 'red' }} /> :
-                                <TableCell className='calendarTableStyle' />
-                        )
-                    }
-                </TableRow>
+                    <TableRow>
+                        <TableCell
+                            className={classes.sticky}
+                            component="th"
+                            scope="row"
+
+                        >
+                            ENTRATA
+                        </TableCell>
+                        {
+                            props.items.rowsE.map((item, i) =>
+                                item.isActive === true ?
+                                    <TableCell key={i} className='calendarTableStyle' style={{ backgroundColor: 'green' }} /> :
+                                    <TableCell key={i} className='calendarTableStyle' />
+                            )
+                        }
+                    </TableRow>
+
+                    <TableRow>
+                        <TableCell
+                            className={classes.sticky}
+                            component="th"
+                            scope="row"
+                        >
+                            USCITA
+                        </TableCell>
+                        {
+                            props.items.rowsU.map((item, i) =>
+                                item.isActive === true ?
+                                    <TableCell key={i} className='calendarTableStyle' style={{ backgroundColor: 'red' }} /> :
+                                    <TableCell key={i} className='calendarTableStyle' />
+                            )
+                        }
+                    </TableRow>
+                </TableBody>
             </Table>
         </TableContainer>
     );

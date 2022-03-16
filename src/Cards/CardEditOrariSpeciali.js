@@ -1,8 +1,8 @@
 import * as React from "react"
 import { SelectInput, BooleanInput, FormDataConsumer, useTranslate } from "react-admin"
 import Typography from '@material-ui/core/Typography'
-import TableBody from '@material-ui/core/TableBody'
 import { makeStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles({
     textInput: {
@@ -14,49 +14,113 @@ function CardEditOrariSpeciali(record) {
     const translate = useTranslate()
     const classes = useStyles();
     return (
-        <TableBody>
-            <FormDataConsumer>
-                {({ formData, ...rest }) => (
-                    <Typography gutterBottom variant="h5" component="div">
-                        {translate('resources.cardGenerale.fields.scheduledIdLabel')}   {formData.description}
-                    </Typography>
-                )}
-            </FormDataConsumer>
-            <br />
-            <Typography gutterBottom variant="h7" component="div">
-                {translate('resources.cardOrarioSpeciali.fields.subTitle1')}
-            </Typography>
-            <BooleanInput source="applyAutomaticCompensation" label={translate('resources.cardOrarioSpeciali.fields.applyAutomaticCompensation')} />
-            <BooleanInput source="generateAutomaticEntries" label={translate('resources.cardOrarioSpeciali.fields.generateAutomaticEntries')} />
-            <BooleanInput source="realTypesWithoutStamping" label={translate('resources.cardOrarioSpeciali.fields.realTypesWithoutStamping')} />
-            <br />
-            <Typography gutterBottom variant="h7" component="div">
-                {translate('resources.cardOrarioSpeciali.fields.subTitle2')}
-            </Typography>
-            <SelectInput source="theoreticalHours" label={translate('resources.cardOrarioSpeciali.fields.theoreticalHours')} /* allowEmpty="True" */ className={classes.textInput} choices={[
-                { id: 'minime', name: translate('resources.cardOrarioSpeciali.fields.minime') },
-                { id: 'base', name: translate('resources.cardOrarioSpeciali.fields.base') },
-            ]} />
-            <SelectInput source="typeOfDay" label={translate('resources.cardOrarioSpeciali.fields.typeOfDay')} className={classes.textInput} choices={[
-                { id: 0, name: translate('resources.cardOrarioSpeciali.fields.lavorativo') },
-                { id: 1, name: translate('resources.cardOrarioSpeciali.fields.nonLavorativo') },
-                { id: 2, name: translate('resources.cardOrarioSpeciali.fields.festivo') },
-            ]} />
-            <br />
-            <Typography gutterBottom variant="h7" component="div">
-                {translate('resources.cardOrarioSpeciali.fields.subTitle3')}
-            </Typography>
-            <BooleanInput source="ignoreOrphanedPunch" label={translate('resources.cardOrarioSpeciali.fields.ignoreOrphanedPunch')} />
-            <BooleanInput source="includePunchInAutomaticTimeDiscriminationPhase" label={translate('resources.cardOrarioSpeciali.fields.includePunchInAutomaticTimeDiscriminationPhase')} />
-            <BooleanInput source="partialReceiptsIntoAssignedStiff" label={translate('resources.cardOrarioSpeciali.fields.partialReceiptsIntoAssignedStiff')} />
-            <BooleanInput source="partialReceiptsIntoAssignedFlex" label={translate('resources.cardOrarioSpeciali.fields.partialReceiptsIntoAssignedFlex')} />
-            <BooleanInput source="receiptsAssignedInAbsenceOfPunch" label={translate('resources.cardOrarioSpeciali.fields.receiptsAssignedInAbsenceOfPunch')} />
-            <br />
-            <Typography gutterBottom variant="h7" component="div">
-                {translate('resources.cardOrarioSpeciali.fields.subTitle4')}
-            </Typography>
-            <BooleanInput source="omitDescriptionInServiceOrders" label={translate('resources.cardOrarioSpeciali.fields.omitDescriptionInServiceOrders')} />
-        </TableBody>
+        <Grid container spacing={1} style={{ width: "100%" }}>
+
+            <Grid container>
+                <Grid item xs />
+                <Grid item xs={6} style={{ textAlign: 'center' }}>
+                    <FormDataConsumer>
+                        {({ formData }) => (
+                            <Typography gutterBottom variant="h5" component="div">
+                                {translate('resources.cardGenerale.fields.scheduledIdLabel')}  {formData.description}
+                            </Typography>
+                        )}
+                    </FormDataConsumer>
+                </Grid>
+                <Grid item xs />
+            </Grid>
+
+            <Grid container spacing={1} >
+                <Grid item xs />
+                <Grid item xs={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
+                    {translate('resources.cardOrarioSpeciali.fields.subTitle1')}
+                </Grid>
+                <Grid item xs />
+            </Grid>
+
+            <Grid container  >
+                <Grid item xs={4} >
+                    <BooleanInput source="applyAutomaticCompensation" label={translate('resources.cardOrarioSpeciali.fields.applyAutomaticCompensation')} />
+                </Grid>
+                <Grid item xs={4} >
+                    <BooleanInput source="generateAutomaticEntries" label={translate('resources.cardOrarioSpeciali.fields.generateAutomaticEntries')} />
+                </Grid>
+                <Grid item xs={4} >
+                    <BooleanInput source="realTypesWithoutStamping" label={translate('resources.cardOrarioSpeciali.fields.realTypesWithoutStamping')} />
+                </Grid>
+            </Grid>
+
+            <Grid container >
+                <Grid item xs />
+                <Grid item xs={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }}>
+                    {translate('resources.cardOrarioSpeciali.fields.subTitle2')}
+                </Grid>
+                <Grid item xs />
+            </Grid>
+
+            <Grid container>
+                <Grid item xs={2} >
+                    <SelectInput source="theoreticalHours" label={translate('resources.cardOrarioSpeciali.fields.theoreticalHours')} className={classes.textInput} choices={[
+                        { id: 0, name: translate('resources.cardOrarioSpeciali.fields.minime') },
+                        { id: 1, name: translate('resources.cardOrarioSpeciali.fields.base') },
+                    ]} />
+                </Grid>
+                <Grid item xs={2} >
+                    <SelectInput source="typeOfDay" label={translate('resources.cardOrarioSpeciali.fields.typeOfDay')} className={classes.textInput} choices={[
+                        { id: 0, name: translate('resources.cardOrarioSpeciali.fields.lavorativo') },
+                        { id: 1, name: translate('resources.cardOrarioSpeciali.fields.nonLavorativo') },
+                        { id: 2, name: translate('resources.cardOrarioSpeciali.fields.festivo') },
+                    ]} />
+                </Grid>
+                <Grid item xs />
+            </Grid>
+
+            <Grid container>
+                <Grid item xs />
+                <Grid item xs={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }}>
+                    {translate('resources.cardOrarioSpeciali.fields.subTitle3')}
+                </Grid>
+                <Grid item xs />
+            </Grid>
+
+            <Grid container>
+                <Grid item xs={4} >
+                    <BooleanInput source="ignoreOrphanedPunch" label={translate('resources.cardOrarioSpeciali.fields.ignoreOrphanedPunch')} />
+                </Grid>
+                <Grid item xs={4} >
+                    <BooleanInput source="includePunchInAutomaticTimeDiscriminationPhase" label={translate('resources.cardOrarioSpeciali.fields.includePunchInAutomaticTimeDiscriminationPhase')} />
+                </Grid>
+                <Grid item xs={4} >
+                    <BooleanInput source="partialReceiptsIntoAssignedStiff" label={translate('resources.cardOrarioSpeciali.fields.partialReceiptsIntoAssignedStiff')} />
+                </Grid>
+            </Grid>
+
+            <Grid container>
+                <Grid item xs={4} >
+                    <BooleanInput source="partialReceiptsIntoAssignedFlex" label={translate('resources.cardOrarioSpeciali.fields.partialReceiptsIntoAssignedFlex')} />
+                </Grid>
+                <Grid item xs={4} >
+                    <BooleanInput source="receiptsAssignedInAbsenceOfPunch" label={translate('resources.cardOrarioSpeciali.fields.receiptsAssignedInAbsenceOfPunch')} />
+                </Grid>
+                <Grid item xs />
+            </Grid>
+
+            <Grid container>
+                <Grid item xs />
+                <Grid item xs={6} style={{ textAlign: 'center', marginBottom: '10px', color: '#40b2d4' }} >
+                    {translate('resources.cardOrarioSpeciali.fields.subTitle4')}
+                </Grid>
+                <Grid item xs />
+            </Grid>
+
+            <Grid container>
+                <Grid item xs={6}>
+                    <BooleanInput source="omitDescriptionInServiceOrders" label={translate('resources.cardOrarioSpeciali.fields.omitDescriptionInServiceOrders')} />
+                </Grid>
+                <Grid item xs />
+            </Grid >
+
+        </Grid>
     );
 }
 

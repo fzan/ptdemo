@@ -6,14 +6,7 @@ import TableRow from '@material-ui/core/TableRow'
 import TableCell from '@material-ui/core/TableCell'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import CheckBox from '@material-ui/core/Checkbox'
-import { makeStyles } from '@material-ui/core/styles'
 import { useTranslate, SelectField, Labeled } from 'react-admin'
-
-const useStyles = makeStyles({
-    textInput: {
-        margin: 4
-    }
-});
 
 const theoreticalHoursChoices = [
     { id: 1, name: 'resources.cardOrarioSpeciali.fields.minime' },
@@ -28,7 +21,6 @@ const typeOfDayChoices = [
 
 function CardOrarioSpeciali(record) {
     const translate = useTranslate()
-    const classes = useStyles()
     return (
         <TableContainer>
             <Table>

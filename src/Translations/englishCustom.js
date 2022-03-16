@@ -158,7 +158,7 @@ module.exports = {
             fields: {
                 subTitle1: "Replacement Hours",
                 saturday: "Saturday",
-                sundayHolyday: "Sunday and Holidays",
+                sundayHolyday: "Holidays",
                 preHolyday: "Pre-holiday",
                 subTitle2: "Compliant stampings",
                 reportPunchOutOfBands: "Report out-of-time stampings",
