@@ -19,17 +19,12 @@ function CardEsperto(record) {
     return (
         <Grid container spacing={1} style={{ width: "100%" }}>
 
-            <Grid container>
-                <Grid item xs={2} />
-                <Grid item xs={6}>
+            <Grid container  >
+                <Grid item xs={3}>
                     <FormControlLabel control={
                         <CheckBox id="selectiveCompensation" checked={record.selectiveCompensation} />
                     } label={translate('resources.cardEsperto.fields.selectiveCompensation')} />
                 </Grid>
-                <Grid item xs />
-            </Grid >
-
-            <Grid container  >
                 <Grid item xs={3} >
                     <TextField id="cumulativeAbsence" label={translate('resources.cardEsperto.fields.cumulativeAbsence')} defaultValue={record.cumulativeAbsence} InputProps={{ readOnly: true }} className={classes.textInput} />
                 </Grid>
@@ -39,15 +34,14 @@ function CardEsperto(record) {
                 <Grid item xs={3} >
                     <TextField id="maximal" label={translate('resources.cardEsperto.fields.maximal')} defaultValue={record.maximal} InputProps={{ readOnly: true }} className={classes.textInput} />
                 </Grid>
+            </Grid>
+
+            <Grid container  >
                 <Grid item xs={3} >
                     <FormControlLabel control={
                         <CheckBox id="positiveBalanceForCompensateHours" checked={record.positiveBalanceForCompensateHours} />
                     } label={translate('resources.cardEsperto.fields.positiveBalanceForCompensateHours')} />
                 </Grid>
-            </Grid>
-
-            <Grid container  >
-                <Grid item xs />
                 <Grid item xs={3} >
                     <FormControlLabel control={
                         <CheckBox id="bandsInCaseOfAbsence" checked={record.bandsInCaseOfAbsence} />
