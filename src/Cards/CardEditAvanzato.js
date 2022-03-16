@@ -67,7 +67,7 @@ function CardEditAvanzato(record) {
                 <Grid item xs={12} md={6}>
                     <BooleanInput source="reportPunchOutOfBands" label={translate('resources.cardAvanzato.fields.reportPunchOutOfBands')} />
                 </Grid>
-                <Grid item xs />
+                <Grid item xs md />
             </Grid >
 
             <Grid container >
