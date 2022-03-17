@@ -220,8 +220,8 @@ module.exports = {
         },
         calendario: {
             fields: {
-                entrance: "entrance",
-                exit: "USCITA",
+                entrance: "ENTRANCE",
+                exit: "EXIT",
                 title: "Insertion of Stamping Bands",
                 istruzioni: "Instruction",
                 istruzioni1: "You can move and recalibrate the time slot",
@@ -230,6 +230,17 @@ module.exports = {
                 alert: "Are you sure you want to delete the event ",
                 from: "From",
                 to: "To"
+            }
+        },
+        inOutTable: {
+            fields: {
+                inOut: "Type of Punch",
+                from: "From",
+                to: "To ",
+                gg: "GG",
+                punch: "Punch",
+                type: "Type",
+                delType: "Del Type"
             }
         }
     }

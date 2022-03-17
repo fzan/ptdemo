@@ -1,29 +1,37 @@
-import * as React from 'react';
-import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableRow from "@material-ui/core/TableRow";
-import { TableBody } from '@mui/material';
+import * as React from 'react'
+import { makeStyles } from "@material-ui/core/styles"
+import Table from "@material-ui/core/Table"
+import TableCell from "@material-ui/core/TableCell"
+import TableContainer from "@material-ui/core/TableContainer"
+import TableRow from "@material-ui/core/TableRow"
+import { TableBody } from '@mui/material'
+import { useTranslate } from 'react-admin'
 
 const useStyles = makeStyles({
     table: {
-        width: 'auto',
-        overflowX: "visible"
+        width: 'auto', /** dimensione 400px auto */
+        overflowX: "visible" /**scroll */
     },
     sticky: {
         position: "sticky",
         left: 0,
         background: "white",
         borderRight: "2px solid black"
+    },
+    cellDimension: {
+        width: '30'
+    },
+    tableContainer: {
+        width: "70%"
     }
 });
 
 export default function InOutTable(props) {
     const classes = useStyles();
+    const translate = useTranslate();
     return (
 
-        <TableContainer >
+        <TableContainer className={classes.tableContainer} >
             <Table
                 className={classes.table}
                 aria-label="simple table"
@@ -35,7 +43,7 @@ export default function InOutTable(props) {
                             className={classes.sticky}
                             component="th"
                             scope="row"
-
+                            width="90px"
                         >
 
                         </TableCell>
@@ -52,9 +60,10 @@ export default function InOutTable(props) {
                             className={classes.sticky}
                             component="th"
                             scope="row"
+                            width="90px"
 
                         >
-                            ENTRATA
+                            {translate('resources.calendario.fields.entrance')}
                         </TableCell>
                         {
                             props.items.rowsE.map((item, i) =>
@@ -70,8 +79,9 @@ export default function InOutTable(props) {
                             className={classes.sticky}
                             component="th"
                             scope="row"
+                            width="90px"
                         >
-                            USCITA
+                            {translate('resources.calendario.fields.exit')}
                         </TableCell>
                         {
                             props.items.rowsU.map((item, i) =>

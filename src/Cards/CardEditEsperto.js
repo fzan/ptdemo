@@ -45,13 +45,13 @@ function CardEditEsperto(record) {
                             <>
                                 <Grid container  >
                                     <Grid item xs={12} sm="auto" md="auto">
-                                        <ReferenceInput source="cumulativeAbsence" reference="vocis" label={translate('resources.cardEsperto.fields.cumulativeAbsence')} className={classes.textInput}>
-                                            <SelectInput optionText="title" />
+                                        <ReferenceInput source="cumulativeAbsence" reference="voices" allowEmpty label={translate('resources.cardEsperto.fields.cumulativeAbsence')} className={classes.textInput}>
+                                            <SelectInput optionText="name" />
                                         </ReferenceInput>
                                     </Grid>
                                     <Grid item xs={12} sm="auto" md="auto">
-                                        <ReferenceInput style={{ width: '200px' }} source="cumulativeOvertime" reference="vocis" label={translate('resources.cardEsperto.fields.cumulativeOvertime')} className={classes.textInput}>
-                                            <SelectInput optionText="title" />
+                                        <ReferenceInput style={{ width: '200px' }} source="cumulativeOvertime" reference="voices" allowEmpty label={translate('resources.cardEsperto.fields.cumulativeOvertime')} className={classes.textInput}>
+                                            <SelectInput optionText="name" />
                                         </ReferenceInput>
                                     </Grid>
                                     <Grid item xs={12} sm="auto" md="auto">

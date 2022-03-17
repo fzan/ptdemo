@@ -232,6 +232,17 @@ module.exports = {
                 from: "Dalle",
                 to: "Alle"
             }
+        },
+        inOutTable: {
+            fields: {
+                inOut: "Tipo Timbratura",
+                from: "Dalle",
+                to: "Alle",
+                gg: "GG",
+                punch: "Timbratura",
+                type: "Tipo",
+                delType: "Del Tipo"
+            }
         }
     }
 }
