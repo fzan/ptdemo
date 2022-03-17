@@ -6,6 +6,8 @@ import dataProvider from '../data'
 import moment from 'moment'
 import { useTranslate } from 'react-admin'
 
+
+
 export default function InOutCalendar({ record }) {
     const translate = useTranslate();
     const columns = [

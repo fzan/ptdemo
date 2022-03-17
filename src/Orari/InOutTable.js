@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     sticky: {
         position: "sticky",
         left: 0,
-        background: "white",
+        background: "#e6e6e6",
         borderRight: "2px solid black"
     },
     cellDimension: {
@@ -43,7 +43,6 @@ export default function InOutTable(props) {
                             className={classes.sticky}
                             component="th"
                             scope="row"
-                            width="90px"
                         >
 
                         </TableCell>
@@ -60,8 +59,6 @@ export default function InOutTable(props) {
                             className={classes.sticky}
                             component="th"
                             scope="row"
-                            width="90px"
-
                         >
                             {translate('resources.calendario.fields.entrance')}
                         </TableCell>
@@ -79,7 +76,6 @@ export default function InOutTable(props) {
                             className={classes.sticky}
                             component="th"
                             scope="row"
-                            width="90px"
                         >
                             {translate('resources.calendario.fields.exit')}
                         </TableCell>
