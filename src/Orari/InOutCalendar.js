@@ -7,7 +7,6 @@ import moment from 'moment'
 import { useTranslate } from 'react-admin'
 
 
-
 export default function InOutCalendar({ record }) {
     const translate = useTranslate();
     const columns = [
@@ -20,6 +19,15 @@ export default function InOutCalendar({ record }) {
         { field: 'delType', headerName: translate('resources.inOutTable.fields.delType'), width: 90 }
     ]
     const [rows, setRows] = useState([])
+
+    const handleAdd = () => {
+
+        let newRows = [...rows]
+        const newElementInRow = { id: 5, v: "E", from: "00:00", to: "02:00", gg: "0", punch: "20:00", type: "virtuale", delType: "" };
+        debugger
+        newRows.push(newElementInRow);
+        setRows(newRows)
+    }
 
     useEffect(() => {
 
@@ -89,6 +97,7 @@ export default function InOutCalendar({ record }) {
                     checkboxSelection
                 />
             </div>
+            <button onClick={handleAdd}>Add Row</button>
         </>
     );
 }

@@ -150,8 +150,8 @@ function CardEditGenerale(record) {
             </Grid>
 
             <Grid container  >
-                <Grid item xs={12} sm="auto" md="auto">
-                    <FormDataConsumer>
+                <Grid item xs={12} sm="auto" md="auto" >
+                    <FormDataConsumer >
                         {({ formData }) => (
                             <SettingTime source="from" value={formData.from} label={translate('resources.cardGenerale.fields.from')} {...record} />
                         )}
@@ -167,7 +167,7 @@ function CardEditGenerale(record) {
                 <Grid item xs={12} sm="auto" md="auto">
                     <NumberInput source="nextDays" label={translate('resources.cardGenerale.fields.nextDaysLabel')} />
                 </Grid>
-                <Grid item xs md />
+                <Grid item xs sm="auto" md="auto" />
             </Grid>
 
             <Grid container>

@@ -12,12 +12,12 @@ const UserEditToolbar = props => (
         <SaveButton />
     </Toolbar>
 );
-
+/**{ maxWidth: '100vw' } style={{ width: '80%' }} */
 export const OrariEdit = props => {
     const translate = useTranslate()
     return (
-        <Edit {...props}>
-            <TabbedForm style={{ maxWidth: '100vw' }} tabs={<TabbedFormTabs variant="scrollable" scrollButtons="auto" />}>
+        <Edit {...props} >
+            <TabbedForm style={{ width: '100vw' }} tabs={<TabbedFormTabs variant="scrollable" scrollButtons="auto" />}>
                 <FormTab label={translate('resources.orariDetails.fields.generale')} >
                     <CardEditGenerale {...props.record} />
                 </FormTab>
@@ -33,12 +33,6 @@ export const OrariEdit = props => {
                 <FormTab label='inOut' toolbar={<UserEditToolbar />}>
                     <InOutCalendar {...props.record} />
                 </FormTab>
-                {/* <FormTab label='Zavorra' toolbar={<UserEditToolbar />}>
-                  
-                </FormTab>
-                <FormTab label='Trattore' toolbar={<UserEditToolbar />}>
-                   
-                </FormTab> */}
             </TabbedForm>
         </Edit >)
 }
