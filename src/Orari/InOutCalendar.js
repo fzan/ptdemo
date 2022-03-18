@@ -24,7 +24,6 @@ export default function InOutCalendar({ record }) {
 
         let newRows = [...rows]
         const newElementInRow = { id: 5, v: "E", from: "00:00", to: "02:00", gg: "0", punch: "20:00", type: "virtuale", delType: "" };
-        debugger
         newRows.push(newElementInRow);
         setRows(newRows)
     }
@@ -82,7 +81,6 @@ export default function InOutCalendar({ record }) {
 
             }
         })
-    // debugger
     return (
         <>
             <br />
