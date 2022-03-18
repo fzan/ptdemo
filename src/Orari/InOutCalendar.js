@@ -5,10 +5,12 @@ import InOutTable from './InOutTable'
 import dataProvider from '../data'
 import moment from 'moment'
 import { useTranslate } from 'react-admin'
+import ShortInOutTable from './shortInOutTable'
 
 
 export default function InOutCalendar({ record }) {
     const translate = useTranslate();
+
     const columns = [
         { field: 'v', headerName: translate('resources.inOutTable.fields.inOut'), width: 130 },
         { field: 'from', headerName: translate('resources.inOutTable.fields.from'), width: 90 },
@@ -19,6 +21,7 @@ export default function InOutCalendar({ record }) {
         { field: 'delType', headerName: translate('resources.inOutTable.fields.delType'), width: 90 }
     ]
     const [rows, setRows] = useState([])
+    const [showCalendar, setShowCalendar] = useState(false)
 
     const handleAdd = () => {
 
@@ -26,6 +29,9 @@ export default function InOutCalendar({ record }) {
         const newElementInRow = { id: 5, v: "E", from: "00:00", to: "02:00", gg: "0", punch: "20:00", type: "virtuale", delType: "" };
         newRows.push(newElementInRow);
         setRows(newRows)
+    }
+    const handleZoom = () => {
+        setShowCalendar(!showCalendar)
     }
 
     useEffect(() => {
@@ -84,7 +90,13 @@ export default function InOutCalendar({ record }) {
     return (
         <>
             <br />
-            <InOutTable items={items} />
+            <br />
+            <ShortInOutTable items={items} />
+            <br />
+            <button onClick={handleZoom}>zoom</button>
+            <br />
+            {showCalendar ? <InOutTable items={items} /> : null}
+
             <br />
             <div style={{ height: 400, width: '60%' }}>
                 <DataGrid
